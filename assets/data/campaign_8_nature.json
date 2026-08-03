@@ -1,0 +1,82 @@
+[
+  {
+    "arabic": "أ ر ض",
+    "translit": "ʾ-r-ḍ",
+    "meaning": "Earth, land",
+    "mnemonic": "An Archer's Range is a huge Dusty stretch of land. ʾ-R-Ḍ is the root of earth and land.",
+    "words": ["أرض", "أراضي", "أرضي"],
+    "example": "The أرض stretched for miles, its أراضي rich and أرضي in nature."
+  },
+  {
+    "arabic": "س م و",
+    "translit": "s-m-w",
+    "meaning": "Sky, height, loftiness",
+    "mnemonic": "A Sailor's Mast reaches toward the Way up high. S-M-W is the root of sky and elevation.",
+    "words": ["سماء", "سموات"],
+    "example": "The سماء stretched above, one of countless سموات in the poem."
+  },
+  {
+    "arabic": "ش م س",
+    "translit": "sh-m-s",
+    "meaning": "Sun",
+    "mnemonic": "A Sheikh's Mighty Star blazes overhead — the sun. SH-M-S is the root of the sun.",
+    "words": ["شمس", "شمسي"],
+    "example": "The شمس rose brightly, powering the شمسي panels below."
+  },
+  {
+    "arabic": "ق م ر",
+    "translit": "q-m-r",
+    "meaning": "Moon",
+    "mnemonic": "A Queen's Mirror Reflects the glowing moon. Q-M-R is the root of the moon.",
+    "words": ["قمر", "أقمار"],
+    "example": "The قمر lit the night sky, one of many أقمار orbiting planets."
+  },
+  {
+    "arabic": "ل ي ل",
+    "translit": "l-y-l",
+    "meaning": "Night",
+    "mnemonic": "A Lady Yawns late at night, Lulled to sleep. L-Y-L is the root of night.",
+    "words": ["ليل", "ليلة", "ليالي"],
+    "example": "The ليل fell quietly, and each ليلة joined the countless ليالي before it."
+  },
+  {
+    "arabic": "ب ح ر",
+    "translit": "b-ḥ-r",
+    "meaning": "Sea",
+    "mnemonic": "A Boatman Heads out to the Reef in the open sea. B-Ḥ-R is the root of the sea.",
+    "words": ["بحر", "بحار", "بحري"],
+    "example": "The بحر stretched wide, and the بحار crossed it on his بحري voyage."
+  },
+  {
+    "arabic": "ج ب ل",
+    "translit": "j-b-l",
+    "meaning": "Mountain",
+    "mnemonic": "A Journeyman Battles a steep Ledge climbing the mountain. J-B-L is the root of mountains.",
+    "words": ["جبل", "جبال", "جبلي"],
+    "example": "The جبل towered above, one of many جبال in the جبلي range."
+  },
+  {
+    "arabic": "ر ي ح",
+    "translit": "r-y-ḥ",
+    "meaning": "Wind",
+    "mnemonic": "A Racer's Yell gets Hushed by the roaring wind. R-Y-Ḥ is the root of wind.",
+    "words": ["ريح", "رياح"],
+    "example": "The ريح howled through the valley, joined by strong رياح from the north."
+  },
+  {
+    "arabic": "م ط ر",
+    "translit": "m-ṭ-r",
+    "meaning": "Rain",
+    "mnemonic": "A Miner Taps his Roof, listening to the falling rain. M-Ṭ-R is the root of rain.",
+    "words": ["مطر", "أمطار", "ممطر"],
+    "example": "The مطر poured down, and the أمطار made the sky ممطر all day."
+  },
+  {
+    "arabic": "ن و ر",
+    "translit": "n-w-r",
+    "meaning": "Light",
+    "mnemonic": "A Navigator Waves a Radiant lantern for light. N-W-R is the root of light.",
+    "words": ["نور", "منور", "نار"],
+    "example": "The نور filled the room, keeping it منور through the night by the نار."
+  }
+]

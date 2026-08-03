@@ -36,7 +36,7 @@ class StudySessionView extends ConsumerWidget {
         _PhaseLabel(phase: session.phase),
         const SizedBox(height: 4),
         Text(
-          '${session.phasePosition} of ${session.phaseTotal}',
+          '${session.reviewedCount} seen',
           style: Theme.of(
             context,
           ).textTheme.bodySmall?.copyWith(color: AppColors.inkMuted),

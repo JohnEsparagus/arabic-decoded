@@ -1,0 +1,122 @@
+[
+  {
+    "arabic": "ذ ه ب",
+    "translit": "dh-h-b",
+    "meaning": "Going",
+    "mnemonic": "The Duchess Heads out the Back door. DH-H-B is the root of going and departing.",
+    "words": ["ذهب", "يذهب", "ذاهب"],
+    "example": "She ذهب to work early, يذهب there every morning as the ذاهب one."
+  },
+  {
+    "arabic": "ج ا ء",
+    "translit": "j-ʾ-ʾ",
+    "meaning": "Coming",
+    "mnemonic": "A Jester Arrives, Announcing his entrance loudly. J-ʾ-ʾ is the root of coming and arriving.",
+    "words": ["جاء", "يجيء", "مجيء"],
+    "example": "He جاء late, but his مجيء was still celebrated."
+  },
+  {
+    "arabic": "د خ ل",
+    "translit": "d-kh-l",
+    "meaning": "Entering",
+    "mnemonic": "A Detective Kicks the Lock to enter the room. D-KH-L is the root of entering and inside.",
+    "words": ["دخل", "يدخل", "داخل", "مدخل"],
+    "example": "He دخل through the مدخل and stood داخل the hall."
+  },
+  {
+    "arabic": "خ ر ج",
+    "translit": "kh-r-j",
+    "meaning": "Exiting",
+    "mnemonic": "A Knight Rushes out the Gate. KH-R-J is the root of exiting and going out.",
+    "words": ["خرج", "يخرج", "خارج", "مخرج"],
+    "example": "She خرج quickly through the مخرج to stand خارج the building."
+  },
+  {
+    "arabic": "و ص ل",
+    "translit": "w-ṣ-l",
+    "meaning": "Arriving, connecting",
+    "mnemonic": "A Wanderer Steps in at Last. W-Ṣ-L is the root of arriving and connecting.",
+    "words": ["وصل", "يصل", "وصول", "متصل"],
+    "example": "The train وصل on time, and its وصول meant the line stayed متصل."
+  },
+  {
+    "arabic": "ر ج ع",
+    "translit": "r-j-ʿ",
+    "meaning": "Returning",
+    "mnemonic": "A Runner Jogs back Again. R-J-ʿ is the root of returning and going back.",
+    "words": ["رجع", "يرجع", "رجوع"],
+    "example": "He رجع home at sunset, his رجوع expected every day."
+  },
+  {
+    "arabic": "ق ا م",
+    "translit": "q-w-m",
+    "meaning": "Standing, rising",
+    "mnemonic": "A Queen Wakes and stands Majestic. Q-W-M is the root of standing, rising, and getting up.",
+    "words": ["قام", "يقوم", "قيام"],
+    "example": "He قام from his chair, and every morning يقوم the same way."
+  },
+  {
+    "arabic": "ج ل س",
+    "translit": "j-l-s",
+    "meaning": "Sitting",
+    "mnemonic": "A Juggler Lands and Sits down abruptly. J-L-S is the root of sitting.",
+    "words": ["جلس", "يجلس", "جلوس", "مجلس"],
+    "example": "He جلس on the bench, and the council's مجلس also means a sitting place."
+  },
+  {
+    "arabic": "ف ت ح",
+    "translit": "f-t-ḥ",
+    "meaning": "Opening",
+    "mnemonic": "A Farmer Turns the Handle to open the gate. F-T-Ḥ is the root of opening.",
+    "words": ["فتح", "يفتح", "مفتوح", "مفتاح"],
+    "example": "He فتح the door with a مفتاح, leaving it مفتوح."
+  },
+  {
+    "arabic": "غ ل ق",
+    "translit": "gh-l-q",
+    "meaning": "Closing",
+    "mnemonic": "A Ghost Locks the Quarters shut. GH-L-Q is the root of closing.",
+    "words": ["غلق", "يغلق", "مغلق"],
+    "example": "He غلق the shop early, so it stayed مغلق all night."
+  },
+  {
+    "arabic": "ح م ل",
+    "translit": "ḥ-m-l",
+    "meaning": "Carrying",
+    "mnemonic": "A Hiker's Mule Lugs the heavy bags. Ḥ-M-L is the root of carrying and bearing.",
+    "words": ["حمل", "يحمل", "حامل"],
+    "example": "The mule حمل the load, and every day it يحمل more as a حامل."
+  },
+  {
+    "arabic": "ت ر ك",
+    "translit": "t-r-k",
+    "meaning": "Leaving",
+    "mnemonic": "A Traveler Runs off, Kaput — gone for good. T-R-K is the root of leaving and abandoning.",
+    "words": ["ترك", "يترك", "متروك"],
+    "example": "He ترك the old house, and it stayed متروك for years."
+  },
+  {
+    "arabic": "و ض ع",
+    "translit": "w-ḍ-ʿ",
+    "meaning": "Placing",
+    "mnemonic": "A Waiter Drops off the Order at your table. W-Ḍ-ʿ is the root of placing and putting.",
+    "words": ["وضع", "يضع", "وضع", "موضوع"],
+    "example": "She وضع the plate down, and the موضوع of the meeting was already set."
+  },
+  {
+    "arabic": "و ق ف",
+    "translit": "w-q-f",
+    "meaning": "Standing still, stopping",
+    "mnemonic": "A Watchman Quietly Freezes in place. W-Q-F is the root of stopping and standing still.",
+    "words": ["وقف", "يقف", "موقف"],
+    "example": "The bus وقف at the موقف, and everyone يقف waiting."
+  },
+  {
+    "arabic": "م ش ى",
+    "translit": "m-sh-y",
+    "meaning": "Walking",
+    "mnemonic": "A Marcher Shuffles onward, Yawning as he walks. M-SH-Y is the root of walking.",
+    "words": ["مشى", "يمشي", "مشي"],
+    "example": "He مشى to the park, since يمشي there is his daily مشي."
+  }
+]

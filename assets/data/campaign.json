@@ -3,73 +3,103 @@
     "arabic": "ك ت ب",
     "translit": "k-t-b",
     "meaning": "Writing",
-    "mnemonic": "Imagine a writer carrying books into a library every morning.",
+    "mnemonic": "Kate Ties a Book shut. K-T-B becomes the root for writing, books, authors, and libraries.",
     "words": [
       "كتاب",
       "كاتب",
       "مكتبة",
       "كتابة"
     ],
-    "example": "A كاتب works in a مكتبة writing a كتاب."
+    "example": "A كاتب writes a كتاب in a مكتبة, producing كتابة."
   },
   {
     "arabic": "ق ر أ",
     "translit": "q-r-ʾ",
     "meaning": "Reading",
-    "mnemonic": "Picture someone reading quietly.",
+    "mnemonic": "A Queen Reads Aloud. Q-R-ʾ reminds you of reading whenever you see these letters together.",
     "words": [
       "قرأ",
       "قراءة",
       "قارئ"
     ],
-    "example": "A قارئ does قراءة."
+    "example": "A قارئ enjoys قراءة every day."
   },
-   {
+  {
     "arabic": "ع ل م",
     "translit": "ʿ-l-m",
     "meaning": "Knowledge",
-    "mnemonic": "An academic who knows everything, like an all-knowing professor.",
-    "words": ["علم", "معلم", "عالم", "تعليم"],
-    "example": "A معلم (teacher) gives تعليم (teaching) so students gain علم (knowledge)."
+    "mnemonic": "Imagine an All-knowing Lecturer Mentoring everyone. A-L-M becomes the root of knowledge, learning, and teaching.",
+    "words": [
+      "علم",
+      "معلم",
+      "عالم",
+      "تعليم"
+    ],
+    "example": "A معلم gives تعليم so students gain علم."
   },
   {
     "arabic": "ر أ ي",
     "translit": "r-ʾ-y",
     "meaning": "Seeing",
-    "mnemonic": "Picture climbing a mountain to see everything below.",
-    "words": ["رأى", "يرى", "رأي", "رؤية"],
+    "mnemonic": "A Ranger's Eye Yields a breathtaking view. R-ʾ-Y is all about seeing, vision, and opinion.",
+    "words": [
+      "رأى",
+      "يرى",
+      "رأي",
+      "رؤية"
+    ],
     "example": "His رأي changed after the رؤية."
   },
   {
     "arabic": "س م ع",
     "translit": "s-m-ʿ",
     "meaning": "Hearing",
-    "mnemonic": "Imagine giant ears hearing every sound in the city.",
-    "words": ["سمع", "يسمع", "سماع", "مسموع"],
+    "mnemonic": "Sam's Mega Ears hear everything. S-M-ʿ becomes the root for hearing and listening.",
+    "words": [
+      "سمع",
+      "يسمع",
+      "سماع",
+      "مسموع"
+    ],
     "example": "Everyone سمع the news immediately."
   },
   {
     "arabic": "ن ظ ر",
     "translit": "n-ẓ-r",
     "meaning": "Looking",
-    "mnemonic": "Imagine looking through a telescope at the stars.",
-    "words": ["نظر", "ينظر", "نظرة", "منظر"],
+    "mnemonic": "A Navigator Zooms with a Reflector telescope. N-Ẓ-R means looking, observing, and views.",
+    "words": [
+      "نظر",
+      "ينظر",
+      "نظرة",
+      "منظر"
+    ],
     "example": "The منظر was beautiful to نظر at."
   },
   {
     "arabic": "ع ر ف",
     "translit": "ʿ-r-f",
     "meaning": "Knowing, recognizing",
-    "mnemonic": "Imagine recognizing an old friend in a huge crowd.",
-    "words": ["عرف", "يعرف", "معروف", "معرفة"],
+    "mnemonic": "An Artist Recognizes a Familiar face instantly. ʿ-R-F is the root of recognition and familiarity.",
+    "words": [
+      "عرف",
+      "يعرف",
+      "معروف",
+      "معرفة"
+    ],
     "example": "She عرف the معروف scientist from television."
   },
   {
     "arabic": "ف ه م",
     "translit": "f-h-m",
     "meaning": "Understanding",
-    "mnemonic": "Picture a light bulb turning on above someone's head.",
-    "words": ["فهم", "يفهم", "فهم", "مفهوم"],
+    "mnemonic": "A Flash of Hidden Meaning makes everything click. F-H-M is the root of understanding and comprehension.",
+    "words": [
+      "فهم",
+      "يفهم",
+      "فهم",
+      "مفهوم"
+    ],
     "example": "Students فهم the new مفهوم quickly."
   }
 ]

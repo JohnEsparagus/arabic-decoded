@@ -58,6 +58,12 @@ final deckFlashcardsProvider = FutureProvider.family<List<Flashcard>, int>((
   ref,
   deckId,
 ) async {
+  // Wait for the import to finish, same as dictionaryEntriesProvider above.
+  // Without this, invalidating both providers together (e.g. the debug
+  // reset button) lets this query race the reimport and read the deck
+  // while its flashcards table is still empty, then never re-run.
+  await ref.watch(campaignDecksProvider.future);
+
   final db = ref.watch(databaseServiceProvider);
   return db.getFlashcardsForDeck(deckId);
 });

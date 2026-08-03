@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/flashcard.dart';
 import '../theme/app_theme.dart';
+import '../utils/mastery_level.dart';
 
 /// A small, compact tappable card showing just a root's Arabic word (plus
 /// its transliteration, if any) — used to fill a campaign's root grid,
@@ -22,7 +23,7 @@ class RootPreviewCard extends StatelessWidget {
         width: 92,
         padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: _backgroundColorFor(masteryLevelOf(card)),
           borderRadius: BorderRadius.circular(14),
           border: Border.all(color: AppColors.cardBorder),
         ),
@@ -56,5 +57,20 @@ class RootPreviewCard extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+Color _backgroundColorFor(MasteryLevel level) {
+  switch (level) {
+    case MasteryLevel.unlearned:
+      return Colors.white;
+    case MasteryLevel.weak:
+      return AppColors.masteryWeak;
+    case MasteryLevel.learning:
+      return AppColors.masteryLearning;
+    case MasteryLevel.strong:
+      return AppColors.masteryStrong;
+    case MasteryLevel.mastered:
+      return AppColors.masteryMastered;
   }
 }

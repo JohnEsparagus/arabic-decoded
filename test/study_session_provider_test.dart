@@ -126,6 +126,51 @@ void main() {
   });
 
   test(
+    'grading "Again" requeues the card at the back of its own phase',
+    () async {
+      final db = DatabaseService(pathOverride: inMemoryDatabasePath);
+      final deck = await db.getOrCreateDeck('Test Campaign');
+      for (final word in ['a', 'b', 'c']) {
+        await db.insertFlashcard(
+          Flashcard.newCard(
+            arabicWord: word,
+            englishTranslation: '$word-meaning',
+            exampleSentence: '',
+            deckId: deck.id!,
+          ),
+        );
+      }
+
+      final container = _containerFor(db);
+      final state = await _loaded(container);
+      expect(state.newQueue.map((c) => c.arabicWord), ['a', 'b', 'c']);
+
+      final notifier = container.read(studySessionProvider.notifier);
+
+      // Fail "a" — it should NOT just vanish until tomorrow; it goes to
+      // the back of today's queue instead, and the next card up is "b".
+      await notifier.grade(Grade.again);
+      var current = container.read(studySessionProvider);
+      expect(current.newQueue.map((c) => c.arabicWord), ['a', 'b', 'c', 'a']);
+      expect(current.current?.arabicWord, 'b');
+      expect(current.phaseTotal, 4); // grew by one when "a" was requeued
+
+      await notifier.grade(Grade.good); // b
+      await notifier.grade(Grade.good); // c
+
+      // "a" comes back around before the session ends.
+      current = container.read(studySessionProvider);
+      expect(current.current?.arabicWord, 'a');
+      expect(current.phase, StudyPhase.newCards);
+
+      await notifier.grade(Grade.good); // a, second time
+      expect(container.read(studySessionProvider).phase, StudyPhase.done);
+      // 4 grading actions total: a (failed), b, c, a (passed).
+      expect(container.read(studySessionProvider).reviewedCount, 4);
+    },
+  );
+
+  test(
     'new cards are exhausted from one campaign before moving to the next',
     () async {
       final db = DatabaseService(pathOverride: inMemoryDatabasePath);

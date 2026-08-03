@@ -21,13 +21,53 @@ class CampaignSource {
 
 const campaignSources = [
   CampaignSource(
-    assetPath: 'assets/data/campaign.json',
-    deckName: 'Campaign',
-    description: 'Core campaign vocabulary',
+    assetPath: 'assets/data/campaign_1_absolute_core.json',
+    deckName: 'Absolute Core',
+    description: 'The most foundational roots: writing, saying, knowing, being',
   ),
-  // Add the next campaign here once its JSON file exists, e.g.:
-  // CampaignSource(
-  //   assetPath: 'assets/data/campaign_2.json',
-  //   deckName: 'Campaign 2',
-  // ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_2_daily_actions.json',
+    deckName: 'Daily Actions',
+    description: 'Going, coming, entering, sitting, and other everyday verbs',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_3_learning_communication.json',
+    deckName: 'Learning & Communication',
+    description: 'Asking, answering, studying, explaining, translating',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_4_people_relationships.json',
+    deckName: 'People & Relationships',
+    description: 'Birth, life, death, love, family, and marriage',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_5_home_daily_life.json',
+    deckName: 'Home & Daily Life',
+    description: 'Eating, drinking, cooking, building, owning, selling',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_6_money_work.json',
+    deckName: 'Money & Work',
+    description: 'Buying, paying, profit, loss, farming, needing, serving',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_7_society_news.json',
+    deckName: 'Society & News',
+    description: 'Ruling, justice, war, peace, law, and the people',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_8_nature.json',
+    deckName: 'Nature',
+    description: 'Earth, sky, sun, moon, sea, mountains, wind, rain, light',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_9_time_change.json',
+    deckName: 'Time & Change',
+    description: 'Beginning, completing, growing, shrinking, nearness',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_10_abstract.json',
+    deckName: 'Abstract Concepts',
+    description: 'Cause, result, shape, example, gathering, dividing, type',
+  ),
 ];

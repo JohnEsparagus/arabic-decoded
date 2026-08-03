@@ -1,0 +1,82 @@
+[
+  {
+    "arabic": "ش ر ى",
+    "translit": "sh-r-y",
+    "meaning": "Buying",
+    "mnemonic": "A Shopper Rushes to Yell 'sold!' after buying. SH-R-Y is the root of buying.",
+    "words": ["اشترى", "يشتري", "شراء"],
+    "example": "She اشترى a new bag, and her شراء habit means she يشتري often."
+  },
+  {
+    "arabic": "د ف ع",
+    "translit": "d-f-ʿ",
+    "meaning": "Paying, pushing",
+    "mnemonic": "A Driver Fumbles with the Payment machine, pushing the button. D-F-ʿ is the root of paying and pushing.",
+    "words": ["دفع", "يدفع", "دفعة", "مدفوع"],
+    "example": "He دفع the bill in one دفعة, and it stayed مدفوع."
+  },
+  {
+    "arabic": "ع ط ي",
+    "translit": "ʿ-ṭ-y",
+    "meaning": "Giving",
+    "mnemonic": "An Artist Tosses a Yellow gift to a friend. ʿ-Ṭ-Y is the root of giving.",
+    "words": ["أعطى", "يعطي", "عطاء"],
+    "example": "He أعطى a gift kindly, and his عطاء never stops as he يعطي often."
+  },
+  {
+    "arabic": "ر ب ح",
+    "translit": "r-b-ḥ",
+    "meaning": "Profiting, winning",
+    "mnemonic": "A Racer Bags the Honor of winning first place. R-B-Ḥ is the root of profit and winning.",
+    "words": ["ربح", "يربح", "ربح", "رابح"],
+    "example": "The trader ربح a fortune, and every deal يربح makes him a رابح."
+  },
+  {
+    "arabic": "خ س ر",
+    "translit": "kh-s-r",
+    "meaning": "Losing",
+    "mnemonic": "A Knight Sighs and Retreats after losing the battle. KH-S-R is the root of losing.",
+    "words": ["خسر", "يخسر", "خسارة"],
+    "example": "He خسر the match, and the خسارة still stings as he يخسر again."
+  },
+  {
+    "arabic": "ز ر ع",
+    "translit": "z-r-ʿ",
+    "meaning": "Planting, farming",
+    "mnemonic": "A Zoologist Rakes and Aerates the soil to plant seeds. Z-R-ʿ is the root of planting and farming.",
+    "words": ["زرع", "يزرع", "زراعة", "مزرعة"],
+    "example": "The farmer زرع the field, his زراعة thriving on the مزرعة."
+  },
+  {
+    "arabic": "ث م ر",
+    "translit": "th-m-r",
+    "meaning": "Fruit, bearing fruit",
+    "mnemonic": "A Thespian Munches a Ripe fruit on stage. TH-M-R is the root of fruit and results.",
+    "words": ["ثمر", "يثمر", "ثمرة", "ثمار"],
+    "example": "The tree ثمر sweet apples, and every ثمرة among the ثمار was ripe."
+  },
+  {
+    "arabic": "ح ص ل",
+    "translit": "ḥ-ṣ-l",
+    "meaning": "Obtaining, resulting",
+    "mnemonic": "A Hiker Secures the Loot he was after. Ḥ-Ṣ-L is the root of obtaining and resulting.",
+    "words": ["حصل", "يحصل", "حصول", "نتيجة حصلت"],
+    "example": "He حصل on the prize, since he يحصل on rewards through hard work."
+  },
+  {
+    "arabic": "ح ت ا ج",
+    "translit": "ḥ-t-ʾ-j",
+    "meaning": "Needing",
+    "mnemonic": "A Hiker Tugs at his Aching Joints, needing rest badly. The extended root Ḥ-T-ʾ-J (from ح و ج) means to need.",
+    "words": ["احتاج", "يحتاج", "حاجة"],
+    "example": "He احتاج help urgently, and his حاجة grows as he يحتاج more."
+  },
+  {
+    "arabic": "خ د م",
+    "translit": "kh-d-m",
+    "meaning": "Serving",
+    "mnemonic": "A Knight Delivers a Meal in service to the king. KH-D-M is the root of serving.",
+    "words": ["خدم", "يخدم", "خدمة", "خادم"],
+    "example": "The خادم خدم the guests well, his خدمة praised by all."
+  }
+]

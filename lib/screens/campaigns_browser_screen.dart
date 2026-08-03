@@ -1,8 +1,10 @@
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/deck.dart';
 import '../providers/database_providers.dart';
+import '../providers/study_session_provider.dart';
 import '../theme/app_theme.dart';
 import '../widgets/root_preview_card.dart';
 import 'word_detail_screen.dart';
@@ -42,14 +44,71 @@ class CampaignsBrowserScreen extends ConsumerWidget {
             ),
           );
         }
+        final showResetButton = kDebugMode;
         return ListView.separated(
           padding: const EdgeInsets.all(20),
-          itemCount: decks.length,
+          itemCount: decks.length + (showResetButton ? 1 : 0),
           separatorBuilder: (_, _) => const SizedBox(height: 24),
-          itemBuilder: (context, index) => _CampaignSection(deck: decks[index]),
+          itemBuilder: (context, index) {
+            if (index >= decks.length) return const _ResetProgressButton();
+            return _CampaignSection(deck: decks[index]);
+          },
         );
       },
     );
+  }
+}
+
+/// Debug-only escape hatch for wiping local data while testing — the daily
+/// new-card cap, first-launch import, campaign progression, etc. are much
+/// easier to re-test from a clean slate than by uninstalling the app.
+/// `kDebugMode` strips this out of release builds automatically, so it
+/// never reaches a real user.
+class _ResetProgressButton extends ConsumerWidget {
+  const _ResetProgressButton();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Center(
+      child: TextButton.icon(
+        onPressed: () => _confirmAndReset(context, ref),
+        icon: const Icon(Icons.restart_alt, color: Colors.redAccent),
+        label: const Text(
+          'Reset all progress (debug)',
+          style: TextStyle(color: Colors.redAccent),
+        ),
+      ),
+    );
+  }
+
+  Future<void> _confirmAndReset(BuildContext context, WidgetRef ref) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Reset all progress?'),
+        content: const Text(
+          'Deletes every deck and flashcard and re-imports the campaigns '
+          'from scratch. This cannot be undone.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: const Text('Reset'),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) return;
+
+    await ref.read(databaseServiceProvider).resetDatabase();
+    ref.invalidate(campaignDecksProvider);
+    ref.invalidate(deckFlashcardsProvider);
+    ref.invalidate(dictionaryEntriesProvider);
+    ref.invalidate(studySessionProvider);
   }
 }
 

@@ -41,27 +41,35 @@ void main() {
         expect(find.text('Show answer'), findsOneWidget);
 
         // Switch to the Dictionary tab: it should already have the words
-        // imported by the Campaign tab available to browse. "Seeing" sorts
-        // first alphabetically (ر comes before the other roots' first
-        // letters), so it's guaranteed to be built without scrolling —
-        // ListView.separated only builds what's near the viewport.
+        // imported by the Campaign tab available to browse. "Taking" (أ خ
+        // ذ, from the Absolute Core campaign) sorts first alphabetically
+        // across every campaign's roots, so it's guaranteed to be built
+        // without scrolling — ListView.separated only builds what's near
+        // the viewport.
         await tester.tap(find.text('Dictionary'));
         await _settle(tester);
-        expect(find.text('Seeing'), findsOneWidget);
+        expect(find.text('Taking'), findsOneWidget);
 
         // Tapping a word opens its detail view (the flashcard back side),
-        // showing the mnemonic that plain dictionary rows don't show.
-        await tester.tap(find.text('Seeing'));
+        // showing detail-only content that plain dictionary rows don't:
+        // the transliteration and the mnemonic tip (its 💡 marker is our
+        // own widget chrome, not user-editable prose, so it's a stable
+        // thing to assert on regardless of what the mnemonic text says).
+        await tester.tap(find.text('Taking'));
         await _settle(tester);
-        expect(find.textContaining('climbing a mountain'), findsOneWidget);
+        expect(find.text('ʾ-kh-dh'), findsOneWidget);
+        expect(find.text('💡'), findsOneWidget);
         await tester.pageBack();
         await _settle(tester);
 
-        // Switch to the Campaigns tab: same underlying deck, shown as a
-        // section with a grid of compact root cards.
+        // Switch to the Campaigns tab: same underlying decks, shown as
+        // sections with a grid of compact root cards each. Absolute Core
+        // is the first campaign, so its section renders without scrolling.
+        // (Asserting on the deck name rather than a root count, since more
+        // than one campaign happens to share the same root count.)
         await tester.tap(find.text('Campaigns'));
         await _settle(tester);
-        expect(find.text('8 roots'), findsOneWidget);
+        expect(find.text('Absolute Core'), findsOneWidget);
       });
     },
   );

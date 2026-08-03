@@ -137,8 +137,25 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
 
     final db = ref.read(databaseServiceProvider);
     await db.updateFlashcard(updated);
+    // The Campaigns tab's per-deck root grid and the Dictionary tab both
+    // cache their flashcard lists independently of this session — without
+    // invalidating them, a just-graded card's new mastery level/interval
+    // wouldn't show up until something else happened to refresh them.
+    ref.invalidate(deckFlashcardsProvider);
+    ref.invalidate(dictionaryEntriesProvider);
+
+    // "Again" means you didn't get it — put it back at the end of whichever
+    // queue it came from so it comes up again before this session ends,
+    // instead of only coming back tomorrow via its persisted next_review.
+    final requeue = grade == Grade.again;
 
     state = state.copyWith(
+      reviewQueue: phase == StudyPhase.review && requeue
+          ? [...state.reviewQueue, updated]
+          : state.reviewQueue,
+      newQueue: phase == StudyPhase.newCards && requeue
+          ? [...state.newQueue, updated]
+          : state.newQueue,
       reviewIndex: phase == StudyPhase.review
           ? state.reviewIndex + 1
           : state.reviewIndex,

@@ -27,6 +27,7 @@ class DatabaseService {
 
   final String? pathOverride;
   Database? _db;
+  String? _resolvedPath;
 
   /// The plain `sqflite` package only ships plugin implementations for
   /// Android/iOS/macOS. This project also has Linux/Windows desktop
@@ -62,6 +63,7 @@ class DatabaseService {
     }
     final path =
         pathOverride ?? p.join(await getDatabasesPath(), 'arabic_decoded.db');
+    _resolvedPath = path;
     return openDatabase(
       path,
       version: 3,
@@ -136,6 +138,21 @@ class DatabaseService {
         }
       },
     );
+  }
+
+  /// Wipes every deck and flashcard and recreates a fresh schema — for
+  /// development use (e.g. re-testing the new-card cap or first-launch
+  /// import) rather than anything a real user should be able to trigger.
+  /// Closes the current connection, deletes the underlying file, and lets
+  /// the next call to [database] reopen (and re-run `onCreate`) from
+  /// scratch.
+  Future<void> resetDatabase() async {
+    if (kIsWeb) return;
+    final db = _db;
+    final path = _resolvedPath;
+    _db = null;
+    if (db != null) await db.close();
+    if (path != null) await databaseFactory.deleteDatabase(path);
   }
 
   // ---- Decks -------------------------------------------------------------

@@ -1,0 +1,82 @@
+[
+  {
+    "arabic": "أ ك ل",
+    "translit": "ʾ-k-l",
+    "meaning": "Eating",
+    "mnemonic": "An Actor Chews and swallows a Lasagna on stage. ʾ-K-L is the root of eating.",
+    "words": ["أكل", "يأكل", "طعام أكل", "مأكولات"],
+    "example": "He أكل the meal fast, since he يأكل all the مأكولات."
+  },
+  {
+    "arabic": "ش ر ب",
+    "translit": "sh-r-b",
+    "meaning": "Drinking",
+    "mnemonic": "A Sheikh Raises his Beverage and drinks. SH-R-B is the root of drinking.",
+    "words": ["شرب", "يشرب", "شراب", "مشروب"],
+    "example": "She شرب the tea slowly, enjoying every مشروب she يشرب."
+  },
+  {
+    "arabic": "ل ب س",
+    "translit": "l-b-s",
+    "meaning": "Wearing, clothing",
+    "mnemonic": "A Lady Buttons her Suit before heading out. L-B-S is the root of wearing and clothing.",
+    "words": ["لبس", "يلبس", "ملابس"],
+    "example": "He لبس his coat, since he يلبس new ملابس every winter."
+  },
+  {
+    "arabic": "ط ب خ",
+    "translit": "ṭ-b-kh",
+    "meaning": "Cooking",
+    "mnemonic": "A Tailor Bakes a Kabab in the kitchen. Ṭ-B-KH is the root of cooking.",
+    "words": ["طبخ", "يطبخ", "طبخ", "مطبخ"],
+    "example": "She طبخ dinner in the مطبخ, since she يطبخ every night."
+  },
+  {
+    "arabic": "س ك ن",
+    "translit": "s-k-n",
+    "meaning": "Living, dwelling",
+    "mnemonic": "A Sailor Keeps a Nest to live in permanently. S-K-N is the root of dwelling and residence.",
+    "words": ["سكن", "يسكن", "سكن", "مسكن"],
+    "example": "He سكن in the city, and his مسكن is where he يسكن now."
+  },
+  {
+    "arabic": "ب ن ى",
+    "translit": "b-n-y",
+    "meaning": "Building",
+    "mnemonic": "A Builder Nails and Yanks the beams into place. B-N-Y is the root of building.",
+    "words": ["بنى", "يبني", "بناء", "مبنى"],
+    "example": "They بنى the tower, and every مبنى they يبني adds to the skyline."
+  },
+  {
+    "arabic": "ص ن ع",
+    "translit": "ṣ-n-ʿ",
+    "meaning": "Making, manufacturing",
+    "mnemonic": "A Sculptor Nails an Artifact together, manufacturing it by hand. Ṣ-N-ʿ is the root of making and manufacturing.",
+    "words": ["صنع", "يصنع", "صناعة", "مصنع"],
+    "example": "The مصنع صنع the parts, and its صناعة grows every year."
+  },
+  {
+    "arabic": "س ت ع م ل",
+    "translit": "s-t-ʿ-m-l",
+    "meaning": "Using",
+    "mnemonic": "A Student Tries an Old Machine, Learning to use it. The extended root S-T-ʿ-M-L (from ع م ل, 'work') means to use or employ something.",
+    "words": ["استعمل", "يستعمل", "استعمال"],
+    "example": "He استعمل the tool carefully, and its استعمال became routine."
+  },
+  {
+    "arabic": "م ل ك",
+    "translit": "m-l-k",
+    "meaning": "Owning, possessing",
+    "mnemonic": "A Merchant Locks up his Kingdom of possessions. M-L-K is the root of owning and possessing.",
+    "words": ["ملك", "يملك", "ملك", "مملكة"],
+    "example": "He ملك a large estate, and the مملكة he يملك grew each year."
+  },
+  {
+    "arabic": "ب ي ع",
+    "translit": "b-y-ʿ",
+    "meaning": "Selling",
+    "mnemonic": "A Baker Yells about the Price, selling his bread. B-Y-ʿ is the root of selling.",
+    "words": ["باع", "يبيع", "بيع", "بائع"],
+    "example": "The بائع باع his goods fast, since he يبيع every morning."
+  }
+]

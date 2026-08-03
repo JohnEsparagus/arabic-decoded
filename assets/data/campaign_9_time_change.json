@@ -1,0 +1,82 @@
+[
+  {
+    "arabic": "ب د أ",
+    "translit": "b-d-ʾ",
+    "meaning": "Beginning",
+    "mnemonic": "A Baker Drafts his Agenda, beginning the day. B-D-ʾ is the root of beginning.",
+    "words": ["بدأ", "يبدأ", "بداية"],
+    "example": "He بدأ the project today, and it يبدأ a new بداية each time."
+  },
+  {
+    "arabic": "ت م م",
+    "translit": "t-m-m",
+    "meaning": "Completing",
+    "mnemonic": "A Tailor Measures and Mends until the suit is complete. T-M-M is the root of completing.",
+    "words": ["تم", "يتم", "تمام", "كامل تام"],
+    "example": "The work تم on time, and it يتم completed in تمام fashion."
+  },
+  {
+    "arabic": "ز ي د",
+    "translit": "z-y-d",
+    "meaning": "Increasing",
+    "mnemonic": "A Zoologist Yields more Data, increasing his findings. Z-Y-D is the root of increasing.",
+    "words": ["زاد", "يزيد", "زيادة"],
+    "example": "The price زاد sharply, and it continues to يزيد with each زيادة."
+  },
+  {
+    "arabic": "ن ق ص",
+    "translit": "n-q-ṣ",
+    "meaning": "Decreasing",
+    "mnemonic": "A Navigator Quietly Skips a step, decreasing the total. N-Q-Ṣ is the root of decreasing.",
+    "words": ["نقص", "ينقص", "نقصان"],
+    "example": "The supply نقص quickly, and it ينقص further with each نقصان."
+  },
+  {
+    "arabic": "ك ب ر",
+    "translit": "k-b-r",
+    "meaning": "Growing big",
+    "mnemonic": "A Captain Builds a huge Reserve, growing bigger. K-B-R is the root of growing and bigness.",
+    "words": ["كبر", "يكبر", "كبير", "أكبر"],
+    "example": "The child كبر fast, becoming كبير and eventually أكبر than his father."
+  },
+  {
+    "arabic": "ص غ ر",
+    "translit": "ṣ-gh-r",
+    "meaning": "Becoming small",
+    "mnemonic": "A Sculptor Grinds it down to a Reduced size. Ṣ-GH-R is the root of smallness.",
+    "words": ["صغر", "يصغر", "صغير", "أصغر"],
+    "example": "The team صغر over time, now صغير and the أصغر in the league."
+  },
+  {
+    "arabic": "غ ي ر",
+    "translit": "gh-y-r",
+    "meaning": "Changing",
+    "mnemonic": "A Ghost Yields to a Reshape, changing its form. GH-Y-R is the root of changing.",
+    "words": ["غير", "يغير", "تغيير", "متغير"],
+    "example": "He غير his plans suddenly, and the تغيير left everything متغير."
+  },
+  {
+    "arabic": "ث ب ت",
+    "translit": "th-b-t",
+    "meaning": "Fixing, stability",
+    "mnemonic": "A Thespian Bolts down the seT to keep it stable. TH-B-T is the root of fixing and stability.",
+    "words": ["ثبت", "يثبت", "ثابت"],
+    "example": "He ثبت the shelf firmly, and it stayed ثابت as he يثبت more each time."
+  },
+  {
+    "arabic": "ق ر ب",
+    "translit": "q-r-b",
+    "meaning": "Nearness",
+    "mnemonic": "A Queen Runs closer to Bond with her people. Q-R-B is the root of nearness.",
+    "words": ["قرب", "يقترب", "قريب", "قرابة"],
+    "example": "He قرب the door slowly, since he يقترب whenever a قريب visits."
+  },
+  {
+    "arabic": "ب ع د",
+    "translit": "b-ʿ-d",
+    "meaning": "Farness, after",
+    "mnemonic": "A Boxer Aims Distantly, staying far from his opponent. B-ʿ-D is the root of farness and after.",
+    "words": ["بعد", "بعيد", "يبعد"],
+    "example": "The town was بعيد from here, and it يبعد further after the بعد storm."
+  }
+]

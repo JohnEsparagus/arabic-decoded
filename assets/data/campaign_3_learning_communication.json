@@ -1,0 +1,122 @@
+[
+  {
+    "arabic": "س أ ل",
+    "translit": "s-ʾ-l",
+    "meaning": "Asking",
+    "mnemonic": "A Sailor Asks a Local for directions. S-ʾ-L is the root of asking and questioning.",
+    "words": ["سأل", "يسأل", "سؤال"],
+    "example": "He سأل the guide, and every سؤال he يسأل gets answered."
+  },
+  {
+    "arabic": "ج و ب",
+    "translit": "j-w-b",
+    "meaning": "Answering",
+    "mnemonic": "A Judge Waits for the answer, then Booms it out. J-W-B is the root of answering and responding.",
+    "words": ["أجاب", "يجيب", "جواب", "إجابة"],
+    "example": "He أجاب quickly, and his جواب became the official إجابة."
+  },
+  {
+    "arabic": "ذ ك ر",
+    "translit": "dh-k-r",
+    "meaning": "Mentioning, remembering",
+    "mnemonic": "A Duchess Keeps Recalling the old story. DH-K-R is the root of mentioning and remembering.",
+    "words": ["ذكر", "يذكر", "ذكرى", "تذكير"],
+    "example": "He ذكر the event, and it became a ذكرى he still يذكر."
+  },
+  {
+    "arabic": "ن س ي",
+    "translit": "n-s-y",
+    "meaning": "Forgetting",
+    "mnemonic": "A Navigator Skips the Yield sign, forgetting to check. N-S-Y is the root of forgetting.",
+    "words": ["نسي", "ينسى", "نسيان"],
+    "example": "He نسي the name, and ينسى it again due to his نسيان."
+  },
+  {
+    "arabic": "د ر س",
+    "translit": "d-r-s",
+    "meaning": "Studying",
+    "mnemonic": "A Detective Reviews the Scene like a student studies a case. D-R-S is the root of studying.",
+    "words": ["درس", "يدرس", "دراسة", "مدرسة"],
+    "example": "She درس hard at the مدرسة, her دراسة paying off."
+  },
+  {
+    "arabic": "ش ر ح",
+    "translit": "sh-r-ḥ",
+    "meaning": "Explaining",
+    "mnemonic": "A Shepherd Retells the tale with Heart, explaining every detail. SH-R-Ḥ is the root of explaining.",
+    "words": ["شرح", "يشرح", "شرح"],
+    "example": "The teacher شرح the lesson, and his شرح made it clear."
+  },
+  {
+    "arabic": "ب ح ث",
+    "translit": "b-ḥ-th",
+    "meaning": "Searching, researching",
+    "mnemonic": "A Botanist Hunts Thoroughly for a rare plant. B-Ḥ-TH is the root of searching and researching.",
+    "words": ["بحث", "يبحث", "بحث", "باحث"],
+    "example": "The باحث بحث for years, and still يبحث for answers."
+  },
+  {
+    "arabic": "خ ب ر",
+    "translit": "kh-b-r",
+    "meaning": "Informing, news",
+    "mnemonic": "A Knight Brings a Report from the battlefield. KH-B-R is the root of news and informing.",
+    "words": ["خبر", "أخبر", "يخبر", "خبير"],
+    "example": "He أخبر the king of the خبر, since he is a trusted خبير."
+  },
+  {
+    "arabic": "ت ر ج م",
+    "translit": "t-r-j-m",
+    "meaning": "Translating",
+    "mnemonic": "A Tourist Rushes to Jot down a translation, Mumbling the words. T-R-J-M is the root of translating.",
+    "words": ["ترجم", "يترجم", "ترجمة", "مترجم"],
+    "example": "The مترجم ترجم the speech, its ترجمة finished quickly."
+  },
+  {
+    "arabic": "ق ر ر",
+    "translit": "q-r-r",
+    "meaning": "Deciding",
+    "mnemonic": "A Queen Repeats her Ruling to make it final. Q-R-R is the root of deciding.",
+    "words": ["قرر", "يقرر", "قرار"],
+    "example": "She قرر to leave, and her قرار was final."
+  },
+  {
+    "arabic": "ح س ب",
+    "translit": "ḥ-s-b",
+    "meaning": "Calculating, thinking",
+    "mnemonic": "A Hiker Sums up the Bill in his head. Ḥ-S-B is the root of calculating and thinking.",
+    "words": ["حسب", "يحسب", "حساب", "حاسوب"],
+    "example": "He حسب the total, using a حاسوب for the حساب."
+  },
+  {
+    "arabic": "ق د ر",
+    "translit": "q-d-r",
+    "meaning": "Ability, estimating",
+    "mnemonic": "A Queen's Daughter Rules with the ability to estimate anything. Q-D-R is the root of ability and estimating.",
+    "words": ["قدر", "يقدر", "قدرة", "مقدار"],
+    "example": "She يقدر the distance well, since her قدرة for judging a مقدار is strong."
+  },
+  {
+    "arabic": "ب ي ن",
+    "translit": "b-y-n",
+    "meaning": "Making clear, between",
+    "mnemonic": "A Baker Yells the Notice clearly for all to understand. B-Y-N is the root of clarity and being between.",
+    "words": ["بين", "يبين", "بيان", "واضح بين"],
+    "example": "He بين his point clearly, so the بيان left nothing بين the lines."
+  },
+  {
+    "arabic": "ن ق ش",
+    "translit": "n-q-sh",
+    "meaning": "Discussing",
+    "mnemonic": "A Navigator Quizzes the Ship's crew, sparking a discussion. N-Q-SH is the root of discussing.",
+    "words": ["ناقش", "يناقش", "نقاش", "مناقشة"],
+    "example": "They ناقش the plan, and the نقاش turned into a full مناقشة."
+  },
+  {
+    "arabic": "ح ف ظ",
+    "translit": "ḥ-f-ẓ",
+    "meaning": "Memorizing, preserving",
+    "mnemonic": "A Historian Files everything with Zeal, preserving it forever. Ḥ-F-Ẓ is the root of memorizing and preserving.",
+    "words": ["حفظ", "يحفظ", "حفظ", "محفوظ"],
+    "example": "She حفظ the poem by heart, keeping it محفوظ forever."
+  }
+]

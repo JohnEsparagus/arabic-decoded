@@ -16,6 +16,14 @@ abstract final class AppColors {
   static const gold = Color(0xFFC9A24B);
   static const goldSoft = Color(0xFFE4D3A0);
   static const cardBorder = Color(0xFFDCC79A);
+
+  // Mastery-level backgrounds for root preview cards (see MasteryLevel) —
+  // soft enough to keep the Arabic text readable, distinct enough to read
+  // as a progression from weak (red) to mastered (blue) at a glance.
+  static const masteryWeak = Color(0xFFFFCDD2);
+  static const masteryLearning = Color(0xFFFFE0B2);
+  static const masteryStrong = Color(0xFFC8E6C9);
+  static const masteryMastered = Color(0xFFBBDEFB);
 }
 
 /// Arabic headword styling — the same face used for every Arabic-script

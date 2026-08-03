@@ -1,0 +1,122 @@
+[
+  {
+    "arabic": "ك ت ب",
+    "translit": "k-t-b",
+    "meaning": "Writing",
+    "mnemonic": "Kate Ties a Book shut. K-T-B becomes the root for writing, books, authors, and libraries.",
+    "words": ["كتاب", "كاتب", "مكتبة", "كتابة"],
+    "example": "A كاتب writes a كتاب in a مكتبة, producing كتابة."
+  },
+  {
+    "arabic": "ق و ل",
+    "translit": "q-w-l",
+    "meaning": "Saying",
+    "mnemonic": "A Queen's Words Land like thunder. Q-W-L is the root for saying, speech, and statements.",
+    "words": ["قال", "يقول", "قول", "مقال"],
+    "example": "He قال what he wanted to say, and it became his قول, later a مقال."
+  },
+  {
+    "arabic": "ع ل م",
+    "translit": "ʿ-l-m",
+    "meaning": "Knowledge",
+    "mnemonic": "Imagine an All-knowing Lecturer Mentoring everyone. ʿ-L-M becomes the root of knowledge, learning, and teaching.",
+    "words": ["علم", "معلم", "عالم", "تعليم"],
+    "example": "A معلم gives تعليم so students gain علم."
+  },
+  {
+    "arabic": "ع م ل",
+    "translit": "ʿ-m-l",
+    "meaning": "Work",
+    "mnemonic": "An Amateur Mechanic Labors all night. ʿ-M-L is the root of work, action, and labor.",
+    "words": ["عمل", "يعمل", "عامل", "معمل"],
+    "example": "A عامل goes to the معمل to عمل every day."
+  },
+  {
+    "arabic": "ك و ن",
+    "translit": "k-w-n",
+    "meaning": "Being",
+    "mnemonic": "A Cow Wanders into Nowhere and simply exists. K-W-N is the root of being, existing, and becoming.",
+    "words": ["كان", "يكون", "كون", "مكان"],
+    "example": "It كان there, and it still يكون in that مكان."
+  },
+  {
+    "arabic": "ق ر أ",
+    "translit": "q-r-ʾ",
+    "meaning": "Reading",
+    "mnemonic": "A Queen Reads Aloud. Q-R-ʾ reminds you of reading whenever you see these letters together.",
+    "words": ["قرأ", "قراءة", "قارئ"],
+    "example": "A قارئ enjoys قراءة every day."
+  },
+  {
+    "arabic": "ر أ ي",
+    "translit": "r-ʾ-y",
+    "meaning": "Seeing",
+    "mnemonic": "A Ranger's Eye Yields a breathtaking view. R-ʾ-Y is all about seeing, vision, and opinion.",
+    "words": ["رأى", "يرى", "رأي", "رؤية"],
+    "example": "His رأي changed after the رؤية."
+  },
+  {
+    "arabic": "ع ر ف",
+    "translit": "ʿ-r-f",
+    "meaning": "Knowing, recognizing",
+    "mnemonic": "An Artist Recognizes a Familiar face instantly. ʿ-R-F is the root of recognition and familiarity.",
+    "words": ["عرف", "يعرف", "معروف", "معرفة"],
+    "example": "She عرف the معروف scientist from television."
+  },
+  {
+    "arabic": "ف ه م",
+    "translit": "f-h-m",
+    "meaning": "Understanding",
+    "mnemonic": "A Flash of Hidden Meaning makes everything click. F-H-M is the root of understanding and comprehension.",
+    "words": ["فهم", "يفهم", "مفهوم"],
+    "example": "Students فهم the new مفهوم quickly."
+  },
+  {
+    "arabic": "س م ع",
+    "translit": "s-m-ʿ",
+    "meaning": "Hearing",
+    "mnemonic": "Sam's Mega Ears hear everything. S-M-ʿ becomes the root for hearing and listening.",
+    "words": ["سمع", "يسمع", "سماع", "مسموع"],
+    "example": "Everyone سمع the news immediately."
+  },
+  {
+    "arabic": "ن ظ ر",
+    "translit": "n-ẓ-r",
+    "meaning": "Looking",
+    "mnemonic": "A Navigator Zooms with a Reflector telescope. N-Ẓ-R means looking, observing, and views.",
+    "words": ["نظر", "ينظر", "نظرة", "منظر"],
+    "example": "The منظر was beautiful to نظر at."
+  },
+  {
+    "arabic": "و ج د",
+    "translit": "w-j-d",
+    "meaning": "Finding",
+    "mnemonic": "A Wanderer Jogs and Discovers treasure. W-J-D is the root of finding and existing.",
+    "words": ["وجد", "يجد", "موجود"],
+    "example": "He وجد the keys and they were موجود the whole time."
+  },
+  {
+    "arabic": "أ خ ذ",
+    "translit": "ʾ-kh-dh",
+    "meaning": "Taking",
+    "mnemonic": "An Archer's Kid grabs the Dessert before anyone notices. ʾ-KH-DH is the root of taking and grabbing.",
+    "words": ["أخذ", "يأخذ", "مأخوذ"],
+    "example": "She أخذ the last slice, يأخذ it fast, leaving nothing but مأخوذ looks."
+  },
+  {
+    "arabic": "ج ع ل",
+    "translit": "j-ʿ-l",
+    "meaning": "Making",
+    "mnemonic": "A Juggler Amazes and Livens up the crowd, making the show great. J-ʿ-L is the root of making and causing.",
+    "words": ["جعل", "يجعل", "مجعول"],
+    "example": "The trick جعل the audience gasp, as it always يجعل them do."
+  },
+  {
+    "arabic": "ف ع ل",
+    "translit": "f-ʿ-l",
+    "meaning": "Doing",
+    "mnemonic": "A Fencer Acts with a Lunge. F-ʿ-L is the root of doing and acting.",
+    "words": ["فعل", "يفعل", "فعل", "فاعل"],
+    "example": "He فعل what needed to be done, since he is always the فاعل."
+  }
+]

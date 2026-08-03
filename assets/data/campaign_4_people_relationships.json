@@ -1,0 +1,82 @@
+[
+  {
+    "arabic": "و ل د",
+    "translit": "w-l-d",
+    "meaning": "Being born, child",
+    "mnemonic": "A Wanderer's Long-awaited Delivery — a baby is born. W-L-D is the root of birth and children.",
+    "words": ["ولد", "يلد", "والد", "مولود"],
+    "example": "The mother ولد a child, and the والد welcomed the مولود."
+  },
+  {
+    "arabic": "ح ي ي",
+    "translit": "ḥ-y-y",
+    "meaning": "Living, greeting",
+    "mnemonic": "A Hiker's Youthful Yell greets everyone with life. Ḥ-Y-Y is the root of living and greeting.",
+    "words": ["حي", "يحيا", "حياة", "تحية"],
+    "example": "He is still حي, and every تحية celebrates his حياة."
+  },
+  {
+    "arabic": "م و ت",
+    "translit": "m-w-t",
+    "meaning": "Dying",
+    "mnemonic": "A Miner Wanders into the Tunnel and never returns. M-W-T is the root of death.",
+    "words": ["مات", "يموت", "موت", "ميت"],
+    "example": "The old tree مات, its موت marked by a ميت trunk."
+  },
+  {
+    "arabic": "ح ب ب",
+    "translit": "ḥ-b-b",
+    "meaning": "Loving",
+    "mnemonic": "A Heart Beats and Bounces with love. Ḥ-B-B is the root of loving and affection.",
+    "words": ["حب", "يحب", "محبوب", "حبيب"],
+    "example": "He حب her deeply, calling her his حبيب, always محبوب."
+  },
+  {
+    "arabic": "ك ر ه",
+    "translit": "k-r-h",
+    "meaning": "Hating",
+    "mnemonic": "A Critic Rejects with Hostility everything he hates. K-R-H is the root of hating and disliking.",
+    "words": ["كره", "يكره", "كراهية"],
+    "example": "He كره the taste, and كراهية for it never faded."
+  },
+  {
+    "arabic": "س ع د",
+    "translit": "s-ʿ-d",
+    "meaning": "Helping, happiness",
+    "mnemonic": "A Scout's Aid Delivers help and joy to the village. S-ʿ-D is the root of helping and happiness.",
+    "words": ["ساعد", "يساعد", "مساعدة", "سعيد"],
+    "example": "She ساعد the old man, and her مساعدة made him سعيد."
+  },
+  {
+    "arabic": "د ع و",
+    "translit": "d-ʿ-w",
+    "meaning": "Calling, inviting",
+    "mnemonic": "A Duke's Aide Waves everyone over, calling them in. D-ʿ-W is the root of calling and inviting.",
+    "words": ["دعا", "يدعو", "دعوة"],
+    "example": "He دعا his friends over, and the دعوة was warmly received."
+  },
+  {
+    "arabic": "ش ه د",
+    "translit": "sh-h-d",
+    "meaning": "Witnessing",
+    "mnemonic": "A Shepherd Holds a Diary of everything he witnesses. SH-H-D is the root of witnessing.",
+    "words": ["شهد", "يشهد", "شاهد", "شهادة"],
+    "example": "The شاهد شهد the event, and gave his شهادة in court."
+  },
+  {
+    "arabic": "ز و ج",
+    "translit": "z-w-j",
+    "meaning": "Pairing, marrying",
+    "mnemonic": "A Zookeeper Wants a Jointly matched pair of animals. Z-W-J is the root of pairing and marriage.",
+    "words": ["زوج", "تزوج", "زواج", "زوجة"],
+    "example": "He تزوج his زوجة after a long زواج ceremony."
+  },
+  {
+    "arabic": "أ ه ل",
+    "translit": "ʾ-h-l",
+    "meaning": "Family, people, belonging",
+    "mnemonic": "An Actor's Home Life revolves around family. ʾ-H-L is the root of family and belonging.",
+    "words": ["أهل", "أهلا", "أهلي"],
+    "example": "His أهل welcomed guests warmly with أهلا, proud of their أهلي bonds."
+  }
+]

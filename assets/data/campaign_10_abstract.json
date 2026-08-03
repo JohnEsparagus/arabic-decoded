@@ -1,0 +1,82 @@
+[
+  {
+    "arabic": "س ب ب",
+    "translit": "s-b-b",
+    "meaning": "Cause, reason",
+    "mnemonic": "A Scientist Backs his Belief with a solid reason. S-B-B is the root of cause and reason.",
+    "words": ["سبب", "يسبب", "أسباب"],
+    "example": "The fire سبب major damage, and every one of its أسباب was studied."
+  },
+  {
+    "arabic": "ن ت ج",
+    "translit": "n-t-j",
+    "meaning": "Resulting, producing",
+    "mnemonic": "A Navigator Times his Journey, producing a clear result. N-T-J is the root of resulting and producing.",
+    "words": ["نتج", "ينتج", "نتيجة", "منتج"],
+    "example": "The factory ينتج goods daily, and each منتج leads to a new نتيجة."
+  },
+  {
+    "arabic": "ش ك ل",
+    "translit": "sh-k-l",
+    "meaning": "Shape, forming",
+    "mnemonic": "A Sculptor Keeps molding the cLay into shape. SH-K-L is the root of shape and forming.",
+    "words": ["شكل", "يشكل", "أشكال", "مشكلة"],
+    "example": "The clay شكل into a vase, its أشكال varied, though one became a مشكلة."
+  },
+  {
+    "arabic": "م ث ل",
+    "translit": "m-th-l",
+    "meaning": "Example, resembling",
+    "mnemonic": "A Merchant Throws down a Lookalike example. M-TH-L is the root of examples and resembling.",
+    "words": ["مثل", "يمثل", "مثال", "تمثيل"],
+    "example": "He gave a مثل to explain, and the مثال helped his تمثيل of the idea."
+  },
+  {
+    "arabic": "ج م ع",
+    "translit": "j-m-ʿ",
+    "meaning": "Gathering, collecting",
+    "mnemonic": "A Juggler Musters Allies to gather the crowd. J-M-ʿ is the root of gathering.",
+    "words": ["جمع", "يجمع", "جماعة", "مجموعة"],
+    "example": "He جمع the coins, sorting them into a مجموعة for the جماعة."
+  },
+  {
+    "arabic": "ف ر ق",
+    "translit": "f-r-q",
+    "meaning": "Difference, separating",
+    "mnemonic": "A Farmer Rakes and Quits, separating the piles. F-R-Q is the root of difference and separation.",
+    "words": ["فرق", "يفرق", "فريق", "مختلف فارق"],
+    "example": "There is a فرق between them, and the فريق يفرق its tasks accordingly."
+  },
+  {
+    "arabic": "ق ط ع",
+    "translit": "q-ṭ-ʿ",
+    "meaning": "Cutting",
+    "mnemonic": "A Queen's Tailor Amputates the excess fabric, cutting it off. Q-Ṭ-ʿ is the root of cutting.",
+    "words": ["قطع", "يقطع", "قطعة", "مقطوع"],
+    "example": "He قطع the rope, leaving a قطعة that stayed مقطوع forever."
+  },
+  {
+    "arabic": "و ص ل",
+    "translit": "w-ṣ-l",
+    "meaning": "Connecting, joining",
+    "mnemonic": "A Welder Solders a Link, connecting the pieces. W-Ṣ-L is the root of connecting and joining.",
+    "words": ["وصل", "يصل", "اتصال", "متصل"],
+    "example": "The wires وصل together, and the اتصال stayed متصل throughout."
+  },
+  {
+    "arabic": "ق س م",
+    "translit": "q-s-m",
+    "meaning": "Dividing",
+    "mnemonic": "A Queen Slices and Measures, dividing the cake fairly. Q-S-M is the root of dividing.",
+    "words": ["قسم", "يقسم", "قسمة", "أقسام"],
+    "example": "He قسم the land, and its أقسام were divided by careful قسمة."
+  },
+  {
+    "arabic": "ن و ع",
+    "translit": "n-w-ʿ",
+    "meaning": "Type, kind, variety",
+    "mnemonic": "A Navigator Wants an Assortment of every type. N-W-ʿ is the root of type and variety.",
+    "words": ["نوع", "أنواع", "متنوع"],
+    "example": "This نوع of fruit is rare, and the market sells متنوع أنواع."
+  }
+]

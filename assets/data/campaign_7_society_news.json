@@ -1,0 +1,82 @@
+[
+  {
+    "arabic": "ح ك م",
+    "translit": "ḥ-k-m",
+    "meaning": "Ruling, judging",
+    "mnemonic": "A Historian Keeps a Memo of every ruling. Ḥ-K-M is the root of ruling and judging.",
+    "words": ["حكم", "يحكم", "حكومة", "حاكم"],
+    "example": "The حاكم حكم the land, his حكومة governed by strict حكم."
+  },
+  {
+    "arabic": "ع د ل",
+    "translit": "ʿ-d-l",
+    "meaning": "Justice, fairness",
+    "mnemonic": "An Advocate Delivers a Level, balanced verdict. ʿ-D-L is the root of justice and fairness.",
+    "words": ["عدل", "عادل", "عدالة"],
+    "example": "The judge sought عدل, ruling with عدالة as a truly عادل man."
+  },
+  {
+    "arabic": "ح ق ق",
+    "translit": "ḥ-q-q",
+    "meaning": "Truth, right",
+    "mnemonic": "A Historian Quizzes and Questions until he finds the truth. Ḥ-Q-Q is the root of truth and rights.",
+    "words": ["حق", "حقيقة", "تحقيق"],
+    "example": "She sought the حق, and the تحقيق revealed the حقيقة."
+  },
+  {
+    "arabic": "ظ ل م",
+    "translit": "ẓ-l-m",
+    "meaning": "Oppression, injustice",
+    "mnemonic": "A Zealous Landlord Mistreats his tenants unjustly. Ẓ-L-M is the root of oppression and injustice.",
+    "words": ["ظلم", "يظلم", "ظالم", "مظلوم"],
+    "example": "The tyrant ظلم the people, and the مظلوم suffered under the ظالم."
+  },
+  {
+    "arabic": "أ م ن",
+    "translit": "ʾ-m-n",
+    "meaning": "Safety, security, trust",
+    "mnemonic": "An Astronaut Mans the Nest, keeping it safe and secure. ʾ-M-N is the root of safety and trust.",
+    "words": ["أمن", "آمن", "أمان", "أمين"],
+    "example": "The guard kept the أمن, and every أمين felt أمان in that آمن place."
+  },
+  {
+    "arabic": "ح ر ب",
+    "translit": "ḥ-r-b",
+    "meaning": "War",
+    "mnemonic": "A Historian Records the Battle in grim detail. Ḥ-R-B is the root of war.",
+    "words": ["حرب", "محارب", "حروب"],
+    "example": "The حرب raged for years, and every محارب remembered the حروب."
+  },
+  {
+    "arabic": "س ل م",
+    "translit": "s-l-m",
+    "meaning": "Peace, safety",
+    "mnemonic": "A Sailor Lays down his Musket, choosing peace. S-L-M is the root of peace and safety.",
+    "words": ["سلام", "سلم", "استسلم", "سليم"],
+    "example": "They signed for سلام, and the region stayed سليم after the war ended in استسلم."
+  },
+  {
+    "arabic": "ق ن ن",
+    "translit": "q-n-n",
+    "meaning": "Law",
+    "mnemonic": "A Queen Nails down the New law firmly. Q-N-N is the root of law.",
+    "words": ["قانون", "قوانين"],
+    "example": "The new قانون was passed, joining the country's growing قوانين."
+  },
+  {
+    "arabic": "ن ظ م",
+    "translit": "n-ẓ-m",
+    "meaning": "Organizing, order",
+    "mnemonic": "A Navigator Zips through his Manual, organizing everything neatly. N-Ẓ-M is the root of organizing.",
+    "words": ["نظم", "ينظم", "نظام", "منظمة"],
+    "example": "She نظم the files well, since the منظمة she leads follows strict نظام."
+  },
+  {
+    "arabic": "ش ع ب",
+    "translit": "sh-ʿ-b",
+    "meaning": "People, nation",
+    "mnemonic": "A Sheikh Addresses the Bunch of citizens as one people. SH-ʿ-B is the root of people and nation.",
+    "words": ["شعب", "شعبي", "شعوب"],
+    "example": "The شعب gathered proudly, their شعبي traditions shared among many شعوب."
+  }
+]
