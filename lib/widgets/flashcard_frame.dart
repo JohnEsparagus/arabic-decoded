@@ -12,15 +12,16 @@ class FlashcardFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = context.colors;
     return SizedBox.expand(
       child: DecoratedBox(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: colors.cardSurface,
           borderRadius: BorderRadius.circular(22),
-          border: Border.all(color: AppColors.gold, width: 1.4),
+          border: Border.all(color: colors.gold, width: 1.4),
           boxShadow: [
             BoxShadow(
-              color: AppColors.ink.withValues(alpha: 0.08),
+              color: colors.ink.withValues(alpha: 0.08),
               blurRadius: 16,
               offset: const Offset(0, 6),
             ),
@@ -31,7 +32,7 @@ class FlashcardFrame extends StatelessWidget {
           child: DecoratedBox(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18),
-              border: Border.all(color: AppColors.goldSoft, width: 1),
+              border: Border.all(color: colors.goldSoft, width: 1),
             ),
             child: Padding(padding: const EdgeInsets.all(24), child: child),
           ),

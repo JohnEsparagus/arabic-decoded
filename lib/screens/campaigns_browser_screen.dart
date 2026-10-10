@@ -26,21 +26,22 @@ class CampaignsBrowserScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final decksAsync = ref.watch(campaignDecksProvider);
 
+    final colors = context.colors;
     return decksAsync.when(
       loading: () => const Center(child: CircularProgressIndicator()),
       error: (error, stack) => Center(
         child: Text(
           'Could not load campaigns:\n$error',
           textAlign: TextAlign.center,
-          style: const TextStyle(color: AppColors.inkMuted),
+          style: TextStyle(color: colors.inkMuted),
         ),
       ),
       data: (decks) {
         if (decks.isEmpty) {
-          return const Center(
+          return Center(
             child: Text(
               'No campaigns yet.',
-              style: TextStyle(color: AppColors.inkMuted),
+              style: TextStyle(color: colors.inkMuted),
             ),
           );
         }
@@ -120,6 +121,7 @@ class _CampaignSection extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final rootsAsync = ref.watch(deckFlashcardsProvider(deck.id!));
+    final colors = context.colors;
 
     return Card(
       child: Padding(
@@ -138,7 +140,7 @@ class _CampaignSection extends ConsumerWidget {
                 rootsAsync.maybeWhen(
                   data: (roots) => Text(
                     '${roots.length} root${roots.length == 1 ? '' : 's'}',
-                    style: const TextStyle(color: AppColors.inkMuted),
+                    style: TextStyle(color: colors.inkMuted),
                   ),
                   orElse: () => const SizedBox.shrink(),
                 ),
@@ -148,7 +150,7 @@ class _CampaignSection extends ConsumerWidget {
               const SizedBox(height: 4),
               Text(
                 deck.description!,
-                style: const TextStyle(color: AppColors.inkMuted),
+                style: TextStyle(color: colors.inkMuted),
               ),
             ],
             const SizedBox(height: 14),
@@ -156,13 +158,13 @@ class _CampaignSection extends ConsumerWidget {
               loading: () => const Center(child: CircularProgressIndicator()),
               error: (error, stack) => Text(
                 'Could not load roots: $error',
-                style: const TextStyle(color: AppColors.inkMuted),
+                style: TextStyle(color: colors.inkMuted),
               ),
               data: (roots) {
                 if (roots.isEmpty) {
-                  return const Text(
+                  return Text(
                     'No roots in this campaign yet.',
-                    style: TextStyle(color: AppColors.inkMuted),
+                    style: TextStyle(color: colors.inkMuted),
                   );
                 }
                 return Wrap(

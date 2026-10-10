@@ -17,6 +17,7 @@ class DictionaryScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final query = ref.watch(searchQueryProvider);
     final entriesAsync = ref.watch(dictionaryEntriesProvider);
+    final colors = context.colors;
 
     return Padding(
       padding: const EdgeInsets.all(20),
@@ -27,7 +28,7 @@ class DictionaryScreen extends ConsumerWidget {
             textDirection: TextDirection.rtl,
             decoration: InputDecoration(
               hintText: 'ابحث عن كلمة… (search Arabic or English)',
-              prefixIcon: const Icon(Icons.search, color: AppColors.inkMuted),
+              prefixIcon: Icon(Icons.search, color: colors.inkMuted),
               suffixIcon: query.isNotEmpty
                   ? IconButton(
                       icon: const Icon(Icons.clear),
@@ -47,7 +48,7 @@ class DictionaryScreen extends ConsumerWidget {
                 child: Text(
                   'Could not load the dictionary:\n$error',
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: AppColors.inkMuted),
+                  style: TextStyle(color: colors.inkMuted),
                 ),
               ),
               data: (entries) {
@@ -55,9 +56,9 @@ class DictionaryScreen extends ConsumerWidget {
                   return Center(
                     child: Text(
                       query.trim().isEmpty
-                          ? 'No words yet — visit Campaign to add some.'
+                          ? 'No words yet — visit Home to add some.'
                           : 'No matches for "$query".',
-                      style: const TextStyle(color: AppColors.inkMuted),
+                      style: TextStyle(color: colors.inkMuted),
                     ),
                   );
                 }
@@ -83,6 +84,7 @@ class _DictionaryEntryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = context.colors;
     return Card(
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
@@ -100,17 +102,17 @@ class _DictionaryEntryCard extends StatelessWidget {
                     Text(
                       card.arabicWord,
                       textDirection: TextDirection.rtl,
-                      style: arabicTextStyle(fontSize: 22),
+                      style: arabicTextStyle(fontSize: 22, color: colors.ink),
                     ),
                     const SizedBox(height: 2),
                     Text(
                       card.englishTranslation,
-                      style: const TextStyle(color: AppColors.inkMuted),
+                      style: TextStyle(color: colors.inkMuted),
                     ),
                   ],
                 ),
               ),
-              const Icon(Icons.chevron_right, color: AppColors.inkMuted),
+              Icon(Icons.chevron_right, color: colors.inkMuted),
             ],
           ),
         ),

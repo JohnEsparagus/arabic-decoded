@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 import 'package:arabic_decoded/models/deck.dart';
 import 'package:arabic_decoded/providers/database_providers.dart';
+import 'package:arabic_decoded/providers/settings_providers.dart';
+import 'package:arabic_decoded/repositories/local_flashcard_repository.dart';
 import 'package:arabic_decoded/screens/study_screen.dart';
 import 'package:arabic_decoded/services/content_importer.dart';
 import 'package:arabic_decoded/services/database_service.dart';
+import 'package:arabic_decoded/theme/app_theme.dart';
 
 Future<void> _settle(WidgetTester tester) async {
   for (var i = 0; i < 10; i++) {
@@ -27,10 +31,12 @@ void main() {
     final db = DatabaseService(pathOverride: inMemoryDatabasePath);
 
     await tester.runAsync(() async {
-      final deck = await ContentImporter(db).importAsset(
-        assetPath: 'assets/data/campaign.json',
-        deckName: 'Campaign',
-      );
+      SharedPreferences.setMockInitialValues({});
+      final prefs = await SharedPreferences.getInstance();
+
+      final deck = await ContentImporter(
+        LocalFlashcardRepository(db),
+      ).importAsset(assetPath: 'assets/data/campaign.json', deckName: 'Campaign');
       final cardCount = (await db.getFlashcardsForDeck(deck.id!)).length;
       expect(cardCount, greaterThan(0));
 
@@ -41,9 +47,11 @@ void main() {
             // Content is already imported above; skip the real import so
             // this test isn't coupled to what's in campaign_sources.dart.
             campaignDecksProvider.overrideWith((ref) async => <Deck>[deck]),
+            sharedPreferencesProvider.overrideWithValue(prefs),
           ],
-          child: const MaterialApp(
-            home: Scaffold(
+          child: MaterialApp(
+            theme: buildAppTheme(brightness: Brightness.light),
+            home: const Scaffold(
               body: Padding(
                 padding: EdgeInsets.all(20),
                 child: StudySessionView(),

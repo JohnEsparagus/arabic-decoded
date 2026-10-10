@@ -5,7 +5,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import '../config/campaign_sources.dart';
 import '../models/deck.dart';
 import '../models/flashcard.dart';
-import 'database_service.dart';
+import '../repositories/flashcard_repository.dart';
 
 /// Imports flashcards from a bundled JSON asset into a named deck.
 ///
@@ -33,9 +33,9 @@ import 'database_service.dart';
 /// words to the JSON file and relaunching picks them up without resetting
 /// anyone's review history, unlike a one-time "seed if empty" pass.
 class ContentImporter {
-  ContentImporter(this._db);
+  ContentImporter(this._repository);
 
-  final DatabaseService _db;
+  final FlashcardRepository _repository;
 
   /// Imports every campaign in [sources] (defaults to [campaignSources]),
   /// in order. Sequential — not parallel — so decks get created in list
@@ -62,11 +62,14 @@ class ContentImporter {
     required String deckName,
     String? deckDescription,
   }) async {
-    final deck = await _db.getOrCreateDeck(deckName, description: deckDescription);
+    final deck = await _repository.getOrCreateDeck(
+      deckName,
+      description: deckDescription,
+    );
     final entries = await _loadEntries(assetPath);
     if (entries.isEmpty) return deck;
 
-    final existingWords = (await _db.getFlashcardsForDeck(
+    final existingWords = (await _repository.getFlashcardsForDeck(
       deck.id!,
     )).map((card) => card.arabicWord).toSet();
 
@@ -76,7 +79,7 @@ class ContentImporter {
         continue;
       }
       final words = entry['words'];
-      await _db.insertFlashcard(
+      await _repository.insertFlashcard(
         Flashcard.newCard(
           arabicWord: arabic,
           englishTranslation: entry['meaning'] as String? ?? '',

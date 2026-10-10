@@ -1,9 +1,11 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 import 'package:arabic_decoded/main.dart';
 import 'package:arabic_decoded/providers/database_providers.dart';
+import 'package:arabic_decoded/providers/settings_providers.dart';
 import 'package:arabic_decoded/services/database_service.dart';
 
 Future<void> _settle(WidgetTester tester) async {
@@ -23,21 +25,25 @@ void main() {
       // waits between pumps) needs to happen inside `runAsync` so the
       // import -> read -> render chain can actually complete.
       await tester.runAsync(() async {
+        SharedPreferences.setMockInitialValues({});
+        final prefs = await SharedPreferences.getInstance();
+
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               databaseServiceProvider.overrideWithValue(
                 DatabaseService(pathOverride: inMemoryDatabasePath),
               ),
+              sharedPreferencesProvider.overrideWithValue(prefs),
             ],
             child: const ArabicDecodedApp(),
           ),
         );
         await _settle(tester);
 
-        // Campaign tab is selected by default and shows its flip-card
-        // study session, front-side-up.
-        expect(find.text('Campaign'), findsWidgets); // app bar + nav label
+        // Home tab is selected by default and shows its flip-card study
+        // session, front-side-up.
+        expect(find.text('Home'), findsWidgets); // app bar + nav label
         expect(find.text('Show answer'), findsOneWidget);
 
         // Switch to the Dictionary tab: it should already have the words

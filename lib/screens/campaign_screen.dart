@@ -23,7 +23,7 @@ class CampaignScreen extends ConsumerWidget {
           child: Text(
             'Could not load campaigns:\n$error',
             textAlign: TextAlign.center,
-            style: const TextStyle(color: AppColors.inkMuted),
+            style: TextStyle(color: context.colors.inkMuted),
           ),
         ),
         data: (_) => const StudySessionView(),

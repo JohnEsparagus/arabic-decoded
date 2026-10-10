@@ -16,6 +16,7 @@ class RootPreviewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = context.colors;
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(14),
@@ -23,9 +24,9 @@ class RootPreviewCard extends StatelessWidget {
         width: 92,
         padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
         decoration: BoxDecoration(
-          color: _backgroundColorFor(masteryLevelOf(card)),
+          color: _backgroundColorFor(colors, masteryLevelOf(card)),
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: AppColors.cardBorder),
+          border: Border.all(color: colors.cardBorder),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -36,7 +37,7 @@ class RootPreviewCard extends StatelessWidget {
               textAlign: TextAlign.center,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: arabicTextStyle(fontSize: 20),
+              style: arabicTextStyle(fontSize: 20, color: colors.ink),
             ),
             if (card.transliteration != null &&
                 card.transliteration!.isNotEmpty) ...[
@@ -46,9 +47,9 @@ class RootPreviewCard extends StatelessWidget {
                 textAlign: TextAlign.center,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 11,
-                  color: AppColors.inkMuted,
+                  color: colors.inkMuted,
                   fontStyle: FontStyle.italic,
                 ),
               ),
@@ -60,17 +61,17 @@ class RootPreviewCard extends StatelessWidget {
   }
 }
 
-Color _backgroundColorFor(MasteryLevel level) {
+Color _backgroundColorFor(AppColors colors, MasteryLevel level) {
   switch (level) {
     case MasteryLevel.unlearned:
-      return Colors.white;
+      return colors.cardSurface;
     case MasteryLevel.weak:
-      return AppColors.masteryWeak;
+      return colors.masteryWeak;
     case MasteryLevel.learning:
-      return AppColors.masteryLearning;
+      return colors.masteryLearning;
     case MasteryLevel.strong:
-      return AppColors.masteryStrong;
+      return colors.masteryStrong;
     case MasteryLevel.mastered:
-      return AppColors.masteryMastered;
+      return colors.masteryMastered;
   }
 }

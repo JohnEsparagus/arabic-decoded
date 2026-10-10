@@ -19,7 +19,9 @@ class PatternDivider extends StatelessWidget {
       height: height,
       width: double.infinity,
       child: CustomPaint(
-        painter: _ZigzagPainter(color ?? AppColors.gold.withValues(alpha: 0.55)),
+        painter: _ZigzagPainter(
+          color ?? context.colors.gold.withValues(alpha: 0.55),
+        ),
       ),
     );
   }

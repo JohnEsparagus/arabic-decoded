@@ -39,7 +39,7 @@ class StudySessionView extends ConsumerWidget {
           '${session.reviewedCount} seen',
           style: Theme.of(
             context,
-          ).textTheme.bodySmall?.copyWith(color: AppColors.inkMuted),
+          ).textTheme.bodySmall?.copyWith(color: context.colors.inkMuted),
         ),
         const SizedBox(height: 12),
         Expanded(
@@ -75,12 +75,13 @@ class _PhaseLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isReview = phase == StudyPhase.review;
+    final colors = context.colors;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       decoration: BoxDecoration(
         color: isReview
-            ? AppColors.deepGreen.withValues(alpha: 0.12)
-            : AppColors.gold.withValues(alpha: 0.2),
+            ? colors.deepGreen.withValues(alpha: 0.12)
+            : colors.gold.withValues(alpha: 0.2),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Text(
@@ -88,7 +89,7 @@ class _PhaseLabel extends StatelessWidget {
         style: TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.w600,
-          color: isReview ? AppColors.deepGreen : const Color(0xFF8A6A1D),
+          color: isReview ? colors.deepGreen : const Color(0xFF8A6A1D),
         ),
       ),
     );
@@ -142,7 +143,7 @@ class _CardFront extends StatelessWidget {
         card.arabicWord,
         textDirection: TextDirection.rtl,
         textAlign: TextAlign.center,
-        style: arabicTextStyle(fontSize: 56),
+        style: arabicTextStyle(fontSize: 56, color: context.colors.ink),
       ),
     );
   }
@@ -176,7 +177,7 @@ class _GradeButtons extends StatelessWidget {
         Expanded(
           child: _GradeButton(
             label: 'Good',
-            color: AppColors.deepGreen,
+            color: context.colors.deepGreen,
             onPressed: () => onGrade(Grade.good),
           ),
         ),
@@ -225,11 +226,12 @@ class _SessionComplete extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = context.colors;
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(Icons.check_circle, color: AppColors.deepGreen, size: 64),
+          Icon(Icons.check_circle, color: colors.deepGreen, size: 64),
           const SizedBox(height: 16),
           Text(
             reviewedCount == 0
@@ -237,16 +239,16 @@ class _SessionComplete extends StatelessWidget {
                 : 'All done! Reviewed $reviewedCount card${reviewedCount == 1 ? '' : 's'}.',
             style: Theme.of(
               context,
-            ).textTheme.titleMedium?.copyWith(color: AppColors.ink),
+            ).textTheme.titleMedium?.copyWith(color: colors.ink),
             textAlign: TextAlign.center,
           ),
           if (reviewedCount == 0) ...[
             const SizedBox(height: 8),
-            const Text(
+            Text(
               'Come back tomorrow for more new cards, or check the '
               'Campaigns tab to see what\'s ahead.',
               textAlign: TextAlign.center,
-              style: TextStyle(color: AppColors.inkMuted),
+              style: TextStyle(color: colors.inkMuted),
             ),
           ],
         ],

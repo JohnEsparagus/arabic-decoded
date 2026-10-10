@@ -3,11 +3,13 @@ import 'dart:async';
 import 'package:arabic_decoded/models/deck.dart';
 import 'package:arabic_decoded/models/flashcard.dart';
 import 'package:arabic_decoded/providers/database_providers.dart';
+import 'package:arabic_decoded/providers/settings_providers.dart';
 import 'package:arabic_decoded/providers/study_session_provider.dart';
 import 'package:arabic_decoded/services/database_service.dart';
 import 'package:arabic_decoded/services/sm2.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 /// Waits for the session's initial async load to finish. Plain `test()`
@@ -27,13 +29,15 @@ Future<StudySessionState> _loaded(ProviderContainer container) async {
   return completer.future;
 }
 
-ProviderContainer _containerFor(DatabaseService db) {
+Future<ProviderContainer> _containerFor(DatabaseService db) async {
+  final prefs = await SharedPreferences.getInstance();
   final container = ProviderContainer(
     overrides: [
       databaseServiceProvider.overrideWithValue(db),
       // These tests seed their own cards directly rather than through the
       // real campaign.json content, so skip the real import entirely.
       campaignDecksProvider.overrideWith((ref) async => <Deck>[]),
+      sharedPreferencesProvider.overrideWithValue(prefs),
     ],
   );
   addTearDown(container.dispose);
@@ -41,6 +45,11 @@ ProviderContainer _containerFor(DatabaseService db) {
 }
 
 void main() {
+  // A single shared (empty) mock backing store for the whole file — none
+  // of these tests touch settings, so every container sees the same
+  // untouched defaults (10 new cards/day) regardless of test order.
+  SharedPreferences.setMockInitialValues({});
+
   test('new cards are capped at the daily limit', () async {
     final db = DatabaseService(pathOverride: inMemoryDatabasePath);
     final deck = await db.getOrCreateDeck('Test Campaign');
@@ -55,7 +64,7 @@ void main() {
       );
     }
 
-    final container = _containerFor(db);
+    final container = await _containerFor(db);
     final state = await _loaded(container);
 
     expect(state.reviewQueue, isEmpty);
@@ -72,11 +81,53 @@ void main() {
 
     // Re-opening the session the same day should show none of the 5
     // remaining new cards, even though they're still sitting in the deck.
-    final secondContainer = _containerFor(db);
+    final secondContainer = await _containerFor(db);
     final secondState = await _loaded(secondContainer);
     expect(secondState.newQueue, isEmpty);
     expect(secondState.phase, StudyPhase.done);
   });
+
+  test(
+    'raising the daily cap after running out surfaces more cards '
+    'immediately, without waiting for tomorrow',
+    () async {
+      final db = DatabaseService(pathOverride: inMemoryDatabasePath);
+      final deck = await db.getOrCreateDeck('Test Campaign');
+      for (var i = 0; i < 15; i++) {
+        await db.insertFlashcard(
+          Flashcard.newCard(
+            arabicWord: 'word$i',
+            englishTranslation: 'meaning$i',
+            exampleSentence: '',
+            deckId: deck.id!,
+          ),
+        );
+      }
+
+      final container = await _containerFor(db);
+      final state = await _loaded(container);
+      expect(state.newQueue.length, 10);
+
+      // Exhaust today's default 10-card quota.
+      final notifier = container.read(studySessionProvider.notifier);
+      for (var i = 0; i < 10; i++) {
+        await notifier.grade(Grade.good);
+      }
+      expect(container.read(studySessionProvider).phase, StudyPhase.done);
+
+      // Raise the cap from Settings — StudySessionNotifier watches
+      // maxNewCardsPerDayProvider, so this alone should re-trigger a load
+      // (no explicit refresh call needed) and pick up 5 more of today's
+      // still-new cards, since only 10 have actually been introduced so far.
+      await container
+          .read(maxNewCardsPerDayProvider.notifier)
+          .set(15);
+      final afterRaise = await _loaded(container);
+
+      expect(afterRaise.phase, StudyPhase.newCards);
+      expect(afterRaise.newQueue.length, 5);
+    },
+  );
 
   test('due reviews are shown before new cards, in their own phase', () async {
     final db = DatabaseService(pathOverride: inMemoryDatabasePath);
@@ -106,7 +157,7 @@ void main() {
       );
     }
 
-    final container = _containerFor(db);
+    final container = await _containerFor(db);
     final state = await _loaded(container);
 
     expect(state.phase, StudyPhase.review);
@@ -141,7 +192,7 @@ void main() {
         );
       }
 
-      final container = _containerFor(db);
+      final container = await _containerFor(db);
       final state = await _loaded(container);
       expect(state.newQueue.map((c) => c.arabicWord), ['a', 'b', 'c']);
 

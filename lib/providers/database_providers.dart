@@ -2,20 +2,31 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/deck.dart';
 import '../models/flashcard.dart';
+import '../repositories/flashcard_repository.dart';
+import '../repositories/local_flashcard_repository.dart';
 import '../services/content_importer.dart';
 import '../services/database_service.dart';
 
+/// The raw on-device SQLite connection. Only [flashcardRepositoryProvider]
+/// (today's local-only implementation) and the debug-only "reset all
+/// progress" button in the Campaigns tab should need this directly —
+/// everything else should go through [flashcardRepositoryProvider] instead,
+/// so it doesn't care whether data is local-only or synced.
 final databaseServiceProvider = Provider<DatabaseService>((ref) {
   return DatabaseService.instance;
 });
 
-final contentImporterProvider = Provider<ContentImporter>((ref) {
-  return ContentImporter(ref.watch(databaseServiceProvider));
+/// What every provider/service actually reads and writes decks/flashcards
+/// through. Backed by [LocalFlashcardRepository] today; swapping in a
+/// synced implementation later (once auth exists) means changing this one
+/// provider, not every place that watches it.
+final flashcardRepositoryProvider = Provider<FlashcardRepository>((ref) {
+  return LocalFlashcardRepository(ref.watch(databaseServiceProvider));
 });
 
-/// The maximum number of never-studied cards introduced in a single day,
-/// across all campaigns combined.
-final maxNewCardsPerDayProvider = Provider<int>((ref) => 10);
+final contentImporterProvider = Provider<ContentImporter>((ref) {
+  return ContentImporter(ref.watch(flashcardRepositoryProvider));
+});
 
 /// Imports every campaign listed in `lib/config/campaign_sources.dart`
 /// (creating each one's deck if needed) and returns them in campaign
@@ -46,10 +57,10 @@ final dictionaryEntriesProvider = FutureProvider<List<Flashcard>>((ref) async {
   // the Dictionary tab before ever visiting Campaign.
   await ref.watch(campaignDecksProvider.future);
 
-  final db = ref.watch(databaseServiceProvider);
+  final repository = ref.watch(flashcardRepositoryProvider);
   final query = ref.watch(searchQueryProvider);
-  if (query.trim().isEmpty) return db.getAllFlashcards();
-  return db.searchFlashcards(query);
+  if (query.trim().isEmpty) return repository.getAllFlashcards();
+  return repository.searchFlashcards(query);
 });
 
 /// The roots/words that belong to one campaign deck, for the Campaigns
@@ -64,6 +75,6 @@ final deckFlashcardsProvider = FutureProvider.family<List<Flashcard>, int>((
   // while its flashcards table is still empty, then never re-run.
   await ref.watch(campaignDecksProvider.future);
 
-  final db = ref.watch(databaseServiceProvider);
-  return db.getFlashcardsForDeck(deckId);
+  final repository = ref.watch(flashcardRepositoryProvider);
+  return repository.getFlashcardsForDeck(deckId);
 });

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/flashcard.dart';
 import '../services/sm2.dart';
 import 'database_providers.dart';
+import 'settings_providers.dart';
 
 /// Which part of the session is currently active. Review always comes
 /// first — only once every due card has been reviewed does the session
@@ -78,6 +79,10 @@ class StudySessionState {
 class StudySessionNotifier extends Notifier<StudySessionState> {
   @override
   StudySessionState build() {
+    // Re-run whenever the daily new-card cap changes (see
+    // maxNewCardsPerDayProvider), so raising it after exhausting today's
+    // quota can surface more cards immediately instead of only tomorrow.
+    ref.watch(maxNewCardsPerDayProvider);
     // Kick off the load without blocking `build`, which must stay
     // synchronous for a plain Notifier.
     Future.microtask(_load);
@@ -85,18 +90,20 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
   }
 
   Future<void> _load() async {
-    final db = ref.read(databaseServiceProvider);
+    final repository = ref.read(flashcardRepositoryProvider);
     // Make sure every campaign has been imported before pulling new cards
     // from them, so a fresh install has something to show.
     await ref.read(campaignDecksProvider.future);
 
-    final reviewCards = await db.getDueReviewFlashcards();
+    final reviewCards = await repository.getDueReviewFlashcards();
 
     final startOfToday = _startOfDay(DateTime.now());
-    final introducedToday = await db.countIntroducedSince(startOfToday);
+    final introducedToday = await repository.countIntroducedSince(
+      startOfToday,
+    );
     final maxPerDay = ref.read(maxNewCardsPerDayProvider);
     final remainingToday = (maxPerDay - introducedToday).clamp(0, maxPerDay);
-    final newCards = await db.getNewFlashcards(limit: remainingToday);
+    final newCards = await repository.getNewFlashcards(limit: remainingToday);
 
     state = StudySessionState(
       reviewQueue: reviewCards,
@@ -135,8 +142,8 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
       introducedAt: card.isNew ? DateTime.now() : card.introducedAt,
     );
 
-    final db = ref.read(databaseServiceProvider);
-    await db.updateFlashcard(updated);
+    final repository = ref.read(flashcardRepositoryProvider);
+    await repository.updateFlashcard(updated);
     // The Campaigns tab's per-deck root grid and the Dictionary tab both
     // cache their flashcard lists independently of this session — without
     // invalidating them, a just-graded card's new mastery level/interval

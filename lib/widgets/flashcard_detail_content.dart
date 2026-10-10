@@ -18,6 +18,7 @@ class FlashcardDetailContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = context.colors;
     return SingleChildScrollView(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -26,28 +27,28 @@ class FlashcardDetailContent extends StatelessWidget {
             card.arabicWord,
             textDirection: TextDirection.rtl,
             textAlign: TextAlign.center,
-            style: arabicTextStyle(fontSize: 32),
+            style: arabicTextStyle(fontSize: 32, color: colors.ink),
           ),
           if (card.transliteration != null &&
               card.transliteration!.isNotEmpty) ...[
             const SizedBox(height: 4),
             Text(
               card.transliteration!,
-              style: const TextStyle(
-                color: AppColors.inkMuted,
+              style: TextStyle(
+                color: colors.inkMuted,
                 fontStyle: FontStyle.italic,
               ),
             ),
           ],
           const SizedBox(height: 6),
-          const Text('✦', style: TextStyle(color: AppColors.gold, fontSize: 14)),
+          Text('✦', style: TextStyle(color: colors.gold, fontSize: 14)),
           const SizedBox(height: 10),
           Text(
             card.englishTranslation,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.w600,
-              color: AppColors.deepGreen,
+              color: colors.deepGreen,
             ),
           ),
           if (card.mnemonic != null && card.mnemonic!.isNotEmpty) ...[
@@ -65,7 +66,7 @@ class FlashcardDetailContent extends StatelessWidget {
               style: arabicTextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w400,
-                color: AppColors.inkMuted,
+                color: colors.inkMuted,
               ),
             ),
           ],
@@ -79,8 +80,8 @@ class FlashcardDetailContent extends StatelessWidget {
                   .map(
                     (word) => Chip(
                       label: Text(word, textDirection: TextDirection.rtl),
-                      backgroundColor: AppColors.parchmentDark,
-                      side: const BorderSide(color: AppColors.cardBorder),
+                      backgroundColor: colors.parchmentDark,
+                      side: BorderSide(color: colors.cardBorder),
                     ),
                   )
                   .toList(),
@@ -99,11 +100,12 @@ class _MnemonicTip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = context.colors;
     return DecoratedBox(
       decoration: BoxDecoration(
-        color: AppColors.goldSoft.withValues(alpha: 0.35),
+        color: colors.goldSoft.withValues(alpha: 0.35),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.goldSoft),
+        border: Border.all(color: colors.goldSoft),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
@@ -116,10 +118,7 @@ class _MnemonicTip extends StatelessWidget {
             Flexible(
               child: Text(
                 text,
-                style: const TextStyle(
-                  color: AppColors.ink,
-                  fontStyle: FontStyle.italic,
-                ),
+                style: TextStyle(color: colors.ink, fontStyle: FontStyle.italic),
               ),
             ),
           ],
