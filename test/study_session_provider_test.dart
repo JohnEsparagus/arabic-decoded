@@ -87,47 +87,42 @@ void main() {
     expect(secondState.phase, StudyPhase.done);
   });
 
-  test(
-    'raising the daily cap after running out surfaces more cards '
-    'immediately, without waiting for tomorrow',
-    () async {
-      final db = DatabaseService(pathOverride: inMemoryDatabasePath);
-      final deck = await db.getOrCreateDeck('Test Campaign');
-      for (var i = 0; i < 15; i++) {
-        await db.insertFlashcard(
-          Flashcard.newCard(
-            arabicWord: 'word$i',
-            englishTranslation: 'meaning$i',
-            exampleSentence: '',
-            deckId: deck.id!,
-          ),
-        );
-      }
+  test('raising the daily cap after running out surfaces more cards '
+      'immediately, without waiting for tomorrow', () async {
+    final db = DatabaseService(pathOverride: inMemoryDatabasePath);
+    final deck = await db.getOrCreateDeck('Test Campaign');
+    for (var i = 0; i < 15; i++) {
+      await db.insertFlashcard(
+        Flashcard.newCard(
+          arabicWord: 'word$i',
+          englishTranslation: 'meaning$i',
+          exampleSentence: '',
+          deckId: deck.id!,
+        ),
+      );
+    }
 
-      final container = await _containerFor(db);
-      final state = await _loaded(container);
-      expect(state.newQueue.length, 10);
+    final container = await _containerFor(db);
+    final state = await _loaded(container);
+    expect(state.newQueue.length, 10);
 
-      // Exhaust today's default 10-card quota.
-      final notifier = container.read(studySessionProvider.notifier);
-      for (var i = 0; i < 10; i++) {
-        await notifier.grade(Grade.good);
-      }
-      expect(container.read(studySessionProvider).phase, StudyPhase.done);
+    // Exhaust today's default 10-card quota.
+    final notifier = container.read(studySessionProvider.notifier);
+    for (var i = 0; i < 10; i++) {
+      await notifier.grade(Grade.good);
+    }
+    expect(container.read(studySessionProvider).phase, StudyPhase.done);
 
-      // Raise the cap from Settings — StudySessionNotifier watches
-      // maxNewCardsPerDayProvider, so this alone should re-trigger a load
-      // (no explicit refresh call needed) and pick up 5 more of today's
-      // still-new cards, since only 10 have actually been introduced so far.
-      await container
-          .read(maxNewCardsPerDayProvider.notifier)
-          .set(15);
-      final afterRaise = await _loaded(container);
+    // Raise the cap from Settings — StudySessionNotifier watches
+    // maxNewCardsPerDayProvider, so this alone should re-trigger a load
+    // (no explicit refresh call needed) and pick up 5 more of today's
+    // still-new cards, since only 10 have actually been introduced so far.
+    await container.read(maxNewCardsPerDayProvider.notifier).set(15);
+    final afterRaise = await _loaded(container);
 
-      expect(afterRaise.phase, StudyPhase.newCards);
-      expect(afterRaise.newQueue.length, 5);
-    },
-  );
+    expect(afterRaise.phase, StudyPhase.newCards);
+    expect(afterRaise.newQueue.length, 5);
+  });
 
   test('due reviews are shown before new cards, in their own phase', () async {
     final db = DatabaseService(pathOverride: inMemoryDatabasePath);

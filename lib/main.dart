@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'providers/auth_providers.dart';
 import 'providers/settings_providers.dart';
 import 'screens/root_shell.dart';
 import 'services/database_service.dart';
@@ -19,11 +20,14 @@ Future<void> main() async {
 
   await Supabase.initialize(
     url: 'https://dyuqjlvfogxwcyzdftbg.supabase.co',
-    anonKey: 'sb_publishable_pD-obz9gdGRJ78r2WL5zSQ_6gFZtTe0',
+    publishableKey: 'sb_publishable_pD-obz9gdGRJ78r2WL5zSQ_6gFZtTe0',
   );
   runApp(
     ProviderScope(
-      overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
+      overrides: [
+        sharedPreferencesProvider.overrideWithValue(prefs),
+        supabaseClientProvider.overrideWithValue(Supabase.instance.client),
+      ],
       child: const ArabicDecodedApp(),
     ),
   );

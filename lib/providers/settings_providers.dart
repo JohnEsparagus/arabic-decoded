@@ -30,8 +30,7 @@ const maxNewCardsPerDayLimit = 100;
 class DarkModeNotifier extends Notifier<bool> {
   @override
   bool build() {
-    return ref.watch(sharedPreferencesProvider).getBool(_darkModeKey) ??
-        false;
+    return ref.watch(sharedPreferencesProvider).getBool(_darkModeKey) ?? false;
   }
 
   Future<void> set(bool value) async {

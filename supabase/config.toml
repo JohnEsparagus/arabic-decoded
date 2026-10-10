@@ -1,0 +1,28 @@
+# Project settings kept in the repo and applied with
+# `npx supabase config push`. Only what's declared here is managed —
+# anything left out keeps whatever is set in the Supabase dashboard.
+
+project_id = "arabic_decoded"
+
+[auth.email]
+# Off, so creating an account signs you straight in with no email
+# involved. Supabase's built-in email sender only delivers to members of
+# the project's own organisation, so with this on nobody else could ever
+# finish signing up. Turn it back on together with the templates below.
+enable_confirmations = false
+
+# Code emails: a code to type into the app rather than a link to click (a
+# link would need deep-link handling on every platform, and has nowhere
+# sensible to land on desktop). Supabase rejects custom templates until
+# the project has its own SMTP provider (dashboard: Authentication >
+# Emails > SMTP Settings). Once it does: uncomment these, set
+# enable_confirmations = true above, run `npx supabase config push`, and
+# set `emailCodesEnabled` in lib/config/auth_config.dart.
+
+# [auth.email.template.confirmation]
+# subject = "Your Arabic Decoded confirmation code"
+# content_path = "./supabase/templates/confirmation.html"
+
+# [auth.email.template.recovery]
+# subject = "Your Arabic Decoded password reset code"
+# content_path = "./supabase/templates/recovery.html"

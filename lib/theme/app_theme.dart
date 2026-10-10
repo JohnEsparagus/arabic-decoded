@@ -233,9 +233,7 @@ ThemeData buildAppTheme({required Brightness brightness}) {
         backgroundColor: palette.deepGreen,
         foregroundColor: Colors.white,
         elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(14),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
       ),
     ),
     navigationBarTheme: NavigationBarThemeData(

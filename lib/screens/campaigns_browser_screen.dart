@@ -148,10 +148,7 @@ class _CampaignSection extends ConsumerWidget {
             ),
             if (deck.description != null && deck.description!.isNotEmpty) ...[
               const SizedBox(height: 4),
-              Text(
-                deck.description!,
-                style: TextStyle(color: colors.inkMuted),
-              ),
+              Text(deck.description!, style: TextStyle(color: colors.inkMuted)),
             ],
             const SizedBox(height: 14),
             rootsAsync.when(

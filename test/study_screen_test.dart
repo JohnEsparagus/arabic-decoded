@@ -34,9 +34,11 @@ void main() {
       SharedPreferences.setMockInitialValues({});
       final prefs = await SharedPreferences.getInstance();
 
-      final deck = await ContentImporter(
-        LocalFlashcardRepository(db),
-      ).importAsset(assetPath: 'assets/data/campaign.json', deckName: 'Campaign');
+      final deck = await ContentImporter(LocalFlashcardRepository(db))
+          .importAsset(
+            assetPath: 'assets/data/campaign.json',
+            deckName: 'Campaign',
+          );
       final cardCount = (await db.getFlashcardsForDeck(deck.id!)).length;
       expect(cardCount, greaterThan(0));
 

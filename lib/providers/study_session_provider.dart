@@ -98,9 +98,7 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
     final reviewCards = await repository.getDueReviewFlashcards();
 
     final startOfToday = _startOfDay(DateTime.now());
-    final introducedToday = await repository.countIntroducedSince(
-      startOfToday,
-    );
+    final introducedToday = await repository.countIntroducedSince(startOfToday);
     final maxPerDay = ref.read(maxNewCardsPerDayProvider);
     final remainingToday = (maxPerDay - introducedToday).clamp(0, maxPerDay);
     final newCards = await repository.getNewFlashcards(limit: remainingToday);

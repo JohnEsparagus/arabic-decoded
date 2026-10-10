@@ -4,11 +4,14 @@ import '../models/deck.dart';
 import '../models/flashcard.dart';
 import '../repositories/flashcard_repository.dart';
 import '../repositories/local_flashcard_repository.dart';
+import '../repositories/synced_flashcard_repository.dart';
 import '../services/content_importer.dart';
 import '../services/database_service.dart';
+import 'auth_providers.dart';
+import 'sync_providers.dart';
 
-/// The raw on-device SQLite connection. Only [flashcardRepositoryProvider]
-/// (today's local-only implementation) and the debug-only "reset all
+/// The raw on-device SQLite connection. Only [flashcardRepositoryProvider],
+/// sync (see `sync_providers.dart`) and the debug-only "reset all
 /// progress" button in the Campaigns tab should need this directly —
 /// everything else should go through [flashcardRepositoryProvider] instead,
 /// so it doesn't care whether data is local-only or synced.
@@ -17,11 +20,17 @@ final databaseServiceProvider = Provider<DatabaseService>((ref) {
 });
 
 /// What every provider/service actually reads and writes decks/flashcards
-/// through. Backed by [LocalFlashcardRepository] today; swapping in a
-/// synced implementation later (once auth exists) means changing this one
-/// provider, not every place that watches it.
+/// through. Signed out, that's plain [LocalFlashcardRepository]; signed
+/// in, it's wrapped in a [SyncedFlashcardRepository] that also uploads
+/// each newly graded card. Either way the data itself is read from and
+/// written to the same on-device database.
 final flashcardRepositoryProvider = Provider<FlashcardRepository>((ref) {
-  return LocalFlashcardRepository(ref.watch(databaseServiceProvider));
+  final local = LocalFlashcardRepository(ref.watch(databaseServiceProvider));
+  if (ref.watch(currentUserIdProvider) == null) return local;
+  return SyncedFlashcardRepository(
+    local,
+    onProgressChanged: () => ref.read(syncProvider.notifier).push(),
+  );
 });
 
 final contentImporterProvider = Provider<ContentImporter>((ref) {

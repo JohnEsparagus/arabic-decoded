@@ -118,7 +118,10 @@ class _MnemonicTip extends StatelessWidget {
             Flexible(
               child: Text(
                 text,
-                style: TextStyle(color: colors.ink, fontStyle: FontStyle.italic),
+                style: TextStyle(
+                  color: colors.ink,
+                  fontStyle: FontStyle.italic,
+                ),
               ),
             ),
           ],

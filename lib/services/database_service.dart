@@ -5,6 +5,7 @@ import 'package:path/path.dart' as p;
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
+import '../models/card_progress.dart';
 import '../models/deck.dart';
 import '../models/flashcard.dart';
 import '../utils/arabic_normalize.dart';
@@ -66,7 +67,7 @@ class DatabaseService {
     _resolvedPath = path;
     return openDatabase(
       path,
-      version: 3,
+      version: 4,
       // sqflite's default `singleInstance: true` caches connections keyed
       // by the literal path string. That's harmless for the app's real
       // on-disk path (only ever opened once, by the DatabaseService
@@ -99,6 +100,8 @@ class DatabaseService {
             transliteration TEXT,
             mnemonic TEXT,
             related_words TEXT NOT NULL DEFAULT '[]',
+            updated_at INTEGER,
+            dirty INTEGER NOT NULL DEFAULT 0,
             FOREIGN KEY (deck_id) REFERENCES decks (id) ON DELETE CASCADE
           )
         ''');
@@ -115,7 +118,9 @@ class DatabaseService {
       onUpgrade: (db, oldVersion, newVersion) async {
         if (oldVersion < 2) {
           // Added optional "richer back side" fields — see Flashcard.
-          await db.execute('ALTER TABLE flashcards ADD COLUMN transliteration TEXT');
+          await db.execute(
+            'ALTER TABLE flashcards ADD COLUMN transliteration TEXT',
+          );
           await db.execute('ALTER TABLE flashcards ADD COLUMN mnemonic TEXT');
           await db.execute(
             "ALTER TABLE flashcards ADD COLUMN related_words TEXT NOT NULL DEFAULT '[]'",
@@ -134,6 +139,24 @@ class DatabaseService {
           );
           await db.execute(
             'CREATE INDEX IF NOT EXISTS idx_flashcards_is_new ON flashcards (is_new)',
+          );
+        }
+        if (oldVersion < 4) {
+          // Sync bookkeeping — see the "Sync" section below.
+          await db.execute(
+            'ALTER TABLE flashcards ADD COLUMN updated_at INTEGER',
+          );
+          await db.execute(
+            'ALTER TABLE flashcards ADD COLUMN dirty INTEGER NOT NULL DEFAULT 0',
+          );
+          // Progress made before sync existed has never been uploaded, so
+          // flag all of it. There's no record of when those cards were
+          // actually last graded; next_review minus the interval is the
+          // day SM-2 scheduled them from, which is the same thing.
+          await db.execute(
+            'UPDATE flashcards SET dirty = 1, '
+            'updated_at = next_review - interval * 86400000 '
+            'WHERE is_new = 0',
           );
         }
       },
@@ -191,11 +214,18 @@ class DatabaseService {
     return db.insert('flashcards', card.toMap());
   }
 
+  /// Saves [card] and flags it as changed-since-last-sync. This is the
+  /// "the user just graded a card" write; progress arriving *from* sync
+  /// goes through [applyRemoteProgress] instead, which doesn't flag it.
   Future<void> updateFlashcard(Flashcard card) async {
     final db = await database;
     await db.update(
       'flashcards',
-      card.toMap(),
+      {
+        ...card.toMap(),
+        'updated_at': DateTime.now().millisecondsSinceEpoch,
+        'dirty': 1,
+      },
       where: 'id = ?',
       whereArgs: [card.id],
     );
@@ -265,6 +295,121 @@ class DatabaseService {
     return Sqflite.firstIntValue(result) ?? 0;
   }
 
+  // ---- Sync ----------------------------------------------------------------
+  //
+  // Two extra columns that aren't on [Flashcard] because nothing outside
+  // sync cares about them: `updated_at` (when the card was last graded)
+  // and `dirty` (graded since it was last uploaded). See `SyncService`.
+
+  /// Every card graded since it was last uploaded.
+  Future<List<CardProgress>> getDirtyProgress() async {
+    final db = await database;
+    final rows = await db.rawQuery('''
+      SELECT d.name AS deck_name, f.arabic_word, f.ease_factor, f.interval,
+             f.repetitions, f.next_review, f.introduced_at, f.updated_at
+      FROM flashcards f JOIN decks d ON d.id = f.deck_id
+      WHERE f.dirty = 1
+    ''');
+    return rows.map((row) {
+      final introducedAtMs = row['introduced_at'] as int?;
+      return CardProgress(
+        deckName: row['deck_name'] as String,
+        arabicWord: row['arabic_word'] as String,
+        easeFactor: (row['ease_factor'] as num).toDouble(),
+        interval: row['interval'] as int,
+        repetitions: row['repetitions'] as int,
+        nextReview: DateTime.fromMillisecondsSinceEpoch(
+          row['next_review'] as int,
+        ),
+        introducedAt: introducedAtMs == null
+            ? null
+            : DateTime.fromMillisecondsSinceEpoch(introducedAtMs),
+        updatedAt: DateTime.fromMillisecondsSinceEpoch(
+          row['updated_at'] as int,
+        ),
+      );
+    }).toList();
+  }
+
+  /// Clears the dirty flag on cards that were just uploaded. Matching on
+  /// `updated_at` as well means a card graded again while the upload was
+  /// in flight stays dirty and goes up next time.
+  Future<void> markProgressSynced(List<CardProgress> uploaded) async {
+    final db = await database;
+    final batch = db.batch();
+    for (final progress in uploaded) {
+      batch.rawUpdate(
+        '''
+        UPDATE flashcards SET dirty = 0
+        WHERE arabic_word = ?
+          AND deck_id = (SELECT id FROM decks WHERE name = ?)
+          AND updated_at = ?
+        ''',
+        [
+          progress.arabicWord,
+          progress.deckName,
+          progress.updatedAt.millisecondsSinceEpoch,
+        ],
+      );
+    }
+    await batch.commit(noResult: true);
+  }
+
+  /// Overwrites local progress with [remote] wherever the remote copy is
+  /// newer (or the card has never been graded here), and returns how many
+  /// cards actually changed. Rows for cards this device doesn't have are
+  /// skipped.
+  Future<int> applyRemoteProgress(List<CardProgress> remote) async {
+    if (remote.isEmpty) return 0;
+    final db = await database;
+    final batch = db.batch();
+    for (final progress in remote) {
+      final updatedAt = progress.updatedAt.millisecondsSinceEpoch;
+      batch.rawUpdate(
+        '''
+        UPDATE flashcards
+        SET ease_factor = ?, interval = ?, repetitions = ?, next_review = ?,
+            is_new = 0, introduced_at = ?, updated_at = ?, dirty = 0
+        WHERE arabic_word = ?
+          AND deck_id = (SELECT id FROM decks WHERE name = ?)
+          AND (updated_at IS NULL OR updated_at < ?)
+        ''',
+        [
+          progress.easeFactor,
+          progress.interval,
+          progress.repetitions,
+          progress.nextReview.millisecondsSinceEpoch,
+          progress.introducedAt?.millisecondsSinceEpoch,
+          updatedAt,
+          progress.arabicWord,
+          progress.deckName,
+          updatedAt,
+        ],
+      );
+    }
+    final counts = await batch.commit();
+    return counts.fold<int>(0, (sum, count) => sum + (count as int));
+  }
+
+  /// Puts every card back to never-studied while keeping the cards
+  /// themselves — used when a different account signs in on this device,
+  /// so one person's progress isn't uploaded into another's account.
+  Future<void> clearProgress() async {
+    final db = await database;
+    await db.update('flashcards', {
+      'ease_factor': 2.5,
+      'interval': 0,
+      'repetitions': 0,
+      'next_review': DateTime.now().millisecondsSinceEpoch,
+      'is_new': 1,
+      'introduced_at': null,
+      'updated_at': null,
+      'dirty': 0,
+    });
+  }
+
+  // ---- Search ------------------------------------------------------------
+
   /// Basic Arabic-aware search across every flashcard's word/translation.
   ///
   /// The dataset here is small (a personal word list, not a dictionary), so
@@ -280,17 +425,14 @@ class DatabaseService {
 
     final db = await database;
     final rows = await db.query('flashcards', orderBy: 'arabic_word ASC');
-    return rows
-        .map(Flashcard.fromMap)
-        .where((card) {
-          final matchesArabic = normalizeArabic(
-            card.arabicWord,
-          ).contains(normalizedQuery);
-          final matchesEnglish = card.englishTranslation
-              .toLowerCase()
-              .contains(lowerQuery);
-          return matchesArabic || matchesEnglish;
-        })
-        .toList();
+    return rows.map(Flashcard.fromMap).where((card) {
+      final matchesArabic = normalizeArabic(
+        card.arabicWord,
+      ).contains(normalizedQuery);
+      final matchesEnglish = card.englishTranslation.toLowerCase().contains(
+        lowerQuery,
+      );
+      return matchesArabic || matchesEnglish;
+    }).toList();
   }
 }
