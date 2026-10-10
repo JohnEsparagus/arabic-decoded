@@ -41,6 +41,8 @@ dependencies:
   sqflite_common_ffi: ^2.4.2
   supabase_flutter: ^2.16.0
   google_sign_in: ^7.2.0
+  flutter_tts: ^4.2.5
+  connectivity_plus: ^7.3.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -82,3 +84,16 @@ flutter:
         - asset: assets/fonts/Amiri-Regular.ttf
         - asset: assets/fonts/Amiri-Bold.ttf
           weight: 700
+  # The other choices for the Arabic font setting (Settings > Appearance),
+  # all SIL OFL 1.1 as well; each one's licence is next to it in
+  # assets/fonts/. The two Noto files are variable fonts, so one file
+  # covers every weight.
+    - family: Scheherazade New
+      fonts:
+        - asset: assets/fonts/ScheherazadeNew-Regular.ttf
+    - family: Noto Naskh Arabic
+      fonts:
+        - asset: assets/fonts/NotoNaskhArabic.ttf
+    - family: Noto Kufi Arabic
+      fonts:
+        - asset: assets/fonts/NotoKufiArabic.ttf

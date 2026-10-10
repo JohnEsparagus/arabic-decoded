@@ -4,7 +4,36 @@
     "translit": "ʾ-r-ḍ",
     "meaning": "Earth, land",
     "mnemonic": "An Archer's Range is a huge Dusty stretch of land. ʾ-R-Ḍ is the root of earth and land.",
-    "words": ["أرض", "أراضي", "أرضي"],
+    "words": [
+      {
+        "arabic": "أَرْض",
+        "translit": "ʾarḍ",
+        "meaning": "earth, land",
+        "example": {
+          "ar": "الأرض كبيرة.",
+          "en": "The earth is big."
+        }
+      },
+      {
+        "arabic": "أَرَاضٍ",
+        "translit": "ʾarāḍin",
+        "meaning": "lands",
+        "example": {
+          "ar": "هذه أراض زراعية.",
+          "en": "These are agricultural lands."
+        }
+      },
+      {
+        "arabic": "أَرْضِيّ",
+        "translit": "ʾarḍī",
+        "meaning": "ground-level, earthly",
+        "pattern": "nisba",
+        "example": {
+          "ar": "أسكن في الطابق الأرضي.",
+          "en": "I live on the ground floor."
+        }
+      }
+    ],
     "example": "The أرض stretched for miles, its أراضي rich and أرضي in nature."
   },
   {
@@ -12,7 +41,46 @@
     "translit": "s-m-w",
     "meaning": "Sky, height, loftiness",
     "mnemonic": "A Sailor's Mast reaches toward the Way up high. S-M-W is the root of sky and elevation.",
-    "words": ["سماء", "سموات"],
+    "words": [
+      {
+        "arabic": "سَمَاء",
+        "translit": "samāʾ",
+        "meaning": "sky",
+        "example": {
+          "ar": "السماء زرقاء.",
+          "en": "The sky is blue."
+        }
+      },
+      {
+        "arabic": "سَمَاوَات",
+        "translit": "samāwāt",
+        "meaning": "skies, heavens",
+        "example": {
+          "ar": "خلق الله السماوات والأرض.",
+          "en": "God created the heavens and the earth."
+        }
+      },
+      {
+        "arabic": "سَمَاوِيّ",
+        "translit": "samāwī",
+        "meaning": "heavenly; sky-blue",
+        "pattern": "nisba",
+        "example": {
+          "ar": "قميصه سماوي اللون.",
+          "en": "His shirt is sky-blue."
+        }
+      },
+      {
+        "arabic": "سُمُوّ",
+        "translit": "sumuww",
+        "meaning": "loftiness; Highness",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "صاحب السمو الأمير.",
+          "en": "His Highness the Prince."
+        }
+      }
+    ],
     "example": "The سماء stretched above, one of countless سموات in the poem."
   },
   {
@@ -20,7 +88,27 @@
     "translit": "sh-m-s",
     "meaning": "Sun",
     "mnemonic": "A Sheikh's Mighty Star blazes overhead — the sun. SH-M-S is the root of the sun.",
-    "words": ["شمس", "شمسي"],
+    "words": [
+      {
+        "arabic": "شَمْس",
+        "translit": "shams",
+        "meaning": "sun",
+        "example": {
+          "ar": "الشمس حارة اليوم.",
+          "en": "The sun is hot today."
+        }
+      },
+      {
+        "arabic": "شَمْسِيّ",
+        "translit": "shamsī",
+        "meaning": "solar",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذه طاقة شمسية.",
+          "en": "This is solar energy."
+        }
+      }
+    ],
     "example": "The شمس rose brightly, powering the شمسي panels below."
   },
   {
@@ -28,7 +116,37 @@
     "translit": "q-m-r",
     "meaning": "Moon",
     "mnemonic": "A Queen's Mirror Reflects the glowing moon. Q-M-R is the root of the moon.",
-    "words": ["قمر", "أقمار"],
+    "words": [
+      {
+        "arabic": "قَمَر",
+        "translit": "qamar",
+        "meaning": "moon",
+        "example": {
+          "ar": "القمر جميل الليلة.",
+          "en": "The moon is beautiful tonight."
+        }
+      },
+      {
+        "arabic": "أَقْمَار",
+        "translit": "ʾaqmār",
+        "meaning": "moons",
+        "pattern": "plural",
+        "example": {
+          "ar": "لهذا الكوكب أقمار كثيرة.",
+          "en": "This planet has many moons."
+        }
+      },
+      {
+        "arabic": "قَمَرِيّ",
+        "translit": "qamarī",
+        "meaning": "lunar",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا شهر قمري.",
+          "en": "This is a lunar month."
+        }
+      }
+    ],
     "example": "The قمر lit the night sky, one of many أقمار orbiting planets."
   },
   {
@@ -36,7 +154,45 @@
     "translit": "l-y-l",
     "meaning": "Night",
     "mnemonic": "A Lady Yawns late at night, Lulled to sleep. L-Y-L is the root of night.",
-    "words": ["ليل", "ليلة", "ليالي"],
+    "words": [
+      {
+        "arabic": "لَيْل",
+        "translit": "layl",
+        "meaning": "night, night-time",
+        "example": {
+          "ar": "الليل هادئ.",
+          "en": "The night is quiet."
+        }
+      },
+      {
+        "arabic": "لَيْلَة",
+        "translit": "layla",
+        "meaning": "a night",
+        "example": {
+          "ar": "كانت ليلة جميلة.",
+          "en": "It was a beautiful night."
+        }
+      },
+      {
+        "arabic": "لَيَالٍ",
+        "translit": "layālin",
+        "meaning": "nights",
+        "example": {
+          "ar": "بقينا هناك ثلاث ليال.",
+          "en": "We stayed there three nights."
+        }
+      },
+      {
+        "arabic": "لَيْلِيّ",
+        "translit": "laylī",
+        "meaning": "nightly, night (adj.)",
+        "pattern": "nisba",
+        "example": {
+          "ar": "أعمل في دوام ليلي.",
+          "en": "I work a night shift."
+        }
+      }
+    ],
     "example": "The ليل fell quietly, and each ليلة joined the countless ليالي before it."
   },
   {
@@ -44,7 +200,37 @@
     "translit": "b-ḥ-r",
     "meaning": "Sea",
     "mnemonic": "A Boatman Heads out to the Reef in the open sea. B-Ḥ-R is the root of the sea.",
-    "words": ["بحر", "بحار", "بحري"],
+    "words": [
+      {
+        "arabic": "بَحْر",
+        "translit": "baḥr",
+        "meaning": "sea",
+        "example": {
+          "ar": "البحر هادئ اليوم.",
+          "en": "The sea is calm today."
+        }
+      },
+      {
+        "arabic": "بِحَار",
+        "translit": "biḥār",
+        "meaning": "seas",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "البحار واسعة.",
+          "en": "The seas are vast."
+        }
+      },
+      {
+        "arabic": "بَحْرِيّ",
+        "translit": "baḥrī",
+        "meaning": "marine, naval",
+        "pattern": "nisba",
+        "example": {
+          "ar": "أحب الطعام البحري.",
+          "en": "I like seafood."
+        }
+      }
+    ],
     "example": "The بحر stretched wide, and the بحار crossed it on his بحري voyage."
   },
   {
@@ -52,7 +238,37 @@
     "translit": "j-b-l",
     "meaning": "Mountain",
     "mnemonic": "A Journeyman Battles a steep Ledge climbing the mountain. J-B-L is the root of mountains.",
-    "words": ["جبل", "جبال", "جبلي"],
+    "words": [
+      {
+        "arabic": "جَبَل",
+        "translit": "jabal",
+        "meaning": "mountain",
+        "example": {
+          "ar": "هذا جبل عال.",
+          "en": "This is a high mountain."
+        }
+      },
+      {
+        "arabic": "جِبَال",
+        "translit": "jibāl",
+        "meaning": "mountains",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "الجبال جميلة في الشتاء.",
+          "en": "The mountains are beautiful in winter."
+        }
+      },
+      {
+        "arabic": "جَبَلِيّ",
+        "translit": "jabalī",
+        "meaning": "mountainous",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذه منطقة جبلية.",
+          "en": "This is a mountainous region."
+        }
+      }
+    ],
     "example": "The جبل towered above, one of many جبال in the جبلي range."
   },
   {
@@ -60,7 +276,27 @@
     "translit": "r-y-ḥ",
     "meaning": "Wind",
     "mnemonic": "A Racer's Yell gets Hushed by the roaring wind. R-Y-Ḥ is the root of wind.",
-    "words": ["ريح", "رياح"],
+    "words": [
+      {
+        "arabic": "رِيح",
+        "translit": "rīḥ",
+        "meaning": "wind",
+        "example": {
+          "ar": "الريح قوية اليوم.",
+          "en": "The wind is strong today."
+        }
+      },
+      {
+        "arabic": "رِيَاح",
+        "translit": "riyāḥ",
+        "meaning": "winds",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "الرياح باردة في الشتاء.",
+          "en": "The winds are cold in winter."
+        }
+      }
+    ],
     "example": "The ريح howled through the valley, joined by strong رياح from the north."
   },
   {
@@ -68,7 +304,36 @@
     "translit": "m-ṭ-r",
     "meaning": "Rain",
     "mnemonic": "A Miner Taps his Roof, listening to the falling rain. M-Ṭ-R is the root of rain.",
-    "words": ["مطر", "أمطار", "ممطر"],
+    "words": [
+      {
+        "arabic": "مَطَر",
+        "translit": "maṭar",
+        "meaning": "rain",
+        "example": {
+          "ar": "المطر غزير اليوم.",
+          "en": "The rain is heavy today."
+        }
+      },
+      {
+        "arabic": "أَمْطَار",
+        "translit": "ʾamṭār",
+        "meaning": "rains",
+        "pattern": "plural",
+        "example": {
+          "ar": "الأمطار كثيرة في الشتاء.",
+          "en": "Rains are plentiful in winter."
+        }
+      },
+      {
+        "arabic": "مُمْطِر",
+        "translit": "mumṭir",
+        "meaning": "rainy",
+        "example": {
+          "ar": "الجو ممطر اليوم.",
+          "en": "The weather is rainy today."
+        }
+      }
+    ],
     "example": "The مطر poured down, and the أمطار made the sky ممطر all day."
   },
   {
@@ -76,7 +341,45 @@
     "translit": "n-w-r",
     "meaning": "Light",
     "mnemonic": "A Navigator Waves a Radiant lantern for light. N-W-R is the root of light.",
-    "words": ["نور", "منور", "نار"],
+    "words": [
+      {
+        "arabic": "نُور",
+        "translit": "nūr",
+        "meaning": "light",
+        "example": {
+          "ar": "نور الشمس قوي.",
+          "en": "The sunlight is strong."
+        }
+      },
+      {
+        "arabic": "أَنْوَار",
+        "translit": "ʾanwār",
+        "meaning": "lights",
+        "pattern": "plural",
+        "example": {
+          "ar": "أنوار المدينة جميلة.",
+          "en": "The city lights are beautiful."
+        }
+      },
+      {
+        "arabic": "مُنِير",
+        "translit": "munīr",
+        "meaning": "luminous, bright",
+        "example": {
+          "ar": "القمر منير الليلة.",
+          "en": "The moon is bright tonight."
+        }
+      },
+      {
+        "arabic": "نَار",
+        "translit": "nār",
+        "meaning": "fire",
+        "example": {
+          "ar": "النار حارة.",
+          "en": "Fire is hot."
+        }
+      }
+    ],
     "example": "The نور filled the room, keeping it منور through the night by the نار."
   }
 ]

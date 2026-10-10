@@ -1,0 +1,149 @@
+[
+  {
+    "id": "form1",
+    "arabic": "فَعَلَ",
+    "translit": "faʿala",
+    "meaning": "He did it: the basic verb",
+    "explanation": "The plainest shape a root can take: three letters with short vowels between them. It is the past tense, \"he did\", and the form dictionaries list verbs under. The middle vowel can change (فَعِلَ, فَعُلَ), so it is learned with each verb."
+  },
+  {
+    "id": "form2",
+    "arabic": "فَعَّلَ",
+    "translit": "faʿʿala",
+    "meaning": "Make it happen: doubled middle letter",
+    "explanation": "Doubling the middle root letter makes the verb causative or more intense. عَلِمَ is to know, عَلَّمَ is to make someone know: to teach."
+  },
+  {
+    "id": "form3",
+    "arabic": "فَاعَلَ",
+    "translit": "fāʿala",
+    "meaning": "Do it with someone",
+    "explanation": "A long ā after the first root letter points the action at another person: you do it with them or to them. Helping and discussing both need a second person."
+  },
+  {
+    "id": "form4",
+    "arabic": "أَفْعَلَ",
+    "translit": "ʾafʿala",
+    "meaning": "Cause it: verb starting with أ",
+    "explanation": "An added أَ at the front usually makes the verb causative: to make something be or do what the root describes. خَبَر is news, أَخْبَرَ is to give someone the news."
+  },
+  {
+    "id": "form8",
+    "arabic": "اِفْتَعَلَ",
+    "translit": "iftaʿala",
+    "meaning": "Do it for yourself: ت after the first letter",
+    "explanation": "A ت slipped in after the first root letter often means the action comes back to the one doing it: you do it for yourself or it happens to you."
+  },
+  {
+    "id": "form10",
+    "arabic": "اِسْتَفْعَلَ",
+    "translit": "istafʿala",
+    "meaning": "Seek it: verb starting with اِسْتَـ",
+    "explanation": "The prefix اِسْتَـ means seeking or asking for what the root describes, or treating something as having that quality. عَمَل is work, اِسْتَعْمَلَ is to put something to work: to use it."
+  },
+  {
+    "id": "doer",
+    "arabic": "فَاعِل",
+    "translit": "fāʿil",
+    "meaning": "The doer",
+    "explanation": "A long ā after the first root letter and a short i after the second gives the one who does the action. Many everyday nouns and adjectives are really doers: a writer, a worker, a witness."
+  },
+  {
+    "id": "done",
+    "arabic": "مَفْعُول",
+    "translit": "mafʿūl",
+    "meaning": "The thing it is done to",
+    "explanation": "مَـ at the front and a long ū before the last root letter gives the thing that receives the action: opened, known, written."
+  },
+  {
+    "id": "place",
+    "arabic": "مَفْعَل",
+    "translit": "mafʿal",
+    "meaning": "The place where it happens",
+    "explanation": "مَـ at the front with short vowels gives the place where the root's action happens. Sometimes the last vowel is i instead (مَفْعِل), as in مَجْلِس."
+  },
+  {
+    "id": "place_f",
+    "arabic": "مَفْعَلَة",
+    "translit": "mafʿala",
+    "meaning": "The place where it happens (with ة)",
+    "explanation": "The same place pattern with a ة ending. It often names an institution or a place where there is a lot of something: a school, a library, a farm."
+  },
+  {
+    "id": "act",
+    "arabic": "فَعْل",
+    "translit": "faʿl",
+    "meaning": "The act itself",
+    "explanation": "The shortest noun a root can make: a single a after the first letter and nothing after the second. It names the action as a thing, like \"understanding\" or \"a search\"."
+  },
+  {
+    "id": "fu3ul",
+    "arabic": "فُعُول",
+    "translit": "fuʿūl",
+    "meaning": "The act of moving, or a plural",
+    "explanation": "u then a long ū. For verbs of movement it names the act: entering, leaving, arriving. The same shape is also a common plural, as in حُرُوب (wars)."
+  },
+  {
+    "id": "craft",
+    "arabic": "فِعَالَة",
+    "translit": "fiʿāla",
+    "meaning": "The craft or activity",
+    "explanation": "i, a long ā, and a ة ending. It names an occupation, craft or ongoing activity: writing, farming, industry."
+  },
+  {
+    "id": "quality",
+    "arabic": "فَعَالَة",
+    "translit": "faʿāla",
+    "meaning": "The abstract quality",
+    "explanation": "a, a long ā, and a ة ending. It turns a root into an abstract noun, the way English uses -ness or -ship: happiness, fairness, kinship."
+  },
+  {
+    "id": "fi3al",
+    "arabic": "فِعَال",
+    "translit": "fiʿāl",
+    "meaning": "The act as a noun, or a plural",
+    "explanation": "i then a long ā. It makes nouns for an action or its result (a book, an account, a system) and is also a common plural: جَبَل becomes جِبَال."
+  },
+  {
+    "id": "taf3il",
+    "arabic": "تَفْعِيل",
+    "translit": "tafʿīl",
+    "meaning": "The act of making it happen",
+    "explanation": "تَـ at the front and a long ī before the last letter. It is the noun that goes with the doubled verb فَعَّلَ: عَلَّمَ is to teach, تَعْلِيم is teaching."
+  },
+  {
+    "id": "mufa3ala",
+    "arabic": "مُفَاعَلَة",
+    "translit": "mufāʿala",
+    "meaning": "The act of doing it with someone",
+    "explanation": "The noun that goes with فَاعَلَ: سَاعَدَ is to help, مُسَاعَدَة is help."
+  },
+  {
+    "id": "adj",
+    "arabic": "فَعِيل",
+    "translit": "faʿīl",
+    "meaning": "Having the quality",
+    "explanation": "a then a long ī. The most common adjective shape: it describes something that has the root's quality as a lasting trait. Big, small, near, far and happy all use it."
+  },
+  {
+    "id": "comparative",
+    "arabic": "أَفْعَل",
+    "translit": "ʾafʿal",
+    "meaning": "More or most",
+    "explanation": "أَ at the front turns an adjective into its comparative and superlative: كَبِير is big, أَكْبَر is bigger or biggest."
+  },
+  {
+    "id": "plural",
+    "arabic": "أَفْعَال",
+    "translit": "ʾafʿāl",
+    "meaning": "More than one: a common plural",
+    "explanation": "أَ at the front and a long ā before the last letter. One of the most common ways Arabic makes a plural by reshaping the word instead of adding an ending."
+  },
+  {
+    "id": "nisba",
+    "arabic": "ـِيّ",
+    "translit": "-ī",
+    "meaning": "Related to it",
+    "explanation": "Add ـِيّ to a noun to get an adjective meaning \"of\" or \"related to\" it: شَمْس is sun, شَمْسِيّ is solar. Nationalities work the same way."
+  }
+]

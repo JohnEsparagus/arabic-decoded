@@ -1,0 +1,45 @@
+[
+  {
+    "date": "2026-10-11",
+    "title": "Stats, sidebar and collections",
+    "changes": [
+      "A sidebar with your account, learning stats, settings, About and these updates.",
+      "Learning stats: how many cards you know at each level, by day, month or year, plus your streak.",
+      "Hold any card to add it to your queue, mark it mastered, favorite it, reset it or file it in a collection.",
+      "Collections: your own lists of cards, with a practice mode that doesn't affect your schedule.",
+      "In Campaigns, hold a tile to select several cards and act on them together.",
+      "An Alphabet section for complete beginners: the 28 letters as cards, with their sounds and shapes.",
+      "A daily goal and your streak on the welcome card.",
+      "Favorites, collections and your review history now sync with your account.",
+      "Sentences, in the sidebar: browse everyday sentences and add the ones you want to your queue.",
+      "Choose the Arabic font in Settings."
+    ]
+  },
+  {
+    "date": "2026-10-10",
+    "title": "Words, patterns and listening",
+    "changes": [
+      "Every root now has its words as cards of their own, with meanings and example sentences.",
+      "Words link back to their root, and a root lists the words built from it.",
+      "Pattern cards explain the shapes words are built on.",
+      "A welcome card on opening the app: what's due today and how far along you are.",
+      "Listen to any card read aloud while you're online.",
+      "Accounts: sign in to back up your progress and sync it between devices."
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "More campaigns",
+    "changes": [
+      "Ten themed campaigns of roots, from Absolute Core to Abstract Concepts.",
+      "Root tiles in Campaigns are coloured by how well you know them."
+    ]
+  },
+  {
+    "date": "2026-08-03",
+    "title": "First version",
+    "changes": [
+      "Roots as flashcards on a spaced-repetition schedule, with a dictionary to browse them."
+    ]
+  }
+]

@@ -7,6 +7,7 @@ import '../models/flashcard.dart';
 import '../providers/study_session_provider.dart';
 import '../services/sm2.dart';
 import '../theme/app_theme.dart';
+import '../widgets/card_actions_sheet.dart';
 import '../widgets/flashcard_detail_content.dart';
 import '../widgets/flashcard_frame.dart';
 
@@ -31,6 +32,31 @@ class StudySessionView extends ConsumerWidget {
       return _SessionComplete(reviewedCount: session.reviewedCount);
     }
 
+    // A read-once card has nothing to recall, so nothing to flip or
+    // grade: it's shown whole, with one way forward.
+    if (card.kind == CardKind.info) {
+      return Column(
+        children: [
+          Expanded(
+            child: FlashcardFrame(
+              child: Center(child: FlashcardDetailContent(card: card)),
+            ),
+          ),
+          const SizedBox(height: 16),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: notifier.dismiss,
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+              ),
+              child: const Text('Continue'),
+            ),
+          ),
+        ],
+      );
+    }
+
     return Column(
       children: [
         _PhaseLabel(phase: session.phase),
@@ -45,7 +71,8 @@ class StudySessionView extends ConsumerWidget {
         Expanded(
           child: GestureDetector(
             onTap: notifier.flip,
-            child: _FlipCard(card: card, revealed: session.revealed),
+            onLongPress: () => showCardActions(context, card),
+            child: FlipCard(card: card, revealed: session.revealed),
           ),
         ),
         const SizedBox(height: 16),
@@ -96,8 +123,10 @@ class _PhaseLabel extends StatelessWidget {
   }
 }
 
-class _FlipCard extends StatelessWidget {
-  const _FlipCard({required this.card, required this.revealed});
+/// A card that turns over to show its back: the Arabic alone on the front,
+/// [FlashcardDetailContent] on the back. Also used by [PracticeScreen].
+class FlipCard extends StatelessWidget {
+  const FlipCard({super.key, required this.card, required this.revealed});
 
   final Flashcard card;
   final bool revealed;
@@ -138,13 +167,33 @@ class _CardFront extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        card.arabicWord,
-        textDirection: TextDirection.rtl,
-        textAlign: TextAlign.center,
-        style: arabicTextStyle(fontSize: 56, color: context.colors.ink),
-      ),
+    // A word and a pattern can be spelled the same (فَاعِل is both), so
+    // the front says which kind of card is being asked about.
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          card.kind.name.toUpperCase(),
+          style: TextStyle(
+            color: context.colors.inkMuted,
+            fontSize: 11,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 1,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          card.arabicWord,
+          textDirection: TextDirection.rtl,
+          textAlign: TextAlign.center,
+          style: arabicTextStyle(
+            context,
+            // A whole sentence needs room that a single word doesn't.
+            fontSize: card.kind == CardKind.sentence ? 30 : 56,
+            color: context.colors.ink,
+          ),
+        ),
+      ],
     );
   }
 }

@@ -30,6 +30,40 @@ class SyncedFlashcardRepository implements FlashcardRepository {
   }
 
   @override
+  Future<void> updateFlashcardContent(Flashcard card) =>
+      _local.updateFlashcardContent(card);
+
+  @override
+  Future<void> setQueued(int cardId, bool queued) async {
+    await _local.setQueued(cardId, queued);
+    onProgressChanged();
+  }
+
+  @override
+  Future<void> markMastered(int cardId) async {
+    await _local.markMastered(cardId);
+    onProgressChanged();
+  }
+
+  @override
+  Future<void> resetFlashcard(int cardId) async {
+    await _local.resetFlashcard(cardId);
+    onProgressChanged();
+  }
+
+  @override
+  Future<void> markSeen(int cardId) async {
+    await _local.markSeen(cardId);
+    onProgressChanged();
+  }
+
+  @override
+  Future<void> deleteFlashcard(int cardId) => _local.deleteFlashcard(cardId);
+
+  @override
+  Future<List<Flashcard>> getQueuedFlashcards() => _local.getQueuedFlashcards();
+
+  @override
   Future<List<Flashcard>> getFlashcardsForDeck(int deckId) =>
       _local.getFlashcardsForDeck(deckId);
 
@@ -37,12 +71,26 @@ class SyncedFlashcardRepository implements FlashcardRepository {
   Future<List<Flashcard>> getAllFlashcards() => _local.getAllFlashcards();
 
   @override
-  Future<List<Flashcard>> getDueReviewFlashcards({DateTime? asOf}) =>
-      _local.getDueReviewFlashcards(asOf: asOf);
+  Future<List<Flashcard>> getDueReviewFlashcards({
+    DateTime? asOf,
+    bool includeWords = true,
+    bool includeLetters = true,
+  }) => _local.getDueReviewFlashcards(
+    asOf: asOf,
+    includeWords: includeWords,
+    includeLetters: includeLetters,
+  );
 
   @override
-  Future<List<Flashcard>> getNewFlashcards({required int limit}) =>
-      _local.getNewFlashcards(limit: limit);
+  Future<List<Flashcard>> getNewFlashcards({
+    required int limit,
+    bool includeWords = true,
+    bool includeLetters = true,
+  }) => _local.getNewFlashcards(
+    limit: limit,
+    includeWords: includeWords,
+    includeLetters: includeLetters,
+  );
 
   @override
   Future<int> countIntroducedSince(DateTime cutoff) =>

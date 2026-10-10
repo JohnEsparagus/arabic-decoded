@@ -4,7 +4,38 @@
     "translit": "dh-h-b",
     "meaning": "Going",
     "mnemonic": "The Duchess Heads out the Back door. DH-H-B is the root of going and departing.",
-    "words": ["ذهب", "يذهب", "ذاهب"],
+    "words": [
+      {
+        "arabic": "ذَهَبَ",
+        "translit": "dhahaba",
+        "meaning": "to go",
+        "pattern": "form1",
+        "note": "Present tense: يَذْهَبُ (yadhhabu)",
+        "example": {
+          "ar": "ذهب الولد إلى المدرسة.",
+          "en": "The boy went to school."
+        }
+      },
+      {
+        "arabic": "ذَاهِب",
+        "translit": "dhāhib",
+        "meaning": "going",
+        "pattern": "doer",
+        "example": {
+          "ar": "أنا ذاهب إلى السوق.",
+          "en": "I am going to the market."
+        }
+      },
+      {
+        "arabic": "ذَهَاب",
+        "translit": "dhahāb",
+        "meaning": "going (the act)",
+        "example": {
+          "ar": "الذهاب إلى العمل صعب اليوم.",
+          "en": "Going to work is hard today."
+        }
+      }
+    ],
     "example": "She ذهب to work early, يذهب there every morning as the ذاهب one."
   },
   {
@@ -12,7 +43,28 @@
     "translit": "j-ʾ-ʾ",
     "meaning": "Coming",
     "mnemonic": "A Jester Arrives, Announcing his entrance loudly. J-ʾ-ʾ is the root of coming and arriving.",
-    "words": ["جاء", "يجيء", "مجيء"],
+    "words": [
+      {
+        "arabic": "جَاءَ",
+        "translit": "jāʾa",
+        "meaning": "to come",
+        "pattern": "form1",
+        "note": "Present tense: يَجِيءُ (yajīʾu)",
+        "example": {
+          "ar": "جاء الضيف مساء.",
+          "en": "The guest came in the evening."
+        }
+      },
+      {
+        "arabic": "مَجِيء",
+        "translit": "majīʾ",
+        "meaning": "coming, arrival",
+        "example": {
+          "ar": "شكرا على مجيئك.",
+          "en": "Thank you for coming."
+        }
+      }
+    ],
     "example": "He جاء late, but his مجيء was still celebrated."
   },
   {
@@ -20,7 +72,49 @@
     "translit": "d-kh-l",
     "meaning": "Entering",
     "mnemonic": "A Detective Kicks the Lock to enter the room. D-KH-L is the root of entering and inside.",
-    "words": ["دخل", "يدخل", "داخل", "مدخل"],
+    "words": [
+      {
+        "arabic": "دَخَلَ",
+        "translit": "dakhala",
+        "meaning": "to enter",
+        "pattern": "form1",
+        "note": "Present tense: يَدْخُلُ (yadkhulu)",
+        "example": {
+          "ar": "دخل المعلم الصف.",
+          "en": "The teacher entered the classroom."
+        }
+      },
+      {
+        "arabic": "دَاخِل",
+        "translit": "dākhil",
+        "meaning": "inside, interior",
+        "pattern": "doer",
+        "example": {
+          "ar": "القطة داخل البيت.",
+          "en": "The cat is inside the house."
+        }
+      },
+      {
+        "arabic": "مَدْخَل",
+        "translit": "madkhal",
+        "meaning": "entrance",
+        "pattern": "place",
+        "example": {
+          "ar": "أين مدخل الفندق؟",
+          "en": "Where is the hotel entrance?"
+        }
+      },
+      {
+        "arabic": "دُخُول",
+        "translit": "dukhūl",
+        "meaning": "entering, entry",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "الدخول من هنا.",
+          "en": "Entry is from here."
+        }
+      }
+    ],
     "example": "He دخل through the مدخل and stood داخل the hall."
   },
   {
@@ -28,7 +122,49 @@
     "translit": "kh-r-j",
     "meaning": "Exiting",
     "mnemonic": "A Knight Rushes out the Gate. KH-R-J is the root of exiting and going out.",
-    "words": ["خرج", "يخرج", "خارج", "مخرج"],
+    "words": [
+      {
+        "arabic": "خَرَجَ",
+        "translit": "kharaja",
+        "meaning": "to go out, exit",
+        "pattern": "form1",
+        "note": "Present tense: يَخْرُجُ (yakhruju)",
+        "example": {
+          "ar": "خرج الولد من البيت.",
+          "en": "The boy went out of the house."
+        }
+      },
+      {
+        "arabic": "خَارِج",
+        "translit": "khārij",
+        "meaning": "outside",
+        "pattern": "doer",
+        "example": {
+          "ar": "الأطفال خارج البيت.",
+          "en": "The children are outside the house."
+        }
+      },
+      {
+        "arabic": "مَخْرَج",
+        "translit": "makhraj",
+        "meaning": "exit",
+        "pattern": "place",
+        "example": {
+          "ar": "المخرج على اليمين.",
+          "en": "The exit is on the right."
+        }
+      },
+      {
+        "arabic": "خُرُوج",
+        "translit": "khurūj",
+        "meaning": "going out, exit",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "الخروج ممنوع الآن.",
+          "en": "Going out is not allowed now."
+        }
+      }
+    ],
     "example": "She خرج quickly through the مخرج to stand خارج the building."
   },
   {
@@ -36,7 +172,38 @@
     "translit": "w-ṣ-l",
     "meaning": "Arriving, connecting",
     "mnemonic": "A Wanderer Steps in at Last. W-Ṣ-L is the root of arriving and connecting.",
-    "words": ["وصل", "يصل", "وصول", "متصل"],
+    "words": [
+      {
+        "arabic": "وَصَلَ",
+        "translit": "waṣala",
+        "meaning": "to arrive",
+        "pattern": "form1",
+        "note": "Present tense: يَصِلُ (yaṣilu)",
+        "example": {
+          "ar": "وصل القطار في الوقت.",
+          "en": "The train arrived on time."
+        }
+      },
+      {
+        "arabic": "وُصُول",
+        "translit": "wuṣūl",
+        "meaning": "arrival",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "ما وقت الوصول؟",
+          "en": "What is the arrival time?"
+        }
+      },
+      {
+        "arabic": "مُتَّصِل",
+        "translit": "muttaṣil",
+        "meaning": "connected, online",
+        "example": {
+          "ar": "هل أنت متصل بالإنترنت؟",
+          "en": "Are you connected to the internet?"
+        }
+      }
+    ],
     "example": "The train وصل on time, and its وصول meant the line stayed متصل."
   },
   {
@@ -44,7 +211,29 @@
     "translit": "r-j-ʿ",
     "meaning": "Returning",
     "mnemonic": "A Runner Jogs back Again. R-J-ʿ is the root of returning and going back.",
-    "words": ["رجع", "يرجع", "رجوع"],
+    "words": [
+      {
+        "arabic": "رَجَعَ",
+        "translit": "rajaʿa",
+        "meaning": "to return",
+        "pattern": "form1",
+        "note": "Present tense: يَرْجِعُ (yarjiʿu)",
+        "example": {
+          "ar": "رجع أبي من العمل.",
+          "en": "My father returned from work."
+        }
+      },
+      {
+        "arabic": "رُجُوع",
+        "translit": "rujūʿ",
+        "meaning": "return",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "الرجوع إلى البيت.",
+          "en": "Returning home."
+        }
+      }
+    ],
     "example": "He رجع home at sunset, his رجوع expected every day."
   },
   {
@@ -52,7 +241,29 @@
     "translit": "q-w-m",
     "meaning": "Standing, rising",
     "mnemonic": "A Queen Wakes and stands Majestic. Q-W-M is the root of standing, rising, and getting up.",
-    "words": ["قام", "يقوم", "قيام"],
+    "words": [
+      {
+        "arabic": "قَامَ",
+        "translit": "qāma",
+        "meaning": "to stand up, rise",
+        "pattern": "form1",
+        "note": "Present tense: يَقُومُ (yaqūmu)",
+        "example": {
+          "ar": "قام الطالب من الكرسي.",
+          "en": "The student got up from the chair."
+        }
+      },
+      {
+        "arabic": "قِيَام",
+        "translit": "qiyām",
+        "meaning": "standing, rising",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "القيام مبكرا مفيد.",
+          "en": "Getting up early is beneficial."
+        }
+      }
+    ],
     "example": "He قام from his chair, and every morning يقوم the same way."
   },
   {
@@ -60,7 +271,39 @@
     "translit": "j-l-s",
     "meaning": "Sitting",
     "mnemonic": "A Juggler Lands and Sits down abruptly. J-L-S is the root of sitting.",
-    "words": ["جلس", "يجلس", "جلوس", "مجلس"],
+    "words": [
+      {
+        "arabic": "جَلَسَ",
+        "translit": "jalasa",
+        "meaning": "to sit",
+        "pattern": "form1",
+        "note": "Present tense: يَجْلِسُ (yajlisu)",
+        "example": {
+          "ar": "جلس الرجل على الكرسي.",
+          "en": "The man sat on the chair."
+        }
+      },
+      {
+        "arabic": "جُلُوس",
+        "translit": "julūs",
+        "meaning": "sitting",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "الجلوس طويلا متعب.",
+          "en": "Sitting for a long time is tiring."
+        }
+      },
+      {
+        "arabic": "مَجْلِس",
+        "translit": "majlis",
+        "meaning": "council; sitting room",
+        "pattern": "place",
+        "example": {
+          "ar": "اجتمع المجلس اليوم.",
+          "en": "The council met today."
+        }
+      }
+    ],
     "example": "He جلس on the bench, and the council's مجلس also means a sitting place."
   },
   {
@@ -68,7 +311,38 @@
     "translit": "f-t-ḥ",
     "meaning": "Opening",
     "mnemonic": "A Farmer Turns the Handle to open the gate. F-T-Ḥ is the root of opening.",
-    "words": ["فتح", "يفتح", "مفتوح", "مفتاح"],
+    "words": [
+      {
+        "arabic": "فَتَحَ",
+        "translit": "fataḥa",
+        "meaning": "to open",
+        "pattern": "form1",
+        "note": "Present tense: يَفْتَحُ (yaftaḥu)",
+        "example": {
+          "ar": "فتح الولد الباب.",
+          "en": "The boy opened the door."
+        }
+      },
+      {
+        "arabic": "مَفْتُوح",
+        "translit": "maftūḥ",
+        "meaning": "open",
+        "pattern": "done",
+        "example": {
+          "ar": "الباب مفتوح.",
+          "en": "The door is open."
+        }
+      },
+      {
+        "arabic": "مِفْتَاح",
+        "translit": "miftāḥ",
+        "meaning": "key",
+        "example": {
+          "ar": "أين مفتاح السيارة؟",
+          "en": "Where is the car key?"
+        }
+      }
+    ],
     "example": "He فتح the door with a مفتاح, leaving it مفتوح."
   },
   {
@@ -76,7 +350,28 @@
     "translit": "gh-l-q",
     "meaning": "Closing",
     "mnemonic": "A Ghost Locks the Quarters shut. GH-L-Q is the root of closing.",
-    "words": ["غلق", "يغلق", "مغلق"],
+    "words": [
+      {
+        "arabic": "أَغْلَقَ",
+        "translit": "ʾaghlaqa",
+        "meaning": "to close",
+        "pattern": "form4",
+        "note": "Present tense: يُغْلِقُ (yughliqu)",
+        "example": {
+          "ar": "أغلق الولد الباب.",
+          "en": "The boy closed the door."
+        }
+      },
+      {
+        "arabic": "مُغْلَق",
+        "translit": "mughlaq",
+        "meaning": "closed",
+        "example": {
+          "ar": "المحل مغلق اليوم.",
+          "en": "The shop is closed today."
+        }
+      }
+    ],
     "example": "He غلق the shop early, so it stayed مغلق all night."
   },
   {
@@ -84,7 +379,38 @@
     "translit": "ḥ-m-l",
     "meaning": "Carrying",
     "mnemonic": "A Hiker's Mule Lugs the heavy bags. Ḥ-M-L is the root of carrying and bearing.",
-    "words": ["حمل", "يحمل", "حامل"],
+    "words": [
+      {
+        "arabic": "حَمَلَ",
+        "translit": "ḥamala",
+        "meaning": "to carry",
+        "pattern": "form1",
+        "note": "Present tense: يَحْمِلُ (yaḥmilu)",
+        "example": {
+          "ar": "حمل الرجل الحقيبة.",
+          "en": "The man carried the bag."
+        }
+      },
+      {
+        "arabic": "حَامِل",
+        "translit": "ḥāmil",
+        "meaning": "carrier; pregnant",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو حامل الرسالة.",
+          "en": "He is the bearer of the letter."
+        }
+      },
+      {
+        "arabic": "حِمْل",
+        "translit": "ḥiml",
+        "meaning": "load, burden",
+        "example": {
+          "ar": "هذا حمل ثقيل.",
+          "en": "This is a heavy load."
+        }
+      }
+    ],
     "example": "The mule حمل the load, and every day it يحمل more as a حامل."
   },
   {
@@ -92,7 +418,29 @@
     "translit": "t-r-k",
     "meaning": "Leaving",
     "mnemonic": "A Traveler Runs off, Kaput — gone for good. T-R-K is the root of leaving and abandoning.",
-    "words": ["ترك", "يترك", "متروك"],
+    "words": [
+      {
+        "arabic": "تَرَكَ",
+        "translit": "taraka",
+        "meaning": "to leave",
+        "pattern": "form1",
+        "note": "Present tense: يَتْرُكُ (yatruku)",
+        "example": {
+          "ar": "ترك الولد كتابه في البيت.",
+          "en": "The boy left his book at home."
+        }
+      },
+      {
+        "arabic": "مَتْرُوك",
+        "translit": "matrūk",
+        "meaning": "left, abandoned",
+        "pattern": "done",
+        "example": {
+          "ar": "هذا بيت متروك.",
+          "en": "This is an abandoned house."
+        }
+      }
+    ],
     "example": "He ترك the old house, and it stayed متروك for years."
   },
   {
@@ -100,7 +448,39 @@
     "translit": "w-ḍ-ʿ",
     "meaning": "Placing",
     "mnemonic": "A Waiter Drops off the Order at your table. W-Ḍ-ʿ is the root of placing and putting.",
-    "words": ["وضع", "يضع", "وضع", "موضوع"],
+    "words": [
+      {
+        "arabic": "وَضَعَ",
+        "translit": "waḍaʿa",
+        "meaning": "to put, place",
+        "pattern": "form1",
+        "note": "Present tense: يَضَعُ (yaḍaʿu)",
+        "example": {
+          "ar": "وضع الكتاب على الطاولة.",
+          "en": "He put the book on the table."
+        }
+      },
+      {
+        "arabic": "وَضْع",
+        "translit": "waḍʿ",
+        "meaning": "situation; placing",
+        "pattern": "act",
+        "example": {
+          "ar": "الوضع جيد الآن.",
+          "en": "The situation is good now."
+        }
+      },
+      {
+        "arabic": "مَوْضُوع",
+        "translit": "mawḍūʿ",
+        "meaning": "topic, subject",
+        "pattern": "done",
+        "example": {
+          "ar": "ما موضوع الدرس؟",
+          "en": "What is the topic of the lesson?"
+        }
+      }
+    ],
     "example": "She وضع the plate down, and the موضوع of the meeting was already set."
   },
   {
@@ -108,7 +488,29 @@
     "translit": "w-q-f",
     "meaning": "Standing still, stopping",
     "mnemonic": "A Watchman Quietly Freezes in place. W-Q-F is the root of stopping and standing still.",
-    "words": ["وقف", "يقف", "موقف"],
+    "words": [
+      {
+        "arabic": "وَقَفَ",
+        "translit": "waqafa",
+        "meaning": "to stop, stand",
+        "pattern": "form1",
+        "note": "Present tense: يَقِفُ (yaqifu)",
+        "example": {
+          "ar": "وقفت السيارة أمام البيت.",
+          "en": "The car stopped in front of the house."
+        }
+      },
+      {
+        "arabic": "مَوْقِف",
+        "translit": "mawqif",
+        "meaning": "stance; stop, parking",
+        "pattern": "place",
+        "example": {
+          "ar": "أين موقف الحافلة؟",
+          "en": "Where is the bus stop?"
+        }
+      }
+    ],
     "example": "The bus وقف at the موقف, and everyone يقف waiting."
   },
   {
@@ -116,7 +518,29 @@
     "translit": "m-sh-y",
     "meaning": "Walking",
     "mnemonic": "A Marcher Shuffles onward, Yawning as he walks. M-SH-Y is the root of walking.",
-    "words": ["مشى", "يمشي", "مشي"],
+    "words": [
+      {
+        "arabic": "مَشَى",
+        "translit": "mashā",
+        "meaning": "to walk",
+        "pattern": "form1",
+        "note": "Present tense: يَمْشِي (yamshī)",
+        "example": {
+          "ar": "مشى الرجل في الحديقة.",
+          "en": "The man walked in the garden."
+        }
+      },
+      {
+        "arabic": "مَشْي",
+        "translit": "mashy",
+        "meaning": "walking",
+        "pattern": "act",
+        "example": {
+          "ar": "المشي مفيد للصحة.",
+          "en": "Walking is good for your health."
+        }
+      }
+    ],
     "example": "He مشى to the park, since يمشي there is his daily مشي."
   }
 ]

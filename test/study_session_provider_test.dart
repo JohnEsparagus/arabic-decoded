@@ -273,4 +273,50 @@ void main() {
       expect(secondBatch, hasLength(2));
     },
   );
+
+  test('a read-once card is dismissed, not graded, and the session moves '
+      'on to what it unlocked', () async {
+    final db = DatabaseService(pathOverride: inMemoryDatabasePath);
+    final deck = await db.getOrCreateDeck('Test Campaign');
+    for (final root in ['root1', 'root2']) {
+      await db.insertFlashcard(
+        Flashcard.newCard(
+          arabicWord: root,
+          englishTranslation: root,
+          exampleSentence: '',
+          deckId: deck.id!,
+        ),
+      );
+    }
+    await db.insertFlashcard(
+      Flashcard.newCard(
+        arabicWord: 'A story',
+        englishTranslation: 'Story',
+        exampleSentence: 'Once upon a time…',
+        deckId: deck.id!,
+        kind: CardKind.info,
+        unlockAfter: 1,
+      ),
+    );
+
+    final container = await _containerFor(db);
+    var state = await _loaded(container);
+    final notifier = container.read(studySessionProvider.notifier);
+    expect(state.current!.arabicWord, 'root1');
+
+    // Grading isn't how you get past anything but a read-once card, and
+    // dismissing does nothing to a card that should be graded.
+    await notifier.dismiss();
+    expect(container.read(studySessionProvider).current!.arabicWord, 'root1');
+
+    await notifier.grade(Grade.good);
+    state = container.read(studySessionProvider);
+    expect(state.current!.arabicWord, 'A story');
+    expect(state.reviewedCount, 1);
+
+    await notifier.dismiss();
+    state = container.read(studySessionProvider);
+    expect(state.current!.arabicWord, 'root2');
+    expect(state.reviewedCount, 1); // reading it isn't a card studied
+  });
 }

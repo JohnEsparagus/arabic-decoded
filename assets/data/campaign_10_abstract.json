@@ -4,7 +4,38 @@
     "translit": "s-b-b",
     "meaning": "Cause, reason",
     "mnemonic": "A Scientist Backs his Belief with a solid reason. S-B-B is the root of cause and reason.",
-    "words": ["سبب", "يسبب", "أسباب"],
+    "words": [
+      {
+        "arabic": "سَبَب",
+        "translit": "sabab",
+        "meaning": "cause, reason",
+        "example": {
+          "ar": "ما سبب المشكلة؟",
+          "en": "What is the cause of the problem?"
+        }
+      },
+      {
+        "arabic": "أَسْبَاب",
+        "translit": "ʾasbāb",
+        "meaning": "causes, reasons",
+        "pattern": "plural",
+        "example": {
+          "ar": "الأسباب كثيرة.",
+          "en": "The reasons are many."
+        }
+      },
+      {
+        "arabic": "سَبَّبَ",
+        "translit": "sabbaba",
+        "meaning": "to cause",
+        "pattern": "form2",
+        "note": "Present tense: يُسَبِّبُ (yusabbibu)",
+        "example": {
+          "ar": "سبب المطر مشاكل كثيرة.",
+          "en": "The rain caused many problems."
+        }
+      }
+    ],
     "example": "The fire سبب major damage, and every one of its أسباب was studied."
   },
   {
@@ -12,7 +43,57 @@
     "translit": "n-t-j",
     "meaning": "Resulting, producing",
     "mnemonic": "A Navigator Times his Journey, producing a clear result. N-T-J is the root of resulting and producing.",
-    "words": ["نتج", "ينتج", "نتيجة", "منتج"],
+    "words": [
+      {
+        "arabic": "نَتَجَ",
+        "translit": "nataja",
+        "meaning": "to result",
+        "pattern": "form1",
+        "note": "Present tense: يَنْتُجُ (yantuju)",
+        "example": {
+          "ar": "نتج عن ذلك مشكلة.",
+          "en": "A problem resulted from that."
+        }
+      },
+      {
+        "arabic": "نَتِيجَة",
+        "translit": "natīja",
+        "meaning": "result",
+        "example": {
+          "ar": "النتيجة جيدة.",
+          "en": "The result is good."
+        }
+      },
+      {
+        "arabic": "أَنْتَجَ",
+        "translit": "ʾantaja",
+        "meaning": "to produce",
+        "pattern": "form4",
+        "note": "Present tense: يُنْتِجُ (yuntiju)",
+        "example": {
+          "ar": "أنتج المصنع سيارات.",
+          "en": "The factory produced cars."
+        }
+      },
+      {
+        "arabic": "إِنْتَاج",
+        "translit": "ʾintāj",
+        "meaning": "production",
+        "example": {
+          "ar": "زاد الإنتاج هذا العام.",
+          "en": "Production increased this year."
+        }
+      },
+      {
+        "arabic": "مُنْتَج",
+        "translit": "muntaj",
+        "meaning": "product",
+        "example": {
+          "ar": "هذا منتج محلي.",
+          "en": "This is a local product."
+        }
+      }
+    ],
     "example": "The factory ينتج goods daily, and each منتج leads to a new نتيجة."
   },
   {
@@ -20,7 +101,57 @@
     "translit": "sh-k-l",
     "meaning": "Shape, forming",
     "mnemonic": "A Sculptor Keeps molding the cLay into shape. SH-K-L is the root of shape and forming.",
-    "words": ["شكل", "يشكل", "أشكال", "مشكلة"],
+    "words": [
+      {
+        "arabic": "شَكْل",
+        "translit": "shakl",
+        "meaning": "shape, form",
+        "example": {
+          "ar": "ما شكل البيت؟",
+          "en": "What does the house look like?"
+        }
+      },
+      {
+        "arabic": "أَشْكَال",
+        "translit": "ʾashkāl",
+        "meaning": "shapes",
+        "pattern": "plural",
+        "example": {
+          "ar": "رسم الطفل أشكالا كثيرة.",
+          "en": "The child drew many shapes."
+        }
+      },
+      {
+        "arabic": "شَكَّلَ",
+        "translit": "shakkala",
+        "meaning": "to form, shape",
+        "pattern": "form2",
+        "note": "Present tense: يُشَكِّلُ (yushakkilu)",
+        "example": {
+          "ar": "شكل الرئيس حكومة جديدة.",
+          "en": "The president formed a new government."
+        }
+      },
+      {
+        "arabic": "تَشْكِيل",
+        "translit": "tashkīl",
+        "meaning": "formation; vowel marks",
+        "pattern": "taf3il",
+        "example": {
+          "ar": "التشكيل يساعد على القراءة.",
+          "en": "Vowel marks help with reading."
+        }
+      },
+      {
+        "arabic": "مُشْكِلَة",
+        "translit": "mushkila",
+        "meaning": "problem",
+        "example": {
+          "ar": "عندي مشكلة صغيرة.",
+          "en": "I have a small problem."
+        }
+      }
+    ],
     "example": "The clay شكل into a vase, its أشكال varied, though one became a مشكلة."
   },
   {
@@ -28,7 +159,57 @@
     "translit": "m-th-l",
     "meaning": "Example, resembling",
     "mnemonic": "A Merchant Throws down a Lookalike example. M-TH-L is the root of examples and resembling.",
-    "words": ["مثل", "يمثل", "مثال", "تمثيل"],
+    "words": [
+      {
+        "arabic": "مِثْل",
+        "translit": "mithl",
+        "meaning": "like, similar to",
+        "example": {
+          "ar": "هو مثل أخيه.",
+          "en": "He is like his brother."
+        }
+      },
+      {
+        "arabic": "مِثَال",
+        "translit": "mithāl",
+        "meaning": "example",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "هذا مثال جيد.",
+          "en": "This is a good example."
+        }
+      },
+      {
+        "arabic": "مَثَّلَ",
+        "translit": "maththala",
+        "meaning": "to represent; to act",
+        "pattern": "form2",
+        "note": "Present tense: يُمَثِّلُ (yumaththilu)",
+        "example": {
+          "ar": "مثل اللاعب بلده.",
+          "en": "The player represented his country."
+        }
+      },
+      {
+        "arabic": "تَمْثِيل",
+        "translit": "tamthīl",
+        "meaning": "acting; representation",
+        "pattern": "taf3il",
+        "example": {
+          "ar": "يدرس التمثيل في الجامعة.",
+          "en": "He studies acting at university."
+        }
+      },
+      {
+        "arabic": "مُمَثِّل",
+        "translit": "mumaththil",
+        "meaning": "actor; representative",
+        "example": {
+          "ar": "هو ممثل مشهور.",
+          "en": "He is a famous actor."
+        }
+      }
+    ],
     "example": "He gave a مثل to explain, and the مثال helped his تمثيل of the idea."
   },
   {
@@ -36,7 +217,56 @@
     "translit": "j-m-ʿ",
     "meaning": "Gathering, collecting",
     "mnemonic": "A Juggler Musters Allies to gather the crowd. J-M-ʿ is the root of gathering.",
-    "words": ["جمع", "يجمع", "جماعة", "مجموعة"],
+    "words": [
+      {
+        "arabic": "جَمَعَ",
+        "translit": "jamaʿa",
+        "meaning": "to gather, collect",
+        "pattern": "form1",
+        "note": "Present tense: يَجْمَعُ (yajmaʿu)",
+        "example": {
+          "ar": "جمع الولد الكتب.",
+          "en": "The boy gathered the books."
+        }
+      },
+      {
+        "arabic": "جَمْع",
+        "translit": "jamʿ",
+        "meaning": "gathering; plural",
+        "pattern": "act",
+        "example": {
+          "ar": "ما جمع هذه الكلمة؟",
+          "en": "What is the plural of this word?"
+        }
+      },
+      {
+        "arabic": "جَمَاعَة",
+        "translit": "jamāʿa",
+        "meaning": "group",
+        "example": {
+          "ar": "جاءت جماعة من الطلاب.",
+          "en": "A group of students came."
+        }
+      },
+      {
+        "arabic": "مَجْمُوعَة",
+        "translit": "majmūʿa",
+        "meaning": "collection, set",
+        "example": {
+          "ar": "عندي مجموعة كتب.",
+          "en": "I have a collection of books."
+        }
+      },
+      {
+        "arabic": "جَامِعَة",
+        "translit": "jāmiʿa",
+        "meaning": "university",
+        "example": {
+          "ar": "أدرس في الجامعة.",
+          "en": "I study at the university."
+        }
+      }
+    ],
     "example": "He جمع the coins, sorting them into a مجموعة for the جماعة."
   },
   {
@@ -44,7 +274,46 @@
     "translit": "f-r-q",
     "meaning": "Difference, separating",
     "mnemonic": "A Farmer Rakes and Quits, separating the piles. F-R-Q is the root of difference and separation.",
-    "words": ["فرق", "يفرق", "فريق", "مختلف فارق"],
+    "words": [
+      {
+        "arabic": "فَرْق",
+        "translit": "farq",
+        "meaning": "difference",
+        "example": {
+          "ar": "ما الفرق بينهما؟",
+          "en": "What is the difference between them?"
+        }
+      },
+      {
+        "arabic": "فَرَّقَ",
+        "translit": "farraqa",
+        "meaning": "to separate",
+        "pattern": "form2",
+        "note": "Present tense: يُفَرِّقُ (yufarriqu)",
+        "example": {
+          "ar": "فرق المعلم بين الطالبين.",
+          "en": "The teacher separated the two students."
+        }
+      },
+      {
+        "arabic": "فَرِيق",
+        "translit": "farīq",
+        "meaning": "team",
+        "example": {
+          "ar": "فاز الفريق بالمباراة.",
+          "en": "The team won the match."
+        }
+      },
+      {
+        "arabic": "فِرْقَة",
+        "translit": "firqa",
+        "meaning": "band, troupe",
+        "example": {
+          "ar": "هذه فرقة موسيقية.",
+          "en": "This is a music band."
+        }
+      }
+    ],
     "example": "There is a فرق between them, and the فريق يفرق its tasks accordingly."
   },
   {
@@ -52,7 +321,58 @@
     "translit": "q-ṭ-ʿ",
     "meaning": "Cutting",
     "mnemonic": "A Queen's Tailor Amputates the excess fabric, cutting it off. Q-Ṭ-ʿ is the root of cutting.",
-    "words": ["قطع", "يقطع", "قطعة", "مقطوع"],
+    "words": [
+      {
+        "arabic": "قَطَعَ",
+        "translit": "qaṭaʿa",
+        "meaning": "to cut",
+        "pattern": "form1",
+        "note": "Present tense: يَقْطَعُ (yaqṭaʿu)",
+        "example": {
+          "ar": "قطع الرجل الخبز.",
+          "en": "The man cut the bread."
+        }
+      },
+      {
+        "arabic": "قَطْع",
+        "translit": "qaṭʿ",
+        "meaning": "cutting",
+        "pattern": "act",
+        "example": {
+          "ar": "قطع الأشجار ممنوع.",
+          "en": "Cutting down trees is forbidden."
+        }
+      },
+      {
+        "arabic": "قِطْعَة",
+        "translit": "qiṭʿa",
+        "meaning": "piece",
+        "example": {
+          "ar": "أريد قطعة خبز.",
+          "en": "I want a piece of bread."
+        }
+      },
+      {
+        "arabic": "مَقْطُوع",
+        "translit": "maqṭūʿ",
+        "meaning": "cut off",
+        "pattern": "done",
+        "example": {
+          "ar": "الماء مقطوع اليوم.",
+          "en": "The water is cut off today."
+        }
+      },
+      {
+        "arabic": "مَقْطَع",
+        "translit": "maqṭaʿ",
+        "meaning": "section, clip; syllable",
+        "pattern": "place",
+        "example": {
+          "ar": "شاهدت مقطعا قصيرا.",
+          "en": "I watched a short clip."
+        }
+      }
+    ],
     "example": "He قطع the rope, leaving a قطعة that stayed مقطوع forever."
   },
   {
@@ -60,7 +380,47 @@
     "translit": "w-ṣ-l",
     "meaning": "Connecting, joining",
     "mnemonic": "A Welder Solders a Link, connecting the pieces. W-Ṣ-L is the root of connecting and joining.",
-    "words": ["وصل", "يصل", "اتصال", "متصل"],
+    "words": [
+      {
+        "arabic": "وَصْل",
+        "translit": "waṣl",
+        "meaning": "connection, linking",
+        "pattern": "act",
+        "example": {
+          "ar": "هذه همزة وصل.",
+          "en": "This is a connecting hamza."
+        }
+      },
+      {
+        "arabic": "وَصَّلَ",
+        "translit": "waṣṣala",
+        "meaning": "to deliver, connect",
+        "pattern": "form2",
+        "note": "Present tense: يُوَصِّلُ (yuwaṣṣilu)",
+        "example": {
+          "ar": "وصل السائق الطلب.",
+          "en": "The driver delivered the order."
+        }
+      },
+      {
+        "arabic": "اِتِّصَال",
+        "translit": "ittiṣāl",
+        "meaning": "contact, call",
+        "example": {
+          "ar": "شكرا على الاتصال.",
+          "en": "Thank you for calling."
+        }
+      },
+      {
+        "arabic": "صِلَة",
+        "translit": "ṣila",
+        "meaning": "link, relation",
+        "example": {
+          "ar": "لا صلة بينهما.",
+          "en": "There is no link between them."
+        }
+      }
+    ],
     "example": "The wires وصل together, and the اتصال stayed متصل throughout."
   },
   {
@@ -68,7 +428,57 @@
     "translit": "q-s-m",
     "meaning": "Dividing",
     "mnemonic": "A Queen Slices and Measures, dividing the cake fairly. Q-S-M is the root of dividing.",
-    "words": ["قسم", "يقسم", "قسمة", "أقسام"],
+    "words": [
+      {
+        "arabic": "قَسَمَ",
+        "translit": "qasama",
+        "meaning": "to divide",
+        "pattern": "form1",
+        "note": "Present tense: يَقْسِمُ (yaqsimu)",
+        "example": {
+          "ar": "قسم الأب الخبز.",
+          "en": "The father divided the bread."
+        }
+      },
+      {
+        "arabic": "قِسْم",
+        "translit": "qism",
+        "meaning": "section, department",
+        "example": {
+          "ar": "أعمل في قسم المبيعات.",
+          "en": "I work in the sales department."
+        }
+      },
+      {
+        "arabic": "أَقْسَام",
+        "translit": "ʾaqsām",
+        "meaning": "sections",
+        "pattern": "plural",
+        "example": {
+          "ar": "في الجامعة أقسام كثيرة.",
+          "en": "The university has many departments."
+        }
+      },
+      {
+        "arabic": "قِسْمَة",
+        "translit": "qisma",
+        "meaning": "division; lot",
+        "example": {
+          "ar": "هذه قسمة عادلة.",
+          "en": "This is a fair division."
+        }
+      },
+      {
+        "arabic": "تَقْسِيم",
+        "translit": "taqsīm",
+        "meaning": "dividing, partition",
+        "pattern": "taf3il",
+        "example": {
+          "ar": "تقسيم العمل مهم.",
+          "en": "Dividing up the work is important."
+        }
+      }
+    ],
     "example": "He قسم the land, and its أقسام were divided by careful قسمة."
   },
   {
@@ -76,7 +486,45 @@
     "translit": "n-w-ʿ",
     "meaning": "Type, kind, variety",
     "mnemonic": "A Navigator Wants an Assortment of every type. N-W-ʿ is the root of type and variety.",
-    "words": ["نوع", "أنواع", "متنوع"],
+    "words": [
+      {
+        "arabic": "نَوْع",
+        "translit": "nawʿ",
+        "meaning": "type, kind",
+        "example": {
+          "ar": "ما نوع السيارة؟",
+          "en": "What type of car is it?"
+        }
+      },
+      {
+        "arabic": "أَنْوَاع",
+        "translit": "ʾanwāʿ",
+        "meaning": "types",
+        "pattern": "plural",
+        "example": {
+          "ar": "هناك أنواع كثيرة.",
+          "en": "There are many types."
+        }
+      },
+      {
+        "arabic": "تَنَوُّع",
+        "translit": "tanawwuʿ",
+        "meaning": "variety, diversity",
+        "example": {
+          "ar": "التنوع جميل.",
+          "en": "Diversity is beautiful."
+        }
+      },
+      {
+        "arabic": "مُتَنَوِّع",
+        "translit": "mutanawwiʿ",
+        "meaning": "varied, diverse",
+        "example": {
+          "ar": "الطعام متنوع هنا.",
+          "en": "The food is varied here."
+        }
+      }
+    ],
     "example": "This نوع of fruit is rare, and the market sells متنوع أنواع."
   }
 ]

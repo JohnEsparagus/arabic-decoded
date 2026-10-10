@@ -4,7 +4,28 @@
     "translit": "b-d-ʾ",
     "meaning": "Beginning",
     "mnemonic": "A Baker Drafts his Agenda, beginning the day. B-D-ʾ is the root of beginning.",
-    "words": ["بدأ", "يبدأ", "بداية"],
+    "words": [
+      {
+        "arabic": "بَدَأَ",
+        "translit": "badaʾa",
+        "meaning": "to begin",
+        "pattern": "form1",
+        "note": "Present tense: يَبْدَأُ (yabdaʾu)",
+        "example": {
+          "ar": "بدأ الدرس الآن.",
+          "en": "The lesson has begun now."
+        }
+      },
+      {
+        "arabic": "بِدَايَة",
+        "translit": "bidāya",
+        "meaning": "beginning",
+        "example": {
+          "ar": "هذه بداية جديدة.",
+          "en": "This is a new beginning."
+        }
+      }
+    ],
     "example": "He بدأ the project today, and it يبدأ a new بداية each time."
   },
   {
@@ -12,7 +33,38 @@
     "translit": "t-m-m",
     "meaning": "Completing",
     "mnemonic": "A Tailor Measures and Mends until the suit is complete. T-M-M is the root of completing.",
-    "words": ["تم", "يتم", "تمام", "كامل تام"],
+    "words": [
+      {
+        "arabic": "تَمَّ",
+        "translit": "tamma",
+        "meaning": "to be completed",
+        "pattern": "form1",
+        "note": "Present tense: يَتِمُّ (yatimmu)",
+        "example": {
+          "ar": "تم العمل بنجاح.",
+          "en": "The work was completed successfully."
+        }
+      },
+      {
+        "arabic": "تَمَام",
+        "translit": "tamām",
+        "meaning": "completeness; perfect!",
+        "example": {
+          "ar": "كل شيء تمام.",
+          "en": "Everything is fine."
+        }
+      },
+      {
+        "arabic": "تَامّ",
+        "translit": "tāmm",
+        "meaning": "complete",
+        "pattern": "doer",
+        "example": {
+          "ar": "أنا في راحة تامة.",
+          "en": "I am in complete comfort."
+        }
+      }
+    ],
     "example": "The work تم on time, and it يتم completed in تمام fashion."
   },
   {
@@ -20,7 +72,38 @@
     "translit": "z-y-d",
     "meaning": "Increasing",
     "mnemonic": "A Zoologist Yields more Data, increasing his findings. Z-Y-D is the root of increasing.",
-    "words": ["زاد", "يزيد", "زيادة"],
+    "words": [
+      {
+        "arabic": "زَادَ",
+        "translit": "zāda",
+        "meaning": "to increase",
+        "pattern": "form1",
+        "note": "Present tense: يَزِيدُ (yazīdu)",
+        "example": {
+          "ar": "زاد عدد الطلاب.",
+          "en": "The number of students increased."
+        }
+      },
+      {
+        "arabic": "زِيَادَة",
+        "translit": "ziyāda",
+        "meaning": "increase",
+        "example": {
+          "ar": "هناك زيادة في الأسعار.",
+          "en": "There is an increase in prices."
+        }
+      },
+      {
+        "arabic": "زَائِد",
+        "translit": "zāʾid",
+        "meaning": "extra, plus",
+        "pattern": "doer",
+        "example": {
+          "ar": "اثنان زائد اثنين.",
+          "en": "Two plus two."
+        }
+      }
+    ],
     "example": "The price زاد sharply, and it continues to يزيد with each زيادة."
   },
   {
@@ -28,7 +111,39 @@
     "translit": "n-q-ṣ",
     "meaning": "Decreasing",
     "mnemonic": "A Navigator Quietly Skips a step, decreasing the total. N-Q-Ṣ is the root of decreasing.",
-    "words": ["نقص", "ينقص", "نقصان"],
+    "words": [
+      {
+        "arabic": "نَقَصَ",
+        "translit": "naqaṣa",
+        "meaning": "to decrease",
+        "pattern": "form1",
+        "note": "Present tense: يَنْقُصُ (yanquṣu)",
+        "example": {
+          "ar": "نقص عدد الطلاب.",
+          "en": "The number of students decreased."
+        }
+      },
+      {
+        "arabic": "نَقْص",
+        "translit": "naqṣ",
+        "meaning": "shortage, lack",
+        "pattern": "act",
+        "example": {
+          "ar": "هناك نقص في الماء.",
+          "en": "There is a shortage of water."
+        }
+      },
+      {
+        "arabic": "نَاقِص",
+        "translit": "nāqiṣ",
+        "meaning": "lacking, minus",
+        "pattern": "doer",
+        "example": {
+          "ar": "العمل ناقص.",
+          "en": "The work is incomplete."
+        }
+      }
+    ],
     "example": "The supply نقص quickly, and it ينقص further with each نقصان."
   },
   {
@@ -36,7 +151,39 @@
     "translit": "k-b-r",
     "meaning": "Growing big",
     "mnemonic": "A Captain Builds a huge Reserve, growing bigger. K-B-R is the root of growing and bigness.",
-    "words": ["كبر", "يكبر", "كبير", "أكبر"],
+    "words": [
+      {
+        "arabic": "كَبُرَ",
+        "translit": "kabura",
+        "meaning": "to grow big, grow up",
+        "pattern": "form1",
+        "note": "Present tense: يَكْبُرُ (yakburu)",
+        "example": {
+          "ar": "كبر الولد بسرعة.",
+          "en": "The boy grew up quickly."
+        }
+      },
+      {
+        "arabic": "كَبِير",
+        "translit": "kabīr",
+        "meaning": "big",
+        "pattern": "adj",
+        "example": {
+          "ar": "هذا بيت كبير.",
+          "en": "This is a big house."
+        }
+      },
+      {
+        "arabic": "أَكْبَر",
+        "translit": "ʾakbar",
+        "meaning": "bigger, biggest",
+        "pattern": "comparative",
+        "example": {
+          "ar": "أخي أكبر مني.",
+          "en": "My brother is older than me."
+        }
+      }
+    ],
     "example": "The child كبر fast, becoming كبير and eventually أكبر than his father."
   },
   {
@@ -44,7 +191,39 @@
     "translit": "ṣ-gh-r",
     "meaning": "Becoming small",
     "mnemonic": "A Sculptor Grinds it down to a Reduced size. Ṣ-GH-R is the root of smallness.",
-    "words": ["صغر", "يصغر", "صغير", "أصغر"],
+    "words": [
+      {
+        "arabic": "صَغُرَ",
+        "translit": "ṣaghura",
+        "meaning": "to become small",
+        "pattern": "form1",
+        "note": "Present tense: يَصْغُرُ (yaṣghuru)",
+        "example": {
+          "ar": "صغر القميص بعد الغسل.",
+          "en": "The shirt shrank after washing."
+        }
+      },
+      {
+        "arabic": "صَغِير",
+        "translit": "ṣaghīr",
+        "meaning": "small",
+        "pattern": "adj",
+        "example": {
+          "ar": "هذا بيت صغير.",
+          "en": "This is a small house."
+        }
+      },
+      {
+        "arabic": "أَصْغَر",
+        "translit": "ʾaṣghar",
+        "meaning": "smaller, smallest",
+        "pattern": "comparative",
+        "example": {
+          "ar": "أختي أصغر مني.",
+          "en": "My sister is younger than me."
+        }
+      }
+    ],
     "example": "The team صغر over time, now صغير and the أصغر in the league."
   },
   {
@@ -52,7 +231,47 @@
     "translit": "gh-y-r",
     "meaning": "Changing",
     "mnemonic": "A Ghost Yields to a Reshape, changing its form. GH-Y-R is the root of changing.",
-    "words": ["غير", "يغير", "تغيير", "متغير"],
+    "words": [
+      {
+        "arabic": "غَيَّرَ",
+        "translit": "ghayyara",
+        "meaning": "to change (something)",
+        "pattern": "form2",
+        "note": "Present tense: يُغَيِّرُ (yughayyiru)",
+        "example": {
+          "ar": "غير الرجل رأيه.",
+          "en": "The man changed his mind."
+        }
+      },
+      {
+        "arabic": "تَغْيِير",
+        "translit": "taghyīr",
+        "meaning": "change",
+        "pattern": "taf3il",
+        "example": {
+          "ar": "نحتاج إلى تغيير.",
+          "en": "We need a change."
+        }
+      },
+      {
+        "arabic": "مُتَغَيِّر",
+        "translit": "mutaghayyir",
+        "meaning": "changing, variable",
+        "example": {
+          "ar": "الجو متغير اليوم.",
+          "en": "The weather is changeable today."
+        }
+      },
+      {
+        "arabic": "غَيْر",
+        "translit": "ghayr",
+        "meaning": "other than, non-",
+        "example": {
+          "ar": "هذا غير ممكن.",
+          "en": "This is not possible."
+        }
+      }
+    ],
     "example": "He غير his plans suddenly, and the تغيير left everything متغير."
   },
   {
@@ -60,7 +279,38 @@
     "translit": "th-b-t",
     "meaning": "Fixing, stability",
     "mnemonic": "A Thespian Bolts down the seT to keep it stable. TH-B-T is the root of fixing and stability.",
-    "words": ["ثبت", "يثبت", "ثابت"],
+    "words": [
+      {
+        "arabic": "ثَبَتَ",
+        "translit": "thabata",
+        "meaning": "to be fixed, proven",
+        "pattern": "form1",
+        "note": "Present tense: يَثْبُتُ (yathbutu)",
+        "example": {
+          "ar": "ثبت أن الخبر صحيح.",
+          "en": "It was proven that the news is true."
+        }
+      },
+      {
+        "arabic": "ثَابِت",
+        "translit": "thābit",
+        "meaning": "fixed, stable",
+        "pattern": "doer",
+        "example": {
+          "ar": "السعر ثابت.",
+          "en": "The price is fixed."
+        }
+      },
+      {
+        "arabic": "ثَبَات",
+        "translit": "thabāt",
+        "meaning": "stability",
+        "example": {
+          "ar": "الثبات مهم في العمل.",
+          "en": "Stability is important at work."
+        }
+      }
+    ],
     "example": "He ثبت the shelf firmly, and it stayed ثابت as he يثبت more each time."
   },
   {
@@ -68,7 +318,58 @@
     "translit": "q-r-b",
     "meaning": "Nearness",
     "mnemonic": "A Queen Runs closer to Bond with her people. Q-R-B is the root of nearness.",
-    "words": ["قرب", "يقترب", "قريب", "قرابة"],
+    "words": [
+      {
+        "arabic": "اِقْتَرَبَ",
+        "translit": "iqtaraba",
+        "meaning": "to approach",
+        "pattern": "form8",
+        "note": "Present tense: يَقْتَرِبُ (yaqtaribu)",
+        "example": {
+          "ar": "اقترب الشتاء.",
+          "en": "Winter has approached."
+        }
+      },
+      {
+        "arabic": "قُرْب",
+        "translit": "qurb",
+        "meaning": "nearness",
+        "example": {
+          "ar": "البيت قرب المدرسة.",
+          "en": "The house is near the school."
+        }
+      },
+      {
+        "arabic": "قَرِيب",
+        "translit": "qarīb",
+        "meaning": "near; a relative",
+        "pattern": "adj",
+        "example": {
+          "ar": "السوق قريب من هنا.",
+          "en": "The market is near here."
+        }
+      },
+      {
+        "arabic": "أَقْرَب",
+        "translit": "ʾaqrab",
+        "meaning": "nearer, nearest",
+        "pattern": "comparative",
+        "example": {
+          "ar": "ما أقرب محطة؟",
+          "en": "What is the nearest station?"
+        }
+      },
+      {
+        "arabic": "قَرَابَة",
+        "translit": "qarāba",
+        "meaning": "kinship",
+        "pattern": "quality",
+        "example": {
+          "ar": "بيننا قرابة.",
+          "en": "We are related."
+        }
+      }
+    ],
     "example": "He قرب the door slowly, since he يقترب whenever a قريب visits."
   },
   {
@@ -76,7 +377,48 @@
     "translit": "b-ʿ-d",
     "meaning": "Farness, after",
     "mnemonic": "A Boxer Aims Distantly, staying far from his opponent. B-ʿ-D is the root of farness and after.",
-    "words": ["بعد", "بعيد", "يبعد"],
+    "words": [
+      {
+        "arabic": "بَعُدَ",
+        "translit": "baʿuda",
+        "meaning": "to be far",
+        "pattern": "form1",
+        "note": "Present tense: يَبْعُدُ (yabʿudu)",
+        "example": {
+          "ar": "يبعد البيت عن المدرسة.",
+          "en": "The house is far from the school."
+        }
+      },
+      {
+        "arabic": "بَعِيد",
+        "translit": "baʿīd",
+        "meaning": "far",
+        "pattern": "adj",
+        "example": {
+          "ar": "المطار بعيد عن المدينة.",
+          "en": "The airport is far from the city."
+        }
+      },
+      {
+        "arabic": "أَبْعَد",
+        "translit": "ʾabʿad",
+        "meaning": "farther, farthest",
+        "pattern": "comparative",
+        "example": {
+          "ar": "هذا أبعد مكان.",
+          "en": "This is the farthest place."
+        }
+      },
+      {
+        "arabic": "بَعْدَ",
+        "translit": "baʿda",
+        "meaning": "after",
+        "example": {
+          "ar": "أراك بعد الدرس.",
+          "en": "I will see you after the lesson."
+        }
+      }
+    ],
     "example": "The town was بعيد from here, and it يبعد further after the بعد storm."
   }
 ]

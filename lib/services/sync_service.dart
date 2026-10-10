@@ -12,6 +12,10 @@ import 'progress_remote.dart';
 /// (see [DatabaseService.updateFlashcard]) and uploaded, and anything
 /// newer on the remote is copied down. Conflicts are settled per card by
 /// whichever side was graded most recently.
+///
+/// Two more things ride along with every sync: the review history, and the
+/// library (favorites and collections). A problem with either never holds
+/// card progress back — see [_run].
 class SyncService {
   SyncService({
     required this._db,
@@ -32,16 +36,26 @@ class SyncService {
 
   /// Marks whatever progress is on this device as nobody's, so the next
   /// account to sign in adopts it instead of clearing it.
-  static Future<void> forgetOwner(SharedPreferences prefs) =>
-      prefs.remove(_ownerKey);
+  static Future<void> forgetOwner(SharedPreferences prefs) async {
+    await prefs.remove(_ownerKey);
+    await prefs.remove(_reviewCursorKey);
+  }
+
+  /// The highest server id among the review-log entries already fetched,
+  /// so each sync only asks for what's been added since.
+  static const _reviewCursorKey = 'sync.review_log_cursor';
+
+  /// How many review-log entries go in one request, either way.
+  static const _reviewPageSize = 500;
 
   Future<int>? _running;
   bool _again = false;
   bool _pullAgain = false;
 
   /// Pulls anything newer from the remote, then uploads local changes.
-  /// Returns how many local cards changed as a result, so callers know
-  /// whether anything on screen needs refreshing.
+  /// Returns how many things changed locally as a result (cards, review
+  /// history entries, the library), so callers know whether anything on
+  /// screen needs refreshing.
   ///
   /// Calls made while a sync is already running don't start a second one
   /// in parallel — they share the running one, which then goes round once
@@ -74,15 +88,80 @@ class SyncService {
         changed++;
         pullThisRound = true;
       }
+      // The extras go either side of card progress, and a failure in
+      // them is held until progress is done: studying comes first, and a
+      // backend that doesn't have their tables yet shouldn't stop it
+      // syncing. The error still surfaces, so the next sync retries.
+      Object? extrasError;
       if (pullThisRound) {
+        try {
+          // Before progress, so the real log entries are in place by the
+          // time applyRemoteProgress looks for cards whose history is
+          // missing.
+          changed += await _pullReviews();
+          if (await _pullLibrary()) changed++;
+        } catch (error) {
+          extrasError = error;
+        }
         changed += await _db.applyRemoteProgress(await _remote.fetchAll());
       }
       final dirty = await _db.getDirtyProgress();
       await _remote.upsert(dirty);
       await _db.markProgressSynced(dirty);
+      if (extrasError == null) {
+        try {
+          await _pushReviews();
+          await _pushLibrary();
+        } catch (error) {
+          extrasError = error;
+        }
+      }
+      if (extrasError != null) throw extrasError;
       pullThisRound = _pullAgain;
     } while (_again);
     return changed;
+  }
+
+  /// Fetches review-log entries added since the last sync, a page at a
+  /// time, and returns how many were new to this device.
+  Future<int> _pullReviews() async {
+    var added = 0;
+    var cursor = _prefs.getInt(_reviewCursorKey) ?? 0;
+    while (true) {
+      final page = await _remote.fetchReviews(
+        afterId: cursor,
+        limit: _reviewPageSize,
+      );
+      if (page.isEmpty) break;
+      added += await _db.applyRemoteReviews(page);
+      cursor = page.last.id;
+      await _prefs.setInt(_reviewCursorKey, cursor);
+      if (page.length < _reviewPageSize) break;
+    }
+    return added;
+  }
+
+  Future<void> _pushReviews() async {
+    while (true) {
+      final batch = await _db.getUnsyncedReviews(limit: _reviewPageSize);
+      if (batch.isEmpty) break;
+      await _remote.addReviews(batch);
+      await _db.markReviewsSynced(batch);
+    }
+  }
+
+  /// Takes the remote library if it's newer than the local one. Returns
+  /// whether anything changed here.
+  Future<bool> _pullLibrary() async {
+    final remote = await _remote.fetchLibrary();
+    return remote != null && await _db.applyRemoteLibrary(remote);
+  }
+
+  Future<void> _pushLibrary() async {
+    final library = await _db.getDirtyLibrary();
+    if (library == null) return;
+    await _remote.upsertLibrary(library);
+    await _db.markLibrarySynced(library);
   }
 
   /// Decides what the progress already on this device means for [userId],
@@ -98,6 +177,9 @@ class SyncService {
     final cleared = owner != null;
     if (cleared) await _db.clearProgress();
     await _prefs.setString(_ownerKey, userId);
+    // Whoever the cursor belonged to, this account's history starts from
+    // the top.
+    await _prefs.remove(_reviewCursorKey);
     return cleared;
   }
 }

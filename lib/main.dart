@@ -39,11 +39,18 @@ class ArabicDecodedApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isDarkMode = ref.watch(darkModeProvider);
+    final arabicFont = ref.watch(arabicFontProvider);
     return MaterialApp(
       title: 'Arabic Decoded',
       debugShowCheckedModeBanner: false,
-      theme: buildAppTheme(brightness: Brightness.light),
-      darkTheme: buildAppTheme(brightness: Brightness.dark),
+      theme: buildAppTheme(
+        brightness: Brightness.light,
+        arabicFont: arabicFont,
+      ),
+      darkTheme: buildAppTheme(
+        brightness: Brightness.dark,
+        arabicFont: arabicFont,
+      ),
       themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
       home: const RootShell(),
     );

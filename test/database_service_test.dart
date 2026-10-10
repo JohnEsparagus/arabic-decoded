@@ -111,5 +111,33 @@ void main() {
     expect(studied.easeFactor, 2.6);
     expect(studied.repetitions, 2);
     expect(studied.isNew, isFalse);
+
+    // Everything added since came through the same upgrade. Cards from
+    // before there were kinds are roots.
+    expect(studied.kind, CardKind.root);
+    expect(studied.isFavorite, isFalse);
+
+    // The review log starts with what's known of the studied card: where
+    // it stands now. The unstudied one has no history.
+    final log = await db.getReviewLog();
+    expect(log.map((e) => e.cardId), everyElement(studied.id));
+    expect(log.last.interval, 6);
+    expect(log.every((e) => !e.graded), isTrue);
+
+    // Nothing starred or collected, so nothing to upload; and the tables
+    // behind them are there to use.
+    expect(await db.getDirtyLibrary(), isNull);
+    final collection = await db.createCollection('Mine');
+    await db.setInCollection(collection, studied.id!, true);
+    await db.setFavorite(studied.id!, true);
+    expect((await db.getDirtyLibrary())!.data['favorites'], hasLength(1));
+
+    // The queue works: the unstudied card is next, and the studied one
+    // can be graded, which is logged.
+    final next = await db.getNewFlashcards(limit: 5);
+    expect(next.map((c) => c.arabicWord), isNot(contains('studied')));
+    expect(next, hasLength(1));
+    await db.updateFlashcard(studied.copyWith(interval: 15));
+    expect((await db.getReviewLog()).last.graded, isTrue);
   });
 }

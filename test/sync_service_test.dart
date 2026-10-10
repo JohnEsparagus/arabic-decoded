@@ -1,5 +1,6 @@
 import 'package:arabic_decoded/models/card_progress.dart';
 import 'package:arabic_decoded/models/flashcard.dart';
+import 'package:arabic_decoded/models/synced_extras.dart';
 import 'package:arabic_decoded/services/database_service.dart';
 import 'package:arabic_decoded/services/progress_remote.dart';
 import 'package:arabic_decoded/services/sync_service.dart';
@@ -7,23 +8,29 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
-/// Stands in for the `card_progress` table: one map of rows per user,
-/// keyed the same way the real table's primary key is, and applying the
-/// same "ignore an update older than what's stored" rule as its trigger.
+/// Stands in for the backend's tables: per user, a map of progress rows
+/// keyed the same way the real table's primary key is, the review log and
+/// the library. It applies the same rules the real thing does: an update
+/// older than what's stored is ignored, and a review that's already there
+/// isn't added twice.
 class _FakeBackend {
-  final Map<String, Map<String, CardProgress>> _rows = {};
+  final Map<String, _FakeRemote> _users = {};
 
-  ProgressRemote forUser(String userId) =>
-      _FakeRemote(_rows.putIfAbsent(userId, () => {}));
+  _FakeRemote forUser(String userId) =>
+      _users.putIfAbsent(userId, _FakeRemote.new);
 
   List<CardProgress> rowsOf(String userId) =>
-      (_rows[userId] ?? {}).values.toList();
+      forUser(userId)._rows.values.toList();
 }
 
 class _FakeRemote implements ProgressRemote {
-  _FakeRemote(this._rows);
+  final Map<String, CardProgress> _rows = {};
+  final List<SyncedReview> reviews = [];
+  LibrarySnapshot? library;
 
-  final Map<String, CardProgress> _rows;
+  /// Set to make the review log and library fail, as they would against a
+  /// backend that doesn't have their tables yet.
+  bool extrasBroken = false;
 
   @override
   Future<List<CardProgress>> fetchAll() async => _rows.values.toList();
@@ -39,6 +46,56 @@ class _FakeRemote implements ProgressRemote {
       _rows[key] = p;
     }
   }
+
+  @override
+  Future<List<SyncedReview>> fetchReviews({
+    required int afterId,
+    required int limit,
+  }) async {
+    if (extrasBroken) throw Exception('no such table');
+    return reviews.where((r) => r.id > afterId).take(limit).toList();
+  }
+
+  @override
+  Future<void> addReviews(List<SyncedReview> added) async {
+    if (extrasBroken) throw Exception('no such table');
+    for (final r in added) {
+      final exists = reviews.any(
+        (e) =>
+            e.deckName == r.deckName &&
+            e.arabicWord == r.arabicWord &&
+            e.at == r.at,
+      );
+      if (exists) continue;
+      reviews.add(
+        SyncedReview(
+          id: reviews.length + 1,
+          deckName: r.deckName,
+          arabicWord: r.arabicWord,
+          at: r.at,
+          interval: r.interval,
+          isNew: r.isNew,
+          graded: r.graded,
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<LibrarySnapshot?> fetchLibrary() async {
+    if (extrasBroken) throw Exception('no such table');
+    return library;
+  }
+
+  @override
+  Future<void> upsertLibrary(LibrarySnapshot uploaded) async {
+    if (extrasBroken) throw Exception('no such table');
+    final existing = library;
+    if (existing != null && uploaded.updatedAt.isBefore(existing.updatedAt)) {
+      return;
+    }
+    library = uploaded;
+  }
 }
 
 class _OfflineRemote implements ProgressRemote {
@@ -47,6 +104,23 @@ class _OfflineRemote implements ProgressRemote {
 
   @override
   Future<void> upsert(List<CardProgress> progress) =>
+      throw Exception('offline');
+
+  @override
+  Future<List<SyncedReview>> fetchReviews({
+    required int afterId,
+    required int limit,
+  }) => throw Exception('offline');
+
+  @override
+  Future<void> addReviews(List<SyncedReview> reviews) =>
+      throw Exception('offline');
+
+  @override
+  Future<LibrarySnapshot?> fetchLibrary() => throw Exception('offline');
+
+  @override
+  Future<void> upsertLibrary(LibrarySnapshot library) =>
       throw Exception('offline');
 }
 
@@ -136,7 +210,8 @@ void main() {
     final laptop = await _device(['a', 'b']);
     final changed = await syncFor(laptop, 'user-1').sync();
 
-    expect(changed, 1);
+    // The card's progress, and the review-log entry that goes with it.
+    expect(changed, 2);
     final a = await _card(laptop, 'a');
     expect(a.isNew, isFalse);
     expect(a.interval, 6);
@@ -243,6 +318,118 @@ void main() {
 
     expect(await syncFor(db, 'user-1').sync(), 0);
     expect((await _card(db, 'a')).isNew, isTrue);
+  });
+
+  /// A second device: its own database and its own preferences.
+  Future<(DatabaseService, SyncService)> secondDevice(
+    List<String> words,
+    String userId,
+  ) async {
+    final db = await _device(words);
+    SharedPreferences.setMockInitialValues({});
+    final otherPrefs = await SharedPreferences.getInstance();
+    return (db, syncFor(db, userId, p: otherPrefs));
+  }
+
+  test('review history follows the account to another device, once', () async {
+    final phone = await _device(['a', 'b']);
+    await _grade(phone, 'a', interval: 6);
+    await _grade(phone, 'b');
+    await phone.markMastered((await _card(phone, 'b')).id!);
+    final phoneSync = syncFor(phone, 'user-1');
+    await phoneSync.sync();
+    expect(backend.forUser('user-1').reviews, hasLength(3));
+
+    final (laptop, laptopSync) = await secondDevice(['a', 'b'], 'user-1');
+    await laptopSync.sync();
+
+    // The same three entries, graded or not as they were on the phone,
+    // with no stand-ins added alongside them for the progress that came
+    // down in the same sync.
+    final log = await laptop.getReviewLog();
+    expect(log.map((e) => e.interval), [6, 1, 180]);
+    expect(log.map((e) => e.graded), [true, true, false]);
+
+    // Syncing again, either side, neither re-downloads nor re-uploads.
+    await laptopSync.sync();
+    await phoneSync.sync();
+    expect(await laptop.getReviewLog(), hasLength(3));
+    expect(await phone.getReviewLog(), hasLength(3));
+    expect(backend.forUser('user-1').reviews, hasLength(3));
+  });
+
+  test('favorites and collections follow the account, newest change '
+      'winning', () async {
+    final phone = await _device(['a', 'b', 'c']);
+    await phone.setFavorite((await _card(phone, 'a')).id!, true);
+    final travel = await phone.createCollection('Travel');
+    await phone.setInCollection(travel, (await _card(phone, 'c')).id!, true);
+    await phone.setInCollection(travel, (await _card(phone, 'b')).id!, true);
+    final phoneSync = syncFor(phone, 'user-1');
+    await phoneSync.sync();
+
+    final (laptop, laptopSync) = await secondDevice(['a', 'b', 'c'], 'user-1');
+    await laptopSync.sync();
+    expect((await _card(laptop, 'a')).isFavorite, isTrue);
+    expect((await _card(laptop, 'b')).isFavorite, isFalse);
+    final copied = (await laptop.getCollections()).single;
+    expect(copied.name, 'Travel');
+    expect(
+      (await laptop.getCollectionFlashcards(
+        copied.id,
+      )).map((c) => c.arabicWord),
+      ['c', 'b'],
+    );
+
+    // A later change on the laptop replaces what the phone has.
+    await Future<void>.delayed(const Duration(milliseconds: 5));
+    await laptop.deleteCollection(copied.id);
+    await laptop.setFavorite((await _card(laptop, 'b')).id!, true);
+    await laptopSync.sync();
+    await phoneSync.sync();
+    expect(await phone.getCollections(), isEmpty);
+    expect((await _card(phone, 'a')).isFavorite, isTrue);
+    expect((await _card(phone, 'b')).isFavorite, isTrue);
+  });
+
+  test('a backend without the extras still syncs card progress', () async {
+    final phone = await _device(['a']);
+    await _grade(phone, 'a', interval: 6);
+    await phone.setFavorite((await _card(phone, 'a')).id!, true);
+    backend.forUser('user-1').extrasBroken = true;
+    final sync = syncFor(phone, 'user-1');
+
+    await expectLater(sync.sync(), throwsException);
+    expect(backend.rowsOf('user-1').single.interval, 6);
+    expect(await phone.getDirtyProgress(), isEmpty);
+
+    // Nothing was lost: once the backend catches up, the extras go too.
+    backend.forUser('user-1').extrasBroken = false;
+    await sync.sync();
+    expect(backend.forUser('user-1').reviews, hasLength(1));
+    expect(backend.forUser('user-1').library, isNotNull);
+  });
+
+  test('another account taking over the device does not inherit the '
+      'library or the history', () async {
+    final db = await _device(['a']);
+    await _grade(db, 'a');
+    await db.setFavorite((await _card(db, 'a')).id!, true);
+    await db.createCollection('Mine');
+    await syncFor(db, 'user-1').sync();
+
+    await syncFor(db, 'user-2').sync();
+    expect(await db.getReviewLog(), isEmpty);
+    expect(await db.getCollections(), isEmpty);
+    expect((await _card(db, 'a')).isFavorite, isFalse);
+    expect(backend.forUser('user-2').reviews, isEmpty);
+    expect(backend.forUser('user-2').library, isNull);
+
+    // And the first account gets everything back when it returns.
+    await syncFor(db, 'user-1').sync();
+    expect(await db.getReviewLog(), hasLength(1));
+    expect((await db.getCollections()).single.name, 'Mine');
+    expect((await _card(db, 'a')).isFavorite, isTrue);
   });
 
   test('CardProgress survives a round trip through its remote row', () {

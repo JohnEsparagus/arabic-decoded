@@ -2,25 +2,69 @@ import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../config/campaign_sources.dart';
 import '../models/deck.dart';
+import '../models/flashcard.dart';
 import '../providers/database_providers.dart';
 import '../providers/study_session_provider.dart';
 import '../theme/app_theme.dart';
 import '../widgets/root_preview_card.dart';
+import '../widgets/selection_bar.dart';
+import 'alphabet_tab.dart';
+import 'collections_tab.dart';
 import 'word_detail_screen.dart';
+import 'words_tab.dart';
 
-/// The "Campaigns" tab: a browsable overview of every campaign (currently
-/// just one — "Campaign" — but the layout is built to hold the 10s-100s of
-/// campaigns planned later, each a themed group of roots the student works
-/// through in order). Each campaign is its own section with a scrollable
-/// grid of its roots as compact preview cards.
+/// The "Campaigns" tab, in four parts: Alphabet (the 28 letters, for
+/// anyone who can't read the script yet), Roots (every campaign, each a
+/// themed group of roots the student works through in order), Words (the
+/// words learnt so far, and the ones ready to be) and Collections (the
+/// user's own lists of cards). It opens on Roots, the core of the app.
 ///
-/// Tapping a root opens the same [WordDetailScreen] the Dictionary tab
-/// uses. Adding a root to an "active study queue" from here is intentionally
-/// not wired up yet — this screen is the browsing/exploration layer that
-/// future queue-management UI will hang off of.
-class CampaignsBrowserScreen extends ConsumerWidget {
+/// Holding a tile in the Roots or Words grid selects it, and more can be
+/// tapped to join it; [SelectionBar] then offers the actions for all of
+/// them at once.
+class CampaignsBrowserScreen extends StatelessWidget {
   const CampaignsBrowserScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const DefaultTabController(
+      length: 4,
+      initialIndex: 1,
+      child: Column(
+        children: [
+          TabBar(
+            labelPadding: EdgeInsets.symmetric(horizontal: 4),
+            tabs: [
+              Tab(text: 'Alphabet'),
+              Tab(text: 'Roots'),
+              Tab(text: 'Words'),
+              Tab(text: 'Collections'),
+            ],
+          ),
+          Expanded(
+            child: TabBarView(
+              children: [
+                AlphabetTab(),
+                _RootsTab(),
+                WordsTab(),
+                CollectionsTab(),
+              ],
+            ),
+          ),
+          SelectionBar(),
+        ],
+      ),
+    );
+  }
+}
+
+/// Every campaign as its own section, with a grid of its roots as compact
+/// preview cards. Tapping a root opens the same [WordDetailScreen] the
+/// Dictionary tab uses.
+class _RootsTab extends ConsumerWidget {
+  const _RootsTab();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -36,7 +80,15 @@ class CampaignsBrowserScreen extends ConsumerWidget {
           style: TextStyle(color: colors.inkMuted),
         ),
       ),
-      data: (decks) {
+      data: (allDecks) {
+        // The patterns and the alphabet have decks but aren't campaigns.
+        final decks = allDecks
+            .where(
+              (deck) =>
+                  deck.name != patternsSource.deckName &&
+                  deck.name != alphabetSource.deckName,
+            )
+            .toList();
         if (decks.isEmpty) {
           return Center(
             child: Text(
@@ -109,6 +161,10 @@ class _ResetProgressButton extends ConsumerWidget {
     ref.invalidate(campaignDecksProvider);
     ref.invalidate(deckFlashcardsProvider);
     ref.invalidate(dictionaryEntriesProvider);
+    ref.invalidate(allFlashcardsProvider);
+    ref.invalidate(reviewLogProvider);
+    ref.invalidate(collectionsProvider);
+    ref.invalidate(collectionFlashcardsProvider);
     ref.invalidate(studySessionProvider);
   }
 }
@@ -120,7 +176,12 @@ class _CampaignSection extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final rootsAsync = ref.watch(deckFlashcardsProvider(deck.id!));
+    // A campaign is its roots; its words are on the Words tab.
+    final rootsAsync = ref
+        .watch(deckFlashcardsProvider(deck.id!))
+        .whenData(
+          (cards) => cards.where((card) => card.kind == CardKind.root).toList(),
+        );
     final colors = context.colors;
 
     return Card(

@@ -1,5 +1,29 @@
 import 'dart:convert';
 
+/// What a [Flashcard] teaches. A root (ك ت ب) is the starting point; a
+/// word (كِتَاب) is built from a root and usually a pattern; a pattern
+/// (فِعَال) is the vowel-and-affix shape words are poured into. A letter
+/// (ب) is one of the alphabet's 28, for someone who can't read the script
+/// yet. A sentence is a whole one to read and understand.
+///
+/// [info] is the odd one out: not something to memorise but something to
+/// read once (a story, a fact, a word of encouragement). It's never
+/// graded or reviewed; it's shown at a set point along the way and then
+/// it's done. See [Flashcard.unlockAfter].
+enum CardKind {
+  root,
+  word,
+  pattern,
+  letter,
+  sentence,
+  info;
+
+  static CardKind fromName(String? name) => CardKind.values.firstWhere(
+    (kind) => kind.name == name,
+    orElse: () => CardKind.root,
+  );
+}
+
 /// A single spaced-repetition flashcard belonging to a [Deck].
 ///
 /// The `ease_factor`, `interval`, `repetitions` and `next_review` fields are
@@ -15,6 +39,12 @@ import 'dart:convert';
 /// [transliteration], [mnemonic] and [relatedWords] are optional "richer
 /// back side" content — nothing renders them unless they're present, so new
 /// content sources can leave them out entirely.
+///
+/// [kind], [rootKey] and [patternKey] are what link cards to each other:
+/// a word's [rootKey] is the [arabicWord] of its root card (in the same
+/// deck), and its [patternKey] is the [patternKey] of a pattern card. A
+/// pattern card carries its own key there, so "every word with this
+/// pattern" is one comparison.
 class Flashcard {
   final int? id;
   final String arabicWord;
@@ -30,6 +60,30 @@ class Flashcard {
   final String? transliteration;
   final String? mnemonic;
   final List<String> relatedWords;
+  final CardKind kind;
+  final String? rootKey;
+  final String? patternKey;
+
+  /// English translation of [exampleSentence], when that is a real Arabic
+  /// sentence (word cards) rather than an English one with Arabic in it.
+  final String? exampleTranslation;
+
+  /// A short extra line under the meaning, e.g. a verb's present tense.
+  final String? note;
+
+  /// For an [CardKind.info] card: how many roots have to have been
+  /// introduced before it's shown. Null or 0 shows it straight away.
+  final int? unlockAfter;
+
+  /// Starred by the user. Like [queuedAt], this is read from the database
+  /// but never written back by [toMap]: each has its own setter on
+  /// `DatabaseService`, so saving a card that was loaded a while ago (the
+  /// one being graded, say) can't undo a star added in the meantime.
+  final bool isFavorite;
+
+  /// When the user asked for this still-new card to be put in their queue,
+  /// ahead of whatever would have come next. Null if they haven't.
+  final DateTime? queuedAt;
 
   const Flashcard({
     this.id,
@@ -46,6 +100,14 @@ class Flashcard {
     this.transliteration,
     this.mnemonic,
     this.relatedWords = const [],
+    this.kind = CardKind.root,
+    this.rootKey,
+    this.patternKey,
+    this.exampleTranslation,
+    this.note,
+    this.unlockAfter,
+    this.isFavorite = false,
+    this.queuedAt,
   });
 
   /// A brand-new card, due immediately, with default SM-2 parameters. Stays
@@ -59,6 +121,12 @@ class Flashcard {
     String? transliteration,
     String? mnemonic,
     List<String> relatedWords = const [],
+    CardKind kind = CardKind.root,
+    String? rootKey,
+    String? patternKey,
+    String? exampleTranslation,
+    String? note,
+    int? unlockAfter,
   }) {
     return Flashcard(
       id: id,
@@ -66,16 +134,23 @@ class Flashcard {
       englishTranslation: englishTranslation,
       exampleSentence: exampleSentence,
       deckId: deckId,
+      unlockAfter: unlockAfter,
       nextReview: DateTime.now(),
       transliteration: transliteration,
       mnemonic: mnemonic,
       relatedWords: relatedWords,
+      kind: kind,
+      rootKey: rootKey,
+      patternKey: patternKey,
+      exampleTranslation: exampleTranslation,
+      note: note,
     );
   }
 
   factory Flashcard.fromMap(Map<String, Object?> map) {
     final relatedWordsJson = map['related_words'] as String?;
     final introducedAtMs = map['introduced_at'] as int?;
+    final queuedAtMs = map['queued_at'] as int?;
     return Flashcard(
       id: map['id'] as int?,
       arabicWord: map['arabic_word'] as String,
@@ -97,6 +172,16 @@ class Flashcard {
       relatedWords: relatedWordsJson == null || relatedWordsJson.isEmpty
           ? const []
           : (json.decode(relatedWordsJson) as List).cast<String>(),
+      kind: CardKind.fromName(map['kind'] as String?),
+      rootKey: map['root_key'] as String?,
+      patternKey: map['pattern_key'] as String?,
+      exampleTranslation: map['example_translation'] as String?,
+      note: map['note'] as String?,
+      unlockAfter: map['unlock_after'] as int?,
+      isFavorite: (map['favorite'] as int? ?? 0) != 0,
+      queuedAt: queuedAtMs == null
+          ? null
+          : DateTime.fromMillisecondsSinceEpoch(queuedAtMs),
     );
   }
 
@@ -104,8 +189,6 @@ class Flashcard {
     return {
       if (id != null) 'id': id,
       'arabic_word': arabicWord,
-      'english_translation': englishTranslation,
-      'example_sentence': exampleSentence,
       'deck_id': deckId,
       'ease_factor': easeFactor,
       'interval': interval,
@@ -113,9 +196,25 @@ class Flashcard {
       'next_review': nextReview.millisecondsSinceEpoch,
       'is_new': isNew ? 1 : 0,
       'introduced_at': introducedAt?.millisecondsSinceEpoch,
+      ...contentMap(),
+    };
+  }
+
+  /// Just the columns that come from the bundled content, none of the
+  /// SM-2 progress — what a content refresh is allowed to overwrite.
+  Map<String, Object?> contentMap() {
+    return {
+      'english_translation': englishTranslation,
+      'example_sentence': exampleSentence,
       'transliteration': transliteration,
       'mnemonic': mnemonic,
       'related_words': json.encode(relatedWords),
+      'kind': kind.name,
+      'root_key': rootKey,
+      'pattern_key': patternKey,
+      'example_translation': exampleTranslation,
+      'note': note,
+      'unlock_after': unlockAfter,
     };
   }
 
@@ -134,6 +233,11 @@ class Flashcard {
     String? transliteration,
     String? mnemonic,
     List<String>? relatedWords,
+    CardKind? kind,
+    String? rootKey,
+    String? patternKey,
+    String? exampleTranslation,
+    String? note,
   }) {
     return Flashcard(
       id: id ?? this.id,
@@ -150,6 +254,14 @@ class Flashcard {
       transliteration: transliteration ?? this.transliteration,
       mnemonic: mnemonic ?? this.mnemonic,
       relatedWords: relatedWords ?? this.relatedWords,
+      kind: kind ?? this.kind,
+      rootKey: rootKey ?? this.rootKey,
+      patternKey: patternKey ?? this.patternKey,
+      exampleTranslation: exampleTranslation ?? this.exampleTranslation,
+      note: note ?? this.note,
+      unlockAfter: unlockAfter,
+      isFavorite: isFavorite,
+      queuedAt: queuedAt,
     );
   }
 }

@@ -83,6 +83,9 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
     // maxNewCardsPerDayProvider), so raising it after exhausting today's
     // quota can surface more cards immediately instead of only tomorrow.
     ref.watch(maxNewCardsPerDayProvider);
+    // Same for switching words on or off: the queue is rebuilt around it.
+    ref.watch(studyWordsProvider);
+    ref.watch(studyAlphabetProvider);
     // Kick off the load without blocking `build`, which must stay
     // synchronous for a plain Notifier.
     Future.microtask(_load);
@@ -95,13 +98,11 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
     // from them, so a fresh install has something to show.
     await ref.read(campaignDecksProvider.future);
 
-    final reviewCards = await repository.getDueReviewFlashcards();
-
-    final startOfToday = _startOfDay(DateTime.now());
-    final introducedToday = await repository.countIntroducedSince(startOfToday);
-    final maxPerDay = ref.read(maxNewCardsPerDayProvider);
-    final remainingToday = (maxPerDay - introducedToday).clamp(0, maxPerDay);
-    final newCards = await repository.getNewFlashcards(limit: remainingToday);
+    final reviewCards = await repository.getDueReviewFlashcards(
+      includeWords: ref.read(studyWordsProvider),
+      includeLetters: ref.read(studyAlphabetProvider),
+    );
+    final newCards = await _fetchNewCards();
 
     state = StudySessionState(
       reviewQueue: reviewCards,
@@ -110,6 +111,24 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
       newIndex: 0,
       loading: false,
     );
+  }
+
+  /// The cards the user queued by hand, all of them, then as many new
+  /// cards as today's cap still allows, in teaching order. The cap is on
+  /// what the app hands out; cards someone asked for aren't held back.
+  Future<List<Flashcard>> _fetchNewCards() async {
+    final repository = ref.read(flashcardRepositoryProvider);
+    final queued = await repository.getQueuedFlashcards();
+    final startOfToday = _startOfDay(DateTime.now());
+    final introducedToday = await repository.countIntroducedSince(startOfToday);
+    final maxPerDay = ref.read(maxNewCardsPerDayProvider);
+    final remainingToday = (maxPerDay - introducedToday).clamp(0, maxPerDay);
+    final upNext = await repository.getNewFlashcards(
+      limit: remainingToday,
+      includeWords: ref.read(studyWordsProvider),
+      includeLetters: ref.read(studyAlphabetProvider),
+    );
+    return [...queued, ...upNext];
   }
 
   DateTime _startOfDay(DateTime time) =>
@@ -123,7 +142,6 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
   Future<void> grade(Grade grade) async {
     final card = state.current;
     if (card == null) return;
-    final phase = state.phase;
 
     final result = computeSM2(
       easeFactor: card.easeFactor,
@@ -140,27 +158,64 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
       introducedAt: card.isNew ? DateTime.now() : card.introducedAt,
     );
 
-    final repository = ref.read(flashcardRepositoryProvider);
-    await repository.updateFlashcard(updated);
+    await ref.read(flashcardRepositoryProvider).updateFlashcard(updated);
+    // "Again" means you didn't get it — put it back at the end of whichever
+    // queue it came from so it comes up again before this session ends,
+    // instead of only coming back tomorrow via its persisted next_review.
+    await _advance(card, updated, requeue: grade == Grade.again);
+  }
+
+  /// Moves on from a read-once card ([CardKind.info]): it's marked as
+  /// read, and that's all. No grade, no schedule.
+  Future<void> dismiss() async {
+    final card = state.current;
+    if (card == null || card.kind != CardKind.info) return;
+    await ref.read(flashcardRepositoryProvider).markSeen(card.id!);
+    await _advance(card, card.copyWith(isNew: false), counts: false);
+  }
+
+  /// Steps the session past [card], which has just been saved as
+  /// [updated]. [counts] is false for a card that was only read, which
+  /// isn't one of the cards "seen" in the tally.
+  Future<void> _advance(
+    Flashcard card,
+    Flashcard updated, {
+    bool requeue = false,
+    bool counts = true,
+  }) async {
+    final phase = state.phase;
     // The Campaigns tab's per-deck root grid and the Dictionary tab both
     // cache their flashcard lists independently of this session — without
     // invalidating them, a just-graded card's new mastery level/interval
     // wouldn't show up until something else happened to refresh them.
     ref.invalidate(deckFlashcardsProvider);
     ref.invalidate(dictionaryEntriesProvider);
+    ref.invalidate(allFlashcardsProvider);
+    ref.invalidate(reviewLogProvider);
 
-    // "Again" means you didn't get it — put it back at the end of whichever
-    // queue it came from so it comes up again before this session ends,
-    // instead of only coming back tomorrow via its persisted next_review.
-    final requeue = grade == Grade.again;
+    var newQueue = state.newQueue;
+    if (phase == StudyPhase.newCards) {
+      final seen = newQueue.sublist(0, state.newIndex + 1);
+      var upcoming = newQueue.sublist(state.newIndex + 1);
+      if (card.isNew) {
+        // Introducing a card can unlock others (a root unlocks its words,
+        // or a read-once card due after it), and those belong next in line
+        // rather than in tomorrow's session. So the not-yet-introduced
+        // part of the queue is asked for again; cards already waiting for
+        // another go after "Again" keep their place at the end.
+        upcoming = [
+          ...await _fetchNewCards(),
+          ...upcoming.where((queued) => !queued.isNew),
+        ];
+      }
+      newQueue = [...seen, ...upcoming, if (requeue) updated];
+    }
 
     state = state.copyWith(
       reviewQueue: phase == StudyPhase.review && requeue
           ? [...state.reviewQueue, updated]
           : state.reviewQueue,
-      newQueue: phase == StudyPhase.newCards && requeue
-          ? [...state.newQueue, updated]
-          : state.newQueue,
+      newQueue: newQueue,
       reviewIndex: phase == StudyPhase.review
           ? state.reviewIndex + 1
           : state.reviewIndex,
@@ -168,7 +223,7 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
           ? state.newIndex + 1
           : state.newIndex,
       revealed: false,
-      reviewedCount: state.reviewedCount + 1,
+      reviewedCount: state.reviewedCount + (counts ? 1 : 0),
     );
   }
 }

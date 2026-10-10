@@ -25,9 +25,14 @@ enum MasteryLevel {
 /// multiplies by the ease factor, ~2.5x, each successful review), so each
 /// bucket lines up with a handful of consecutive repetitions rather than
 /// splitting one apart.
-MasteryLevel masteryLevelOf(Flashcard card) {
-  if (card.isNew) return MasteryLevel.unlearned;
-  final days = card.interval;
+MasteryLevel masteryLevelOf(Flashcard card) =>
+    masteryLevelFor(isNew: card.isNew, interval: card.interval);
+
+/// The same buckets from the two numbers they depend on, for when there's
+/// no [Flashcard] to hand — a past entry in the review log, say.
+MasteryLevel masteryLevelFor({required bool isNew, required int interval}) {
+  if (isNew) return MasteryLevel.unlearned;
+  final days = interval;
   if (days <= 7) return MasteryLevel.weak;
   if (days <= 30) return MasteryLevel.learning;
   if (days <= 90) return MasteryLevel.strong;

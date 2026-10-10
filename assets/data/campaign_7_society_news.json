@@ -4,7 +4,57 @@
     "translit": "ḥ-k-m",
     "meaning": "Ruling, judging",
     "mnemonic": "A Historian Keeps a Memo of every ruling. Ḥ-K-M is the root of ruling and judging.",
-    "words": ["حكم", "يحكم", "حكومة", "حاكم"],
+    "words": [
+      {
+        "arabic": "حَكَمَ",
+        "translit": "ḥakama",
+        "meaning": "to rule, judge",
+        "pattern": "form1",
+        "note": "Present tense: يَحْكُمُ (yaḥkumu)",
+        "example": {
+          "ar": "حكم الملك البلد.",
+          "en": "The king ruled the country."
+        }
+      },
+      {
+        "arabic": "حُكْم",
+        "translit": "ḥukm",
+        "meaning": "rule; verdict",
+        "example": {
+          "ar": "هذا حكم عادل.",
+          "en": "This is a fair verdict."
+        }
+      },
+      {
+        "arabic": "حَاكِم",
+        "translit": "ḥākim",
+        "meaning": "ruler, governor",
+        "pattern": "doer",
+        "example": {
+          "ar": "الحاكم في العاصمة.",
+          "en": "The ruler is in the capital."
+        }
+      },
+      {
+        "arabic": "حُكُومَة",
+        "translit": "ḥukūma",
+        "meaning": "government",
+        "example": {
+          "ar": "الحكومة جديدة.",
+          "en": "The government is new."
+        }
+      },
+      {
+        "arabic": "مَحْكَمَة",
+        "translit": "maḥkama",
+        "meaning": "court",
+        "pattern": "place_f",
+        "example": {
+          "ar": "ذهب المحامي إلى المحكمة.",
+          "en": "The lawyer went to the court."
+        }
+      }
+    ],
     "example": "The حاكم حكم the land, his حكومة governed by strict حكم."
   },
   {
@@ -12,7 +62,38 @@
     "translit": "ʿ-d-l",
     "meaning": "Justice, fairness",
     "mnemonic": "An Advocate Delivers a Level, balanced verdict. ʿ-D-L is the root of justice and fairness.",
-    "words": ["عدل", "عادل", "عدالة"],
+    "words": [
+      {
+        "arabic": "عَدْل",
+        "translit": "ʿadl",
+        "meaning": "justice",
+        "pattern": "act",
+        "example": {
+          "ar": "العدل أساس الملك.",
+          "en": "Justice is the foundation of rule."
+        }
+      },
+      {
+        "arabic": "عَادِل",
+        "translit": "ʿādil",
+        "meaning": "just, fair",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو قاض عادل.",
+          "en": "He is a fair judge."
+        }
+      },
+      {
+        "arabic": "عَدَالَة",
+        "translit": "ʿadāla",
+        "meaning": "justice, fairness",
+        "pattern": "quality",
+        "example": {
+          "ar": "نريد العدالة للجميع.",
+          "en": "We want justice for all."
+        }
+      }
+    ],
     "example": "The judge sought عدل, ruling with عدالة as a truly عادل man."
   },
   {
@@ -20,7 +101,36 @@
     "translit": "ḥ-q-q",
     "meaning": "Truth, right",
     "mnemonic": "A Historian Quizzes and Questions until he finds the truth. Ḥ-Q-Q is the root of truth and rights.",
-    "words": ["حق", "حقيقة", "تحقيق"],
+    "words": [
+      {
+        "arabic": "حَقّ",
+        "translit": "ḥaqq",
+        "meaning": "right; truth",
+        "example": {
+          "ar": "التعليم حق للجميع.",
+          "en": "Education is a right for everyone."
+        }
+      },
+      {
+        "arabic": "حَقِيقَة",
+        "translit": "ḥaqīqa",
+        "meaning": "truth, reality",
+        "example": {
+          "ar": "هذه هي الحقيقة.",
+          "en": "This is the truth."
+        }
+      },
+      {
+        "arabic": "تَحْقِيق",
+        "translit": "taḥqīq",
+        "meaning": "investigation; achieving",
+        "pattern": "taf3il",
+        "example": {
+          "ar": "بدأت الشرطة التحقيق.",
+          "en": "The police began the investigation."
+        }
+      }
+    ],
     "example": "She sought the حق, and the تحقيق revealed the حقيقة."
   },
   {
@@ -28,7 +138,48 @@
     "translit": "ẓ-l-m",
     "meaning": "Oppression, injustice",
     "mnemonic": "A Zealous Landlord Mistreats his tenants unjustly. Ẓ-L-M is the root of oppression and injustice.",
-    "words": ["ظلم", "يظلم", "ظالم", "مظلوم"],
+    "words": [
+      {
+        "arabic": "ظَلَمَ",
+        "translit": "ẓalama",
+        "meaning": "to wrong, oppress",
+        "pattern": "form1",
+        "note": "Present tense: يَظْلِمُ (yaẓlimu)",
+        "example": {
+          "ar": "ظلم الحاكم الناس.",
+          "en": "The ruler oppressed the people."
+        }
+      },
+      {
+        "arabic": "ظُلْم",
+        "translit": "ẓulm",
+        "meaning": "injustice",
+        "example": {
+          "ar": "الظلم لا يدوم.",
+          "en": "Injustice does not last."
+        }
+      },
+      {
+        "arabic": "ظَالِم",
+        "translit": "ẓālim",
+        "meaning": "oppressor, unjust",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو حاكم ظالم.",
+          "en": "He is an unjust ruler."
+        }
+      },
+      {
+        "arabic": "مَظْلُوم",
+        "translit": "maẓlūm",
+        "meaning": "wronged, oppressed",
+        "pattern": "done",
+        "example": {
+          "ar": "ساعد القاضي المظلوم.",
+          "en": "The judge helped the wronged man."
+        }
+      }
+    ],
     "example": "The tyrant ظلم the people, and the مظلوم suffered under the ظالم."
   },
   {
@@ -36,7 +187,47 @@
     "translit": "ʾ-m-n",
     "meaning": "Safety, security, trust",
     "mnemonic": "An Astronaut Mans the Nest, keeping it safe and secure. ʾ-M-N is the root of safety and trust.",
-    "words": ["أمن", "آمن", "أمان", "أمين"],
+    "words": [
+      {
+        "arabic": "أَمْن",
+        "translit": "ʾamn",
+        "meaning": "security",
+        "pattern": "act",
+        "example": {
+          "ar": "الأمن مهم في المدينة.",
+          "en": "Security is important in the city."
+        }
+      },
+      {
+        "arabic": "آمِن",
+        "translit": "ʾāmin",
+        "meaning": "safe",
+        "pattern": "doer",
+        "example": {
+          "ar": "هذا مكان آمن.",
+          "en": "This is a safe place."
+        }
+      },
+      {
+        "arabic": "أَمَان",
+        "translit": "ʾamān",
+        "meaning": "safety",
+        "example": {
+          "ar": "نعيش في أمان.",
+          "en": "We live in safety."
+        }
+      },
+      {
+        "arabic": "أَمِين",
+        "translit": "ʾamīn",
+        "meaning": "trustworthy, honest",
+        "pattern": "adj",
+        "example": {
+          "ar": "هو رجل أمين.",
+          "en": "He is an honest man."
+        }
+      }
+    ],
     "example": "The guard kept the أمن, and every أمين felt أمان in that آمن place."
   },
   {
@@ -44,7 +235,36 @@
     "translit": "ḥ-r-b",
     "meaning": "War",
     "mnemonic": "A Historian Records the Battle in grim detail. Ḥ-R-B is the root of war.",
-    "words": ["حرب", "محارب", "حروب"],
+    "words": [
+      {
+        "arabic": "حَرْب",
+        "translit": "ḥarb",
+        "meaning": "war",
+        "example": {
+          "ar": "انتهت الحرب.",
+          "en": "The war ended."
+        }
+      },
+      {
+        "arabic": "حُرُوب",
+        "translit": "ḥurūb",
+        "meaning": "wars",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "الحروب تدمر البلاد.",
+          "en": "Wars destroy countries."
+        }
+      },
+      {
+        "arabic": "مُحَارِب",
+        "translit": "muḥārib",
+        "meaning": "warrior, fighter",
+        "example": {
+          "ar": "كان جدي محاربا.",
+          "en": "My grandfather was a fighter."
+        }
+      }
+    ],
     "example": "The حرب raged for years, and every محارب remembered the حروب."
   },
   {
@@ -52,7 +272,47 @@
     "translit": "s-l-m",
     "meaning": "Peace, safety",
     "mnemonic": "A Sailor Lays down his Musket, choosing peace. S-L-M is the root of peace and safety.",
-    "words": ["سلام", "سلم", "استسلم", "سليم"],
+    "words": [
+      {
+        "arabic": "سَلَام",
+        "translit": "salām",
+        "meaning": "peace",
+        "example": {
+          "ar": "نريد السلام.",
+          "en": "We want peace."
+        }
+      },
+      {
+        "arabic": "سِلْم",
+        "translit": "silm",
+        "meaning": "peace (opposite of war)",
+        "example": {
+          "ar": "في السلم وفي الحرب.",
+          "en": "In peace and in war."
+        }
+      },
+      {
+        "arabic": "سَلِيم",
+        "translit": "salīm",
+        "meaning": "sound, healthy",
+        "pattern": "adj",
+        "example": {
+          "ar": "العقل السليم في الجسم السليم.",
+          "en": "A sound mind in a sound body."
+        }
+      },
+      {
+        "arabic": "اِسْتَسْلَمَ",
+        "translit": "istaslama",
+        "meaning": "to surrender",
+        "pattern": "form10",
+        "note": "Present tense: يَسْتَسْلِمُ (yastaslimu)",
+        "example": {
+          "ar": "استسلم الجيش.",
+          "en": "The army surrendered."
+        }
+      }
+    ],
     "example": "They signed for سلام, and the region stayed سليم after the war ended in استسلم."
   },
   {
@@ -60,7 +320,26 @@
     "translit": "q-n-n",
     "meaning": "Law",
     "mnemonic": "A Queen Nails down the New law firmly. Q-N-N is the root of law.",
-    "words": ["قانون", "قوانين"],
+    "words": [
+      {
+        "arabic": "قَانُون",
+        "translit": "qānūn",
+        "meaning": "law",
+        "example": {
+          "ar": "هذا قانون جديد.",
+          "en": "This is a new law."
+        }
+      },
+      {
+        "arabic": "قَوَانِين",
+        "translit": "qawānīn",
+        "meaning": "laws",
+        "example": {
+          "ar": "القوانين مهمة للمجتمع.",
+          "en": "Laws are important for society."
+        }
+      }
+    ],
     "example": "The new قانون was passed, joining the country's growing قوانين."
   },
   {
@@ -68,7 +347,48 @@
     "translit": "n-ẓ-m",
     "meaning": "Organizing, order",
     "mnemonic": "A Navigator Zips through his Manual, organizing everything neatly. N-Ẓ-M is the root of organizing.",
-    "words": ["نظم", "ينظم", "نظام", "منظمة"],
+    "words": [
+      {
+        "arabic": "نَظَّمَ",
+        "translit": "naẓẓama",
+        "meaning": "to organize",
+        "pattern": "form2",
+        "note": "Present tense: يُنَظِّمُ (yunaẓẓimu)",
+        "example": {
+          "ar": "نظم الطلاب رحلة.",
+          "en": "The students organized a trip."
+        }
+      },
+      {
+        "arabic": "نِظَام",
+        "translit": "niẓām",
+        "meaning": "system, order",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "هذا نظام جديد.",
+          "en": "This is a new system."
+        }
+      },
+      {
+        "arabic": "تَنْظِيم",
+        "translit": "tanẓīm",
+        "meaning": "organizing, organization",
+        "pattern": "taf3il",
+        "example": {
+          "ar": "التنظيم مهم في العمل.",
+          "en": "Organization is important at work."
+        }
+      },
+      {
+        "arabic": "مُنَظَّمَة",
+        "translit": "munaẓẓama",
+        "meaning": "organization",
+        "example": {
+          "ar": "يعمل في منظمة دولية.",
+          "en": "He works at an international organization."
+        }
+      }
+    ],
     "example": "She نظم the files well, since the منظمة she leads follows strict نظام."
   },
   {
@@ -76,7 +396,37 @@
     "translit": "sh-ʿ-b",
     "meaning": "People, nation",
     "mnemonic": "A Sheikh Addresses the Bunch of citizens as one people. SH-ʿ-B is the root of people and nation.",
-    "words": ["شعب", "شعبي", "شعوب"],
+    "words": [
+      {
+        "arabic": "شَعْب",
+        "translit": "shaʿb",
+        "meaning": "a people, nation",
+        "example": {
+          "ar": "الشعب يريد السلام.",
+          "en": "The people want peace."
+        }
+      },
+      {
+        "arabic": "شُعُوب",
+        "translit": "shuʿūb",
+        "meaning": "peoples",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "شعوب العالم كثيرة.",
+          "en": "The peoples of the world are many."
+        }
+      },
+      {
+        "arabic": "شَعْبِيّ",
+        "translit": "shaʿbī",
+        "meaning": "popular, folk",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا مطعم شعبي.",
+          "en": "This is a popular local restaurant."
+        }
+      }
+    ],
     "example": "The شعب gathered proudly, their شعبي traditions shared among many شعوب."
   }
 ]

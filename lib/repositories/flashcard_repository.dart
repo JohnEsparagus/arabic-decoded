@@ -24,10 +24,34 @@ abstract class FlashcardRepository {
   Future<void> insertFlashcard(Flashcard card);
   Future<void> updateFlashcard(Flashcard card);
 
+  /// Replaces a card's content without touching its progress.
+  Future<void> updateFlashcardContent(Flashcard card);
+
+  /// The things a user does to one card by hand that change its progress
+  /// (see "Card actions" in `DatabaseService`).
+  Future<void> setQueued(int cardId, bool queued);
+  Future<void> markMastered(int cardId);
+  Future<void> resetFlashcard(int cardId);
+
+  /// Marks a read-once ([CardKind.info]) card as read.
+  Future<void> markSeen(int cardId);
+
+  /// Removes a card that's no longer part of the bundled content.
+  Future<void> deleteFlashcard(int cardId);
+
   Future<List<Flashcard>> getFlashcardsForDeck(int deckId);
   Future<List<Flashcard>> getAllFlashcards();
-  Future<List<Flashcard>> getDueReviewFlashcards({DateTime? asOf});
-  Future<List<Flashcard>> getNewFlashcards({required int limit});
+  Future<List<Flashcard>> getDueReviewFlashcards({
+    DateTime? asOf,
+    bool includeWords = true,
+    bool includeLetters = true,
+  });
+  Future<List<Flashcard>> getNewFlashcards({
+    required int limit,
+    bool includeWords = true,
+    bool includeLetters = true,
+  });
+  Future<List<Flashcard>> getQueuedFlashcards();
   Future<int> countIntroducedSince(DateTime cutoff);
   Future<List<Flashcard>> searchFlashcards(String query);
 }

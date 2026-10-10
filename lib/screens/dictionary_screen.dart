@@ -4,11 +4,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/flashcard.dart';
 import '../providers/database_providers.dart';
 import '../theme/app_theme.dart';
+import '../widgets/card_actions_sheet.dart';
 import 'word_detail_screen.dart';
 
-/// The "Dictionary" tab: every word across every deck, browsable by
-/// default and filterable with basic Arabic-aware search (normalizeArabic
-/// handles diacritics/alef-variant folding so spelling variants match).
+/// The "Dictionary" tab: every root, word and pattern across every deck,
+/// browsable by default, narrowable to one kind, and filterable with basic
+/// Arabic-aware search (normalizeArabic handles diacritics/alef-variant
+/// folding so spelling variants match).
 /// Tapping a word opens its full flashcard back side ([WordDetailScreen]).
 class DictionaryScreen extends ConsumerWidget {
   const DictionaryScreen({super.key});
@@ -40,7 +42,9 @@ class DictionaryScreen extends ConsumerWidget {
             onChanged: (value) =>
                 ref.read(searchQueryProvider.notifier).set(value),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 10),
+          const _KindFilter(),
+          const SizedBox(height: 10),
           Expanded(
             child: entriesAsync.when(
               loading: () => const Center(child: CircularProgressIndicator()),
@@ -77,6 +81,38 @@ class DictionaryScreen extends ConsumerWidget {
   }
 }
 
+class _KindFilter extends ConsumerWidget {
+  const _KindFilter();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final selected = ref.watch(dictionaryKindProvider);
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          for (final (kind, label) in const [
+            (CardKind.root, 'Roots'),
+            (CardKind.word, 'Words'),
+            (CardKind.pattern, 'Patterns'),
+            (CardKind.letter, 'Letters'),
+            (null, 'All'),
+          ])
+            Padding(
+              padding: const EdgeInsets.only(right: 8),
+              child: ChoiceChip(
+                label: Text(label),
+                selected: selected == kind,
+                onSelected: (_) =>
+                    ref.read(dictionaryKindProvider.notifier).set(kind),
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
 class _DictionaryEntryCard extends StatelessWidget {
   const _DictionaryEntryCard({required this.card});
 
@@ -91,6 +127,7 @@ class _DictionaryEntryCard extends StatelessWidget {
         onTap: () => Navigator.of(
           context,
         ).push(MaterialPageRoute(builder: (_) => WordDetailScreen(card: card))),
+        onLongPress: () => showCardActions(context, card),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
           child: Row(
@@ -102,7 +139,11 @@ class _DictionaryEntryCard extends StatelessWidget {
                     Text(
                       card.arabicWord,
                       textDirection: TextDirection.rtl,
-                      style: arabicTextStyle(fontSize: 22, color: colors.ink),
+                      style: arabicTextStyle(
+                        context,
+                        fontSize: 22,
+                        color: colors.ink,
+                      ),
                     ),
                     const SizedBox(height: 2),
                     Text(
@@ -112,6 +153,16 @@ class _DictionaryEntryCard extends StatelessWidget {
                   ],
                 ),
               ),
+              if (card.isFavorite)
+                Padding(
+                  padding: const EdgeInsets.only(right: 6),
+                  child: Icon(Icons.star, color: colors.gold, size: 18),
+                ),
+              Text(
+                card.kind.name,
+                style: TextStyle(color: colors.inkMuted, fontSize: 12),
+              ),
+              const SizedBox(width: 4),
               Icon(Icons.chevron_right, color: colors.inkMuted),
             ],
           ),

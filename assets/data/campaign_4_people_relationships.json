@@ -4,7 +4,48 @@
     "translit": "w-l-d",
     "meaning": "Being born, child",
     "mnemonic": "A Wanderer's Long-awaited Delivery — a baby is born. W-L-D is the root of birth and children.",
-    "words": ["ولد", "يلد", "والد", "مولود"],
+    "words": [
+      {
+        "arabic": "وَلَدَ",
+        "translit": "walada",
+        "meaning": "to give birth, beget",
+        "pattern": "form1",
+        "note": "Present tense: يَلِدُ (yalidu)",
+        "example": {
+          "ar": "ولدت الأم بنتا.",
+          "en": "The mother gave birth to a girl."
+        }
+      },
+      {
+        "arabic": "وَلَد",
+        "translit": "walad",
+        "meaning": "boy, child",
+        "example": {
+          "ar": "الولد يلعب في الحديقة.",
+          "en": "The boy is playing in the garden."
+        }
+      },
+      {
+        "arabic": "وَالِد",
+        "translit": "wālid",
+        "meaning": "father",
+        "pattern": "doer",
+        "example": {
+          "ar": "والدي طبيب.",
+          "en": "My father is a doctor."
+        }
+      },
+      {
+        "arabic": "مَوْلُود",
+        "translit": "mawlūd",
+        "meaning": "newborn",
+        "pattern": "done",
+        "example": {
+          "ar": "المولود بخير.",
+          "en": "The newborn is well."
+        }
+      }
+    ],
     "example": "The mother ولد a child, and the والد welcomed the مولود."
   },
   {
@@ -12,7 +53,35 @@
     "translit": "ḥ-y-y",
     "meaning": "Living, greeting",
     "mnemonic": "A Hiker's Youthful Yell greets everyone with life. Ḥ-Y-Y is the root of living and greeting.",
-    "words": ["حي", "يحيا", "حياة", "تحية"],
+    "words": [
+      {
+        "arabic": "حَيّ",
+        "translit": "ḥayy",
+        "meaning": "alive; neighbourhood",
+        "example": {
+          "ar": "أسكن في حي هادئ.",
+          "en": "I live in a quiet neighbourhood."
+        }
+      },
+      {
+        "arabic": "حَيَاة",
+        "translit": "ḥayāh",
+        "meaning": "life",
+        "example": {
+          "ar": "الحياة جميلة.",
+          "en": "Life is beautiful."
+        }
+      },
+      {
+        "arabic": "تَحِيَّة",
+        "translit": "taḥiyya",
+        "meaning": "greeting",
+        "example": {
+          "ar": "تحية طيبة للجميع.",
+          "en": "Warm greetings to everyone."
+        }
+      }
+    ],
     "example": "He is still حي, and every تحية celebrates his حياة."
   },
   {
@@ -20,7 +89,38 @@
     "translit": "m-w-t",
     "meaning": "Dying",
     "mnemonic": "A Miner Wanders into the Tunnel and never returns. M-W-T is the root of death.",
-    "words": ["مات", "يموت", "موت", "ميت"],
+    "words": [
+      {
+        "arabic": "مَاتَ",
+        "translit": "māta",
+        "meaning": "to die",
+        "pattern": "form1",
+        "note": "Present tense: يَمُوتُ (yamūtu)",
+        "example": {
+          "ar": "مات الملك.",
+          "en": "The king died."
+        }
+      },
+      {
+        "arabic": "مَوْت",
+        "translit": "mawt",
+        "meaning": "death",
+        "pattern": "act",
+        "example": {
+          "ar": "الموت حق.",
+          "en": "Death is certain."
+        }
+      },
+      {
+        "arabic": "مَيِّت",
+        "translit": "mayyit",
+        "meaning": "dead",
+        "example": {
+          "ar": "البحر الميت في الأردن.",
+          "en": "The Dead Sea is in Jordan."
+        }
+      }
+    ],
     "example": "The old tree مات, its موت marked by a ميت trunk."
   },
   {
@@ -28,7 +128,48 @@
     "translit": "ḥ-b-b",
     "meaning": "Loving",
     "mnemonic": "A Heart Beats and Bounces with love. Ḥ-B-B is the root of loving and affection.",
-    "words": ["حب", "يحب", "محبوب", "حبيب"],
+    "words": [
+      {
+        "arabic": "أَحَبَّ",
+        "translit": "ʾaḥabba",
+        "meaning": "to love",
+        "pattern": "form4",
+        "note": "Present tense: يُحِبُّ (yuḥibbu)",
+        "example": {
+          "ar": "أحب الولد أمه.",
+          "en": "The boy loved his mother."
+        }
+      },
+      {
+        "arabic": "حُبّ",
+        "translit": "ḥubb",
+        "meaning": "love",
+        "example": {
+          "ar": "الحب جميل.",
+          "en": "Love is beautiful."
+        }
+      },
+      {
+        "arabic": "مَحْبُوب",
+        "translit": "maḥbūb",
+        "meaning": "beloved, popular",
+        "pattern": "done",
+        "example": {
+          "ar": "هو معلم محبوب.",
+          "en": "He is a well-loved teacher."
+        }
+      },
+      {
+        "arabic": "حَبِيب",
+        "translit": "ḥabīb",
+        "meaning": "dear, darling",
+        "pattern": "adj",
+        "example": {
+          "ar": "أنت صديق حبيب.",
+          "en": "You are a dear friend."
+        }
+      }
+    ],
     "example": "He حب her deeply, calling her his حبيب, always محبوب."
   },
   {
@@ -36,7 +177,38 @@
     "translit": "k-r-h",
     "meaning": "Hating",
     "mnemonic": "A Critic Rejects with Hostility everything he hates. K-R-H is the root of hating and disliking.",
-    "words": ["كره", "يكره", "كراهية"],
+    "words": [
+      {
+        "arabic": "كَرِهَ",
+        "translit": "kariha",
+        "meaning": "to hate",
+        "pattern": "form1",
+        "note": "Present tense: يَكْرَهُ (yakrahu)",
+        "example": {
+          "ar": "كره الولد الظلم.",
+          "en": "The boy hated injustice."
+        }
+      },
+      {
+        "arabic": "كَرَاهِيَة",
+        "translit": "karāhiya",
+        "meaning": "hatred",
+        "example": {
+          "ar": "الكراهية لا تفيد.",
+          "en": "Hatred is no use."
+        }
+      },
+      {
+        "arabic": "مَكْرُوه",
+        "translit": "makrūh",
+        "meaning": "disliked, hateful",
+        "pattern": "done",
+        "example": {
+          "ar": "الكذب مكروه.",
+          "en": "Lying is hateful."
+        }
+      }
+    ],
     "example": "He كره the taste, and كراهية for it never faded."
   },
   {
@@ -44,7 +216,49 @@
     "translit": "s-ʿ-d",
     "meaning": "Helping, happiness",
     "mnemonic": "A Scout's Aid Delivers help and joy to the village. S-ʿ-D is the root of helping and happiness.",
-    "words": ["ساعد", "يساعد", "مساعدة", "سعيد"],
+    "words": [
+      {
+        "arabic": "سَاعَدَ",
+        "translit": "sāʿada",
+        "meaning": "to help",
+        "pattern": "form3",
+        "note": "Present tense: يُسَاعِدُ (yusāʿidu)",
+        "example": {
+          "ar": "ساعد الولد أباه.",
+          "en": "The boy helped his father."
+        }
+      },
+      {
+        "arabic": "مُسَاعَدَة",
+        "translit": "musāʿada",
+        "meaning": "help, assistance",
+        "pattern": "mufa3ala",
+        "example": {
+          "ar": "أحتاج إلى مساعدة.",
+          "en": "I need help."
+        }
+      },
+      {
+        "arabic": "سَعِيد",
+        "translit": "saʿīd",
+        "meaning": "happy",
+        "pattern": "adj",
+        "example": {
+          "ar": "أنا سعيد اليوم.",
+          "en": "I am happy today."
+        }
+      },
+      {
+        "arabic": "سَعَادَة",
+        "translit": "saʿāda",
+        "meaning": "happiness",
+        "pattern": "quality",
+        "example": {
+          "ar": "السعادة في البيت.",
+          "en": "Happiness is at home."
+        }
+      }
+    ],
     "example": "She ساعد the old man, and her مساعدة made him سعيد."
   },
   {
@@ -52,7 +266,37 @@
     "translit": "d-ʿ-w",
     "meaning": "Calling, inviting",
     "mnemonic": "A Duke's Aide Waves everyone over, calling them in. D-ʿ-W is the root of calling and inviting.",
-    "words": ["دعا", "يدعو", "دعوة"],
+    "words": [
+      {
+        "arabic": "دَعَا",
+        "translit": "daʿā",
+        "meaning": "to call, invite",
+        "pattern": "form1",
+        "note": "Present tense: يَدْعُو (yadʿū)",
+        "example": {
+          "ar": "دعا الرجل أصدقاءه.",
+          "en": "The man invited his friends."
+        }
+      },
+      {
+        "arabic": "دَعْوَة",
+        "translit": "daʿwa",
+        "meaning": "invitation",
+        "example": {
+          "ar": "شكرا على الدعوة.",
+          "en": "Thank you for the invitation."
+        }
+      },
+      {
+        "arabic": "دُعَاء",
+        "translit": "duʿāʾ",
+        "meaning": "prayer, supplication",
+        "example": {
+          "ar": "دعاء الأم مهم.",
+          "en": "A mother's prayer is important."
+        }
+      }
+    ],
     "example": "He دعا his friends over, and the دعوة was warmly received."
   },
   {
@@ -60,7 +304,39 @@
     "translit": "sh-h-d",
     "meaning": "Witnessing",
     "mnemonic": "A Shepherd Holds a Diary of everything he witnesses. SH-H-D is the root of witnessing.",
-    "words": ["شهد", "يشهد", "شاهد", "شهادة"],
+    "words": [
+      {
+        "arabic": "شَهِدَ",
+        "translit": "shahida",
+        "meaning": "to witness",
+        "pattern": "form1",
+        "note": "Present tense: يَشْهَدُ (yashhadu)",
+        "example": {
+          "ar": "شهد الرجل الحادث.",
+          "en": "The man witnessed the accident."
+        }
+      },
+      {
+        "arabic": "شَاهِد",
+        "translit": "shāhid",
+        "meaning": "witness",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو شاهد في المحكمة.",
+          "en": "He is a witness in court."
+        }
+      },
+      {
+        "arabic": "شَهَادَة",
+        "translit": "shahāda",
+        "meaning": "testimony; certificate",
+        "pattern": "quality",
+        "example": {
+          "ar": "حصل على شهادة جامعية.",
+          "en": "He obtained a university degree."
+        }
+      }
+    ],
     "example": "The شاهد شهد the event, and gave his شهادة in court."
   },
   {
@@ -68,7 +344,45 @@
     "translit": "z-w-j",
     "meaning": "Pairing, marrying",
     "mnemonic": "A Zookeeper Wants a Jointly matched pair of animals. Z-W-J is the root of pairing and marriage.",
-    "words": ["زوج", "تزوج", "زواج", "زوجة"],
+    "words": [
+      {
+        "arabic": "زَوْج",
+        "translit": "zawj",
+        "meaning": "husband; pair",
+        "example": {
+          "ar": "زوجها مهندس.",
+          "en": "Her husband is an engineer."
+        }
+      },
+      {
+        "arabic": "زَوْجَة",
+        "translit": "zawja",
+        "meaning": "wife",
+        "example": {
+          "ar": "زوجته طبيبة.",
+          "en": "His wife is a doctor."
+        }
+      },
+      {
+        "arabic": "تَزَوَّجَ",
+        "translit": "tazawwaja",
+        "meaning": "to get married",
+        "note": "Present tense: يَتَزَوَّجُ (yatazawwaju)",
+        "example": {
+          "ar": "تزوج أخي في الصيف.",
+          "en": "My brother got married in the summer."
+        }
+      },
+      {
+        "arabic": "زَوَاج",
+        "translit": "zawāj",
+        "meaning": "marriage",
+        "example": {
+          "ar": "الزواج مسؤولية.",
+          "en": "Marriage is a responsibility."
+        }
+      }
+    ],
     "example": "He تزوج his زوجة after a long زواج ceremony."
   },
   {
@@ -76,7 +390,36 @@
     "translit": "ʾ-h-l",
     "meaning": "Family, people, belonging",
     "mnemonic": "An Actor's Home Life revolves around family. ʾ-H-L is the root of family and belonging.",
-    "words": ["أهل", "أهلا", "أهلي"],
+    "words": [
+      {
+        "arabic": "أَهْل",
+        "translit": "ʾahl",
+        "meaning": "family, people",
+        "example": {
+          "ar": "أهلي في القرية.",
+          "en": "My family is in the village."
+        }
+      },
+      {
+        "arabic": "أَهْلًا",
+        "translit": "ʾahlan",
+        "meaning": "welcome!",
+        "example": {
+          "ar": "أهلا بك في بيتنا.",
+          "en": "Welcome to our home."
+        }
+      },
+      {
+        "arabic": "أَهْلِيّ",
+        "translit": "ʾahlī",
+        "meaning": "domestic, civil",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا بنك أهلي.",
+          "en": "This is a national bank."
+        }
+      }
+    ],
     "example": "His أهل welcomed guests warmly with أهلا, proud of their أهلي bonds."
   }
 ]

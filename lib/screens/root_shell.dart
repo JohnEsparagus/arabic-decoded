@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../providers/sync_providers.dart';
+import '../widgets/app_drawer.dart';
 import '../widgets/pattern_divider.dart';
 import 'campaign_screen.dart';
 import 'campaigns_browser_screen.dart';
 import 'dictionary_screen.dart';
-import 'settings_screen.dart';
 
 /// The app's top-level scaffold: a shared app bar + a 3-tab bottom
-/// navigation bar (Home / Dictionary / Campaigns). Tabs are kept in an
+/// navigation bar (Home / Dictionary / Campaigns), with everything else
+/// (account, stats, settings, About, updates) in the [AppDrawer] behind
+/// the menu button at the top left. Tabs are kept in an
 /// [IndexedStack] so switching between them doesn't reset an in-progress
 /// study session or a typed search query.
 ///
@@ -51,18 +53,8 @@ class _RootShellState extends ConsumerState<RootShell> {
     // alive, not a rebuild of the whole shell on every sync.
     ref.listen(syncProvider, (_, _) {});
     return Scaffold(
-      appBar: AppBar(
-        title: Text(_titles[_index]),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.settings_outlined),
-            tooltip: 'Settings',
-            onPressed: () => Navigator.of(
-              context,
-            ).push(MaterialPageRoute(builder: (_) => const SettingsScreen())),
-          ),
-        ],
-      ),
+      appBar: AppBar(title: Text(_titles[_index])),
+      drawer: const AppDrawer(),
       body: SafeArea(
         child: Column(
           children: [

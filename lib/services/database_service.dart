@@ -5,9 +5,12 @@ import 'package:path/path.dart' as p;
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
+import '../models/card_collection.dart';
 import '../models/card_progress.dart';
 import '../models/deck.dart';
 import '../models/flashcard.dart';
+import '../models/review_log_entry.dart';
+import '../models/synced_extras.dart';
 import '../utils/arabic_normalize.dart';
 
 /// Owns the single sqflite [Database] connection and all reads/writes for
@@ -67,7 +70,7 @@ class DatabaseService {
     _resolvedPath = path;
     return openDatabase(
       path,
-      version: 4,
+      version: 9,
       // sqflite's default `singleInstance: true` caches connections keyed
       // by the literal path string. That's harmless for the app's real
       // on-disk path (only ever opened once, by the DatabaseService
@@ -102,9 +105,20 @@ class DatabaseService {
             related_words TEXT NOT NULL DEFAULT '[]',
             updated_at INTEGER,
             dirty INTEGER NOT NULL DEFAULT 0,
+            kind TEXT NOT NULL DEFAULT 'root',
+            root_key TEXT,
+            pattern_key TEXT,
+            example_translation TEXT,
+            note TEXT,
+            favorite INTEGER NOT NULL DEFAULT 0,
+            queued_at INTEGER,
+            unlock_after INTEGER,
             FOREIGN KEY (deck_id) REFERENCES decks (id) ON DELETE CASCADE
           )
         ''');
+        await _createCollectionTables(db);
+        await _createReviewLogTable(db);
+        await _createLibraryStateTable(db);
         await db.execute(
           'CREATE INDEX idx_flashcards_deck_id ON flashcards (deck_id)',
         );
@@ -159,8 +173,135 @@ class DatabaseService {
             'WHERE is_new = 0',
           );
         }
+        if (oldVersion < 5) {
+          // Words and patterns became cards of their own, linked to their
+          // root — see Flashcard.kind. Everything stored before this was
+          // a root, which is what the default says.
+          await db.execute(
+            "ALTER TABLE flashcards ADD COLUMN kind TEXT NOT NULL DEFAULT 'root'",
+          );
+          await db.execute('ALTER TABLE flashcards ADD COLUMN root_key TEXT');
+          await db.execute(
+            'ALTER TABLE flashcards ADD COLUMN pattern_key TEXT',
+          );
+          await db.execute(
+            'ALTER TABLE flashcards ADD COLUMN example_translation TEXT',
+          );
+          await db.execute('ALTER TABLE flashcards ADD COLUMN note TEXT');
+        }
+        if (oldVersion < 6) {
+          // Things the user does to a card by hand — see the "Card
+          // actions" and "Collections" sections below.
+          await db.execute(
+            'ALTER TABLE flashcards ADD COLUMN favorite INTEGER NOT NULL DEFAULT 0',
+          );
+          await db.execute(
+            'ALTER TABLE flashcards ADD COLUMN queued_at INTEGER',
+          );
+          await _createCollectionTables(db);
+        }
+        if (oldVersion < 7) {
+          await _createReviewLogTable(db);
+          // There's no record of what happened before the log existed,
+          // only where each card stands now. So every card already being
+          // studied gets the two points that are known: it started out
+          // (interval of a day) when it was introduced, and it reached its
+          // current interval when it was last graded. Stats for the time
+          // before this are that straight-line guess; from here on they're
+          // exact.
+          await db.execute('''
+            INSERT INTO review_log (card_id, at, interval, is_new, graded)
+            SELECT id, introduced_at, 1, 0, 0 FROM flashcards
+            WHERE is_new = 0 AND introduced_at IS NOT NULL
+              AND updated_at IS NOT NULL AND introduced_at < updated_at
+          ''');
+          await db.execute('''
+            INSERT INTO review_log (card_id, at, interval, is_new, graded)
+            SELECT id,
+                   COALESCE(updated_at, introduced_at,
+                            next_review - interval * 86400000),
+                   interval, 0, 0
+            FROM flashcards WHERE is_new = 0
+          ''');
+        }
+        if (oldVersion < 8) {
+          // Sync bookkeeping for the review log and the library — see
+          // "Syncing the extras" below. Version 7 created the log without
+          // the column; a database made at 7 or later already has it.
+          if (oldVersion == 7) {
+            await db.execute(
+              'ALTER TABLE review_log ADD COLUMN synced INTEGER NOT NULL DEFAULT 0',
+            );
+          }
+          await _createLibraryStateTable(db);
+          // Whatever is starred or collected already has never been
+          // uploaded.
+          await db.execute(
+            '''
+            UPDATE library_state SET dirty = 1, updated_at = ?
+            WHERE EXISTS (SELECT 1 FROM flashcards WHERE favorite = 1)
+               OR EXISTS (SELECT 1 FROM collections)
+          ''',
+            [DateTime.now().millisecondsSinceEpoch],
+          );
+        }
+        if (oldVersion < 9) {
+          // When a read-once card comes up — see Flashcard.unlockAfter.
+          await db.execute(
+            'ALTER TABLE flashcards ADD COLUMN unlock_after INTEGER',
+          );
+        }
       },
     );
+  }
+
+  static Future<void> _createCollectionTables(Database db) async {
+    await db.execute('''
+      CREATE TABLE collections (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        created_at INTEGER NOT NULL
+      )
+    ''');
+    await db.execute('''
+      CREATE TABLE collection_cards (
+        collection_id INTEGER NOT NULL,
+        card_id INTEGER NOT NULL,
+        added_at INTEGER NOT NULL,
+        PRIMARY KEY (collection_id, card_id),
+        FOREIGN KEY (collection_id) REFERENCES collections (id) ON DELETE CASCADE,
+        FOREIGN KEY (card_id) REFERENCES flashcards (id) ON DELETE CASCADE
+      )
+    ''');
+  }
+
+  static Future<void> _createReviewLogTable(Database db) async {
+    await db.execute('''
+      CREATE TABLE review_log (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        card_id INTEGER NOT NULL,
+        at INTEGER NOT NULL,
+        interval INTEGER NOT NULL,
+        is_new INTEGER NOT NULL DEFAULT 0,
+        graded INTEGER NOT NULL DEFAULT 0,
+        synced INTEGER NOT NULL DEFAULT 0,
+        FOREIGN KEY (card_id) REFERENCES flashcards (id) ON DELETE CASCADE
+      )
+    ''');
+    await db.execute('CREATE INDEX idx_review_log_at ON review_log (at)');
+  }
+
+  /// A single row that says when the library (favorites and collections)
+  /// was last changed and whether that change has been uploaded.
+  static Future<void> _createLibraryStateTable(Database db) async {
+    await db.execute('''
+      CREATE TABLE library_state (
+        id INTEGER PRIMARY KEY CHECK (id = 1),
+        updated_at INTEGER,
+        dirty INTEGER NOT NULL DEFAULT 0
+      )
+    ''');
+    await db.insert('library_state', {'id': 1});
   }
 
   /// Wipes every deck and flashcard and recreates a fresh schema — for
@@ -219,16 +360,68 @@ class DatabaseService {
   /// goes through [applyRemoteProgress] instead, which doesn't flag it.
   Future<void> updateFlashcard(Flashcard card) async {
     final db = await database;
+    final now = DateTime.now().millisecondsSinceEpoch;
     await db.update(
       'flashcards',
-      {
-        ...card.toMap(),
-        'updated_at': DateTime.now().millisecondsSinceEpoch,
-        'dirty': 1,
-      },
+      {...card.toMap(), 'updated_at': now, 'dirty': 1},
       where: 'id = ?',
       whereArgs: [card.id],
     );
+    await _logProgress(db, card.id!, at: now, graded: true);
+  }
+
+  /// Adds the card's progress as it stands right now to the review log.
+  /// Called after every write that changes it, so the log always ends on
+  /// the card's current state.
+  ///
+  /// A card's entries are told apart by their time, here and when synced,
+  /// so two changes to one card in the same millisecond would look like
+  /// one. The second is nudged a millisecond later instead.
+  Future<void> _logProgress(
+    DatabaseExecutor db,
+    int cardId, {
+    required int at,
+    bool graded = false,
+  }) {
+    return db.rawInsert(
+      '''
+      INSERT INTO review_log (card_id, at, interval, is_new, graded)
+      SELECT id,
+             MAX(?, COALESCE(
+               (SELECT MAX(at) + 1 FROM review_log WHERE card_id = ?), 0)),
+             interval, is_new, ?
+      FROM flashcards WHERE id = ?
+      ''',
+      [at, cardId, graded ? 1 : 0, cardId],
+    );
+  }
+
+  /// Every change to any card's progress, oldest first — see
+  /// [ReviewLogEntry].
+  Future<List<ReviewLogEntry>> getReviewLog() async {
+    final db = await database;
+    final rows = await db.query('review_log', orderBy: 'at ASC, id ASC');
+    return rows.map(ReviewLogEntry.fromMap).toList();
+  }
+
+  /// Overwrites [card]'s content (meaning, example, links...) and nothing
+  /// else: SM-2 progress and the sync flags are left exactly as they are.
+  /// Used by `ContentImporter` when the bundled JSON has changed.
+  Future<void> updateFlashcardContent(Flashcard card) async {
+    final db = await database;
+    await db.update(
+      'flashcards',
+      card.contentMap(),
+      where: 'id = ?',
+      whereArgs: [card.id],
+    );
+  }
+
+  /// Removes a card outright, along with its history and its place in any
+  /// collection. For content that has been taken out of the bundled files.
+  Future<void> deleteFlashcard(int cardId) async {
+    final db = await database;
+    await db.delete('flashcards', where: 'id = ?', whereArgs: [cardId]);
   }
 
   Future<List<Flashcard>> getFlashcardsForDeck(int deckId) async {
@@ -254,32 +447,141 @@ class DatabaseService {
   /// to now), soonest-due first. Deliberately global across every
   /// campaign/deck — once a card has been introduced it just lives in one
   /// shared review rotation, regardless of which campaign it came from.
-  Future<List<Flashcard>> getDueReviewFlashcards({DateTime? asOf}) async {
+  ///
+  /// Roots always come back, and so do sentences: those are only ever
+  /// studied because the user asked for them. Words and patterns only with
+  /// [includeWords], letters only with [includeLetters]; switched off,
+  /// those cards keep their progress and simply wait until it's switched
+  /// on again. Read-once cards are never reviewed.
+  Future<List<Flashcard>> getDueReviewFlashcards({
+    DateTime? asOf,
+    bool includeWords = true,
+    bool includeLetters = true,
+  }) async {
     final db = await database;
     final cutoff = (asOf ?? DateTime.now()).millisecondsSinceEpoch;
+    final kinds = [
+      CardKind.root,
+      CardKind.sentence,
+      if (includeWords) ...[CardKind.word, CardKind.pattern],
+      if (includeLetters) CardKind.letter,
+    ];
     final rows = await db.query(
       'flashcards',
-      where: 'is_new = 0 AND next_review <= ?',
+      where:
+          'is_new = 0 AND next_review <= ? '
+          'AND kind IN (${kinds.map((kind) => "'${kind.name}'").join(', ')})',
       whereArgs: [cutoff],
       orderBy: 'next_review ASC',
     );
     return rows.map(Flashcard.fromMap).toList();
   }
 
-  /// Up to [limit] not-yet-introduced cards, in campaign order. Ordering by
-  /// `deck_id` (campaigns are created in the order they're imported, so
-  /// lower ids are earlier campaigns) then `id` (a campaign's own cards in
-  /// their original JSON order) means this naturally exhausts one
-  /// campaign's new cards before moving to the next — no separate
-  /// "what's the current campaign" query needed.
-  Future<List<Flashcard>> getNewFlashcards({required int limit}) async {
+  /// Up to [limit] not-yet-introduced cards, in the order they should be
+  /// taught. Roots come in campaign order: `deck_id` (campaigns are created
+  /// in the order they're imported, so lower ids are earlier campaigns)
+  /// then `id` (a campaign's own cards in their original JSON order), which
+  /// naturally exhausts one campaign's roots before moving to the next —
+  /// no separate "what's the current campaign" query needed.
+  ///
+  /// With [includeWords] on, words are mixed in: new cards alternate, a
+  /// root then a word, so roots keep moving. Only words whose root has
+  /// already been introduced are offered, and a pattern card is slotted in
+  /// right before the first word that uses it. With it off this is just
+  /// the roots.
+  ///
+  /// With [includeLetters] on, the alphabet comes before all of that:
+  /// there's no reading a root without it.
+  ///
+  /// Read-once cards go at the very front as soon as enough roots have
+  /// been introduced for them ([Flashcard.unlockAfter]). Because the queue
+  /// is asked for again after every new card, that means one turns up
+  /// right after the root that unlocks it.
+  ///
+  /// Cards the user queued by hand (see [setQueued]) aren't part of this;
+  /// those come from [getQueuedFlashcards] and go ahead of these.
+  ///
+  /// Done in Dart over every card rather than in SQL: the rules read more
+  /// plainly this way, and there are only a few hundred rows.
+  Future<List<Flashcard>> getNewFlashcards({
+    required int limit,
+    bool includeWords = true,
+    bool includeLetters = true,
+  }) async {
     if (limit <= 0) return [];
+    final db = await database;
+    final rows = await db.query('flashcards', orderBy: 'deck_id ASC, id ASC');
+    final cards = rows.map(Flashcard.fromMap).toList();
+    bool isWaiting(Flashcard card) => card.isNew && card.queuedAt == null;
+
+    final rootsIntroduced = cards
+        .where((card) => !card.isNew && card.kind == CardKind.root)
+        .length;
+    final unlockedInfo =
+        cards
+            .where(
+              (card) =>
+                  isWaiting(card) &&
+                  card.kind == CardKind.info &&
+                  (card.unlockAfter ?? 0) <= rootsIntroduced,
+            )
+            .toList()
+          // Earliest unlock first; cards unlocked at the same point keep
+          // the order they have in the file (their ids), which a sort on
+          // the unlock point alone wouldn't promise.
+          ..sort((a, b) {
+            final byUnlock = (a.unlockAfter ?? 0).compareTo(b.unlockAfter ?? 0);
+            return byUnlock != 0 ? byUnlock : a.id!.compareTo(b.id!);
+          });
+
+    final result = <Flashcard>[
+      ...unlockedInfo,
+      if (includeLetters)
+        ...cards.where(
+          (card) => isWaiting(card) && card.kind == CardKind.letter,
+        ),
+    ];
+    final roots = cards
+        .where((card) => isWaiting(card) && card.kind == CardKind.root)
+        .toList();
+    if (!includeWords) return [...result, ...roots].take(limit).toList();
+
+    // Each word, led by its pattern's card if that hasn't been introduced
+    // (or queued by hand) yet.
+    final lockedRoots = {
+      for (final card in cards)
+        if (card.isNew && card.kind == CardKind.root)
+          (card.deckId, card.arabicWord),
+    };
+    final newPatterns = {
+      for (final card in cards)
+        if (isWaiting(card) && card.kind == CardKind.pattern)
+          card.patternKey: card,
+    };
+    final wordSteps = <List<Flashcard>>[];
+    for (final card in cards) {
+      if (!isWaiting(card) || card.kind != CardKind.word) continue;
+      if (lockedRoots.contains((card.deckId, card.rootKey))) continue;
+      final pattern = newPatterns.remove(card.patternKey);
+      wordSteps.add([?pattern, card]);
+    }
+
+    for (var i = 0; i < roots.length || i < wordSteps.length; i++) {
+      if (i < roots.length) result.add(roots[i]);
+      if (i < wordSteps.length) result.addAll(wordSteps[i]);
+    }
+    return result.take(limit).toList();
+  }
+
+  /// Still-new cards the user put in their queue by hand, in the order
+  /// they asked for them. Any kind of card, whatever the words setting
+  /// says and whether or not its root has been learned: they asked.
+  Future<List<Flashcard>> getQueuedFlashcards() async {
     final db = await database;
     final rows = await db.query(
       'flashcards',
-      where: 'is_new = 1',
-      orderBy: 'deck_id ASC, id ASC',
-      limit: limit,
+      where: 'is_new = 1 AND queued_at IS NOT NULL',
+      orderBy: 'queued_at ASC, id ASC',
     );
     return rows.map(Flashcard.fromMap).toList();
   }
@@ -293,6 +595,203 @@ class DatabaseService {
       [cutoff.millisecondsSinceEpoch],
     );
     return Sqflite.firstIntValue(result) ?? 0;
+  }
+
+  // ---- Card actions -------------------------------------------------------
+  //
+  // What the user can do to a card by hand, from the menu that holding a
+  // card brings up. The ones that change progress flag the card for sync
+  // exactly like grading does.
+
+  /// Puts a card in the queue, or takes it back out. A still-new card
+  /// jumps the line for new cards (see [getQueuedFlashcards]); one that's
+  /// already being reviewed is made due right now instead.
+  Future<void> setQueued(int cardId, bool queued) async {
+    final db = await database;
+    final now = DateTime.now().millisecondsSinceEpoch;
+    await db.update(
+      'flashcards',
+      {'queued_at': queued ? now : null},
+      where: 'id = ? AND is_new = 1',
+      whereArgs: [cardId],
+    );
+    if (!queued) return;
+    await db.update(
+      'flashcards',
+      {'next_review': now, 'updated_at': now, 'dirty': 1},
+      where: 'id = ? AND is_new = 0',
+      whereArgs: [cardId],
+    );
+  }
+
+  /// "I know this one": skips the card straight to a long interval, so it
+  /// counts as learned and only comes back for a check in [intervalDays].
+  /// Leaves `introduced_at` alone, so mastering cards by hand doesn't eat
+  /// into the day's allowance of new ones.
+  Future<void> markMastered(int cardId, {int intervalDays = 180}) async {
+    final db = await database;
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    await db.rawUpdate(
+      '''
+      UPDATE flashcards
+      SET is_new = 0, interval = ?, repetitions = MAX(repetitions, 5),
+          next_review = ?, queued_at = NULL, updated_at = ?, dirty = 1
+      WHERE id = ?
+      ''',
+      [
+        intervalDays,
+        today.add(Duration(days: intervalDays)).millisecondsSinceEpoch,
+        now.millisecondsSinceEpoch,
+        cardId,
+      ],
+    );
+    await _logProgress(db, cardId, at: now.millisecondsSinceEpoch);
+  }
+
+  /// Marks a read-once card as read: it won't be shown again, and it's
+  /// never due for review. Nothing goes in the review log and
+  /// `introduced_at` stays empty, so reading one doesn't count as studying
+  /// a card or use up any of the day's new ones. The change is still
+  /// flagged for sync, so it isn't shown again on another device either.
+  Future<void> markSeen(int cardId) async {
+    final db = await database;
+    await db.update(
+      'flashcards',
+      {
+        'is_new': 0,
+        'repetitions': 1,
+        'next_review': DateTime(9999).millisecondsSinceEpoch,
+        'queued_at': null,
+        'updated_at': DateTime.now().millisecondsSinceEpoch,
+        'dirty': 1,
+      },
+      where: 'id = ?',
+      whereArgs: [cardId],
+    );
+  }
+
+  /// Puts one card back to never-studied.
+  Future<void> resetFlashcard(int cardId) async {
+    final db = await database;
+    final now = DateTime.now().millisecondsSinceEpoch;
+    await db.update(
+      'flashcards',
+      {
+        'ease_factor': 2.5,
+        'interval': 0,
+        'repetitions': 0,
+        'next_review': now,
+        'is_new': 1,
+        'introduced_at': null,
+        'queued_at': null,
+        'updated_at': now,
+        'dirty': 1,
+      },
+      where: 'id = ?',
+      whereArgs: [cardId],
+    );
+    await _logProgress(db, cardId, at: now);
+  }
+
+  Future<void> setFavorite(int cardId, bool favorite) async {
+    final db = await database;
+    await db.update(
+      'flashcards',
+      {'favorite': favorite ? 1 : 0},
+      where: 'id = ?',
+      whereArgs: [cardId],
+    );
+    await _touchLibrary(db);
+  }
+
+  /// Notes that the library just changed and needs uploading.
+  Future<void> _touchLibrary(DatabaseExecutor db) {
+    return db.update('library_state', {
+      'updated_at': DateTime.now().millisecondsSinceEpoch,
+      'dirty': 1,
+    });
+  }
+
+  // ---- Collections -----------------------------------------------------------
+
+  /// Every collection, oldest first, each with how many cards it holds.
+  Future<List<CardCollection>> getCollections() async {
+    final db = await database;
+    final rows = await db.rawQuery('''
+      SELECT c.id, c.name, COUNT(cc.card_id) AS card_count
+      FROM collections c
+      LEFT JOIN collection_cards cc ON cc.collection_id = c.id
+      GROUP BY c.id
+      ORDER BY c.created_at ASC, c.id ASC
+    ''');
+    return rows.map(CardCollection.fromMap).toList();
+  }
+
+  Future<int> createCollection(String name) async {
+    final db = await database;
+    final id = await db.insert('collections', {
+      'name': name,
+      'created_at': DateTime.now().millisecondsSinceEpoch,
+    });
+    await _touchLibrary(db);
+    return id;
+  }
+
+  /// Deletes the collection. The cards that were in it are untouched.
+  Future<void> deleteCollection(int collectionId) async {
+    final db = await database;
+    await db.delete('collections', where: 'id = ?', whereArgs: [collectionId]);
+    await _touchLibrary(db);
+  }
+
+  Future<void> setInCollection(
+    int collectionId,
+    int cardId,
+    bool inCollection,
+  ) async {
+    final db = await database;
+    if (inCollection) {
+      await db.insert('collection_cards', {
+        'collection_id': collectionId,
+        'card_id': cardId,
+        'added_at': DateTime.now().millisecondsSinceEpoch,
+      }, conflictAlgorithm: ConflictAlgorithm.ignore);
+    } else {
+      await db.delete(
+        'collection_cards',
+        where: 'collection_id = ? AND card_id = ?',
+        whereArgs: [collectionId, cardId],
+      );
+    }
+    await _touchLibrary(db);
+  }
+
+  /// A collection's cards, in the order they were added.
+  Future<List<Flashcard>> getCollectionFlashcards(int collectionId) async {
+    final db = await database;
+    final rows = await db.rawQuery(
+      '''
+      SELECT f.* FROM flashcards f
+      JOIN collection_cards cc ON cc.card_id = f.id
+      WHERE cc.collection_id = ?
+      ORDER BY cc.added_at ASC, cc.rowid ASC
+      ''',
+      [collectionId],
+    );
+    return rows.map(Flashcard.fromMap).toList();
+  }
+
+  /// The ids of the collections [cardId] is in.
+  Future<Set<int>> getCollectionIdsForCard(int cardId) async {
+    final db = await database;
+    final rows = await db.query(
+      'collection_cards',
+      columns: ['collection_id'],
+      where: 'card_id = ?',
+      whereArgs: [cardId],
+    );
+    return rows.map((row) => row['collection_id'] as int).toSet();
   }
 
   // ---- Sync ----------------------------------------------------------------
@@ -369,7 +868,7 @@ class DatabaseService {
         '''
         UPDATE flashcards
         SET ease_factor = ?, interval = ?, repetitions = ?, next_review = ?,
-            is_new = 0, introduced_at = ?, updated_at = ?, dirty = 0
+            is_new = ?, introduced_at = ?, updated_at = ?, dirty = 0
         WHERE arabic_word = ?
           AND deck_id = (SELECT id FROM decks WHERE name = ?)
           AND (updated_at IS NULL OR updated_at < ?)
@@ -379,6 +878,10 @@ class DatabaseService {
           progress.interval,
           progress.repetitions,
           progress.nextReview.millisecondsSinceEpoch,
+          // Only a card that was reset by hand is uploaded with no
+          // interval and no repetitions: even one failed first try has an
+          // interval of a day. That card is new again here too.
+          progress.interval == 0 && progress.repetitions == 0 ? 1 : 0,
           progress.introducedAt?.millisecondsSinceEpoch,
           updatedAt,
           progress.arabicWord,
@@ -388,6 +891,19 @@ class DatabaseService {
       );
     }
     final counts = await batch.commit();
+    // Whatever just changed gets a log entry dated when it was graded on
+    // the other device, unless the log already reaches that far: the card
+    // didn't change, was graded here, or its real entry has already come
+    // down with the synced review log. (These stand-ins are marked synced
+    // so they aren't uploaded as if they were the real thing.)
+    await db.execute('''
+      INSERT INTO review_log (card_id, at, interval, is_new, graded, synced)
+      SELECT f.id, f.updated_at, f.interval, f.is_new, 0, 1 FROM flashcards f
+      WHERE f.updated_at IS NOT NULL AND f.kind != 'info' AND NOT EXISTS (
+        SELECT 1 FROM review_log r
+        WHERE r.card_id = f.id AND r.at >= f.updated_at
+      )
+    ''');
     return counts.fold<int>(0, (sum, count) => sum + (count as int));
   }
 
@@ -403,9 +919,228 @@ class DatabaseService {
       'next_review': DateTime.now().millisecondsSinceEpoch,
       'is_new': 1,
       'introduced_at': null,
+      'queued_at': null,
       'updated_at': null,
       'dirty': 0,
     });
+    // The history and the library are the previous account's too.
+    await db.delete('review_log');
+    await db.delete('collections');
+    await db.update('flashcards', {'favorite': 0});
+    await db.update('library_state', {'updated_at': null, 'dirty': 0});
+  }
+
+  // ---- Syncing the extras ---------------------------------------------------
+  //
+  // The review log and the library (favorites + collections) sync too, each
+  // in the way that suits it. The log only ever grows, so each entry is
+  // uploaded once (`synced`) and other devices' entries are added to it.
+  // The library is small and changes rarely, so it travels whole, with
+  // `library_state` saying when it last changed and whether that's been
+  // uploaded.
+
+  /// Up to [limit] review-log entries that haven't been uploaded yet.
+  Future<List<SyncedReview>> getUnsyncedReviews({int limit = 500}) async {
+    final db = await database;
+    final rows = await db.rawQuery(
+      '''
+      SELECT r.id, d.name AS deck_name, f.arabic_word, r.at, r.interval,
+             r.is_new, r.graded
+      FROM review_log r
+      JOIN flashcards f ON f.id = r.card_id
+      JOIN decks d ON d.id = f.deck_id
+      WHERE r.synced = 0
+      ORDER BY r.id ASC LIMIT ?
+      ''',
+      [limit],
+    );
+    return [
+      for (final row in rows)
+        SyncedReview(
+          id: row['id'] as int,
+          deckName: row['deck_name'] as String,
+          arabicWord: row['arabic_word'] as String,
+          at: DateTime.fromMillisecondsSinceEpoch(row['at'] as int),
+          interval: row['interval'] as int,
+          isNew: (row['is_new'] as int) != 0,
+          graded: (row['graded'] as int) != 0,
+        ),
+    ];
+  }
+
+  Future<void> markReviewsSynced(List<SyncedReview> uploaded) async {
+    if (uploaded.isEmpty) return;
+    final db = await database;
+    final ids = uploaded.map((review) => review.id).join(', ');
+    await db.execute('UPDATE review_log SET synced = 1 WHERE id IN ($ids)');
+  }
+
+  /// Adds review-log entries made on other devices, and returns how many
+  /// were new here. An entry this device already has (same card, same
+  /// moment) is left alone, except that a stand-in for it (see
+  /// [applyRemoteProgress]) learns whether it was really a graded review.
+  /// Entries for cards this device doesn't have are skipped.
+  Future<int> applyRemoteReviews(List<SyncedReview> remote) async {
+    if (remote.isEmpty) return 0;
+    final db = await database;
+    final batch = db.batch();
+    for (final review in remote) {
+      final at = review.at.millisecondsSinceEpoch;
+      const card = '''
+        (SELECT f.id FROM flashcards f JOIN decks d ON d.id = f.deck_id
+         WHERE f.arabic_word = ? AND d.name = ?)
+      ''';
+      if (review.graded) {
+        batch.rawUpdate(
+          'UPDATE review_log SET graded = 1 WHERE at = ? AND card_id = $card',
+          [at, review.arabicWord, review.deckName],
+        );
+      }
+      batch.rawInsert(
+        '''
+        INSERT INTO review_log (card_id, at, interval, is_new, graded, synced)
+        SELECT f.id, ?, ?, ?, ?, 1
+        FROM flashcards f JOIN decks d ON d.id = f.deck_id
+        WHERE f.arabic_word = ? AND d.name = ? AND NOT EXISTS (
+          SELECT 1 FROM review_log r WHERE r.card_id = f.id AND r.at = ?
+        )
+        ''',
+        [
+          at,
+          review.interval,
+          review.isNew ? 1 : 0,
+          review.graded ? 1 : 0,
+          review.arabicWord,
+          review.deckName,
+          at,
+        ],
+      );
+    }
+    final before = Sqflite.firstIntValue(
+      await db.rawQuery('SELECT COUNT(*) FROM review_log'),
+    )!;
+    await batch.commit(noResult: true);
+    final after = Sqflite.firstIntValue(
+      await db.rawQuery('SELECT COUNT(*) FROM review_log'),
+    )!;
+    return after - before;
+  }
+
+  /// The library as it stands, if it has changes that haven't been
+  /// uploaded; null if there's nothing to send.
+  Future<LibrarySnapshot?> getDirtyLibrary() async {
+    final db = await database;
+    final state = (await db.query('library_state')).single;
+    if (state['dirty'] == 0 || state['updated_at'] == null) return null;
+
+    final favorites = await db.rawQuery('''
+      SELECT d.name AS deck, f.arabic_word AS word
+      FROM flashcards f JOIN decks d ON d.id = f.deck_id
+      WHERE f.favorite = 1 ORDER BY f.id
+    ''');
+    final collections = await db.query(
+      'collections',
+      orderBy: 'created_at ASC, id ASC',
+    );
+    final cards = await db.rawQuery('''
+      SELECT cc.collection_id, d.name AS deck, f.arabic_word AS word,
+             cc.added_at
+      FROM collection_cards cc
+      JOIN flashcards f ON f.id = cc.card_id
+      JOIN decks d ON d.id = f.deck_id
+      ORDER BY cc.added_at ASC, cc.rowid ASC
+    ''');
+    return LibrarySnapshot(
+      updatedAt: DateTime.fromMillisecondsSinceEpoch(
+        state['updated_at'] as int,
+      ),
+      data: {
+        'favorites': [
+          for (final row in favorites)
+            {'deck': row['deck'], 'word': row['word']},
+        ],
+        'collections': [
+          for (final collection in collections)
+            {
+              'name': collection['name'],
+              'created_at': collection['created_at'],
+              'cards': [
+                for (final row in cards)
+                  if (row['collection_id'] == collection['id'])
+                    {
+                      'deck': row['deck'],
+                      'word': row['word'],
+                      'added_at': row['added_at'],
+                    },
+              ],
+            },
+        ],
+      },
+    );
+  }
+
+  /// Clears the library's dirty flag once [uploaded] has gone up. Matching
+  /// on its timestamp means a change made while the upload was in flight
+  /// stays dirty and goes up next time.
+  Future<void> markLibrarySynced(LibrarySnapshot uploaded) async {
+    final db = await database;
+    await db.update(
+      'library_state',
+      {'dirty': 0},
+      where: 'updated_at = ?',
+      whereArgs: [uploaded.updatedAt.millisecondsSinceEpoch],
+    );
+  }
+
+  /// Replaces the local library with [remote] if that's the newer of the
+  /// two (or there's nothing local), and returns whether it did. Anything
+  /// in it that names a card this device doesn't have is skipped.
+  Future<bool> applyRemoteLibrary(LibrarySnapshot remote) async {
+    final db = await database;
+    final remoteAt = remote.updatedAt.millisecondsSinceEpoch;
+    final localAt = (await db.query('library_state')).single['updated_at'];
+    if (localAt != null && (localAt as int) >= remoteAt) return false;
+
+    const cardId = '''
+      (SELECT f.id FROM flashcards f JOIN decks d ON d.id = f.deck_id
+       WHERE f.arabic_word = ? AND d.name = ?)
+    ''';
+    await db.transaction((txn) async {
+      await txn.update('flashcards', {'favorite': 0});
+      await txn.delete('collections');
+      for (final favorite in remote.data['favorites'] as List? ?? const []) {
+        await txn.rawUpdate(
+          'UPDATE flashcards SET favorite = 1 WHERE id = $cardId',
+          [favorite['word'], favorite['deck']],
+        );
+      }
+      for (final collection
+          in remote.data['collections'] as List? ?? const []) {
+        final id = await txn.insert('collections', {
+          'name': collection['name'],
+          'created_at': collection['created_at'],
+        });
+        for (final card in collection['cards'] as List? ?? const []) {
+          await txn.rawInsert(
+            '''
+            INSERT OR IGNORE INTO collection_cards
+              (collection_id, card_id, added_at)
+            SELECT ?, $cardId, ? WHERE $cardId IS NOT NULL
+            ''',
+            [
+              id,
+              card['word'],
+              card['deck'],
+              card['added_at'],
+              card['word'],
+              card['deck'],
+            ],
+          );
+        }
+      }
+      await txn.update('library_state', {'updated_at': remoteAt, 'dirty': 0});
+    });
+    return true;
   }
 
   // ---- Search ------------------------------------------------------------

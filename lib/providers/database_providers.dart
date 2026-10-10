@@ -1,7 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../models/card_collection.dart';
 import '../models/deck.dart';
 import '../models/flashcard.dart';
+import '../models/review_log_entry.dart';
 import '../repositories/flashcard_repository.dart';
 import '../repositories/local_flashcard_repository.dart';
 import '../repositories/synced_flashcard_repository.dart';
@@ -59,6 +61,21 @@ final searchQueryProvider = NotifierProvider<SearchQueryNotifier, String>(
   SearchQueryNotifier.new,
 );
 
+/// Which kind of card the dictionary tab is narrowed down to; null shows
+/// roots, words and patterns together. Starts on roots, the core of the
+/// app, rather than on several hundred entries of every kind mixed up.
+class DictionaryKindNotifier extends Notifier<CardKind?> {
+  @override
+  CardKind? build() => CardKind.root;
+
+  void set(CardKind? value) => state = value;
+}
+
+final dictionaryKindProvider =
+    NotifierProvider<DictionaryKindNotifier, CardKind?>(
+      DictionaryKindNotifier.new,
+    );
+
 /// Every flashcard across every deck when the search field is empty
 /// (browsing mode), or the matching subset once the user types something.
 final dictionaryEntriesProvider = FutureProvider<List<Flashcard>>((ref) async {
@@ -68,8 +85,57 @@ final dictionaryEntriesProvider = FutureProvider<List<Flashcard>>((ref) async {
 
   final repository = ref.watch(flashcardRepositoryProvider);
   final query = ref.watch(searchQueryProvider);
-  if (query.trim().isEmpty) return repository.getAllFlashcards();
-  return repository.searchFlashcards(query);
+  final kind = ref.watch(dictionaryKindProvider);
+  final entries = query.trim().isEmpty
+      ? await repository.getAllFlashcards()
+      : await repository.searchFlashcards(query);
+  // Sentences have a screen of their own, and read-once cards aren't
+  // something to look up.
+  return entries
+      .where(
+        (card) =>
+            card.kind != CardKind.sentence &&
+            card.kind != CardKind.info &&
+            (kind == null || card.kind == kind),
+      )
+      .toList();
+});
+
+/// Every card there is, regardless of what's typed in the search field —
+/// what a card's links (a root's words, a word's root and pattern) are
+/// looked up in, and what the welcome card counts progress over.
+final allFlashcardsProvider = FutureProvider<List<Flashcard>>((ref) async {
+  await ref.watch(campaignDecksProvider.future);
+  return ref.watch(flashcardRepositoryProvider).getAllFlashcards();
+});
+
+/// The user's collections, and what's in each. These and favorites live
+/// only in the on-device database (they aren't progress, so they aren't
+/// synced), which is why they read [databaseServiceProvider] directly.
+final collectionsProvider = FutureProvider<List<CardCollection>>((ref) {
+  return ref.watch(databaseServiceProvider).getCollections();
+});
+
+final collectionFlashcardsProvider =
+    FutureProvider.family<List<Flashcard>, int>((ref, collectionId) {
+      return ref
+          .watch(databaseServiceProvider)
+          .getCollectionFlashcards(collectionId);
+    });
+
+/// Which collections one card is in, for the "Add to collection" list.
+final cardCollectionIdsProvider = FutureProvider.family<Set<int>, int>((
+  ref,
+  cardId,
+) {
+  return ref.watch(databaseServiceProvider).getCollectionIdsForCard(cardId);
+});
+
+/// Every change to any card's progress, oldest first: the raw material of
+/// the learning stats (see `stats_providers.dart`).
+final reviewLogProvider = FutureProvider<List<ReviewLogEntry>>((ref) async {
+  await ref.watch(campaignDecksProvider.future);
+  return ref.watch(databaseServiceProvider).getReviewLog();
 });
 
 /// The roots/words that belong to one campaign deck, for the Campaigns

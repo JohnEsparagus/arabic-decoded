@@ -1,0 +1,486 @@
+[
+  {
+    "arabic": "ا",
+    "name": "ʾalif",
+    "sound": "Long “a”, as in “father”",
+    "forms": [
+      "ا",
+      "ا",
+      "ـا",
+      "ـا"
+    ],
+    "joins_next": false,
+    "example": {
+      "ar": "أَنَا",
+      "translit": "ʾanā",
+      "en": "I"
+    },
+    "tip": "It also acts as a seat for the hamza (أ), the catch in the throat at the start of “uh-oh”."
+  },
+  {
+    "arabic": "ب",
+    "name": "bāʾ",
+    "sound": "b, as in “book”",
+    "forms": [
+      "ب",
+      "بـ",
+      "ـبـ",
+      "ـب"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "بَاب",
+      "translit": "bāb",
+      "en": "door"
+    }
+  },
+  {
+    "arabic": "ت",
+    "name": "tāʾ",
+    "sound": "t, as in “tea”",
+    "forms": [
+      "ت",
+      "تـ",
+      "ـتـ",
+      "ـت"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "تَمْر",
+      "translit": "tamr",
+      "en": "dates"
+    }
+  },
+  {
+    "arabic": "ث",
+    "name": "thāʾ",
+    "sound": "th, as in “think”",
+    "forms": [
+      "ث",
+      "ثـ",
+      "ـثـ",
+      "ـث"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "ثَلَاثَة",
+      "translit": "thalātha",
+      "en": "three"
+    }
+  },
+  {
+    "arabic": "ج",
+    "name": "jīm",
+    "sound": "j, as in “jam”",
+    "forms": [
+      "ج",
+      "جـ",
+      "ـجـ",
+      "ـج"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "جَبَل",
+      "translit": "jabal",
+      "en": "mountain"
+    }
+  },
+  {
+    "arabic": "ح",
+    "name": "ḥāʾ",
+    "sound": "A strong, breathy h from the throat",
+    "forms": [
+      "ح",
+      "حـ",
+      "ـحـ",
+      "ـح"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "حُبّ",
+      "translit": "ḥubb",
+      "en": "love"
+    },
+    "tip": "Like fogging up a mirror: a whispered h, pushed out from the throat."
+  },
+  {
+    "arabic": "خ",
+    "name": "khāʾ",
+    "sound": "kh, like “ch” in Scottish “loch”",
+    "forms": [
+      "خ",
+      "خـ",
+      "ـخـ",
+      "ـخ"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "خُبْز",
+      "translit": "khubz",
+      "en": "bread"
+    }
+  },
+  {
+    "arabic": "د",
+    "name": "dāl",
+    "sound": "d, as in “door”",
+    "forms": [
+      "د",
+      "د",
+      "ـد",
+      "ـد"
+    ],
+    "joins_next": false,
+    "example": {
+      "ar": "دَرْس",
+      "translit": "dars",
+      "en": "lesson"
+    }
+  },
+  {
+    "arabic": "ذ",
+    "name": "dhāl",
+    "sound": "th, as in “this”",
+    "forms": [
+      "ذ",
+      "ذ",
+      "ـذ",
+      "ـذ"
+    ],
+    "joins_next": false,
+    "example": {
+      "ar": "ذَهَب",
+      "translit": "dhahab",
+      "en": "gold"
+    }
+  },
+  {
+    "arabic": "ر",
+    "name": "rāʾ",
+    "sound": "A lightly rolled r",
+    "forms": [
+      "ر",
+      "ر",
+      "ـر",
+      "ـر"
+    ],
+    "joins_next": false,
+    "example": {
+      "ar": "رَجُل",
+      "translit": "rajul",
+      "en": "man"
+    }
+  },
+  {
+    "arabic": "ز",
+    "name": "zāy",
+    "sound": "z, as in “zoo”",
+    "forms": [
+      "ز",
+      "ز",
+      "ـز",
+      "ـز"
+    ],
+    "joins_next": false,
+    "example": {
+      "ar": "زَيْت",
+      "translit": "zayt",
+      "en": "oil"
+    }
+  },
+  {
+    "arabic": "س",
+    "name": "sīn",
+    "sound": "s, as in “sun”",
+    "forms": [
+      "س",
+      "سـ",
+      "ـسـ",
+      "ـس"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "سَلَام",
+      "translit": "salām",
+      "en": "peace"
+    }
+  },
+  {
+    "arabic": "ش",
+    "name": "shīn",
+    "sound": "sh, as in “ship”",
+    "forms": [
+      "ش",
+      "شـ",
+      "ـشـ",
+      "ـش"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "شَمْس",
+      "translit": "shams",
+      "en": "sun"
+    }
+  },
+  {
+    "arabic": "ص",
+    "name": "ṣād",
+    "sound": "A heavy s",
+    "forms": [
+      "ص",
+      "صـ",
+      "ـصـ",
+      "ـص"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "صَبَاح",
+      "translit": "ṣabāḥ",
+      "en": "morning"
+    },
+    "tip": "Say s with the back of the tongue lowered. The vowels next to it sound darker, closer to “aw”."
+  },
+  {
+    "arabic": "ض",
+    "name": "ḍād",
+    "sound": "A heavy d",
+    "forms": [
+      "ض",
+      "ضـ",
+      "ـضـ",
+      "ـض"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "ضَوْء",
+      "translit": "ḍawʾ",
+      "en": "light"
+    },
+    "tip": "The heavy partner of د. Arabic is nicknamed “the language of the ḍād”."
+  },
+  {
+    "arabic": "ط",
+    "name": "ṭāʾ",
+    "sound": "A heavy t",
+    "forms": [
+      "ط",
+      "طـ",
+      "ـطـ",
+      "ـط"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "طَالِب",
+      "translit": "ṭālib",
+      "en": "student"
+    },
+    "tip": "The heavy partner of ت: same place in the mouth, tongue lowered at the back."
+  },
+  {
+    "arabic": "ظ",
+    "name": "ẓāʾ",
+    "sound": "A heavy th, as in “this”",
+    "forms": [
+      "ظ",
+      "ظـ",
+      "ـظـ",
+      "ـظ"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "ظُهْر",
+      "translit": "ẓuhr",
+      "en": "noon"
+    },
+    "tip": "The heavy partner of ذ."
+  },
+  {
+    "arabic": "ع",
+    "name": "ʿayn",
+    "sound": "A voiced squeeze deep in the throat",
+    "forms": [
+      "ع",
+      "عـ",
+      "ـعـ",
+      "ـع"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "عَيْن",
+      "translit": "ʿayn",
+      "en": "eye"
+    },
+    "tip": "No English equivalent. Tighten the throat as if starting to say “ah” while lifting something heavy."
+  },
+  {
+    "arabic": "غ",
+    "name": "ghayn",
+    "sound": "gh, like a gargled or French r",
+    "forms": [
+      "غ",
+      "غـ",
+      "ـغـ",
+      "ـغ"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "غُرْفَة",
+      "translit": "ghurfa",
+      "en": "room"
+    }
+  },
+  {
+    "arabic": "ف",
+    "name": "fāʾ",
+    "sound": "f, as in “fish”",
+    "forms": [
+      "ف",
+      "فـ",
+      "ـفـ",
+      "ـف"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "فَم",
+      "translit": "fam",
+      "en": "mouth"
+    }
+  },
+  {
+    "arabic": "ق",
+    "name": "qāf",
+    "sound": "A k from the very back of the mouth",
+    "forms": [
+      "ق",
+      "قـ",
+      "ـقـ",
+      "ـق"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "قَلَم",
+      "translit": "qalam",
+      "en": "pen"
+    },
+    "tip": "Further back than ك, where the tongue meets the soft part of the palate."
+  },
+  {
+    "arabic": "ك",
+    "name": "kāf",
+    "sound": "k, as in “kite”",
+    "forms": [
+      "ك",
+      "كـ",
+      "ـكـ",
+      "ـك"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "كِتَاب",
+      "translit": "kitāb",
+      "en": "book"
+    }
+  },
+  {
+    "arabic": "ل",
+    "name": "lām",
+    "sound": "l, as in “light”",
+    "forms": [
+      "ل",
+      "لـ",
+      "ـلـ",
+      "ـل"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "لَيْل",
+      "translit": "layl",
+      "en": "night"
+    }
+  },
+  {
+    "arabic": "م",
+    "name": "mīm",
+    "sound": "m, as in “moon”",
+    "forms": [
+      "م",
+      "مـ",
+      "ـمـ",
+      "ـم"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "مَاء",
+      "translit": "māʾ",
+      "en": "water"
+    }
+  },
+  {
+    "arabic": "ن",
+    "name": "nūn",
+    "sound": "n, as in “noon”",
+    "forms": [
+      "ن",
+      "نـ",
+      "ـنـ",
+      "ـن"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "نُور",
+      "translit": "nūr",
+      "en": "light"
+    }
+  },
+  {
+    "arabic": "ه",
+    "name": "hāʾ",
+    "sound": "h, as in “hat”",
+    "forms": [
+      "ه",
+      "هـ",
+      "ـهـ",
+      "ـه"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "هَوَاء",
+      "translit": "hawāʾ",
+      "en": "air"
+    }
+  },
+  {
+    "arabic": "و",
+    "name": "wāw",
+    "sound": "w, as in “water”; also long “oo”",
+    "forms": [
+      "و",
+      "و",
+      "ـو",
+      "ـو"
+    ],
+    "joins_next": false,
+    "example": {
+      "ar": "وَلَد",
+      "translit": "walad",
+      "en": "boy"
+    }
+  },
+  {
+    "arabic": "ي",
+    "name": "yāʾ",
+    "sound": "y, as in “yes”; also long “ee”",
+    "forms": [
+      "ي",
+      "يـ",
+      "ـيـ",
+      "ـي"
+    ],
+    "joins_next": true,
+    "example": {
+      "ar": "يَد",
+      "translit": "yad",
+      "en": "hand"
+    }
+  }
+]

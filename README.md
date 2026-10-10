@@ -25,14 +25,16 @@ Web (`-d chrome`) is not supported: the app stores its data in SQLite.
   that, so it works offline and without an account.
 - **Sync** (`lib/services/sync_service.dart`) copies progress to and from
   Supabase for a signed-in user. Each card is matched by deck name + Arabic
-  word, and whichever device graded it last wins.
+  word, and whichever device graded it last wins. Review history and
+  the library (favorites and collections) sync alongside it.
 - **Accounts** go through `lib/services/auth_service.dart`, a thin wrapper
   over Supabase Auth.
 
 ## Supabase
 
-The backend is one table (`card_progress`) and one function
-(`delete_account`), both defined in `supabase/migrations/`. With the
+The backend is three tables (`card_progress`, `review_log` and
+`user_library`) and one function (`delete_account`), all defined in
+`supabase/migrations/`. With the
 [Supabase CLI](https://supabase.com/docs/guides/cli):
 
 ```bash

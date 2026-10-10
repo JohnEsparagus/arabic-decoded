@@ -1,4 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Needed in release builds too: sync talks to Supabase, and reading
+         aloud is only offered while online. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="arabic_decoded"
         android:name="${applicationName}"
@@ -40,6 +43,10 @@
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
+        </intent>
+        <!-- Lets flutter_tts find the device's text-to-speech engine. -->
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
         </intent>
     </queries>
 </manifest>

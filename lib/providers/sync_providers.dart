@@ -93,6 +93,11 @@ class SyncNotifier extends Notifier<SyncState> {
   void _refreshCards() {
     ref.invalidate(deckFlashcardsProvider);
     ref.invalidate(dictionaryEntriesProvider);
+    ref.invalidate(allFlashcardsProvider);
+    ref.invalidate(reviewLogProvider);
+    ref.invalidate(collectionsProvider);
+    ref.invalidate(collectionFlashcardsProvider);
+    ref.invalidate(cardCollectionIdsProvider);
     ref.invalidate(studySessionProvider);
   }
 }

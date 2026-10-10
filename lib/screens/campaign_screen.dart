@@ -3,16 +3,28 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../providers/database_providers.dart';
 import '../theme/app_theme.dart';
+import '../widgets/welcome_card.dart';
 import 'study_screen.dart';
 
-/// The "Campaign" tab: makes sure every campaign is imported, then drops
-/// straight into the global study session (due reviews first, then new
-/// cards pulled from whichever campaign is current).
-class CampaignScreen extends ConsumerWidget {
+/// The "Campaign" tab: makes sure every campaign is imported, greets the
+/// user with a [WelcomeCard] summing up what's due and how far along they
+/// are, then drops into the global study session (due reviews first, then
+/// new cards pulled from whichever campaign is current).
+///
+/// The welcome is shown once per launch: [_started] lives in this widget's
+/// state, which [RootShell]'s IndexedStack keeps alive across tab switches.
+class CampaignScreen extends ConsumerStatefulWidget {
   const CampaignScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<CampaignScreen> createState() => _CampaignScreenState();
+}
+
+class _CampaignScreenState extends ConsumerState<CampaignScreen> {
+  bool _started = false;
+
+  @override
+  Widget build(BuildContext context) {
     final decksAsync = ref.watch(campaignDecksProvider);
 
     return Padding(
@@ -26,7 +38,9 @@ class CampaignScreen extends ConsumerWidget {
             style: TextStyle(color: context.colors.inkMuted),
           ),
         ),
-        data: (_) => const StudySessionView(),
+        data: (_) => _started
+            ? const StudySessionView()
+            : WelcomeCard(onStart: () => setState(() => _started = true)),
       ),
     );
   }

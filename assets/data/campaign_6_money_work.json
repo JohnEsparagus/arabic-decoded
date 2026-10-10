@@ -4,7 +4,29 @@
     "translit": "sh-r-y",
     "meaning": "Buying",
     "mnemonic": "A Shopper Rushes to Yell 'sold!' after buying. SH-R-Y is the root of buying.",
-    "words": ["اشترى", "يشتري", "شراء"],
+    "words": [
+      {
+        "arabic": "اِشْتَرَى",
+        "translit": "ishtarā",
+        "meaning": "to buy",
+        "pattern": "form8",
+        "note": "Present tense: يَشْتَرِي (yashtarī)",
+        "example": {
+          "ar": "اشترى الولد كتابا.",
+          "en": "The boy bought a book."
+        }
+      },
+      {
+        "arabic": "شِرَاء",
+        "translit": "shirāʾ",
+        "meaning": "buying, purchase",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "أريد شراء سيارة.",
+          "en": "I want to buy a car."
+        }
+      }
+    ],
     "example": "She اشترى a new bag, and her شراء habit means she يشتري often."
   },
   {
@@ -12,7 +34,48 @@
     "translit": "d-f-ʿ",
     "meaning": "Paying, pushing",
     "mnemonic": "A Driver Fumbles with the Payment machine, pushing the button. D-F-ʿ is the root of paying and pushing.",
-    "words": ["دفع", "يدفع", "دفعة", "مدفوع"],
+    "words": [
+      {
+        "arabic": "دَفَعَ",
+        "translit": "dafaʿa",
+        "meaning": "to pay; to push",
+        "pattern": "form1",
+        "note": "Present tense: يَدْفَعُ (yadfaʿu)",
+        "example": {
+          "ar": "دفع الرجل الحساب.",
+          "en": "The man paid the bill."
+        }
+      },
+      {
+        "arabic": "دَفْع",
+        "translit": "dafʿ",
+        "meaning": "payment; pushing",
+        "pattern": "act",
+        "example": {
+          "ar": "الدفع عند الباب.",
+          "en": "Payment is at the door."
+        }
+      },
+      {
+        "arabic": "دَفْعَة",
+        "translit": "dafʿa",
+        "meaning": "a payment, instalment",
+        "example": {
+          "ar": "هذه الدفعة الأولى.",
+          "en": "This is the first instalment."
+        }
+      },
+      {
+        "arabic": "مَدْفُوع",
+        "translit": "madfūʿ",
+        "meaning": "paid",
+        "pattern": "done",
+        "example": {
+          "ar": "الحساب مدفوع.",
+          "en": "The bill is paid."
+        }
+      }
+    ],
     "example": "He دفع the bill in one دفعة, and it stayed مدفوع."
   },
   {
@@ -20,7 +83,28 @@
     "translit": "ʿ-ṭ-y",
     "meaning": "Giving",
     "mnemonic": "An Artist Tosses a Yellow gift to a friend. ʿ-Ṭ-Y is the root of giving.",
-    "words": ["أعطى", "يعطي", "عطاء"],
+    "words": [
+      {
+        "arabic": "أَعْطَى",
+        "translit": "ʾaʿṭā",
+        "meaning": "to give",
+        "pattern": "form4",
+        "note": "Present tense: يُعْطِي (yuʿṭī)",
+        "example": {
+          "ar": "أعطى الأب ابنه هدية.",
+          "en": "The father gave his son a gift."
+        }
+      },
+      {
+        "arabic": "عَطَاء",
+        "translit": "ʿaṭāʾ",
+        "meaning": "giving, generosity",
+        "example": {
+          "ar": "العطاء يجلب السعادة.",
+          "en": "Giving brings happiness."
+        }
+      }
+    ],
     "example": "He أعطى a gift kindly, and his عطاء never stops as he يعطي often."
   },
   {
@@ -28,7 +112,38 @@
     "translit": "r-b-ḥ",
     "meaning": "Profiting, winning",
     "mnemonic": "A Racer Bags the Honor of winning first place. R-B-Ḥ is the root of profit and winning.",
-    "words": ["ربح", "يربح", "ربح", "رابح"],
+    "words": [
+      {
+        "arabic": "رَبِحَ",
+        "translit": "rabiḥa",
+        "meaning": "to win, profit",
+        "pattern": "form1",
+        "note": "Present tense: يَرْبَحُ (yarbaḥu)",
+        "example": {
+          "ar": "ربح الفريق المباراة.",
+          "en": "The team won the match."
+        }
+      },
+      {
+        "arabic": "رِبْح",
+        "translit": "ribḥ",
+        "meaning": "profit",
+        "example": {
+          "ar": "الربح قليل هذا العام.",
+          "en": "The profit is small this year."
+        }
+      },
+      {
+        "arabic": "رَابِح",
+        "translit": "rābiḥ",
+        "meaning": "winner, winning",
+        "pattern": "doer",
+        "example": {
+          "ar": "من الرابح؟",
+          "en": "Who is the winner?"
+        }
+      }
+    ],
     "example": "The trader ربح a fortune, and every deal يربح makes him a رابح."
   },
   {
@@ -36,7 +151,39 @@
     "translit": "kh-s-r",
     "meaning": "Losing",
     "mnemonic": "A Knight Sighs and Retreats after losing the battle. KH-S-R is the root of losing.",
-    "words": ["خسر", "يخسر", "خسارة"],
+    "words": [
+      {
+        "arabic": "خَسِرَ",
+        "translit": "khasira",
+        "meaning": "to lose",
+        "pattern": "form1",
+        "note": "Present tense: يَخْسَرُ (yakhsaru)",
+        "example": {
+          "ar": "خسر الفريق المباراة.",
+          "en": "The team lost the match."
+        }
+      },
+      {
+        "arabic": "خَسَارَة",
+        "translit": "khasāra",
+        "meaning": "loss",
+        "pattern": "quality",
+        "example": {
+          "ar": "هذه خسارة كبيرة.",
+          "en": "This is a big loss."
+        }
+      },
+      {
+        "arabic": "خَاسِر",
+        "translit": "khāsir",
+        "meaning": "loser, losing",
+        "pattern": "doer",
+        "example": {
+          "ar": "لا يوجد خاسر هنا.",
+          "en": "There is no loser here."
+        }
+      }
+    ],
     "example": "He خسر the match, and the خسارة still stings as he يخسر again."
   },
   {
@@ -44,7 +191,39 @@
     "translit": "z-r-ʿ",
     "meaning": "Planting, farming",
     "mnemonic": "A Zoologist Rakes and Aerates the soil to plant seeds. Z-R-ʿ is the root of planting and farming.",
-    "words": ["زرع", "يزرع", "زراعة", "مزرعة"],
+    "words": [
+      {
+        "arabic": "زَرَعَ",
+        "translit": "zaraʿa",
+        "meaning": "to plant",
+        "pattern": "form1",
+        "note": "Present tense: يَزْرَعُ (yazraʿu)",
+        "example": {
+          "ar": "زرع الفلاح القمح.",
+          "en": "The farmer planted wheat."
+        }
+      },
+      {
+        "arabic": "زِرَاعَة",
+        "translit": "zirāʿa",
+        "meaning": "agriculture, farming",
+        "pattern": "craft",
+        "example": {
+          "ar": "الزراعة مهمة للبلد.",
+          "en": "Agriculture is important for the country."
+        }
+      },
+      {
+        "arabic": "مَزْرَعَة",
+        "translit": "mazraʿa",
+        "meaning": "farm",
+        "pattern": "place_f",
+        "example": {
+          "ar": "يعيش جدي في مزرعة.",
+          "en": "My grandfather lives on a farm."
+        }
+      }
+    ],
     "example": "The farmer زرع the field, his زراعة thriving on the مزرعة."
   },
   {
@@ -52,7 +231,38 @@
     "translit": "th-m-r",
     "meaning": "Fruit, bearing fruit",
     "mnemonic": "A Thespian Munches a Ripe fruit on stage. TH-M-R is the root of fruit and results.",
-    "words": ["ثمر", "يثمر", "ثمرة", "ثمار"],
+    "words": [
+      {
+        "arabic": "أَثْمَرَ",
+        "translit": "ʾathmara",
+        "meaning": "to bear fruit",
+        "pattern": "form4",
+        "note": "Present tense: يُثْمِرُ (yuthmiru)",
+        "example": {
+          "ar": "أثمرت الشجرة.",
+          "en": "The tree bore fruit."
+        }
+      },
+      {
+        "arabic": "ثَمَرَة",
+        "translit": "thamara",
+        "meaning": "a fruit; result",
+        "example": {
+          "ar": "هذه ثمرة العمل.",
+          "en": "This is the fruit of the work."
+        }
+      },
+      {
+        "arabic": "ثِمَار",
+        "translit": "thimār",
+        "meaning": "fruits",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "الثمار ناضجة.",
+          "en": "The fruits are ripe."
+        }
+      }
+    ],
     "example": "The tree ثمر sweet apples, and every ثمرة among the ثمار was ripe."
   },
   {
@@ -60,7 +270,39 @@
     "translit": "ḥ-ṣ-l",
     "meaning": "Obtaining, resulting",
     "mnemonic": "A Hiker Secures the Loot he was after. Ḥ-Ṣ-L is the root of obtaining and resulting.",
-    "words": ["حصل", "يحصل", "حصول", "نتيجة حصلت"],
+    "words": [
+      {
+        "arabic": "حَصَلَ",
+        "translit": "ḥaṣala",
+        "meaning": "to obtain; to happen",
+        "pattern": "form1",
+        "note": "Present tense: يَحْصُلُ (yaḥṣulu)",
+        "example": {
+          "ar": "حصل الطالب على جائزة.",
+          "en": "The student obtained a prize."
+        }
+      },
+      {
+        "arabic": "حُصُول",
+        "translit": "ḥuṣūl",
+        "meaning": "obtaining",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "الحصول على عمل صعب.",
+          "en": "Getting a job is hard."
+        }
+      },
+      {
+        "arabic": "مَحْصُول",
+        "translit": "maḥṣūl",
+        "meaning": "crop, yield",
+        "pattern": "done",
+        "example": {
+          "ar": "المحصول جيد هذا العام.",
+          "en": "The crop is good this year."
+        }
+      }
+    ],
     "example": "He حصل on the prize, since he يحصل on rewards through hard work."
   },
   {
@@ -68,7 +310,28 @@
     "translit": "ḥ-t-ʾ-j",
     "meaning": "Needing",
     "mnemonic": "A Hiker Tugs at his Aching Joints, needing rest badly. The extended root Ḥ-T-ʾ-J (from ح و ج) means to need.",
-    "words": ["احتاج", "يحتاج", "حاجة"],
+    "words": [
+      {
+        "arabic": "اِحْتَاجَ",
+        "translit": "iḥtāja",
+        "meaning": "to need",
+        "pattern": "form8",
+        "note": "Present tense: يَحْتَاجُ (yaḥtāju)",
+        "example": {
+          "ar": "احتاج الولد إلى مساعدة.",
+          "en": "The boy needed help."
+        }
+      },
+      {
+        "arabic": "حَاجَة",
+        "translit": "ḥāja",
+        "meaning": "need",
+        "example": {
+          "ar": "أنا في حاجة إلى الراحة.",
+          "en": "I am in need of rest."
+        }
+      }
+    ],
     "example": "He احتاج help urgently, and his حاجة grows as he يحتاج more."
   },
   {
@@ -76,7 +339,38 @@
     "translit": "kh-d-m",
     "meaning": "Serving",
     "mnemonic": "A Knight Delivers a Meal in service to the king. KH-D-M is the root of serving.",
-    "words": ["خدم", "يخدم", "خدمة", "خادم"],
+    "words": [
+      {
+        "arabic": "خَدَمَ",
+        "translit": "khadama",
+        "meaning": "to serve",
+        "pattern": "form1",
+        "note": "Present tense: يَخْدِمُ (yakhdimu)",
+        "example": {
+          "ar": "خدم الرجل بلده.",
+          "en": "The man served his country."
+        }
+      },
+      {
+        "arabic": "خِدْمَة",
+        "translit": "khidma",
+        "meaning": "service",
+        "example": {
+          "ar": "الخدمة ممتازة هنا.",
+          "en": "The service is excellent here."
+        }
+      },
+      {
+        "arabic": "خَادِم",
+        "translit": "khādim",
+        "meaning": "servant; server",
+        "pattern": "doer",
+        "example": {
+          "ar": "الخادم لا يعمل الآن.",
+          "en": "The server is not working now."
+        }
+      }
+    ],
     "example": "The خادم خدم the guests well, his خدمة praised by all."
   }
 ]

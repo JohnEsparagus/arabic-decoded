@@ -4,7 +4,38 @@
     "translit": "ʾ-k-l",
     "meaning": "Eating",
     "mnemonic": "An Actor Chews and swallows a Lasagna on stage. ʾ-K-L is the root of eating.",
-    "words": ["أكل", "يأكل", "طعام أكل", "مأكولات"],
+    "words": [
+      {
+        "arabic": "أَكَلَ",
+        "translit": "ʾakala",
+        "meaning": "to eat",
+        "pattern": "form1",
+        "note": "Present tense: يَأْكُلُ (yaʾkulu)",
+        "example": {
+          "ar": "أكل الولد التفاحة.",
+          "en": "The boy ate the apple."
+        }
+      },
+      {
+        "arabic": "أَكْل",
+        "translit": "ʾakl",
+        "meaning": "food; eating",
+        "pattern": "act",
+        "example": {
+          "ar": "الأكل جاهز.",
+          "en": "The food is ready."
+        }
+      },
+      {
+        "arabic": "مَأْكُولَات",
+        "translit": "maʾkūlāt",
+        "meaning": "foods, dishes",
+        "example": {
+          "ar": "هذا مطعم مأكولات بحرية.",
+          "en": "This is a seafood restaurant."
+        }
+      }
+    ],
     "example": "He أكل the meal fast, since he يأكل all the مأكولات."
   },
   {
@@ -12,7 +43,38 @@
     "translit": "sh-r-b",
     "meaning": "Drinking",
     "mnemonic": "A Sheikh Raises his Beverage and drinks. SH-R-B is the root of drinking.",
-    "words": ["شرب", "يشرب", "شراب", "مشروب"],
+    "words": [
+      {
+        "arabic": "شَرِبَ",
+        "translit": "shariba",
+        "meaning": "to drink",
+        "pattern": "form1",
+        "note": "Present tense: يَشْرَبُ (yashrabu)",
+        "example": {
+          "ar": "شرب الولد الماء.",
+          "en": "The boy drank the water."
+        }
+      },
+      {
+        "arabic": "شَرَاب",
+        "translit": "sharāb",
+        "meaning": "drink, beverage",
+        "example": {
+          "ar": "هذا شراب لذيذ.",
+          "en": "This is a delicious drink."
+        }
+      },
+      {
+        "arabic": "مَشْرُوب",
+        "translit": "mashrūb",
+        "meaning": "a drink",
+        "pattern": "done",
+        "example": {
+          "ar": "ما مشروبك المفضل؟",
+          "en": "What is your favourite drink?"
+        }
+      }
+    ],
     "example": "She شرب the tea slowly, enjoying every مشروب she يشرب."
   },
   {
@@ -20,7 +82,38 @@
     "translit": "l-b-s",
     "meaning": "Wearing, clothing",
     "mnemonic": "A Lady Buttons her Suit before heading out. L-B-S is the root of wearing and clothing.",
-    "words": ["لبس", "يلبس", "ملابس"],
+    "words": [
+      {
+        "arabic": "لَبِسَ",
+        "translit": "labisa",
+        "meaning": "to wear",
+        "pattern": "form1",
+        "note": "Present tense: يَلْبَسُ (yalbasu)",
+        "example": {
+          "ar": "لبس الولد قميصا جديدا.",
+          "en": "The boy wore a new shirt."
+        }
+      },
+      {
+        "arabic": "لِبَاس",
+        "translit": "libās",
+        "meaning": "clothing, dress",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "هذا لباس تقليدي.",
+          "en": "This is traditional dress."
+        }
+      },
+      {
+        "arabic": "مَلَابِس",
+        "translit": "malābis",
+        "meaning": "clothes",
+        "example": {
+          "ar": "اشتريت ملابس جديدة.",
+          "en": "I bought new clothes."
+        }
+      }
+    ],
     "example": "He لبس his coat, since he يلبس new ملابس every winter."
   },
   {
@@ -28,7 +121,39 @@
     "translit": "ṭ-b-kh",
     "meaning": "Cooking",
     "mnemonic": "A Tailor Bakes a Kabab in the kitchen. Ṭ-B-KH is the root of cooking.",
-    "words": ["طبخ", "يطبخ", "طبخ", "مطبخ"],
+    "words": [
+      {
+        "arabic": "طَبَخَ",
+        "translit": "ṭabakha",
+        "meaning": "to cook",
+        "pattern": "form1",
+        "note": "Present tense: يَطْبُخُ (yaṭbukhu)",
+        "example": {
+          "ar": "طبخت الأم العشاء.",
+          "en": "The mother cooked dinner."
+        }
+      },
+      {
+        "arabic": "طَبْخ",
+        "translit": "ṭabkh",
+        "meaning": "cooking",
+        "pattern": "act",
+        "example": {
+          "ar": "أحب الطبخ.",
+          "en": "I love cooking."
+        }
+      },
+      {
+        "arabic": "مَطْبَخ",
+        "translit": "maṭbakh",
+        "meaning": "kitchen",
+        "pattern": "place",
+        "example": {
+          "ar": "الأم في المطبخ.",
+          "en": "The mother is in the kitchen."
+        }
+      }
+    ],
     "example": "She طبخ dinner in the مطبخ, since she يطبخ every night."
   },
   {
@@ -36,7 +161,48 @@
     "translit": "s-k-n",
     "meaning": "Living, dwelling",
     "mnemonic": "A Sailor Keeps a Nest to live in permanently. S-K-N is the root of dwelling and residence.",
-    "words": ["سكن", "يسكن", "سكن", "مسكن"],
+    "words": [
+      {
+        "arabic": "سَكَنَ",
+        "translit": "sakana",
+        "meaning": "to live, dwell",
+        "pattern": "form1",
+        "note": "Present tense: يَسْكُنُ (yaskunu)",
+        "example": {
+          "ar": "سكن الرجل في المدينة.",
+          "en": "The man lived in the city."
+        }
+      },
+      {
+        "arabic": "سَاكِن",
+        "translit": "sākin",
+        "meaning": "resident",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو ساكن جديد في الحي.",
+          "en": "He is a new resident in the neighbourhood."
+        }
+      },
+      {
+        "arabic": "سَكَن",
+        "translit": "sakan",
+        "meaning": "housing",
+        "example": {
+          "ar": "السكن غال هنا.",
+          "en": "Housing is expensive here."
+        }
+      },
+      {
+        "arabic": "مَسْكَن",
+        "translit": "maskan",
+        "meaning": "residence, home",
+        "pattern": "place",
+        "example": {
+          "ar": "هذا مسكن جميل.",
+          "en": "This is a beautiful home."
+        }
+      }
+    ],
     "example": "He سكن in the city, and his مسكن is where he يسكن now."
   },
   {
@@ -44,7 +210,39 @@
     "translit": "b-n-y",
     "meaning": "Building",
     "mnemonic": "A Builder Nails and Yanks the beams into place. B-N-Y is the root of building.",
-    "words": ["بنى", "يبني", "بناء", "مبنى"],
+    "words": [
+      {
+        "arabic": "بَنَى",
+        "translit": "banā",
+        "meaning": "to build",
+        "pattern": "form1",
+        "note": "Present tense: يَبْنِي (yabnī)",
+        "example": {
+          "ar": "بنى الرجل بيتا.",
+          "en": "The man built a house."
+        }
+      },
+      {
+        "arabic": "بِنَاء",
+        "translit": "bināʾ",
+        "meaning": "building, construction",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "البناء يحتاج إلى وقت.",
+          "en": "Construction takes time."
+        }
+      },
+      {
+        "arabic": "مَبْنَى",
+        "translit": "mabnā",
+        "meaning": "a building",
+        "pattern": "place",
+        "example": {
+          "ar": "هذا مبنى قديم.",
+          "en": "This is an old building."
+        }
+      }
+    ],
     "example": "They بنى the tower, and every مبنى they يبني adds to the skyline."
   },
   {
@@ -52,7 +250,39 @@
     "translit": "ṣ-n-ʿ",
     "meaning": "Making, manufacturing",
     "mnemonic": "A Sculptor Nails an Artifact together, manufacturing it by hand. Ṣ-N-ʿ is the root of making and manufacturing.",
-    "words": ["صنع", "يصنع", "صناعة", "مصنع"],
+    "words": [
+      {
+        "arabic": "صَنَعَ",
+        "translit": "ṣanaʿa",
+        "meaning": "to make, manufacture",
+        "pattern": "form1",
+        "note": "Present tense: يَصْنَعُ (yaṣnaʿu)",
+        "example": {
+          "ar": "صنع النجار طاولة.",
+          "en": "The carpenter made a table."
+        }
+      },
+      {
+        "arabic": "صِنَاعَة",
+        "translit": "ṣināʿa",
+        "meaning": "industry",
+        "pattern": "craft",
+        "example": {
+          "ar": "صناعة السيارات مهمة.",
+          "en": "The car industry is important."
+        }
+      },
+      {
+        "arabic": "مَصْنَع",
+        "translit": "maṣnaʿ",
+        "meaning": "factory",
+        "pattern": "place",
+        "example": {
+          "ar": "يعمل أبي في مصنع.",
+          "en": "My father works in a factory."
+        }
+      }
+    ],
     "example": "The مصنع صنع the parts, and its صناعة grows every year."
   },
   {
@@ -60,7 +290,28 @@
     "translit": "s-t-ʿ-m-l",
     "meaning": "Using",
     "mnemonic": "A Student Tries an Old Machine, Learning to use it. The extended root S-T-ʿ-M-L (from ع م ل, 'work') means to use or employ something.",
-    "words": ["استعمل", "يستعمل", "استعمال"],
+    "words": [
+      {
+        "arabic": "اِسْتَعْمَلَ",
+        "translit": "istaʿmala",
+        "meaning": "to use",
+        "pattern": "form10",
+        "note": "Present tense: يَسْتَعْمِلُ (yastaʿmilu)",
+        "example": {
+          "ar": "استعمل الولد القلم.",
+          "en": "The boy used the pen."
+        }
+      },
+      {
+        "arabic": "اِسْتِعْمَال",
+        "translit": "istiʿmāl",
+        "meaning": "use, usage",
+        "example": {
+          "ar": "هذا للاستعمال اليومي.",
+          "en": "This is for daily use."
+        }
+      }
+    ],
     "example": "He استعمل the tool carefully, and its استعمال became routine."
   },
   {
@@ -68,7 +319,47 @@
     "translit": "m-l-k",
     "meaning": "Owning, possessing",
     "mnemonic": "A Merchant Locks up his Kingdom of possessions. M-L-K is the root of owning and possessing.",
-    "words": ["ملك", "يملك", "ملك", "مملكة"],
+    "words": [
+      {
+        "arabic": "مَلَكَ",
+        "translit": "malaka",
+        "meaning": "to own",
+        "pattern": "form1",
+        "note": "Present tense: يَمْلِكُ (yamliku)",
+        "example": {
+          "ar": "ملك الرجل بيتا كبيرا.",
+          "en": "The man owned a big house."
+        }
+      },
+      {
+        "arabic": "مَلِك",
+        "translit": "malik",
+        "meaning": "king",
+        "example": {
+          "ar": "الملك في القصر.",
+          "en": "The king is in the palace."
+        }
+      },
+      {
+        "arabic": "مُلْك",
+        "translit": "mulk",
+        "meaning": "property, dominion",
+        "example": {
+          "ar": "هذا البيت ملك أبي.",
+          "en": "This house is my father's property."
+        }
+      },
+      {
+        "arabic": "مَمْلَكَة",
+        "translit": "mamlaka",
+        "meaning": "kingdom",
+        "pattern": "place_f",
+        "example": {
+          "ar": "هذه مملكة قديمة.",
+          "en": "This is an ancient kingdom."
+        }
+      }
+    ],
     "example": "He ملك a large estate, and the مملكة he يملك grew each year."
   },
   {
@@ -76,7 +367,39 @@
     "translit": "b-y-ʿ",
     "meaning": "Selling",
     "mnemonic": "A Baker Yells about the Price, selling his bread. B-Y-ʿ is the root of selling.",
-    "words": ["باع", "يبيع", "بيع", "بائع"],
+    "words": [
+      {
+        "arabic": "بَاعَ",
+        "translit": "bāʿa",
+        "meaning": "to sell",
+        "pattern": "form1",
+        "note": "Present tense: يَبِيعُ (yabīʿu)",
+        "example": {
+          "ar": "باع الرجل سيارته.",
+          "en": "The man sold his car."
+        }
+      },
+      {
+        "arabic": "بَيْع",
+        "translit": "bayʿ",
+        "meaning": "sale, selling",
+        "pattern": "act",
+        "example": {
+          "ar": "البيت للبيع.",
+          "en": "The house is for sale."
+        }
+      },
+      {
+        "arabic": "بَائِع",
+        "translit": "bāʾiʿ",
+        "meaning": "seller",
+        "pattern": "doer",
+        "example": {
+          "ar": "سألت البائع عن السعر.",
+          "en": "I asked the seller about the price."
+        }
+      }
+    ],
     "example": "The بائع باع his goods fast, since he يبيع every morning."
   }
 ]

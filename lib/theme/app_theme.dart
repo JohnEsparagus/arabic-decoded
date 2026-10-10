@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/mastery_level.dart';
+
 /// Family name declared in pubspec.yaml for the bundled Amiri font files
 /// (assets/fonts/) — a classic Naskh-style Arabic typeface, SIL OFL 1.1.
 const _amiri = 'Amiri';
@@ -144,25 +146,102 @@ extension AppColorsX on BuildContext {
   AppColors get colors => Theme.of(this).extension<AppColors>()!;
 }
 
+/// The colour a mastery level is drawn in on a chart. Same hues as the
+/// tile backgrounds (red, amber, green, blue, weakest to strongest) but
+/// strong enough to be marks rather than washes, and a different set per
+/// mode: each was checked against that mode's card surface for contrast
+/// and for staying apart under colour-blindness.
+Color masteryChartColor(BuildContext context, MasteryLevel level) {
+  final dark = Theme.of(context).brightness == Brightness.dark;
+  return switch (level) {
+    MasteryLevel.unlearned => context.colors.cardBorder,
+    MasteryLevel.weak => const Color(0xFFE34948),
+    MasteryLevel.learning => Color(dark ? 0xFFC98500 : 0xFFEDA100),
+    MasteryLevel.strong => Color(dark ? 0xFF199E70 : 0xFF1BAF7A),
+    MasteryLevel.mastered => Color(dark ? 0xFF3987E5 : 0xFF2A78D6),
+  };
+}
+
+/// What a mastery level is called wherever it's named to the user.
+String masteryLabel(MasteryLevel level) => switch (level) {
+  MasteryLevel.unlearned => 'Not started',
+  MasteryLevel.weak => 'Weak',
+  MasteryLevel.learning => 'Learning',
+  MasteryLevel.strong => 'Strong',
+  MasteryLevel.mastered => 'Mastered',
+};
+
 /// Arabic headword styling — the same face used for every Arabic-script
 /// string in the app (flashcard fronts/backs, dictionary entries). [color]
 /// is required rather than defaulting to a fixed ink shade, since the right
 /// shade depends on light vs. night mode — pass `context.colors.ink` (or
 /// `inkMuted`, etc.) from the call site.
-TextStyle arabicTextStyle({
+///
+/// The typeface itself is the user's choice (see [ArabicFont]), read from
+/// the theme, which is why this needs a [context].
+TextStyle arabicTextStyle(
+  BuildContext context, {
   required Color color,
   double fontSize = 28,
   FontWeight fontWeight = FontWeight.w600,
 }) {
   return TextStyle(
-    fontFamily: _amiri,
+    fontFamily: Theme.of(context).extension<ArabicFontTheme>()?.font.family,
     fontSize: fontSize,
     fontWeight: fontWeight,
     color: color,
   );
 }
 
-ThemeData buildAppTheme({required Brightness brightness}) {
+/// The typefaces offered for Arabic text. All but [system] are bundled
+/// with the app (see pubspec.yaml), so they work offline. This only
+/// changes Arabic script; headings stay in Amiri, the app's own face.
+enum ArabicFont {
+  amiri('Amiri', 'Amiri', 'Classic book style'),
+  scheherazade(
+    'Scheherazade',
+    'Scheherazade New',
+    'Open and roomy, clear vowel marks',
+  ),
+  notoNaskh('Noto Naskh', 'Noto Naskh Arabic', 'Clean everyday print'),
+  notoKufi('Noto Kufi', 'Noto Kufi Arabic', 'Modern and geometric'),
+  system('System', null, 'Whatever this device uses');
+
+  const ArabicFont(this.label, this.family, this.description);
+
+  final String label;
+
+  /// The font family to ask for, or null for the device's own.
+  final String? family;
+  final String description;
+
+  static ArabicFont fromName(String? name) => ArabicFont.values.firstWhere(
+    (font) => font.name == name,
+    orElse: () => ArabicFont.amiri,
+  );
+}
+
+/// Carries the chosen [ArabicFont] in the theme, so every widget showing
+/// Arabic picks it up (and rebuilds when it changes) through
+/// [arabicTextStyle] without knowing about settings.
+class ArabicFontTheme extends ThemeExtension<ArabicFontTheme> {
+  const ArabicFontTheme(this.font);
+
+  final ArabicFont font;
+
+  @override
+  ArabicFontTheme copyWith({ArabicFont? font}) =>
+      ArabicFontTheme(font ?? this.font);
+
+  @override
+  ArabicFontTheme lerp(ThemeExtension<ArabicFontTheme>? other, double t) =>
+      other is ArabicFontTheme && t >= 0.5 ? other : this;
+}
+
+ThemeData buildAppTheme({
+  required Brightness brightness,
+  ArabicFont arabicFont = ArabicFont.amiri,
+}) {
   final palette = brightness == Brightness.dark
       ? AppColors.dark
       : AppColors.light;
@@ -174,7 +253,7 @@ ThemeData buildAppTheme({required Brightness brightness}) {
   ).copyWith(secondary: palette.gold, surface: palette.parchment);
 
   return base.copyWith(
-    extensions: [palette],
+    extensions: [palette, ArabicFontTheme(arabicFont)],
     colorScheme: colorScheme,
     scaffoldBackgroundColor: palette.parchment,
     textTheme: base.textTheme

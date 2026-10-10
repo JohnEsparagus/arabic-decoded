@@ -4,7 +4,28 @@
     "translit": "s-ʾ-l",
     "meaning": "Asking",
     "mnemonic": "A Sailor Asks a Local for directions. S-ʾ-L is the root of asking and questioning.",
-    "words": ["سأل", "يسأل", "سؤال"],
+    "words": [
+      {
+        "arabic": "سَأَلَ",
+        "translit": "saʾala",
+        "meaning": "to ask",
+        "pattern": "form1",
+        "note": "Present tense: يَسْأَلُ (yasʾalu)",
+        "example": {
+          "ar": "سأل الطالب المعلم.",
+          "en": "The student asked the teacher."
+        }
+      },
+      {
+        "arabic": "سُؤَال",
+        "translit": "suʾāl",
+        "meaning": "question",
+        "example": {
+          "ar": "عندي سؤال.",
+          "en": "I have a question."
+        }
+      }
+    ],
     "example": "He سأل the guide, and every سؤال he يسأل gets answered."
   },
   {
@@ -12,7 +33,37 @@
     "translit": "j-w-b",
     "meaning": "Answering",
     "mnemonic": "A Judge Waits for the answer, then Booms it out. J-W-B is the root of answering and responding.",
-    "words": ["أجاب", "يجيب", "جواب", "إجابة"],
+    "words": [
+      {
+        "arabic": "أَجَابَ",
+        "translit": "ʾajāba",
+        "meaning": "to answer",
+        "pattern": "form4",
+        "note": "Present tense: يُجِيبُ (yujību)",
+        "example": {
+          "ar": "أجاب الطالب عن السؤال.",
+          "en": "The student answered the question."
+        }
+      },
+      {
+        "arabic": "جَوَاب",
+        "translit": "jawāb",
+        "meaning": "answer",
+        "example": {
+          "ar": "هذا جواب صحيح.",
+          "en": "This is a correct answer."
+        }
+      },
+      {
+        "arabic": "إِجَابَة",
+        "translit": "ʾijāba",
+        "meaning": "answer, reply",
+        "example": {
+          "ar": "شكرا على الإجابة.",
+          "en": "Thank you for the answer."
+        }
+      }
+    ],
     "example": "He أجاب quickly, and his جواب became the official إجابة."
   },
   {
@@ -20,7 +71,38 @@
     "translit": "dh-k-r",
     "meaning": "Mentioning, remembering",
     "mnemonic": "A Duchess Keeps Recalling the old story. DH-K-R is the root of mentioning and remembering.",
-    "words": ["ذكر", "يذكر", "ذكرى", "تذكير"],
+    "words": [
+      {
+        "arabic": "ذَكَرَ",
+        "translit": "dhakara",
+        "meaning": "to mention, remember",
+        "pattern": "form1",
+        "note": "Present tense: يَذْكُرُ (yadhkuru)",
+        "example": {
+          "ar": "ذكر المعلم اسمي.",
+          "en": "The teacher mentioned my name."
+        }
+      },
+      {
+        "arabic": "ذِكْرَى",
+        "translit": "dhikrā",
+        "meaning": "memory, anniversary",
+        "example": {
+          "ar": "هذه ذكرى جميلة.",
+          "en": "This is a beautiful memory."
+        }
+      },
+      {
+        "arabic": "تَذْكِير",
+        "translit": "tadhkīr",
+        "meaning": "reminder",
+        "pattern": "taf3il",
+        "example": {
+          "ar": "شكرا على التذكير.",
+          "en": "Thanks for the reminder."
+        }
+      }
+    ],
     "example": "He ذكر the event, and it became a ذكرى he still يذكر."
   },
   {
@@ -28,7 +110,28 @@
     "translit": "n-s-y",
     "meaning": "Forgetting",
     "mnemonic": "A Navigator Skips the Yield sign, forgetting to check. N-S-Y is the root of forgetting.",
-    "words": ["نسي", "ينسى", "نسيان"],
+    "words": [
+      {
+        "arabic": "نَسِيَ",
+        "translit": "nasiya",
+        "meaning": "to forget",
+        "pattern": "form1",
+        "note": "Present tense: يَنْسَى (yansā)",
+        "example": {
+          "ar": "نسي الولد كتابه.",
+          "en": "The boy forgot his book."
+        }
+      },
+      {
+        "arabic": "نِسْيَان",
+        "translit": "nisyān",
+        "meaning": "forgetting, forgetfulness",
+        "example": {
+          "ar": "النسيان مشكلة.",
+          "en": "Forgetfulness is a problem."
+        }
+      }
+    ],
     "example": "He نسي the name, and ينسى it again due to his نسيان."
   },
   {
@@ -36,7 +139,49 @@
     "translit": "d-r-s",
     "meaning": "Studying",
     "mnemonic": "A Detective Reviews the Scene like a student studies a case. D-R-S is the root of studying.",
-    "words": ["درس", "يدرس", "دراسة", "مدرسة"],
+    "words": [
+      {
+        "arabic": "دَرَسَ",
+        "translit": "darasa",
+        "meaning": "to study",
+        "pattern": "form1",
+        "note": "Present tense: يَدْرُسُ (yadrusu)",
+        "example": {
+          "ar": "درس الطالب اللغة العربية.",
+          "en": "The student studied Arabic."
+        }
+      },
+      {
+        "arabic": "دَرْس",
+        "translit": "dars",
+        "meaning": "lesson",
+        "pattern": "act",
+        "example": {
+          "ar": "الدرس سهل اليوم.",
+          "en": "The lesson is easy today."
+        }
+      },
+      {
+        "arabic": "دِرَاسَة",
+        "translit": "dirāsa",
+        "meaning": "study, studies",
+        "pattern": "craft",
+        "example": {
+          "ar": "الدراسة في الجامعة صعبة.",
+          "en": "Studying at university is hard."
+        }
+      },
+      {
+        "arabic": "مَدْرَسَة",
+        "translit": "madrasa",
+        "meaning": "school",
+        "pattern": "place_f",
+        "example": {
+          "ar": "المدرسة قريبة من البيت.",
+          "en": "The school is near the house."
+        }
+      }
+    ],
     "example": "She درس hard at the مدرسة, her دراسة paying off."
   },
   {
@@ -44,7 +189,29 @@
     "translit": "sh-r-ḥ",
     "meaning": "Explaining",
     "mnemonic": "A Shepherd Retells the tale with Heart, explaining every detail. SH-R-Ḥ is the root of explaining.",
-    "words": ["شرح", "يشرح", "شرح"],
+    "words": [
+      {
+        "arabic": "شَرَحَ",
+        "translit": "sharaḥa",
+        "meaning": "to explain",
+        "pattern": "form1",
+        "note": "Present tense: يَشْرَحُ (yashraḥu)",
+        "example": {
+          "ar": "شرح المعلم الدرس.",
+          "en": "The teacher explained the lesson."
+        }
+      },
+      {
+        "arabic": "شَرْح",
+        "translit": "sharḥ",
+        "meaning": "explanation",
+        "pattern": "act",
+        "example": {
+          "ar": "هذا شرح واضح.",
+          "en": "This is a clear explanation."
+        }
+      }
+    ],
     "example": "The teacher شرح the lesson, and his شرح made it clear."
   },
   {
@@ -52,7 +219,39 @@
     "translit": "b-ḥ-th",
     "meaning": "Searching, researching",
     "mnemonic": "A Botanist Hunts Thoroughly for a rare plant. B-Ḥ-TH is the root of searching and researching.",
-    "words": ["بحث", "يبحث", "بحث", "باحث"],
+    "words": [
+      {
+        "arabic": "بَحَثَ",
+        "translit": "baḥatha",
+        "meaning": "to search",
+        "pattern": "form1",
+        "note": "Present tense: يَبْحَثُ (yabḥathu)",
+        "example": {
+          "ar": "بحث الولد عن المفتاح.",
+          "en": "The boy searched for the key."
+        }
+      },
+      {
+        "arabic": "بَحْث",
+        "translit": "baḥth",
+        "meaning": "search, research",
+        "pattern": "act",
+        "example": {
+          "ar": "كتب الطالب بحثا.",
+          "en": "The student wrote a research paper."
+        }
+      },
+      {
+        "arabic": "بَاحِث",
+        "translit": "bāḥith",
+        "meaning": "researcher",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو باحث في الجامعة.",
+          "en": "He is a researcher at the university."
+        }
+      }
+    ],
     "example": "The باحث بحث for years, and still يبحث for answers."
   },
   {
@@ -60,7 +259,38 @@
     "translit": "kh-b-r",
     "meaning": "Informing, news",
     "mnemonic": "A Knight Brings a Report from the battlefield. KH-B-R is the root of news and informing.",
-    "words": ["خبر", "أخبر", "يخبر", "خبير"],
+    "words": [
+      {
+        "arabic": "خَبَر",
+        "translit": "khabar",
+        "meaning": "news, a piece of news",
+        "example": {
+          "ar": "سمعت خبرا جيدا.",
+          "en": "I heard good news."
+        }
+      },
+      {
+        "arabic": "أَخْبَرَ",
+        "translit": "ʾakhbara",
+        "meaning": "to inform, tell",
+        "pattern": "form4",
+        "note": "Present tense: يُخْبِرُ (yukhbiru)",
+        "example": {
+          "ar": "أخبر الولد أمه.",
+          "en": "The boy told his mother."
+        }
+      },
+      {
+        "arabic": "خَبِير",
+        "translit": "khabīr",
+        "meaning": "expert",
+        "pattern": "adj",
+        "example": {
+          "ar": "هو خبير في الاقتصاد.",
+          "en": "He is an expert in economics."
+        }
+      }
+    ],
     "example": "He أخبر the king of the خبر, since he is a trusted خبير."
   },
   {
@@ -68,7 +298,36 @@
     "translit": "t-r-j-m",
     "meaning": "Translating",
     "mnemonic": "A Tourist Rushes to Jot down a translation, Mumbling the words. T-R-J-M is the root of translating.",
-    "words": ["ترجم", "يترجم", "ترجمة", "مترجم"],
+    "words": [
+      {
+        "arabic": "تَرْجَمَ",
+        "translit": "tarjama",
+        "meaning": "to translate",
+        "note": "Present tense: يُتَرْجِمُ (yutarjimu)",
+        "example": {
+          "ar": "ترجم الكاتب الكتاب.",
+          "en": "The writer translated the book."
+        }
+      },
+      {
+        "arabic": "تَرْجَمَة",
+        "translit": "tarjama",
+        "meaning": "translation",
+        "example": {
+          "ar": "هذه ترجمة جيدة.",
+          "en": "This is a good translation."
+        }
+      },
+      {
+        "arabic": "مُتَرْجِم",
+        "translit": "mutarjim",
+        "meaning": "translator",
+        "example": {
+          "ar": "يعمل أخي مترجما.",
+          "en": "My brother works as a translator."
+        }
+      }
+    ],
     "example": "The مترجم ترجم the speech, its ترجمة finished quickly."
   },
   {
@@ -76,7 +335,28 @@
     "translit": "q-r-r",
     "meaning": "Deciding",
     "mnemonic": "A Queen Repeats her Ruling to make it final. Q-R-R is the root of deciding.",
-    "words": ["قرر", "يقرر", "قرار"],
+    "words": [
+      {
+        "arabic": "قَرَّرَ",
+        "translit": "qarrara",
+        "meaning": "to decide",
+        "pattern": "form2",
+        "note": "Present tense: يُقَرِّرُ (yuqarriru)",
+        "example": {
+          "ar": "قرر الرجل السفر.",
+          "en": "The man decided to travel."
+        }
+      },
+      {
+        "arabic": "قَرَار",
+        "translit": "qarār",
+        "meaning": "decision",
+        "example": {
+          "ar": "هذا قرار صعب.",
+          "en": "This is a difficult decision."
+        }
+      }
+    ],
     "example": "She قرر to leave, and her قرار was final."
   },
   {
@@ -84,7 +364,38 @@
     "translit": "ḥ-s-b",
     "meaning": "Calculating, thinking",
     "mnemonic": "A Hiker Sums up the Bill in his head. Ḥ-S-B is the root of calculating and thinking.",
-    "words": ["حسب", "يحسب", "حساب", "حاسوب"],
+    "words": [
+      {
+        "arabic": "حَسَبَ",
+        "translit": "ḥasaba",
+        "meaning": "to calculate",
+        "pattern": "form1",
+        "note": "Present tense: يَحْسُبُ (yaḥsubu)",
+        "example": {
+          "ar": "حسب التاجر المال.",
+          "en": "The merchant counted the money."
+        }
+      },
+      {
+        "arabic": "حِسَاب",
+        "translit": "ḥisāb",
+        "meaning": "account; calculation; bill",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "الحساب من فضلك.",
+          "en": "The bill, please."
+        }
+      },
+      {
+        "arabic": "حَاسُوب",
+        "translit": "ḥāsūb",
+        "meaning": "computer",
+        "example": {
+          "ar": "أعمل على الحاسوب.",
+          "en": "I work on the computer."
+        }
+      }
+    ],
     "example": "He حسب the total, using a حاسوب for the حساب."
   },
   {
@@ -92,7 +403,37 @@
     "translit": "q-d-r",
     "meaning": "Ability, estimating",
     "mnemonic": "A Queen's Daughter Rules with the ability to estimate anything. Q-D-R is the root of ability and estimating.",
-    "words": ["قدر", "يقدر", "قدرة", "مقدار"],
+    "words": [
+      {
+        "arabic": "قَدَرَ",
+        "translit": "qadara",
+        "meaning": "to be able",
+        "pattern": "form1",
+        "note": "Present tense: يَقْدِرُ (yaqdiru)",
+        "example": {
+          "ar": "قدر الولد على حمل الحقيبة.",
+          "en": "The boy was able to carry the bag."
+        }
+      },
+      {
+        "arabic": "قُدْرَة",
+        "translit": "qudra",
+        "meaning": "ability, power",
+        "example": {
+          "ar": "عنده قدرة كبيرة.",
+          "en": "He has great ability."
+        }
+      },
+      {
+        "arabic": "مِقْدَار",
+        "translit": "miqdār",
+        "meaning": "amount, quantity",
+        "example": {
+          "ar": "ما مقدار السكر؟",
+          "en": "What is the amount of sugar?"
+        }
+      }
+    ],
     "example": "She يقدر the distance well, since her قدرة for judging a مقدار is strong."
   },
   {
@@ -100,7 +441,37 @@
     "translit": "b-y-n",
     "meaning": "Making clear, between",
     "mnemonic": "A Baker Yells the Notice clearly for all to understand. B-Y-N is the root of clarity and being between.",
-    "words": ["بين", "يبين", "بيان", "واضح بين"],
+    "words": [
+      {
+        "arabic": "بَيَّنَ",
+        "translit": "bayyana",
+        "meaning": "to clarify, make clear",
+        "pattern": "form2",
+        "note": "Present tense: يُبَيِّنُ (yubayyinu)",
+        "example": {
+          "ar": "بين المعلم المعنى.",
+          "en": "The teacher made the meaning clear."
+        }
+      },
+      {
+        "arabic": "بَيَان",
+        "translit": "bayān",
+        "meaning": "statement, declaration",
+        "example": {
+          "ar": "قرأ الوزير البيان.",
+          "en": "The minister read the statement."
+        }
+      },
+      {
+        "arabic": "بَيْنَ",
+        "translit": "bayna",
+        "meaning": "between",
+        "example": {
+          "ar": "البيت بين المدرسة والسوق.",
+          "en": "The house is between the school and the market."
+        }
+      }
+    ],
     "example": "He بين his point clearly, so the بيان left nothing بين the lines."
   },
   {
@@ -108,7 +479,39 @@
     "translit": "n-q-sh",
     "meaning": "Discussing",
     "mnemonic": "A Navigator Quizzes the Ship's crew, sparking a discussion. N-Q-SH is the root of discussing.",
-    "words": ["ناقش", "يناقش", "نقاش", "مناقشة"],
+    "words": [
+      {
+        "arabic": "نَاقَشَ",
+        "translit": "nāqasha",
+        "meaning": "to discuss",
+        "pattern": "form3",
+        "note": "Present tense: يُنَاقِشُ (yunāqishu)",
+        "example": {
+          "ar": "ناقش الطلاب الموضوع.",
+          "en": "The students discussed the topic."
+        }
+      },
+      {
+        "arabic": "نِقَاش",
+        "translit": "niqāsh",
+        "meaning": "discussion, debate",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "كان النقاش طويلا.",
+          "en": "The discussion was long."
+        }
+      },
+      {
+        "arabic": "مُنَاقَشَة",
+        "translit": "munāqasha",
+        "meaning": "discussion",
+        "pattern": "mufa3ala",
+        "example": {
+          "ar": "بعد المناقشة فهمنا الدرس.",
+          "en": "After the discussion we understood the lesson."
+        }
+      }
+    ],
     "example": "They ناقش the plan, and the نقاش turned into a full مناقشة."
   },
   {
@@ -116,7 +519,38 @@
     "translit": "ḥ-f-ẓ",
     "meaning": "Memorizing, preserving",
     "mnemonic": "A Historian Files everything with Zeal, preserving it forever. Ḥ-F-Ẓ is the root of memorizing and preserving.",
-    "words": ["حفظ", "يحفظ", "حفظ", "محفوظ"],
+    "words": [
+      {
+        "arabic": "حَفِظَ",
+        "translit": "ḥafiẓa",
+        "meaning": "to memorize; to keep safe",
+        "pattern": "form1",
+        "note": "Present tense: يَحْفَظُ (yaḥfaẓu)",
+        "example": {
+          "ar": "حفظ الولد الدرس.",
+          "en": "The boy memorized the lesson."
+        }
+      },
+      {
+        "arabic": "حِفْظ",
+        "translit": "ḥifẓ",
+        "meaning": "memorization; preservation",
+        "example": {
+          "ar": "الحفظ يحتاج إلى وقت.",
+          "en": "Memorization takes time."
+        }
+      },
+      {
+        "arabic": "مَحْفُوظ",
+        "translit": "maḥfūẓ",
+        "meaning": "preserved, kept safe",
+        "pattern": "done",
+        "example": {
+          "ar": "المال محفوظ في البنك.",
+          "en": "The money is kept safe in the bank."
+        }
+      }
+    ],
     "example": "She حفظ the poem by heart, keeping it محفوظ forever."
   }
 ]

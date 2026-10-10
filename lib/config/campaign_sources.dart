@@ -71,3 +71,37 @@ const campaignSources = [
     description: 'Cause, result, shape, example, gathering, dividing, type',
   ),
 ];
+
+/// The 28 letters, for absolute beginners. Not a campaign either: it's
+/// optional, and when switched on its cards come before any root (see
+/// `DatabaseService.getNewFlashcards`).
+const alphabetSource = CampaignSource(
+  assetPath: 'assets/data/alphabet.json',
+  deckName: 'Alphabet',
+  description: 'The 28 letters: their names, sounds and shapes',
+);
+
+/// Whole sentences to read. Never fed into the queue automatically: the
+/// user picks the ones they want from the Sentences screen.
+const sentencesSource = CampaignSource(
+  assetPath: 'assets/data/sentences.json',
+  deckName: 'Sentences',
+  description: 'Everyday sentences to read and understand',
+);
+
+/// Read-once cards about anything (a story, a fact), each shown after a
+/// set number of roots. The file ships empty; see
+/// `ContentImporter.importExtras` for what goes in it.
+const extrasSource = CampaignSource(
+  assetPath: 'assets/data/extras.json',
+  deckName: 'Extras',
+);
+
+/// The word patterns (awzān) that words are built on. Not a campaign: a
+/// pattern's card comes up along with the words, right before the first
+/// word that uses it (see `DatabaseService.getNewFlashcards`).
+const patternsSource = CampaignSource(
+  assetPath: 'assets/data/patterns.json',
+  deckName: 'Patterns',
+  description: 'The shapes roots are poured into to make words',
+);

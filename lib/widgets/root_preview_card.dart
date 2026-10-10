@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/flashcard.dart';
+import '../providers/card_actions.dart';
 import '../theme/app_theme.dart';
 import '../utils/mastery_level.dart';
 
@@ -8,17 +10,30 @@ import '../utils/mastery_level.dart';
 /// its transliteration, if any) — used to fill a campaign's root grid,
 /// where the goal is scanning many words at a glance rather than reading
 /// full detail. Tapping opens the full word detail view.
-class RootPreviewCard extends StatelessWidget {
+///
+/// Holding one selects it (see [cardSelectionProvider]). While anything is
+/// selected, tapping a tile adds or removes it instead of opening it, so a
+/// whole batch can be picked out and acted on together.
+class RootPreviewCard extends ConsumerWidget {
   const RootPreviewCard({super.key, required this.card, required this.onTap});
 
   final Flashcard card;
   final VoidCallback onTap;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final colors = context.colors;
+    final selecting = ref.watch(
+      cardSelectionProvider.select((selection) => selection.isNotEmpty),
+    );
+    final selected = ref.watch(
+      cardSelectionProvider.select((selection) => selection.contains(card.id)),
+    );
+    void toggle() => ref.read(cardSelectionProvider.notifier).toggle(card.id!);
+
     return InkWell(
-      onTap: onTap,
+      onTap: selecting ? toggle : onTap,
+      onLongPress: toggle,
       borderRadius: BorderRadius.circular(14),
       child: Container(
         width: 92,
@@ -28,6 +43,15 @@ class RootPreviewCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(14),
           border: Border.all(color: colors.cardBorder),
         ),
+        // Drawn over the tile rather than as a thicker border, so
+        // selecting doesn't nudge the tile's contents around.
+        foregroundDecoration: selected
+            ? BoxDecoration(
+                color: colors.deepGreen.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(color: colors.deepGreen, width: 2.5),
+              )
+            : null,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -37,7 +61,7 @@ class RootPreviewCard extends StatelessWidget {
               textAlign: TextAlign.center,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: arabicTextStyle(fontSize: 20, color: colors.ink),
+              style: arabicTextStyle(context, fontSize: 20, color: colors.ink),
             ),
             if (card.transliteration != null &&
                 card.transliteration!.isNotEmpty) ...[

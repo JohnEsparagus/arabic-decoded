@@ -26,6 +26,29 @@ class LocalFlashcardRepository implements FlashcardRepository {
   Future<void> updateFlashcard(Flashcard card) => _db.updateFlashcard(card);
 
   @override
+  Future<void> updateFlashcardContent(Flashcard card) =>
+      _db.updateFlashcardContent(card);
+
+  @override
+  Future<void> setQueued(int cardId, bool queued) =>
+      _db.setQueued(cardId, queued);
+
+  @override
+  Future<void> markMastered(int cardId) => _db.markMastered(cardId);
+
+  @override
+  Future<void> resetFlashcard(int cardId) => _db.resetFlashcard(cardId);
+
+  @override
+  Future<void> markSeen(int cardId) => _db.markSeen(cardId);
+
+  @override
+  Future<void> deleteFlashcard(int cardId) => _db.deleteFlashcard(cardId);
+
+  @override
+  Future<List<Flashcard>> getQueuedFlashcards() => _db.getQueuedFlashcards();
+
+  @override
   Future<List<Flashcard>> getFlashcardsForDeck(int deckId) =>
       _db.getFlashcardsForDeck(deckId);
 
@@ -33,12 +56,26 @@ class LocalFlashcardRepository implements FlashcardRepository {
   Future<List<Flashcard>> getAllFlashcards() => _db.getAllFlashcards();
 
   @override
-  Future<List<Flashcard>> getDueReviewFlashcards({DateTime? asOf}) =>
-      _db.getDueReviewFlashcards(asOf: asOf);
+  Future<List<Flashcard>> getDueReviewFlashcards({
+    DateTime? asOf,
+    bool includeWords = true,
+    bool includeLetters = true,
+  }) => _db.getDueReviewFlashcards(
+    asOf: asOf,
+    includeWords: includeWords,
+    includeLetters: includeLetters,
+  );
 
   @override
-  Future<List<Flashcard>> getNewFlashcards({required int limit}) =>
-      _db.getNewFlashcards(limit: limit);
+  Future<List<Flashcard>> getNewFlashcards({
+    required int limit,
+    bool includeWords = true,
+    bool includeLetters = true,
+  }) => _db.getNewFlashcards(
+    limit: limit,
+    includeWords: includeWords,
+    includeLetters: includeLetters,
+  );
 
   @override
   Future<int> countIntroducedSince(DateTime cutoff) =>
