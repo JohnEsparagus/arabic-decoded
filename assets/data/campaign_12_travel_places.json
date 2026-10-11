@@ -1,0 +1,421 @@
+[
+  {
+    "arabic": "س ف ر",
+    "translit": "s-f-r",
+    "meaning": "Travelling",
+    "mnemonic": "Set Forth and Roam. S-F-R is the root of travel.",
+    "words": [
+      {
+        "arabic": "سَافَرَ",
+        "translit": "sāfara",
+        "meaning": "to travel",
+        "pattern": "form3",
+        "note": "Present tense: يُسَافِرُ (yusāfiru)",
+        "example": {
+          "ar": "سافر أبي إلى مصر.",
+          "en": "My father travelled to Egypt."
+        }
+      },
+      {
+        "arabic": "سَفَر",
+        "translit": "safar",
+        "meaning": "travel, journey",
+        "example": {
+          "ar": "السفر متعة.",
+          "en": "Travel is a pleasure."
+        }
+      },
+      {
+        "arabic": "مُسَافِر",
+        "translit": "musāfir",
+        "meaning": "traveller",
+        "example": {
+          "ar": "المسافر ينتظر القطار.",
+          "en": "The traveller is waiting for the train."
+        }
+      },
+      {
+        "arabic": "سَفَارَة",
+        "translit": "safāra",
+        "meaning": "embassy",
+        "pattern": "quality",
+        "example": {
+          "ar": "ذهبت إلى السفارة.",
+          "en": "I went to the embassy."
+        }
+      }
+    ],
+    "example": "The مُسَافِر loves سَفَر; he سَافَرَ far."
+  },
+  {
+    "arabic": "ر ح ل",
+    "translit": "r-ḥ-l",
+    "meaning": "Journeying, departing",
+    "mnemonic": "Riders Head off at Light. R-Ḥ-L is the root of setting out on a journey.",
+    "words": [
+      {
+        "arabic": "رَحَلَ",
+        "translit": "raḥala",
+        "meaning": "to depart, set out",
+        "pattern": "form1",
+        "note": "Present tense: يَرْحَلُ (yarḥalu)",
+        "example": {
+          "ar": "رحل الضيوف في الصباح.",
+          "en": "The guests left in the morning."
+        }
+      },
+      {
+        "arabic": "رِحْلَة",
+        "translit": "riḥla",
+        "meaning": "trip, journey",
+        "example": {
+          "ar": "كانت رحلة جميلة.",
+          "en": "It was a beautiful trip."
+        }
+      },
+      {
+        "arabic": "رَاحِل",
+        "translit": "rāḥil",
+        "meaning": "departing; the late (deceased)",
+        "pattern": "doer",
+        "example": {
+          "ar": "الكاتب الراحل مشهور.",
+          "en": "The late writer is famous."
+        }
+      }
+    ],
+    "example": "He رَحَلَ at dawn; the رِحْلَة was long."
+  },
+  {
+    "arabic": "ط ي ر",
+    "translit": "ṭ-y-r",
+    "meaning": "Flying",
+    "mnemonic": "Take Your Route skyward. Ṭ-Y-R is the root of flying: birds, planes and airports.",
+    "words": [
+      {
+        "arabic": "طَارَ",
+        "translit": "ṭāra",
+        "meaning": "to fly",
+        "pattern": "form1",
+        "note": "Present tense: يَطِيرُ (yaṭīru)",
+        "example": {
+          "ar": "طار الطير فوق البحر.",
+          "en": "The bird flew over the sea."
+        }
+      },
+      {
+        "arabic": "طَائِرَة",
+        "translit": "ṭāʾira",
+        "meaning": "aeroplane",
+        "example": {
+          "ar": "وصلت الطائرة في الوقت.",
+          "en": "The plane arrived on time."
+        }
+      },
+      {
+        "arabic": "مَطَار",
+        "translit": "maṭār",
+        "meaning": "airport",
+        "pattern": "place",
+        "example": {
+          "ar": "المطار بعيد عن المدينة.",
+          "en": "The airport is far from the city."
+        }
+      },
+      {
+        "arabic": "طَيْر",
+        "translit": "ṭayr",
+        "meaning": "bird, birds",
+        "pattern": "act",
+        "example": {
+          "ar": "الطير على الشجرة.",
+          "en": "The bird is on the tree."
+        }
+      }
+    ],
+    "example": "The طَائِرَة طَارَتْ from the مَطَار."
+  },
+  {
+    "arabic": "ر ك ب",
+    "translit": "r-k-b",
+    "meaning": "Riding",
+    "mnemonic": "Riders Keep Balance. R-K-B is the root of riding and boarding.",
+    "words": [
+      {
+        "arabic": "رَكِبَ",
+        "translit": "rakiba",
+        "meaning": "to ride, board",
+        "pattern": "form1",
+        "note": "Present tense: يَرْكَبُ (yarkabu)",
+        "example": {
+          "ar": "ركب الولد الحافلة.",
+          "en": "The boy got on the bus."
+        }
+      },
+      {
+        "arabic": "رَاكِب",
+        "translit": "rākib",
+        "meaning": "passenger, rider",
+        "pattern": "doer",
+        "example": {
+          "ar": "الراكب في القطار.",
+          "en": "The passenger is on the train."
+        }
+      },
+      {
+        "arabic": "رُكُوب",
+        "translit": "rukūb",
+        "meaning": "riding, boarding",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "ركوب الخيل ممتع.",
+          "en": "Horse riding is fun."
+        }
+      }
+    ],
+    "example": "The رَاكِب رَكِبَ the bus."
+  },
+  {
+    "arabic": "س و ق",
+    "translit": "s-w-q",
+    "meaning": "Driving; market",
+    "mnemonic": "Steer the Wagon Quickly. S-W-Q is the root of driving something along, and of the market animals were driven to.",
+    "words": [
+      {
+        "arabic": "سَاقَ",
+        "translit": "sāqa",
+        "meaning": "to drive",
+        "pattern": "form1",
+        "note": "Present tense: يَسُوقُ (yasūqu)",
+        "example": {
+          "ar": "ساق الرجل السيارة.",
+          "en": "The man drove the car."
+        }
+      },
+      {
+        "arabic": "سَائِق",
+        "translit": "sāʾiq",
+        "meaning": "driver",
+        "pattern": "doer",
+        "example": {
+          "ar": "سألت السائق عن الطريق.",
+          "en": "I asked the driver about the road."
+        }
+      },
+      {
+        "arabic": "سُوق",
+        "translit": "sūq",
+        "meaning": "market",
+        "example": {
+          "ar": "السوق قريب من هنا.",
+          "en": "The market is near here."
+        }
+      }
+    ],
+    "example": "The سَائِق drove to the سُوق."
+  },
+  {
+    "arabic": "ن ز ل",
+    "translit": "n-z-l",
+    "meaning": "Descending, staying",
+    "mnemonic": "Now Zoom Lower. N-Z-L is the root of coming down, and of where you alight to stay.",
+    "words": [
+      {
+        "arabic": "نَزَلَ",
+        "translit": "nazala",
+        "meaning": "to go down, get off",
+        "pattern": "form1",
+        "note": "Present tense: يَنْزِلُ (yanzilu)",
+        "example": {
+          "ar": "نزل الرجل من القطار.",
+          "en": "The man got off the train."
+        }
+      },
+      {
+        "arabic": "نُزُول",
+        "translit": "nuzūl",
+        "meaning": "descent, getting off",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "النزول من هنا.",
+          "en": "Get off here."
+        }
+      },
+      {
+        "arabic": "مَنْزِل",
+        "translit": "manzil",
+        "meaning": "house, home",
+        "pattern": "place",
+        "example": {
+          "ar": "هذا منزل جميل.",
+          "en": "This is a beautiful house."
+        }
+      }
+    ],
+    "example": "He نَزَلَ from the train and went to his مَنْزِل."
+  },
+  {
+    "arabic": "ز و ر",
+    "translit": "z-w-r",
+    "meaning": "Visiting",
+    "mnemonic": "Zip Over and Ring the bell. Z-W-R is the root of visiting.",
+    "words": [
+      {
+        "arabic": "زَارَ",
+        "translit": "zāra",
+        "meaning": "to visit",
+        "pattern": "form1",
+        "note": "Present tense: يَزُورُ (yazūru)",
+        "example": {
+          "ar": "زار الولد جده.",
+          "en": "The boy visited his grandfather."
+        }
+      },
+      {
+        "arabic": "زِيَارَة",
+        "translit": "ziyāra",
+        "meaning": "visit",
+        "example": {
+          "ar": "شكرا على الزيارة.",
+          "en": "Thank you for the visit."
+        }
+      },
+      {
+        "arabic": "زَائِر",
+        "translit": "zāʾir",
+        "meaning": "visitor",
+        "pattern": "doer",
+        "example": {
+          "ar": "الزائر في الغرفة.",
+          "en": "The visitor is in the room."
+        }
+      }
+    ],
+    "example": "The زَائِر made a short زِيَارَة."
+  },
+  {
+    "arabic": "ع ب ر",
+    "translit": "ʿ-b-r",
+    "meaning": "Crossing; expressing",
+    "mnemonic": "A Bridge Reaches across. ʿ-B-R is the root of crossing over, and of getting a meaning across.",
+    "words": [
+      {
+        "arabic": "عَبَرَ",
+        "translit": "ʿabara",
+        "meaning": "to cross",
+        "pattern": "form1",
+        "note": "Present tense: يَعْبُرُ (yaʿburu)",
+        "example": {
+          "ar": "عبر الولد الشارع.",
+          "en": "The boy crossed the street."
+        }
+      },
+      {
+        "arabic": "عُبُور",
+        "translit": "ʿubūr",
+        "meaning": "crossing",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "عبور النهر صعب.",
+          "en": "Crossing the river is hard."
+        }
+      },
+      {
+        "arabic": "عِبَارَة",
+        "translit": "ʿibāra",
+        "meaning": "phrase, expression",
+        "pattern": "craft",
+        "example": {
+          "ar": "هذه عبارة مشهورة.",
+          "en": "This is a well-known phrase."
+        }
+      },
+      {
+        "arabic": "تَعْبِير",
+        "translit": "taʿbīr",
+        "meaning": "expression",
+        "pattern": "taf3il",
+        "example": {
+          "ar": "هذا تعبير جميل.",
+          "en": "This is a beautiful expression."
+        }
+      }
+    ],
+    "example": "He عَبَرَ the road; a عِبَارَة carries meaning across."
+  },
+  {
+    "arabic": "ط ر ق",
+    "translit": "ṭ-r-q",
+    "meaning": "Road, way",
+    "mnemonic": "Travellers' Rough Quest. Ṭ-R-Q is the root of roads, and of ways of doing things.",
+    "words": [
+      {
+        "arabic": "طَرِيق",
+        "translit": "ṭarīq",
+        "meaning": "road, way",
+        "pattern": "adj",
+        "example": {
+          "ar": "الطريق طويل.",
+          "en": "The road is long."
+        }
+      },
+      {
+        "arabic": "طَرِيقَة",
+        "translit": "ṭarīqa",
+        "meaning": "way, method",
+        "example": {
+          "ar": "هذه طريقة سهلة.",
+          "en": "This is an easy way."
+        }
+      },
+      {
+        "arabic": "طُرُق",
+        "translit": "ṭuruq",
+        "meaning": "roads; ways",
+        "example": {
+          "ar": "هناك طرق كثيرة.",
+          "en": "There are many ways."
+        }
+      }
+    ],
+    "example": "The طَرِيق is long, but there is a طَرِيقَة."
+  },
+  {
+    "arabic": "ب ل د",
+    "translit": "b-l-d",
+    "meaning": "Country, town",
+    "mnemonic": "Borders, Land, Dwellers. B-L-D is the root of country and town.",
+    "words": [
+      {
+        "arabic": "بَلَد",
+        "translit": "balad",
+        "meaning": "country; town",
+        "example": {
+          "ar": "هذا بلد جميل.",
+          "en": "This is a beautiful country."
+        }
+      },
+      {
+        "arabic": "بِلَاد",
+        "translit": "bilād",
+        "meaning": "countries; homeland",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "زرت بلادا كثيرة.",
+          "en": "I visited many countries."
+        }
+      },
+      {
+        "arabic": "بَلَدِيّ",
+        "translit": "baladī",
+        "meaning": "local, municipal",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا خبز بلدي.",
+          "en": "This is local bread."
+        }
+      }
+    ],
+    "example": "My بَلَد is one of many بِلَاد."
+  }
+]

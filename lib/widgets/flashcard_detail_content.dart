@@ -3,9 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/flashcard.dart';
 import '../providers/database_providers.dart';
+import '../providers/sentence_providers.dart';
 import '../screens/word_detail_screen.dart';
 import '../theme/app_theme.dart';
 import 'card_actions_sheet.dart';
+import 'sentence_text.dart';
+import 'sentence_tile.dart';
 import 'speak_button.dart';
 
 /// The "back of the card" content: Arabic word, transliteration, English
@@ -40,12 +43,19 @@ class FlashcardDetailContent extends ConsumerWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-            card.arabicWord,
-            textDirection: TextDirection.rtl,
-            textAlign: TextAlign.center,
-            style: arabicTextStyle(context, fontSize: 32, color: colors.ink),
-          ),
+          if (card.kind == CardKind.sentence)
+            SentenceText(
+              card.arabicWord,
+              fontSize: 28,
+              textAlign: TextAlign.center,
+            )
+          else
+            Text(
+              card.arabicWord,
+              textDirection: TextDirection.rtl,
+              textAlign: TextAlign.center,
+              style: arabicTextStyle(context, fontSize: 32, color: colors.ink),
+            ),
           if (card.transliteration != null &&
               card.transliteration!.isNotEmpty) ...[
             const SizedBox(height: 4),
@@ -111,6 +121,9 @@ class FlashcardDetailContent extends ConsumerWidget {
             ],
           ],
           if (card.kind == CardKind.root) ..._wordsFromRoot(allCards, colors),
+          if (card.id != null &&
+              (card.kind == CardKind.word || card.kind == CardKind.root))
+            _SentencesSection(cardId: card.id!),
         ],
       ),
     );
@@ -166,41 +179,187 @@ class FlashcardDetailContent extends ConsumerWidget {
   }
 }
 
-/// A read-once card: an optional small label, a title and a body of text.
-/// Unlike every other kind there's no Arabic headword and no meaning; it
-/// can be about anything.
-class _InfoContent extends StatelessWidget {
+/// What sets one sort of read-once card apart from another, and all of
+/// them from the cards that are studied: an accent colour and an icon,
+/// picked by the card's label.
+({Color color, IconData icon}) readOnceStyle(
+  BuildContext context,
+  Flashcard card,
+) {
+  final colors = context.colors;
+  return switch (card.englishTranslation) {
+    'Lesson' => (color: colors.deepGreen, icon: Icons.school_outlined),
+    'Story' => (color: colors.gold, icon: Icons.auto_stories_outlined),
+    _ => (color: colors.inkMuted, icon: Icons.lightbulb_outline),
+  };
+}
+
+/// A read-once card: a lesson, a story, or anything else there is to tell.
+/// Laid out as a page to read, not a card to recall: a labelled badge in
+/// its accent colour, a title, an optional Arabic headline, the text, and
+/// any worked examples. An example that's a word the app teaches opens
+/// that word.
+class _InfoContent extends ConsumerWidget {
   const _InfoContent({required this.card});
 
   final Flashcard card;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final colors = context.colors;
+    final style = readOnceStyle(context, card);
+    final examples = card.relatedWords.map(ReadOnceExample.decode).toList();
+    final words = {
+      for (final other
+          in ref.watch(allFlashcardsProvider).asData?.value ??
+              const <Flashcard>[])
+        if (other.kind == CardKind.word) other.arabicWord: other,
+    };
+
     return SingleChildScrollView(
       child: Column(
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          if (card.englishTranslation.isNotEmpty) ...[
-            _SectionLabel(card.englishTranslation),
-            const SizedBox(height: 8),
-          ],
+          if (card.englishTranslation.isNotEmpty)
+            Center(
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  color: style.color.withValues(alpha: 0.14),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 5,
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(style.icon, size: 16, color: colors.ink),
+                      const SizedBox(width: 6),
+                      _SectionLabel(card.englishTranslation),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          const SizedBox(height: 14),
           Text(
             card.arabicWord,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.w600,
-              color: colors.deepGreen,
+              color: colors.ink,
             ),
           ),
-          const SizedBox(height: 6),
-          Text('✦', style: TextStyle(color: colors.gold, fontSize: 14)),
+          if (card.note != null && card.note!.isNotEmpty) ...[
+            const SizedBox(height: 10),
+            Text(
+              card.note!,
+              textDirection: TextDirection.rtl,
+              textAlign: TextAlign.center,
+              style: arabicTextStyle(
+                context,
+                fontSize: 30,
+                color: colors.deepGreen,
+              ),
+            ),
+            if (card.transliteration != null)
+              Text(
+                card.transliteration!,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: colors.inkMuted,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+          ],
           const SizedBox(height: 14),
+          // A short rule in the accent colour, in place of the ✦ the
+          // study cards have.
+          Center(child: Container(width: 44, height: 3, color: style.color)),
+          const SizedBox(height: 16),
           Text(
             card.exampleSentence,
             style: TextStyle(color: colors.ink, height: 1.5, fontSize: 16),
           ),
+          if (examples.isNotEmpty) ...[
+            const SizedBox(height: 18),
+            DecoratedBox(
+              decoration: BoxDecoration(
+                color: style.color.withValues(alpha: 0.08),
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 6),
+                child: Column(
+                  children: [
+                    for (final example in examples)
+                      _ExampleRow(
+                        example: example,
+                        card: words[example.arabic],
+                      ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ],
+      ),
+    );
+  }
+}
+
+/// One example on a read-once card: what it means on the left, the Arabic
+/// on the right. With a [card] behind it, tapping opens that card.
+class _ExampleRow extends StatelessWidget {
+  const _ExampleRow({required this.example, required this.card});
+
+  final ReadOnceExample example;
+  final Flashcard? card;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = context.colors;
+    final card = this.card;
+    return InkWell(
+      onTap: card == null
+          ? null
+          : () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => WordDetailScreen(card: card)),
+            ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(example.meaning, style: TextStyle(color: colors.ink)),
+                  if (example.translit.isNotEmpty)
+                    Text(
+                      example.translit,
+                      style: TextStyle(
+                        color: colors.inkMuted,
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 12),
+            Text(
+              example.arabic,
+              textDirection: TextDirection.rtl,
+              style: arabicTextStyle(context, fontSize: 22, color: colors.ink),
+            ),
+            if (card != null)
+              Icon(Icons.chevron_right, size: 18, color: colors.inkMuted),
+          ],
+        ),
       ),
     );
   }
@@ -242,6 +401,85 @@ class _LetterForms extends StatelessWidget {
                   style: TextStyle(color: colors.inkMuted, fontSize: 11),
                 ),
               ],
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+/// A closed "Sentences" heading that opens to the sentences this card's
+/// word appears in. Closed by default so the card stays uncluttered, and
+/// so nothing is looked up until someone actually wants to see them.
+class _SentencesSection extends StatefulWidget {
+  const _SentencesSection({required this.cardId});
+
+  final int cardId;
+
+  @override
+  State<_SentencesSection> createState() => _SentencesSectionState();
+}
+
+class _SentencesSectionState extends State<_SentencesSection> {
+  bool _open = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = context.colors;
+    return Padding(
+      padding: const EdgeInsets.only(top: 14),
+      child: Column(
+        children: [
+          InkWell(
+            borderRadius: BorderRadius.circular(10),
+            onTap: () => setState(() => _open = !_open),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const _SectionLabel('Sentences'),
+                  Icon(
+                    _open ? Icons.expand_less : Icons.expand_more,
+                    size: 20,
+                    color: colors.inkMuted,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          if (_open)
+            Consumer(
+              builder: (context, ref, _) {
+                final sentences = ref.watch(
+                  sentencesForCardProvider(widget.cardId),
+                );
+                return sentences.when(
+                  loading: () => const Padding(
+                    padding: EdgeInsets.all(12),
+                    child: SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(strokeWidth: 2),
+                    ),
+                  ),
+                  error: (error, stack) => Text(
+                    'Could not load sentences.',
+                    style: TextStyle(color: colors.inkMuted),
+                  ),
+                  data: (sentences) => sentences.isEmpty
+                      ? Text(
+                          'No sentences with this word yet.',
+                          style: TextStyle(color: colors.inkMuted),
+                        )
+                      : Column(
+                          children: [
+                            for (final sentence in sentences)
+                              SentenceTile(sentence: sentence, dense: true),
+                          ],
+                        ),
+                );
+              },
             ),
         ],
       ),

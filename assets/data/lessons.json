@@ -1,0 +1,151 @@
+[
+  {
+    "title": "Three letters, one idea",
+    "after_roots": 3,
+    "arabic": "ك ت ب",
+    "translit": "k-t-b",
+    "body": "You have met your first roots. A root is three consonants that carry a core idea; it is not a word you can say. Arabic makes its words by pouring a root into a pattern of vowels and extra letters. The pattern changes, the three letters stay, and so does the idea. Look for k, t and b in each of these.",
+    "examples": [
+      {"arabic": "كِتَاب", "translit": "kitāb", "meaning": "book"},
+      {"arabic": "كَاتِب", "translit": "kātib", "meaning": "writer"},
+      {"arabic": "مَكْتَبَة", "translit": "maktaba", "meaning": "library"}
+    ]
+  },
+  {
+    "title": "The doer",
+    "after_roots": 6,
+    "arabic": "فَاعِل",
+    "translit": "fāʿil",
+    "body": "Grammarians show a pattern using the root ف ع ل (doing) as a stand-in: ف is the first root letter, ع the second, ل the third. This pattern puts a long ā after the first letter and a short i after the second. It gives you the one who does the action. Once you know it, every root you learn hands you a new word for free.",
+    "examples": [
+      {"arabic": "كَاتِب", "translit": "kātib", "meaning": "writer (one who writes)"},
+      {"arabic": "عَالِم", "translit": "ʿālim", "meaning": "scholar (one who knows)"},
+      {"arabic": "عَامِل", "translit": "ʿāmil", "meaning": "worker (one who works)"}
+    ]
+  },
+  {
+    "title": "He did it",
+    "after_roots": 10,
+    "arabic": "فَعَلَ",
+    "translit": "faʿala",
+    "body": "The plainest thing a root can become is a verb in the past: the three letters with a short vowel after each. It means \"he did\", and it is the form dictionaries list every verb under. The first and last vowels are always a. The middle one varies from verb to verb, so it is learned with each.",
+    "examples": [
+      {"arabic": "كَتَبَ", "translit": "kataba", "meaning": "he wrote"},
+      {"arabic": "قَرَأَ", "translit": "qaraʾa", "meaning": "he read"},
+      {"arabic": "عَلِمَ", "translit": "ʿalima", "meaning": "he knew (middle vowel i)"}
+    ]
+  },
+  {
+    "title": "The thing it is done to",
+    "after_roots": 15,
+    "arabic": "مَفْعُول",
+    "translit": "mafʿūl",
+    "body": "The mirror image of the doer. Put مَـ in front and a long ū before the last root letter, and you get whatever receives the action: the known, the understood, the found. Many of these have settled into everyday words of their own. \"Present\" in Arabic is literally \"found\".",
+    "examples": [
+      {"arabic": "مَعْرُوف", "translit": "maʿrūf", "meaning": "well-known (known)"},
+      {"arabic": "مَفْهُوم", "translit": "mafhūm", "meaning": "understood; a concept"},
+      {"arabic": "مَوْجُود", "translit": "mawjūd", "meaning": "present (found)"}
+    ]
+  },
+  {
+    "title": "The place where it happens",
+    "after_roots": 20,
+    "arabic": "مَفْعَل",
+    "translit": "mafʿal",
+    "body": "مَـ in front again, but with short vowels this time, and the word becomes a place: where the root's action happens. Sometimes the last vowel is i instead of a, and sometimes the word ends in ة, especially for institutions. A library is a place of writing; an entrance is a place of entering.",
+    "examples": [
+      {"arabic": "مَكَان", "translit": "makān", "meaning": "place (where something is)"},
+      {"arabic": "مَدْخَل", "translit": "madkhal", "meaning": "entrance"},
+      {"arabic": "مَخْرَج", "translit": "makhraj", "meaning": "exit"},
+      {"arabic": "مَكْتَبَة", "translit": "maktaba", "meaning": "library"}
+    ]
+  },
+  {
+    "title": "He does it",
+    "after_roots": 25,
+    "arabic": "يَفْعَلُ",
+    "translit": "yafʿalu",
+    "body": "For the present, Arabic adds a letter to the front instead of changing the end. يَـ means \"he\": he writes, he goes, he enters. The first root letter loses its vowel, and the middle vowel is again one to learn with each verb. Swap the يَـ for أَ and it is \"I\"; for تَـ, \"you\" or \"she\"; for نَـ, \"we\".",
+    "examples": [
+      {"arabic": "يَكْتُبُ", "translit": "yaktubu", "meaning": "he writes"},
+      {"arabic": "يَذْهَبُ", "translit": "yadhhabu", "meaning": "he goes"},
+      {"arabic": "أَكْتُبُ", "translit": "ʾaktubu", "meaning": "I write"}
+    ]
+  },
+  {
+    "title": "The act itself",
+    "after_roots": 30,
+    "arabic": "فَعْل · فُعُول",
+    "translit": "faʿl · fuʿūl",
+    "body": "Every verb has a noun that names the action as a thing: understanding, entering, a search. Arabic has several shapes for it and each verb picks its own. Two are worth spotting early. The shortest is فَعْل. Verbs of movement like فُعُول, with its two u sounds: going in, going out, arriving.",
+    "examples": [
+      {"arabic": "فَهْم", "translit": "fahm", "meaning": "understanding"},
+      {"arabic": "دُخُول", "translit": "dukhūl", "meaning": "entering"},
+      {"arabic": "خُرُوج", "translit": "khurūj", "meaning": "going out"},
+      {"arabic": "وُصُول", "translit": "wuṣūl", "meaning": "arrival"}
+    ]
+  },
+  {
+    "title": "Doubling the middle letter",
+    "after_roots": 40,
+    "arabic": "فَعَّلَ",
+    "translit": "faʿʿala",
+    "body": "Say the middle root letter twice and the verb gains force: often it means making someone else do the thing. To know becomes to make know, which is to teach. The small w-shaped mark ّ over a letter is what tells you it is doubled. Its noun has a shape of its own, تَفْعِيل.",
+    "examples": [
+      {"arabic": "قَرَّرَ", "translit": "qarrara", "meaning": "he decided"},
+      {"arabic": "بَيَّنَ", "translit": "bayyana", "meaning": "he made clear"},
+      {"arabic": "تَعْلِيم", "translit": "taʿlīm", "meaning": "teaching, education"},
+      {"arabic": "تَذْكِير", "translit": "tadhkīr", "meaning": "a reminder"}
+    ]
+  },
+  {
+    "title": "Having the quality",
+    "after_roots": 55,
+    "arabic": "فَعِيل",
+    "translit": "faʿīl",
+    "body": "A short a, then a long ī: the commonest shape for an adjective. It describes something that has the root's quality as a lasting trait, not just for a moment. Big, small, near, far, happy and new all wear it. Put أَ in front instead (أَفْعَل) and you get \"more\" or \"most\": كَبِير is big, أَكْبَر is bigger.",
+    "examples": [
+      {"arabic": "سَعِيد", "translit": "saʿīd", "meaning": "happy"},
+      {"arabic": "حَبِيب", "translit": "ḥabīb", "meaning": "dear, beloved"},
+      {"arabic": "خَبِير", "translit": "khabīr", "meaning": "expert"}
+    ]
+  },
+  {
+    "title": "Verbs with something added",
+    "after_roots": 75,
+    "arabic": "أَفْعَلَ · فَاعَلَ · اِفْتَعَلَ · اِسْتَفْعَلَ",
+    "translit": "ʾafʿala · fāʿala · iftaʿala · istafʿala",
+    "body": "A root can make more than one verb. Each added letter bends the meaning in a regular way. أَ in front: cause it to happen. A long ā after the first letter: do it with someone. ت after the first letter: do it for yourself. اِسْتَـ in front: seek it or ask for it. You have already learned one of each.",
+    "examples": [
+      {"arabic": "أَخْبَرَ", "translit": "ʾakhbara", "meaning": "he informed (gave news)"},
+      {"arabic": "سَاعَدَ", "translit": "sāʿada", "meaning": "he helped (someone)"},
+      {"arabic": "اِشْتَرَى", "translit": "ishtarā", "meaning": "he bought (for himself)"},
+      {"arabic": "اِسْتَعْمَلَ", "translit": "istaʿmala", "meaning": "he used (put to work)"}
+    ]
+  },
+  {
+    "title": "More than one",
+    "after_roots": 95,
+    "arabic": "فِعَال · أَفْعَال · فُعُول",
+    "translit": "fiʿāl · ʾafʿāl · fuʿūl",
+    "body": "English adds an s. Arabic often reshapes the whole word instead, keeping the root letters and changing the vowels around them. These are called broken plurals, and each noun has its own, so they are learned along with the word. Three shapes cover a great many of them.",
+    "examples": [
+      {"arabic": "جِبَال", "translit": "jibāl", "meaning": "mountains (from جَبَل)"},
+      {"arabic": "بِحَار", "translit": "biḥār", "meaning": "seas (from بَحْر)"},
+      {"arabic": "أَقْمَار", "translit": "ʾaqmār", "meaning": "moons (from قَمَر)"},
+      {"arabic": "حُرُوب", "translit": "ḥurūb", "meaning": "wars (from حَرْب)"}
+    ]
+  },
+  {
+    "title": "Of it, from it",
+    "after_roots": 100,
+    "arabic": "ـِيّ",
+    "translit": "-ī",
+    "body": "The easiest pattern of all. Add ـِيّ to the end of a noun and it becomes an adjective meaning \"of\" or \"related to\" that thing. Sun becomes solar, sea becomes marine. Nationalities are made the same way: مِصْر is Egypt, مِصْرِيّ is Egyptian.",
+    "examples": [
+      {"arabic": "شَمْسِيّ", "translit": "shamsī", "meaning": "solar"},
+      {"arabic": "بَحْرِيّ", "translit": "baḥrī", "meaning": "marine, naval"},
+      {"arabic": "جَبَلِيّ", "translit": "jabalī", "meaning": "mountainous"}
+    ]
+  }
+]

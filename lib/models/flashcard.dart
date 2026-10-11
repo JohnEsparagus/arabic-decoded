@@ -24,6 +24,33 @@ enum CardKind {
   );
 }
 
+/// One worked example on a read-once card: a word, how it's said and what
+/// it means. A card's examples are kept in [Flashcard.relatedWords], which
+/// holds plain strings, so each one is packed into a single string there.
+class ReadOnceExample {
+  const ReadOnceExample({
+    required this.arabic,
+    required this.translit,
+    required this.meaning,
+  });
+
+  final String arabic;
+  final String translit;
+  final String meaning;
+
+  /// Tab-separated: a character none of the three parts would contain.
+  String encode() => '$arabic\t$translit\t$meaning';
+
+  factory ReadOnceExample.decode(String packed) {
+    final parts = packed.split('\t');
+    return ReadOnceExample(
+      arabic: parts[0],
+      translit: parts.length > 1 ? parts[1] : '',
+      meaning: parts.length > 2 ? parts[2] : '',
+    );
+  }
+}
+
 /// A single spaced-repetition flashcard belonging to a [Deck].
 ///
 /// The `ease_factor`, `interval`, `repetitions` and `next_review` fields are

@@ -32,3 +32,18 @@ String normalizeArabic(String input) {
   result = result.replaceAll(RegExp(r'\s+'), ' ');
   return result.toLowerCase();
 }
+
+/// The alef forms only, for [wordKey].
+final RegExp _alefForms = RegExp('[آأإٱ]');
+
+/// A word reduced to what identifies it when matching words to each other
+/// (a word in a sentence to its dictionary entry): vowel marks off and the
+/// alef forms folded, and nothing else.
+///
+/// Stricter than [normalizeArabic], which is for search and forgives
+/// spelling: that also treats ة as ه and ى as ي, which is right for
+/// someone typing loosely but would make "كتابه" (his book) the same word
+/// as "كتابة" (writing).
+String wordKey(String word) {
+  return word.trim().replaceAll(_diacritics, '').replaceAll(_alefForms, 'ا');
+}

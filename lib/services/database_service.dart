@@ -5,11 +5,13 @@ import 'package:path/path.dart' as p;
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
+import '../config/campaign_sources.dart';
 import '../models/card_collection.dart';
 import '../models/card_progress.dart';
 import '../models/deck.dart';
 import '../models/flashcard.dart';
 import '../models/review_log_entry.dart';
+import '../models/sentence.dart';
 import '../models/synced_extras.dart';
 import '../utils/arabic_normalize.dart';
 
@@ -70,7 +72,7 @@ class DatabaseService {
     _resolvedPath = path;
     return openDatabase(
       path,
-      version: 9,
+      version: 10,
       // sqflite's default `singleInstance: true` caches connections keyed
       // by the literal path string. That's harmless for the app's real
       // on-disk path (only ever opened once, by the DatabaseService
@@ -119,6 +121,7 @@ class DatabaseService {
         await _createCollectionTables(db);
         await _createReviewLogTable(db);
         await _createLibraryStateTable(db);
+        await _createSentenceTables(db);
         await db.execute(
           'CREATE INDEX idx_flashcards_deck_id ON flashcards (deck_id)',
         );
@@ -251,6 +254,18 @@ class DatabaseService {
             'ALTER TABLE flashcards ADD COLUMN unlock_after INTEGER',
           );
         }
+        if (oldVersion < 10) {
+          // Sentences moved out of `flashcards` into a corpus of their
+          // own — see "Sentences" below. The cards that stood in for them
+          // go, except any the user has done something with.
+          await _createSentenceTables(db);
+          await db.execute('''
+            DELETE FROM flashcards
+            WHERE kind = 'sentence' AND is_new = 1
+              AND queued_at IS NULL AND favorite = 0
+              AND id NOT IN (SELECT card_id FROM collection_cards)
+          ''');
+        }
       },
     );
   }
@@ -289,6 +304,38 @@ class DatabaseService {
       )
     ''');
     await db.execute('CREATE INDEX idx_review_log_at ON review_log (at)');
+  }
+
+  /// The sentence corpus and its index, plus a small key/value table for
+  /// facts about the bundled content (which version of it is loaded).
+  static Future<void> _createSentenceTables(Database db) async {
+    // `search` is the sentence with its vowel marks stripped and its
+    // English lowercased, so one LIKE covers a search in either language.
+    await db.execute('''
+      CREATE TABLE sentences (
+        id INTEGER PRIMARY KEY,
+        arabic TEXT NOT NULL UNIQUE,
+        english TEXT NOT NULL,
+        search TEXT NOT NULL
+      )
+    ''');
+    // Which sentences each word appears in. Clustered on the word, so
+    // "every sentence with this word" is one short range read however big
+    // the corpus gets.
+    await db.execute('''
+      CREATE TABLE sentence_words (
+        word TEXT NOT NULL,
+        sentence_id INTEGER NOT NULL,
+        PRIMARY KEY (word, sentence_id)
+      ) WITHOUT ROWID
+    ''');
+    await db.execute(
+      'CREATE TABLE content_meta (key TEXT PRIMARY KEY, value TEXT)',
+    );
+    // A sentence finds its flashcard by its text.
+    await db.execute(
+      'CREATE INDEX idx_flashcards_arabic_word ON flashcards (arabic_word)',
+    );
   }
 
   /// A single row that says when the library (favorites and collections)
@@ -353,6 +400,19 @@ class DatabaseService {
   Future<int> insertFlashcard(Flashcard card) async {
     final db = await database;
     return db.insert('flashcards', card.toMap());
+  }
+
+  /// Inserts many cards as one write. The first launch imports around a
+  /// thousand of them; one at a time, each waits on the disk separately,
+  /// which is seconds of startup.
+  Future<void> insertFlashcards(List<Flashcard> cards) async {
+    if (cards.isEmpty) return;
+    final db = await database;
+    final batch = db.batch();
+    for (final card in cards) {
+      batch.insert('flashcards', card.toMap());
+    }
+    await batch.commit(noResult: true);
   }
 
   /// Saves [card] and flags it as changed-since-last-sync. This is the
@@ -861,6 +921,28 @@ class DatabaseService {
   Future<int> applyRemoteProgress(List<CardProgress> remote) async {
     if (remote.isEmpty) return 0;
     final db = await database;
+    // A sentence is only a card on the devices where it was added. If
+    // progress for one arrives here first, make its card from the corpus
+    // so there's something for the progress to land on.
+    final sentences = remote
+        .where((progress) => progress.deckName == sentencesSource.deckName)
+        .toList();
+    if (sentences.isNotEmpty) {
+      final deck = await getOrCreateDeck(
+        sentencesSource.deckName,
+        description: sentencesSource.description,
+      );
+      final adding = db.batch();
+      for (final progress in sentences) {
+        adding.rawInsert(_insertSentenceCard, [
+          deck.id,
+          DateTime.now().millisecondsSinceEpoch,
+          progress.arabicWord,
+          deck.id,
+        ]);
+      }
+      await adding.commit(noResult: true);
+    }
     final batch = db.batch();
     for (final progress in remote) {
       final updatedAt = progress.updatedAt.millisecondsSinceEpoch;
@@ -1142,6 +1224,197 @@ class DatabaseService {
     });
     return true;
   }
+
+  // ---- Sentences -----------------------------------------------------------
+  //
+  // The corpus is built to grow into the thousands, so nothing here ever
+  // reads all of it: the explorer pages through it, a word looks its
+  // sentences up through the `sentence_words` index, and a sentence only
+  // gets a row in `flashcards` when the user adds it to their queue.
+
+  /// Makes a sentence's flashcard from its corpus row, unless it has one.
+  /// Arguments: deck id, next_review, the sentence's Arabic, deck id.
+  static const _insertSentenceCard = '''
+    INSERT INTO flashcards
+      (arabic_word, english_translation, example_sentence, deck_id,
+       next_review, kind)
+    SELECT s.arabic, s.english, '', ?, ?, 'sentence'
+    FROM sentences s
+    WHERE s.arabic = ? AND NOT EXISTS (
+      SELECT 1 FROM flashcards f
+      WHERE f.arabic_word = s.arabic AND f.deck_id = ?
+    )
+  ''';
+
+  /// A sentence together with its flashcard's state, if it has one.
+  static const _selectSentences = '''
+    SELECT s.id, s.arabic, s.english,
+           f.id AS card_id, f.is_new, f.queued_at
+    FROM sentences s
+    LEFT JOIN flashcards f
+      ON f.arabic_word = s.arabic AND f.kind = 'sentence'
+  ''';
+
+  /// Which version of the bundled corpus is loaded, or null if none is.
+  Future<int?> getSentencesVersion() async {
+    final db = await database;
+    final rows = await db.query(
+      'content_meta',
+      where: 'key = ?',
+      whereArgs: ['sentences_version'],
+    );
+    return rows.isEmpty ? null : int.tryParse(rows.single['value'] as String);
+  }
+
+  /// Replaces the whole corpus with [sentences] and records it as
+  /// [version]. Each entry comes with the keys it's indexed under (see
+  /// `sentenceKeys`). One transaction, written in batches, so even ten
+  /// thousand sentences load in one go and a crash halfway leaves the old
+  /// corpus in place. Flashcards made from sentences aren't touched.
+  Future<void> replaceSentences(
+    List<({String arabic, String english, String search, Set<String> keys})>
+    sentences, {
+    required int version,
+  }) async {
+    final db = await database;
+    await db.transaction((txn) async {
+      await txn.delete('sentence_words');
+      await txn.delete('sentences');
+      var batch = txn.batch();
+      var pending = 0;
+      for (final (index, sentence) in sentences.indexed) {
+        final id = index + 1;
+        batch.insert('sentences', {
+          'id': id,
+          'arabic': sentence.arabic,
+          'english': sentence.english,
+          'search': sentence.search,
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
+        for (final key in sentence.keys) {
+          batch.insert('sentence_words', {'word': key, 'sentence_id': id});
+        }
+        pending += 1 + sentence.keys.length;
+        if (pending >= 5000) {
+          await batch.commit(noResult: true);
+          batch = txn.batch();
+          pending = 0;
+        }
+      }
+      await batch.commit(noResult: true);
+      await txn.insert('content_meta', {
+        'key': 'sentences_version',
+        'value': '$version',
+      }, conflictAlgorithm: ConflictAlgorithm.replace);
+    });
+  }
+
+  /// One page of the corpus in its own order: [limit] sentences starting
+  /// [offset] in, narrowed to those containing [search] if that's given.
+  /// [search] must already be folded the way the `search` column is.
+  Future<List<Sentence>> searchSentences({
+    String search = '',
+    required int limit,
+    int offset = 0,
+  }) async {
+    final db = await database;
+    final rows = await db.rawQuery(
+      '''
+      $_selectSentences
+      ${search.isEmpty ? '' : "WHERE s.search LIKE ? ESCAPE '!'"}
+      ORDER BY s.id LIMIT ? OFFSET ?
+      ''',
+      [if (search.isNotEmpty) '%${_escapeLike(search)}%', limit, offset],
+    );
+    return rows.map(Sentence.fromMap).toList();
+  }
+
+  /// Up to [limit] sentences that contain any of the words [keys] (word
+  /// cards' Arabic, reduced with `wordKey`).
+  Future<List<Sentence>> getSentencesWithWords(
+    List<String> keys, {
+    int limit = 20,
+  }) async {
+    if (keys.isEmpty) return [];
+    final db = await database;
+    final rows = await db.rawQuery(
+      '''
+      $_selectSentences
+      WHERE s.id IN (
+        SELECT sentence_id FROM sentence_words
+        WHERE word IN (${List.filled(keys.length, '?').join(', ')})
+      )
+      ORDER BY s.id LIMIT ?
+      ''',
+      [...keys, limit],
+    );
+    return rows.map(Sentence.fromMap).toList();
+  }
+
+  Future<int> countSentences() async {
+    final db = await database;
+    return Sqflite.firstIntValue(
+      await db.rawQuery('SELECT COUNT(*) FROM sentences'),
+    )!;
+  }
+
+  /// Puts a sentence in the study queue, making its flashcard if this is
+  /// the first time, or takes it back out. Taking out a sentence that was
+  /// never studied removes its card again, so the cards table only ever
+  /// holds sentences the user is actually doing something with. One
+  /// that's already being studied is made due now instead, as for any
+  /// other card (see [setQueued]). Returns the card's id, or null if the
+  /// card was removed or there's no such sentence.
+  Future<int?> setSentenceQueued(int sentenceId, bool queued) async {
+    final db = await database;
+    final row = await db.query(
+      'sentences',
+      columns: ['arabic'],
+      where: 'id = ?',
+      whereArgs: [sentenceId],
+    );
+    if (row.isEmpty) return null;
+    final arabic = row.single['arabic'] as String;
+    final deck = await getOrCreateDeck(
+      sentencesSource.deckName,
+      description: sentencesSource.description,
+    );
+    if (queued) {
+      await db.rawInsert(_insertSentenceCard, [
+        deck.id,
+        DateTime.now().millisecondsSinceEpoch,
+        arabic,
+        deck.id,
+      ]);
+    }
+    final cards = await db.query(
+      'flashcards',
+      columns: ['id', 'is_new', 'favorite'],
+      where: 'arabic_word = ? AND deck_id = ?',
+      whereArgs: [arabic, deck.id],
+    );
+    if (cards.isEmpty) return null;
+    final cardId = cards.single['id'] as int;
+    await setQueued(cardId, queued);
+    final inCollection = await db.query(
+      'collection_cards',
+      where: 'card_id = ?',
+      whereArgs: [cardId],
+      limit: 1,
+    );
+    final untouched =
+        cards.single['is_new'] == 1 &&
+        cards.single['favorite'] == 0 &&
+        inCollection.isEmpty;
+    if (!queued && untouched) {
+      await deleteFlashcard(cardId);
+      return null;
+    }
+    return cardId;
+  }
+
+  /// Makes [text] safe inside a LIKE pattern that uses `!` as its escape.
+  static String _escapeLike(String text) =>
+      text.replaceAllMapped(RegExp('[!%_]'), (match) => '!${match.group(0)}');
 
   // ---- Search ------------------------------------------------------------
 

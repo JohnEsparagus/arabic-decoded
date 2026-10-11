@@ -17,6 +17,10 @@ import '../utils/mastery_level.dart';
 class RootPreviewCard extends ConsumerWidget {
   const RootPreviewCard({super.key, required this.card, required this.onTap});
 
+  /// Every tile is this wide, which is what lets [TileGrid] work out how
+  /// many fit in a row.
+  static const width = 92.0;
+
   final Flashcard card;
   final VoidCallback onTap;
 
@@ -36,7 +40,7 @@ class RootPreviewCard extends ConsumerWidget {
       onLongPress: toggle,
       borderRadius: BorderRadius.circular(14),
       child: Container(
-        width: 92,
+        width: width,
         padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
         decoration: BoxDecoration(
           color: _backgroundColorFor(colors, masteryLevelOf(card)),

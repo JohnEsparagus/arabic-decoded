@@ -6,6 +6,11 @@
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<!-- The app only uses the encryption built into iOS (HTTPS), which is
+	     exempt from export paperwork. Saying so here stops App Store
+	     Connect asking on every upload. -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>CFBundleDisplayName</key>
 	<string>Arabic Decoded</string>
 	<key>CFBundleExecutable</key>

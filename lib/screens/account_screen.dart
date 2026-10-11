@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../providers/auth_providers.dart';
 import '../providers/sync_providers.dart';
+import '../providers/tts_providers.dart';
 import '../theme/app_theme.dart';
 import '../widgets/pattern_divider.dart';
 import 'sign_in_screen.dart';
@@ -102,7 +103,10 @@ class AccountCard extends ConsumerWidget {
             ),
             const SizedBox(height: 4),
             Text(
-              _syncSummary(sync),
+              _syncSummary(
+                sync,
+                online: ref.watch(onlineProvider).asData?.value ?? true,
+              ),
               style: TextStyle(color: colors.inkMuted, fontSize: 13),
             ),
             const SizedBox(height: 4),
@@ -137,8 +141,12 @@ class AccountCard extends ConsumerWidget {
     );
   }
 
-  String _syncSummary(SyncState sync) {
+  String _syncSummary(SyncState sync, {required bool online}) {
     if (sync.syncing) return 'Syncing…';
+    if (!online) {
+      return 'You\'re offline. Everything you do is saved on this device '
+          'and syncs by itself when you\'re back online.';
+    }
     if (sync.error != null) {
       return 'Couldn\'t sync just now. Your progress is saved on this '
           'device and will upload next time.';

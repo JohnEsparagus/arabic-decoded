@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:arabic_decoded/config/campaign_sources.dart';
 import 'package:arabic_decoded/models/flashcard.dart';
 import 'package:arabic_decoded/repositories/local_flashcard_repository.dart';
 import 'package:arabic_decoded/services/content_importer.dart';
@@ -123,29 +126,6 @@ void main() {
     expect(await db.getDueReviewFlashcards(includeLetters: false), isEmpty);
   });
 
-  test('sentences import as cards that only enter the queue when asked '
-      'for', () async {
-    await importCore();
-    final deck = await importer.importSentences();
-    final sentences = await db.getFlashcardsForDeck(deck.id!);
-    expect(sentences.length, greaterThan(300));
-    expect(sentences.map((c) => c.kind), everyElement(CardKind.sentence));
-
-    var queue = await db.getNewFlashcards(limit: 1000);
-    expect(queue.map((c) => c.kind), isNot(contains(CardKind.sentence)));
-
-    await db.setQueued(sentences.first.id!, true);
-    expect((await db.getQueuedFlashcards()).single.id, sentences.first.id);
-
-    // Once studied, it's reviewed whatever the other switches say.
-    await db.updateFlashcard(sentences.first.copyWith(isNew: false));
-    final due = await db.getDueReviewFlashcards(
-      includeWords: false,
-      includeLetters: false,
-    );
-    expect(due.single.kind, CardKind.sentence);
-  });
-
   test('read-once cards follow their file: added, changed and deleted '
       'with it', () async {
     var file = '''[
@@ -158,7 +138,7 @@ void main() {
       loadAsset: (_) async => file,
     );
 
-    final deck = await extras.importExtras();
+    final deck = await extras.importReadOnce(extrasSource);
     var cards = await db.getFlashcardsForDeck(deck.id!);
     expect(cards.map((c) => c.kind), everyElement(CardKind.info));
     final fact = cards.singleWhere((c) => c.arabicWord == 'Why three letters?');
@@ -172,11 +152,80 @@ void main() {
     file = '''[
       {"title": "Why three letters?", "body": "Rewritten.", "after_roots": 5}
     ]''';
-    await extras.importExtras();
+    await extras.importReadOnce(extrasSource);
     cards = await db.getFlashcardsForDeck(deck.id!);
     expect(cards.single.exampleSentence, 'Rewritten.');
     expect(cards.single.unlockAfter, 5);
     expect(cards.single.id, fact.id);
+  });
+
+  test(
+    'the whole first-launch import is quick, and a relaunch quicker',
+    () async {
+      // On a real file, where each separate write waits on the disk: this
+      // is what caught the import taking seconds when cards were inserted
+      // one at a time.
+      final dir = Directory.systemTemp.createTempSync('arabic_decoded_test_');
+      addTearDown(() => dir.deleteSync(recursive: true));
+      final fileDb = DatabaseService(pathOverride: '${dir.path}/test.db');
+      final fileImporter = ContentImporter(LocalFlashcardRepository(fileDb));
+
+      final watch = Stopwatch()..start();
+      await fileImporter.importAll();
+      final firstLaunch = watch.elapsedMilliseconds;
+      final cards = (await fileDb.getAllFlashcards()).length;
+      watch.reset();
+      await fileImporter.importAll();
+      final relaunch = watch.elapsedMilliseconds;
+
+      // ignore: avoid_print
+      print('import of $cards cards: ${firstLaunch}ms, relaunch ${relaunch}ms');
+      expect(cards, greaterThan(700));
+      expect((await fileDb.getAllFlashcards()).length, cards);
+      // Generous ceilings for slow machines; one-at-a-time took ~4000ms.
+      expect(firstLaunch, lessThan(2500));
+      expect(relaunch, lessThan(500));
+    },
+  );
+
+  test('the lessons and stories that ship are well-formed and point at '
+      'real words', () async {
+    await importer.importAll();
+    final all = await db.getAllFlashcards();
+    final words = {
+      for (final c in all.where((c) => c.kind == CardKind.word)) c.arabicWord,
+    };
+    final roots = all.where((c) => c.kind == CardKind.root).length;
+
+    for (final source in [lessonsSource, storiesSource]) {
+      final cards = all
+          .where(
+            (c) =>
+                c.kind == CardKind.info && c.englishTranslation == source.label,
+          )
+          .toList();
+      expect(cards.length, greaterThanOrEqualTo(10), reason: source.deckName);
+      for (final card in cards) {
+        final where = '${source.deckName}: ${card.arabicWord}';
+        expect(card.exampleSentence.length, greaterThan(120), reason: where);
+        expect(card.note, isNotEmpty, reason: where);
+        // Reachable: it opens up before the roots run out.
+        expect(card.unlockAfter, inInclusiveRange(1, roots), reason: where);
+        final examples = card.relatedWords.map(ReadOnceExample.decode);
+        expect(examples, isNotEmpty, reason: where);
+        for (final example in examples) {
+          expect(example.meaning, isNotEmpty, reason: where);
+        }
+        // Stories are told with words the app teaches, so every example
+        // links to a card. (Lessons also show forms that aren't cards,
+        // like a verb's present tense.)
+        if (source == storiesSource) {
+          for (final example in examples) {
+            expect(words, contains(example.arabic), reason: where);
+          }
+        }
+      }
+    }
   });
 
   test('a read-once card turns up once enough roots are introduced, is '
@@ -190,7 +239,7 @@ void main() {
         {"title": "At the start", "body": "…"}
       ]''',
     );
-    await extras.importExtras();
+    await extras.importReadOnce(extrasSource);
     Future<List<String>> upNext() async => [
       for (final c in await db.getNewFlashcards(limit: 3, includeWords: false))
         c.arabicWord,

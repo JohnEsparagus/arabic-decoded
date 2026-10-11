@@ -1,0 +1,438 @@
+[
+  {
+    "arabic": "م د ن",
+    "translit": "m-d-n",
+    "meaning": "City, civilisation",
+    "mnemonic": "Many Dwell Near. M-D-N is the root of the city and of civil life.",
+    "words": [
+      {
+        "arabic": "مَدِينَة",
+        "translit": "madīna",
+        "meaning": "city",
+        "example": {
+          "ar": "هذه مدينة كبيرة.",
+          "en": "This is a big city."
+        }
+      },
+      {
+        "arabic": "مُدُن",
+        "translit": "mudun",
+        "meaning": "cities",
+        "example": {
+          "ar": "زرت مدنا كثيرة.",
+          "en": "I visited many cities."
+        }
+      },
+      {
+        "arabic": "مَدَنِيّ",
+        "translit": "madanī",
+        "meaning": "civil, civilian",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا قانون مدني.",
+          "en": "This is a civil law."
+        }
+      }
+    ],
+    "example": "A مَدِينَة is where مَدَنِيّ life happens."
+  },
+  {
+    "arabic": "ش ر ع",
+    "translit": "sh-r-ʿ",
+    "meaning": "Street; starting; law",
+    "mnemonic": "SHow the Road Ahead. SH-R-ʿ is the root of opening a way: a street, a project begun, a law laid down.",
+    "words": [
+      {
+        "arabic": "شَارِع",
+        "translit": "shāriʿ",
+        "meaning": "street",
+        "pattern": "doer",
+        "example": {
+          "ar": "هذا شارع طويل.",
+          "en": "This is a long street."
+        }
+      },
+      {
+        "arabic": "مَشْرُوع",
+        "translit": "mashrūʿ",
+        "meaning": "project",
+        "pattern": "done",
+        "example": {
+          "ar": "هذا مشروع جديد.",
+          "en": "This is a new project."
+        }
+      },
+      {
+        "arabic": "شَوَارِع",
+        "translit": "shawāriʿ",
+        "meaning": "streets",
+        "example": {
+          "ar": "شوارع المدينة واسعة.",
+          "en": "The city's streets are wide."
+        }
+      }
+    ],
+    "example": "On the شَارِع they began a مَشْرُوع."
+  },
+  {
+    "arabic": "ش ر ك",
+    "translit": "sh-r-k",
+    "meaning": "Sharing, partnership",
+    "mnemonic": "SHare the Risk, Keep faith. SH-R-K is the root of sharing: partners, companies and taking part.",
+    "words": [
+      {
+        "arabic": "شَارَكَ",
+        "translit": "shāraka",
+        "meaning": "to take part, share",
+        "pattern": "form3",
+        "note": "Present tense: يُشَارِكُ (yushāriku)",
+        "example": {
+          "ar": "شارك الطلاب في الرحلة.",
+          "en": "The students took part in the trip."
+        }
+      },
+      {
+        "arabic": "شَرِكَة",
+        "translit": "sharika",
+        "meaning": "company",
+        "example": {
+          "ar": "يعمل في شركة كبيرة.",
+          "en": "He works at a big company."
+        }
+      },
+      {
+        "arabic": "شَرِيك",
+        "translit": "sharīk",
+        "meaning": "partner",
+        "pattern": "adj",
+        "example": {
+          "ar": "هو شريكي في العمل.",
+          "en": "He is my business partner."
+        }
+      },
+      {
+        "arabic": "مُشَارَكَة",
+        "translit": "mushāraka",
+        "meaning": "participation",
+        "pattern": "mufa3ala",
+        "example": {
+          "ar": "شكرا على المشاركة.",
+          "en": "Thank you for taking part."
+        }
+      }
+    ],
+    "example": "Two شُرَكَاء run the شَرِكَة."
+  },
+  {
+    "arabic": "و ظ ف",
+    "translit": "w-ẓ-f",
+    "meaning": "Job, function",
+    "mnemonic": "Work Zealously, Faithfully. W-Ẓ-F is the root of a job and of the one who holds it.",
+    "words": [
+      {
+        "arabic": "وَظِيفَة",
+        "translit": "waẓīfa",
+        "meaning": "job, position",
+        "example": {
+          "ar": "أبحث عن وظيفة.",
+          "en": "I am looking for a job."
+        }
+      },
+      {
+        "arabic": "مُوَظَّف",
+        "translit": "muwaẓẓaf",
+        "meaning": "employee",
+        "example": {
+          "ar": "الموظف في المكتب.",
+          "en": "The employee is in the office."
+        }
+      },
+      {
+        "arabic": "وَظَّفَ",
+        "translit": "waẓẓafa",
+        "meaning": "to employ",
+        "pattern": "form2",
+        "note": "Present tense: يُوَظِّفُ (yuwaẓẓifu)",
+        "example": {
+          "ar": "وظفت الشركة عمالا جددا.",
+          "en": "The company hired new workers."
+        }
+      }
+    ],
+    "example": "The مُوَظَّف likes his وَظِيفَة."
+  },
+  {
+    "arabic": "ر س ل",
+    "translit": "r-s-l",
+    "meaning": "Sending",
+    "mnemonic": "Relay Some Letters. R-S-L is the root of sending: messages and messengers.",
+    "words": [
+      {
+        "arabic": "أَرْسَلَ",
+        "translit": "ʾarsala",
+        "meaning": "to send",
+        "pattern": "form4",
+        "note": "Present tense: يُرْسِلُ (yursilu)",
+        "example": {
+          "ar": "أرسل الولد رسالة.",
+          "en": "The boy sent a letter."
+        }
+      },
+      {
+        "arabic": "رِسَالَة",
+        "translit": "risāla",
+        "meaning": "letter, message",
+        "pattern": "craft",
+        "example": {
+          "ar": "وصلت الرسالة اليوم.",
+          "en": "The letter arrived today."
+        }
+      },
+      {
+        "arabic": "رَسُول",
+        "translit": "rasūl",
+        "meaning": "messenger",
+        "example": {
+          "ar": "جاء رسول من الملك.",
+          "en": "A messenger came from the king."
+        }
+      }
+    ],
+    "example": "He أَرْسَلَ a رِسَالَة."
+  },
+  {
+    "arabic": "ص و ر",
+    "translit": "ṣ-w-r",
+    "meaning": "Picture, image",
+    "mnemonic": "Snap a Wide Reflection. Ṣ-W-R is the root of pictures and of imagining.",
+    "words": [
+      {
+        "arabic": "صُورَة",
+        "translit": "ṣūra",
+        "meaning": "picture, photo",
+        "example": {
+          "ar": "هذه صورة جميلة.",
+          "en": "This is a beautiful picture."
+        }
+      },
+      {
+        "arabic": "صَوَّرَ",
+        "translit": "ṣawwara",
+        "meaning": "to photograph, depict",
+        "pattern": "form2",
+        "note": "Present tense: يُصَوِّرُ (yuṣawwiru)",
+        "example": {
+          "ar": "صور الرجل الجبل.",
+          "en": "The man photographed the mountain."
+        }
+      },
+      {
+        "arabic": "تَصْوِير",
+        "translit": "taṣwīr",
+        "meaning": "photography, filming",
+        "pattern": "taf3il",
+        "example": {
+          "ar": "التصوير ممنوع هنا.",
+          "en": "Photography is forbidden here."
+        }
+      },
+      {
+        "arabic": "مُصَوِّر",
+        "translit": "muṣawwir",
+        "meaning": "photographer",
+        "example": {
+          "ar": "هو مصور مشهور.",
+          "en": "He is a famous photographer."
+        }
+      }
+    ],
+    "example": "The مُصَوِّر took a beautiful صُورَة."
+  },
+  {
+    "arabic": "ط ب ع",
+    "translit": "ṭ-b-ʿ",
+    "meaning": "Printing; nature",
+    "mnemonic": "Type, Bind, Ink. Ṭ-B-ʿ is the root of stamping a mark: printing, and the nature stamped on a thing.",
+    "words": [
+      {
+        "arabic": "طَبَعَ",
+        "translit": "ṭabaʿa",
+        "meaning": "to print",
+        "pattern": "form1",
+        "note": "Present tense: يَطْبَعُ (yaṭbaʿu)",
+        "example": {
+          "ar": "طبع الكاتب كتابه.",
+          "en": "The writer printed his book."
+        }
+      },
+      {
+        "arabic": "مَطْبَعَة",
+        "translit": "maṭbaʿa",
+        "meaning": "printing press",
+        "pattern": "place_f",
+        "example": {
+          "ar": "يعمل أبي في مطبعة.",
+          "en": "My father works at a printing press."
+        }
+      },
+      {
+        "arabic": "طَبِيعَة",
+        "translit": "ṭabīʿa",
+        "meaning": "nature",
+        "example": {
+          "ar": "أحب الطبيعة.",
+          "en": "I love nature."
+        }
+      },
+      {
+        "arabic": "طَبِيعِيّ",
+        "translit": "ṭabīʿī",
+        "meaning": "natural",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا شيء طبيعي.",
+          "en": "This is a natural thing."
+        }
+      }
+    ],
+    "example": "The مَطْبَعَة prints; طَبِيعَة is how a thing is made."
+  },
+  {
+    "arabic": "ن ش ر",
+    "translit": "n-sh-r",
+    "meaning": "Publishing, spreading",
+    "mnemonic": "News SHared Rapidly. N-SH-R is the root of spreading out and publishing.",
+    "words": [
+      {
+        "arabic": "نَشَرَ",
+        "translit": "nashara",
+        "meaning": "to publish, spread",
+        "pattern": "form1",
+        "note": "Present tense: يَنْشُرُ (yanshuru)",
+        "example": {
+          "ar": "نشر الكاتب مقالا.",
+          "en": "The writer published an article."
+        }
+      },
+      {
+        "arabic": "نَشْر",
+        "translit": "nashr",
+        "meaning": "publishing",
+        "pattern": "act",
+        "example": {
+          "ar": "هذه دار نشر.",
+          "en": "This is a publishing house."
+        }
+      },
+      {
+        "arabic": "نَاشِر",
+        "translit": "nāshir",
+        "meaning": "publisher",
+        "pattern": "doer",
+        "example": {
+          "ar": "الناشر يريد الكتاب.",
+          "en": "The publisher wants the book."
+        }
+      },
+      {
+        "arabic": "مَنْشُور",
+        "translit": "manshūr",
+        "meaning": "published; a post",
+        "pattern": "done",
+        "example": {
+          "ar": "قرأت منشورا جديدا.",
+          "en": "I read a new post."
+        }
+      }
+    ],
+    "example": "The نَاشِر نَشَرَ the book."
+  },
+  {
+    "arabic": "ع ل ن",
+    "translit": "ʿ-l-n",
+    "meaning": "Announcing",
+    "mnemonic": "Air the Latest News. ʿ-L-N is the root of making something public.",
+    "words": [
+      {
+        "arabic": "أَعْلَنَ",
+        "translit": "ʾaʿlana",
+        "meaning": "to announce",
+        "pattern": "form4",
+        "note": "Present tense: يُعْلِنُ (yuʿlinu)",
+        "example": {
+          "ar": "أعلنت الحكومة القرار.",
+          "en": "The government announced the decision."
+        }
+      },
+      {
+        "arabic": "إِعْلَان",
+        "translit": "ʾiʿlān",
+        "meaning": "announcement, advertisement",
+        "example": {
+          "ar": "رأيت إعلانا في الشارع.",
+          "en": "I saw an advertisement in the street."
+        }
+      },
+      {
+        "arabic": "عَلَنِيّ",
+        "translit": "ʿalanī",
+        "meaning": "public, open",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا اجتماع علني.",
+          "en": "This is a public meeting."
+        }
+      }
+    ],
+    "example": "They أَعْلَنُوا the news in an إِعْلَان."
+  },
+  {
+    "arabic": "ح د ث",
+    "translit": "ḥ-d-th",
+    "meaning": "Happening; speaking; new",
+    "mnemonic": "Here's the Daily THing. Ḥ-D-TH is the root of what happens, of what is new, and of talk about it.",
+    "words": [
+      {
+        "arabic": "حَدَثَ",
+        "translit": "ḥadatha",
+        "meaning": "to happen",
+        "pattern": "form1",
+        "note": "Present tense: يَحْدُثُ (yaḥduthu)",
+        "example": {
+          "ar": "ماذا حدث هنا؟",
+          "en": "What happened here?"
+        }
+      },
+      {
+        "arabic": "حَدِيث",
+        "translit": "ḥadīth",
+        "meaning": "talk, conversation; modern",
+        "pattern": "adj",
+        "example": {
+          "ar": "هذا بيت حديث.",
+          "en": "This is a modern house."
+        }
+      },
+      {
+        "arabic": "حَادِث",
+        "translit": "ḥādith",
+        "meaning": "accident, incident",
+        "pattern": "doer",
+        "example": {
+          "ar": "وقع حادث في الشارع.",
+          "en": "An accident happened in the street."
+        }
+      },
+      {
+        "arabic": "تَحَدَّثَ",
+        "translit": "taḥaddatha",
+        "meaning": "to speak, talk",
+        "example": {
+          "ar": "تحدث الرجل مع جاره.",
+          "en": "The man spoke with his neighbour."
+        }
+      }
+    ],
+    "example": "A حَادِث حَدَثَ, and everyone had a حَدِيث about it."
+  }
+]

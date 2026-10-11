@@ -23,6 +23,10 @@ class LocalFlashcardRepository implements FlashcardRepository {
   Future<void> insertFlashcard(Flashcard card) => _db.insertFlashcard(card);
 
   @override
+  Future<void> insertFlashcards(List<Flashcard> cards) =>
+      _db.insertFlashcards(cards);
+
+  @override
   Future<void> updateFlashcard(Flashcard card) => _db.updateFlashcard(card);
 
   @override
@@ -84,4 +88,14 @@ class LocalFlashcardRepository implements FlashcardRepository {
   @override
   Future<List<Flashcard>> searchFlashcards(String query) =>
       _db.searchFlashcards(query);
+
+  @override
+  Future<int?> getSentencesVersion() => _db.getSentencesVersion();
+
+  @override
+  Future<void> replaceSentences(
+    List<({String arabic, String english, String search, Set<String> keys})>
+    sentences, {
+    required int version,
+  }) => _db.replaceSentences(sentences, version: version);
 }

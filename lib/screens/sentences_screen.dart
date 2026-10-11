@@ -1,63 +1,69 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../models/flashcard.dart';
-import '../providers/card_actions.dart';
-import '../providers/database_providers.dart';
+import '../providers/sentence_providers.dart';
 import '../theme/app_theme.dart';
-import '../utils/arabic_normalize.dart';
-import '../widgets/card_list_tile.dart';
 import '../widgets/pattern_divider.dart';
+import '../widgets/sentence_text.dart';
+import '../widgets/sentence_tile.dart';
 
-/// What's typed in the Sentences screen's search field.
-class SentenceQueryNotifier extends Notifier<String> {
-  @override
-  String build() => '';
-
-  void set(String value) => state = value;
-}
-
-final sentenceQueryProvider = NotifierProvider<SentenceQueryNotifier, String>(
-  SentenceQueryNotifier.new,
-);
-
-/// Every sentence card, in corpus order, narrowed to those matching the
-/// search (Arabic matched loosely, ignoring vowel marks, like the
-/// dictionary's). Computed here rather than in the list, so typing only
-/// re-filters, and scrolling doesn't filter at all.
-final sentencesProvider = Provider<List<Flashcard>?>((ref) {
-  final cards = ref.watch(allFlashcardsProvider).asData?.value;
-  if (cards == null) return null;
-  final sentences =
-      cards.where((card) => card.kind == CardKind.sentence).toList()
-        ..sort((a, b) => a.id!.compareTo(b.id!));
-
-  final query = ref.watch(sentenceQueryProvider).trim();
-  if (query.isEmpty) return sentences;
-  final arabic = normalizeArabic(query);
-  final english = query.toLowerCase();
-  return sentences
-      .where(
-        (card) =>
-            (arabic.isNotEmpty &&
-                normalizeArabic(card.arabicWord).contains(arabic)) ||
-            card.englishTranslation.toLowerCase().contains(english),
-      )
-      .toList();
-});
-
-/// Reached from the sidebar: the sentence corpus. Sentences never come up
-/// by themselves; the + on a row puts that one in the study queue (tap it
-/// again to take it back out). After that it's a card like any other:
-/// graded, reviewed, and open to the same hold menu.
-class SentencesScreen extends ConsumerWidget {
+/// Reached from the sidebar: the sentence explorer. The whole corpus,
+/// searchable in Arabic or English, with every word the user is studying
+/// underlined in the colour of how well they know it.
+///
+/// Sentences never come up by themselves; the + on a row puts that one in
+/// the study queue (tap it again to take it back out). After that it's a
+/// card like any other.
+///
+/// Built for a corpus of thousands: rows are fetched a page at a time as
+/// the list is scrolled, and only the rows on screen are ever built.
+class SentencesScreen extends ConsumerStatefulWidget {
   const SentencesScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<SentencesScreen> createState() => _SentencesScreenState();
+}
+
+class _SentencesScreenState extends ConsumerState<SentencesScreen> {
+  final _scroll = ScrollController();
+  Timer? _debounce;
+
+  @override
+  void initState() {
+    super.initState();
+    _scroll.addListener(_loadMoreNearEnd);
+  }
+
+  @override
+  void dispose() {
+    _debounce?.cancel();
+    _scroll.dispose();
+    super.dispose();
+  }
+
+  /// Asks for the next page a screenful or so before the end is reached,
+  /// so it's usually there by the time it's scrolled to.
+  void _loadMoreNearEnd() {
+    if (_scroll.position.extentAfter < 600) {
+      ref.read(sentenceExplorerProvider.notifier).loadMore();
+    }
+  }
+
+  /// Searches once typing pauses, not on every keystroke.
+  void _onQueryChanged(String query) {
+    _debounce?.cancel();
+    _debounce = Timer(const Duration(milliseconds: 250), () {
+      ref.read(sentenceExplorerProvider.notifier).search(query);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final colors = context.colors;
-    final sentences = ref.watch(sentencesProvider);
-    final query = ref.watch(sentenceQueryProvider);
+    final explorer = ref.watch(sentenceExplorerProvider);
+    final sentences = explorer.sentences;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Sentences')),
@@ -66,71 +72,51 @@ class SentencesScreen extends ConsumerWidget {
           children: [
             const PatternDivider(),
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 20, 20, 12),
+              padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
               child: TextField(
                 decoration: InputDecoration(
                   hintText: 'Search Arabic or English',
                   prefixIcon: Icon(Icons.search, color: colors.inkMuted),
                 ),
-                onChanged: (value) =>
-                    ref.read(sentenceQueryProvider.notifier).set(value),
+                onChanged: _onQueryChanged,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(22, 0, 22, 10),
+              child: Row(
+                children: [
+                  const Expanded(child: MasteryLegend()),
+                  Text(
+                    '${explorer.total} sentences',
+                    style: TextStyle(color: colors.inkMuted, fontSize: 12),
+                  ),
+                ],
               ),
             ),
             Expanded(
-              child: sentences == null
-                  ? const Center(child: CircularProgressIndicator())
-                  : sentences.isEmpty
+              child: sentences.isEmpty
                   ? Center(
-                      child: Text(
-                        query.trim().isEmpty
-                            ? 'No sentences yet.'
-                            : 'No matches for "$query".',
-                        style: TextStyle(color: colors.inkMuted),
-                      ),
+                      child: explorer.loading
+                          ? const CircularProgressIndicator()
+                          : Text(
+                              explorer.query.trim().isEmpty
+                                  ? 'No sentences yet.'
+                                  : 'No matches for "${explorer.query}".',
+                              style: TextStyle(color: colors.inkMuted),
+                            ),
                     )
                   : ListView.separated(
+                      controller: _scroll,
                       padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
                       itemCount: sentences.length,
                       separatorBuilder: (_, _) => const SizedBox(height: 8),
                       itemBuilder: (context, index) =>
-                          _SentenceRow(card: sentences[index]),
+                          SentenceTile(sentence: sentences[index]),
                     ),
             ),
           ],
         ),
       ),
-    );
-  }
-}
-
-class _SentenceRow extends ConsumerWidget {
-  const _SentenceRow({required this.card});
-
-  final Flashcard card;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final colors = context.colors;
-    final queued = card.queuedAt != null;
-    return CardListTile(
-      card: card,
-      // Once it's being studied there's nothing left to add; the hold
-      // menu still has "Review now" and the rest.
-      trailing: !card.isNew
-          ? Tooltip(
-              message: 'In your reviews',
-              child: Icon(Icons.check, color: colors.inkMuted),
-            )
-          : IconButton(
-              icon: Icon(
-                queued ? Icons.check_circle : Icons.add_circle_outline,
-              ),
-              color: colors.deepGreen,
-              tooltip: queued
-                  ? 'In your queue. Tap to remove'
-                  : 'Add to my queue',
-              onPressed: () => CardActions(ref).setQueued(card, !queued),
-            ),
     );
   }
 }

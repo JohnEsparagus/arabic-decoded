@@ -24,6 +24,10 @@ class SyncedFlashcardRepository implements FlashcardRepository {
   Future<void> insertFlashcard(Flashcard card) => _local.insertFlashcard(card);
 
   @override
+  Future<void> insertFlashcards(List<Flashcard> cards) =>
+      _local.insertFlashcards(cards);
+
+  @override
   Future<void> updateFlashcard(Flashcard card) async {
     await _local.updateFlashcard(card);
     onProgressChanged();
@@ -99,4 +103,14 @@ class SyncedFlashcardRepository implements FlashcardRepository {
   @override
   Future<List<Flashcard>> searchFlashcards(String query) =>
       _local.searchFlashcards(query);
+
+  @override
+  Future<int?> getSentencesVersion() => _local.getSentencesVersion();
+
+  @override
+  Future<void> replaceSentences(
+    List<({String arabic, String english, String search, Set<String> keys})>
+    sentences, {
+    required int version,
+  }) => _local.replaceSentences(sentences, version: version);
 }

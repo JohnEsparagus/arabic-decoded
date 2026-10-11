@@ -1,0 +1,410 @@
+[
+  {
+    "arabic": "ف ك ر",
+    "translit": "f-k-r",
+    "meaning": "Thinking",
+    "mnemonic": "Find Keen Reasons. F-K-R is the root of thought.",
+    "words": [
+      {
+        "arabic": "فَكَّرَ",
+        "translit": "fakkara",
+        "meaning": "to think",
+        "pattern": "form2",
+        "note": "Present tense: يُفَكِّرُ (yufakkiru)",
+        "example": {
+          "ar": "فكر الطالب في الجواب.",
+          "en": "The student thought about the answer."
+        }
+      },
+      {
+        "arabic": "فِكْر",
+        "translit": "fikr",
+        "meaning": "thought, thinking",
+        "example": {
+          "ar": "هذا فكر جديد.",
+          "en": "This is new thinking."
+        }
+      },
+      {
+        "arabic": "فِكْرَة",
+        "translit": "fikra",
+        "meaning": "idea",
+        "example": {
+          "ar": "عندي فكرة جيدة.",
+          "en": "I have a good idea."
+        }
+      },
+      {
+        "arabic": "تَفْكِير",
+        "translit": "tafkīr",
+        "meaning": "thinking (the act)",
+        "pattern": "taf3il",
+        "example": {
+          "ar": "التفكير يحتاج إلى وقت.",
+          "en": "Thinking takes time."
+        }
+      }
+    ],
+    "example": "He فَكَّرَ for a while and had a فِكْرَة."
+  },
+  {
+    "arabic": "ع ق ل",
+    "translit": "ʿ-q-l",
+    "meaning": "Reason, mind",
+    "mnemonic": "A Quick Logic. ʿ-Q-L is the root of the mind and of being reasonable.",
+    "words": [
+      {
+        "arabic": "عَقْل",
+        "translit": "ʿaql",
+        "meaning": "mind, reason",
+        "pattern": "act",
+        "example": {
+          "ar": "العقل نعمة.",
+          "en": "The mind is a blessing."
+        }
+      },
+      {
+        "arabic": "عَاقِل",
+        "translit": "ʿāqil",
+        "meaning": "sensible, wise",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو ولد عاقل.",
+          "en": "He is a sensible boy."
+        }
+      },
+      {
+        "arabic": "مَعْقُول",
+        "translit": "maʿqūl",
+        "meaning": "reasonable",
+        "pattern": "done",
+        "example": {
+          "ar": "هذا سعر معقول.",
+          "en": "This is a reasonable price."
+        }
+      }
+    ],
+    "example": "The عَقْل judges whether a thing is مَعْقُول."
+  },
+  {
+    "arabic": "ظ ن ن",
+    "translit": "ẓ-n-n",
+    "meaning": "Supposing",
+    "mnemonic": "Zealous Notions, Not facts. Ẓ-N-N is the root of thinking something is so without being sure.",
+    "words": [
+      {
+        "arabic": "ظَنَّ",
+        "translit": "ẓanna",
+        "meaning": "to think, suppose",
+        "pattern": "form1",
+        "note": "Present tense: يَظُنُّ (yaẓunnu)",
+        "example": {
+          "ar": "ظن الرجل أن الباب مغلق.",
+          "en": "The man thought the door was closed."
+        }
+      },
+      {
+        "arabic": "ظَنّ",
+        "translit": "ẓann",
+        "meaning": "supposition, opinion",
+        "pattern": "act",
+        "example": {
+          "ar": "هذا مجرد ظن.",
+          "en": "This is only a supposition."
+        }
+      }
+    ],
+    "example": "He ظَنَّ it was true, but a ظَنّ is not knowledge."
+  },
+  {
+    "arabic": "ش ع ر",
+    "translit": "sh-ʿ-r",
+    "meaning": "Feeling; poetry",
+    "mnemonic": "SHarp Awareness Rises. SH-ʿ-R is the root of sensing, and of poetry, which is feeling put into words.",
+    "words": [
+      {
+        "arabic": "شَعَرَ",
+        "translit": "shaʿara",
+        "meaning": "to feel",
+        "pattern": "form1",
+        "note": "Present tense: يَشْعُرُ (yashʿuru)",
+        "example": {
+          "ar": "شعر الولد بالبرد.",
+          "en": "The boy felt the cold."
+        }
+      },
+      {
+        "arabic": "شُعُور",
+        "translit": "shuʿūr",
+        "meaning": "feeling",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "هذا شعور جميل.",
+          "en": "This is a beautiful feeling."
+        }
+      },
+      {
+        "arabic": "شِعْر",
+        "translit": "shiʿr",
+        "meaning": "poetry",
+        "example": {
+          "ar": "أحب الشعر العربي.",
+          "en": "I love Arabic poetry."
+        }
+      },
+      {
+        "arabic": "شَاعِر",
+        "translit": "shāʿir",
+        "meaning": "poet",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو شاعر مشهور.",
+          "en": "He is a famous poet."
+        }
+      }
+    ],
+    "example": "The شَاعِر turns شُعُور into شِعْر."
+  },
+  {
+    "arabic": "ر و د",
+    "translit": "r-w-d",
+    "meaning": "Wanting",
+    "mnemonic": "Reach With Desire. R-W-D is the root of wanting and of will.",
+    "words": [
+      {
+        "arabic": "أَرَادَ",
+        "translit": "ʾarāda",
+        "meaning": "to want",
+        "pattern": "form4",
+        "note": "Present tense: يُرِيدُ (yurīdu)",
+        "example": {
+          "ar": "أراد الولد أن يلعب.",
+          "en": "The boy wanted to play."
+        }
+      },
+      {
+        "arabic": "إِرَادَة",
+        "translit": "ʾirāda",
+        "meaning": "will, willpower",
+        "example": {
+          "ar": "عنده إرادة قوية.",
+          "en": "He has strong willpower."
+        }
+      },
+      {
+        "arabic": "مُرَاد",
+        "translit": "murād",
+        "meaning": "what is wanted, aim",
+        "example": {
+          "ar": "هذا هو المراد.",
+          "en": "This is what is wanted."
+        }
+      }
+    ],
+    "example": "He أَرَادَ to go; إِرَادَة is the will to."
+  },
+  {
+    "arabic": "ح و ل",
+    "translit": "ḥ-w-l",
+    "meaning": "Trying; changing state",
+    "mnemonic": "Hold on While Labouring. Ḥ-W-L is the root of turning from one state to another, and of trying to bring that about.",
+    "words": [
+      {
+        "arabic": "حَاوَلَ",
+        "translit": "ḥāwala",
+        "meaning": "to try",
+        "pattern": "form3",
+        "note": "Present tense: يُحَاوِلُ (yuḥāwilu)",
+        "example": {
+          "ar": "حاول الطالب مرة أخرى.",
+          "en": "The student tried once more."
+        }
+      },
+      {
+        "arabic": "مُحَاوَلَة",
+        "translit": "muḥāwala",
+        "meaning": "attempt",
+        "pattern": "mufa3ala",
+        "example": {
+          "ar": "هذه محاولة جيدة.",
+          "en": "This is a good attempt."
+        }
+      },
+      {
+        "arabic": "حَال",
+        "translit": "ḥāl",
+        "meaning": "state, condition",
+        "example": {
+          "ar": "كيف الحال؟",
+          "en": "How are things?"
+        }
+      },
+      {
+        "arabic": "حَوْلَ",
+        "translit": "ḥawla",
+        "meaning": "around, about",
+        "example": {
+          "ar": "جلسنا حول الطاولة.",
+          "en": "We sat around the table."
+        }
+      }
+    ],
+    "example": "He حَاوَلَ again; his حَال improved."
+  },
+  {
+    "arabic": "خ ي ر",
+    "translit": "kh-y-r",
+    "meaning": "Choosing; good",
+    "mnemonic": "KHoose Your Road. KH-Y-R is the root of what is good, and of picking the better thing.",
+    "words": [
+      {
+        "arabic": "اِخْتَارَ",
+        "translit": "ikhtāra",
+        "meaning": "to choose",
+        "pattern": "form8",
+        "note": "Present tense: يَخْتَارُ (yakhtāru)",
+        "example": {
+          "ar": "اختار الولد كتابا.",
+          "en": "The boy chose a book."
+        }
+      },
+      {
+        "arabic": "اِخْتِيَار",
+        "translit": "ikhtiyār",
+        "meaning": "choice",
+        "example": {
+          "ar": "هذا اختيار صعب.",
+          "en": "This is a hard choice."
+        }
+      },
+      {
+        "arabic": "خَيْر",
+        "translit": "khayr",
+        "meaning": "good, goodness",
+        "pattern": "act",
+        "example": {
+          "ar": "صباح الخير.",
+          "en": "Good morning."
+        }
+      }
+    ],
+    "example": "He اِخْتَارَ well; the اِخْتِيَار was خَيْر."
+  },
+  {
+    "arabic": "ن ج ح",
+    "translit": "n-j-ḥ",
+    "meaning": "Success",
+    "mnemonic": "Never Just Hope. N-J-Ḥ is the root of success.",
+    "words": [
+      {
+        "arabic": "نَجَحَ",
+        "translit": "najaḥa",
+        "meaning": "to succeed, pass",
+        "pattern": "form1",
+        "note": "Present tense: يَنْجَحُ (yanjaḥu)",
+        "example": {
+          "ar": "نجح الطالب في الامتحان.",
+          "en": "The student passed the exam."
+        }
+      },
+      {
+        "arabic": "نَجَاح",
+        "translit": "najāḥ",
+        "meaning": "success",
+        "example": {
+          "ar": "النجاح يحتاج إلى عمل.",
+          "en": "Success takes work."
+        }
+      },
+      {
+        "arabic": "نَاجِح",
+        "translit": "nājiḥ",
+        "meaning": "successful",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو تاجر ناجح.",
+          "en": "He is a successful merchant."
+        }
+      }
+    ],
+    "example": "She نَجَحَتْ in the exam; a great نَجَاح."
+  },
+  {
+    "arabic": "ف ش ل",
+    "translit": "f-sh-l",
+    "meaning": "Failure",
+    "mnemonic": "Fall SHort, Learn. F-SH-L is the root of failure.",
+    "words": [
+      {
+        "arabic": "فَشِلَ",
+        "translit": "fashila",
+        "meaning": "to fail",
+        "pattern": "form1",
+        "note": "Present tense: يَفْشَلُ (yafshalu)",
+        "example": {
+          "ar": "فشل المشروع.",
+          "en": "The project failed."
+        }
+      },
+      {
+        "arabic": "فَشَل",
+        "translit": "fashal",
+        "meaning": "failure",
+        "example": {
+          "ar": "الفشل بداية النجاح.",
+          "en": "Failure is the beginning of success."
+        }
+      },
+      {
+        "arabic": "فَاشِل",
+        "translit": "fāshil",
+        "meaning": "failing, unsuccessful",
+        "pattern": "doer",
+        "example": {
+          "ar": "هذه محاولة فاشلة.",
+          "en": "This is a failed attempt."
+        }
+      }
+    ],
+    "example": "He فَشِلَ once; فَشَل taught him."
+  },
+  {
+    "arabic": "ه د ف",
+    "translit": "h-d-f",
+    "meaning": "Goal, target",
+    "mnemonic": "Hit the Distant Flag. H-D-F is the root of a target and of aiming.",
+    "words": [
+      {
+        "arabic": "هَدَف",
+        "translit": "hadaf",
+        "meaning": "goal, target",
+        "example": {
+          "ar": "ما هدفك؟",
+          "en": "What is your goal?"
+        }
+      },
+      {
+        "arabic": "أَهْدَاف",
+        "translit": "ʾahdāf",
+        "meaning": "goals",
+        "pattern": "plural",
+        "example": {
+          "ar": "عندي أهداف كثيرة.",
+          "en": "I have many goals."
+        }
+      },
+      {
+        "arabic": "اِسْتَهْدَفَ",
+        "translit": "istahdafa",
+        "meaning": "to aim at, target",
+        "pattern": "form10",
+        "note": "Present tense: يَسْتَهْدِفُ (yastahdifu)",
+        "example": {
+          "ar": "استهدف المشروع الشباب.",
+          "en": "The project targeted young people."
+        }
+      }
+    ],
+    "example": "Every هَدَف needs a plan; he has many أَهْدَاف."
+  }
+]

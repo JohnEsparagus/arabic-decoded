@@ -64,6 +64,8 @@ void main() {
         await _settle(tester);
         for (final item in [
           'Account',
+          'Lessons',
+          'Stories',
           'Sentences',
           'Settings',
           'About',
@@ -78,6 +80,34 @@ void main() {
         await tester.tap(find.text('Years'));
         await _settle(tester);
         expect(find.text('${DateTime.now().year}'), findsOneWidget);
+        await tester.pageBack();
+        await _settle(tester);
+
+        // Lessons are all listed, locked until enough roots are learnt.
+        await tester.tap(find.byTooltip('Open navigation menu'));
+        await _settle(tester);
+        await tester.tap(find.text('Lessons'));
+        await _settle(tester);
+        expect(find.text('Three letters, one idea'), findsOneWidget);
+        expect(find.text('Opens after 3 more roots'), findsOneWidget);
+        await tester.pageBack();
+        await _settle(tester);
+
+        // The sentence explorer lists the corpus a page at a time, and a
+        // tap on + puts a sentence in the queue.
+        await tester.tap(find.byTooltip('Open navigation menu'));
+        await _settle(tester);
+        await tester.tap(find.text('Sentences'));
+        await _settle(tester);
+        expect(find.textContaining(' sentences'), findsOneWidget);
+        expect(find.text('The student wrote a letter.'), findsOneWidget);
+        expect(find.byTooltip('In your queue. Tap to remove'), findsNothing);
+        await tester.tap(find.byTooltip('Add to my queue').first);
+        await _settle(tester);
+        expect(find.byTooltip('In your queue. Tap to remove'), findsOneWidget);
+        await tester.tap(find.byTooltip('In your queue. Tap to remove'));
+        await _settle(tester);
+        expect(find.byTooltip('In your queue. Tap to remove'), findsNothing);
         await tester.pageBack();
         await _settle(tester);
 
@@ -123,6 +153,18 @@ void main() {
         // Roots and words are linked both ways: the root lists its
         // words, and a word has a link back to its root.
         expect(find.text('WORDS FROM THIS ROOT'), findsOneWidget);
+
+        // Its sentences stay folded away until asked for, so the card
+        // isn't cluttered; opening the section looks them up.
+        expect(find.text('The student took the pen.'), findsNothing);
+        await tester.ensureVisible(find.text('SENTENCES'));
+        await tester.tap(find.text('SENTENCES'));
+        await _settle(tester);
+        expect(find.text('The student took the pen.'), findsOneWidget);
+        await tester.tap(find.text('SENTENCES'));
+        await _settle(tester);
+
+        await tester.ensureVisible(find.text('to take'));
         await tester.tap(find.text('to take'));
         await _settle(tester);
         expect(find.text('The student took the pen.'), findsOneWidget);

@@ -9,6 +9,7 @@ import '../providers/database_providers.dart';
 import '../providers/study_session_provider.dart';
 import '../theme/app_theme.dart';
 import '../widgets/root_preview_card.dart';
+import '../widgets/tile_grid.dart';
 import '../widgets/selection_bar.dart';
 import 'alphabet_tab.dart';
 import 'collections_tab.dart';
@@ -225,9 +226,7 @@ class _CampaignSection extends ConsumerWidget {
                     style: TextStyle(color: colors.inkMuted),
                   );
                 }
-                return Wrap(
-                  spacing: 10,
-                  runSpacing: 10,
+                return TileGrid(
                   children: roots
                       .map(
                         (card) => RootPreviewCard(

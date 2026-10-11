@@ -1,0 +1,407 @@
+[
+  {
+    "arabic": "ج س م",
+    "translit": "j-s-m",
+    "meaning": "Body",
+    "mnemonic": "A Jogger Strengthens Muscles. J-S-M is the root of the body and anything physical.",
+    "words": [
+      {
+        "arabic": "جِسْم",
+        "translit": "jism",
+        "meaning": "body",
+        "example": {
+          "ar": "الجسم يحتاج إلى الماء.",
+          "en": "The body needs water."
+        }
+      },
+      {
+        "arabic": "أَجْسَام",
+        "translit": "ʾajsām",
+        "meaning": "bodies",
+        "pattern": "plural",
+        "example": {
+          "ar": "هذه أجسام صغيرة جدا.",
+          "en": "These are very small bodies."
+        }
+      },
+      {
+        "arabic": "جِسْمِيّ",
+        "translit": "jismī",
+        "meaning": "physical, bodily",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا تعب جسمي.",
+          "en": "This is physical tiredness."
+        }
+      }
+    ],
+    "example": "A healthy جِسْم needs sleep; a جِسْمِيّ injury needs rest."
+  },
+  {
+    "arabic": "ص ح ح",
+    "translit": "ṣ-ḥ-ḥ",
+    "meaning": "Health, correctness",
+    "mnemonic": "Sound Habits Heal. Ṣ-Ḥ-Ḥ covers being healthy and being correct: both are being sound.",
+    "words": [
+      {
+        "arabic": "صِحَّة",
+        "translit": "ṣiḥḥa",
+        "meaning": "health",
+        "example": {
+          "ar": "الصحة أهم من المال.",
+          "en": "Health is more important than money."
+        }
+      },
+      {
+        "arabic": "صَحِيح",
+        "translit": "ṣaḥīḥ",
+        "meaning": "correct; healthy",
+        "pattern": "adj",
+        "example": {
+          "ar": "هذا جواب صحيح.",
+          "en": "This is a correct answer."
+        }
+      },
+      {
+        "arabic": "صِحِّيّ",
+        "translit": "ṣiḥḥī",
+        "meaning": "healthy, health-related",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا طعام صحي.",
+          "en": "This is healthy food."
+        }
+      }
+    ],
+    "example": "صِحَّة is health, and a صَحِيح answer is a sound one."
+  },
+  {
+    "arabic": "م ر ض",
+    "translit": "m-r-ḍ",
+    "meaning": "Illness",
+    "mnemonic": "A Man Rests, Drained. M-R-Ḍ is the root of illness and those who nurse it.",
+    "words": [
+      {
+        "arabic": "مَرِضَ",
+        "translit": "mariḍa",
+        "meaning": "to fall ill",
+        "pattern": "form1",
+        "note": "Present tense: يَمْرَضُ (yamraḍu)",
+        "example": {
+          "ar": "مرض الولد في الشتاء.",
+          "en": "The boy fell ill in the winter."
+        }
+      },
+      {
+        "arabic": "مَرَض",
+        "translit": "maraḍ",
+        "meaning": "illness, disease",
+        "example": {
+          "ar": "هذا مرض خطير.",
+          "en": "This is a serious illness."
+        }
+      },
+      {
+        "arabic": "مَرِيض",
+        "translit": "marīḍ",
+        "meaning": "ill; a patient",
+        "pattern": "adj",
+        "example": {
+          "ar": "المريض في المستشفى.",
+          "en": "The patient is in the hospital."
+        }
+      },
+      {
+        "arabic": "مُمَرِّض",
+        "translit": "mumarriḍ",
+        "meaning": "nurse",
+        "example": {
+          "ar": "الممرض يساعد الطبيب.",
+          "en": "The nurse helps the doctor."
+        }
+      }
+    ],
+    "example": "The مَرِيض has a مَرَض, and the مُمَرِّض looks after him."
+  },
+  {
+    "arabic": "ط ب ب",
+    "translit": "ṭ-b-b",
+    "meaning": "Medicine",
+    "mnemonic": "Treat the Body's Burdens. Ṭ-B-B is the root of medicine and doctors.",
+    "words": [
+      {
+        "arabic": "طِبّ",
+        "translit": "ṭibb",
+        "meaning": "medicine (the field)",
+        "example": {
+          "ar": "يدرس أخي الطب.",
+          "en": "My brother studies medicine."
+        }
+      },
+      {
+        "arabic": "طَبِيب",
+        "translit": "ṭabīb",
+        "meaning": "doctor",
+        "pattern": "adj",
+        "example": {
+          "ar": "ذهبت إلى الطبيب.",
+          "en": "I went to the doctor."
+        }
+      },
+      {
+        "arabic": "طِبِّيّ",
+        "translit": "ṭibbī",
+        "meaning": "medical",
+        "pattern": "nisba",
+        "example": {
+          "ar": "أحتاج إلى فحص طبي.",
+          "en": "I need a medical check-up."
+        }
+      }
+    ],
+    "example": "A طَبِيب studies طِبّ and gives طِبِّيّ advice."
+  },
+  {
+    "arabic": "ع ل ج",
+    "translit": "ʿ-l-j",
+    "meaning": "Treating",
+    "mnemonic": "An Able Lady Jabs the cure in. ʿ-L-J is the root of treatment and remedy.",
+    "words": [
+      {
+        "arabic": "عَالَجَ",
+        "translit": "ʿālaja",
+        "meaning": "to treat",
+        "pattern": "form3",
+        "note": "Present tense: يُعَالِجُ (yuʿāliju)",
+        "example": {
+          "ar": "عالج الطبيب المريض.",
+          "en": "The doctor treated the patient."
+        }
+      },
+      {
+        "arabic": "عِلَاج",
+        "translit": "ʿilāj",
+        "meaning": "treatment, cure",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "هذا علاج جديد.",
+          "en": "This is a new treatment."
+        }
+      },
+      {
+        "arabic": "مُعَالَجَة",
+        "translit": "muʿālaja",
+        "meaning": "treatment, handling",
+        "pattern": "mufa3ala",
+        "example": {
+          "ar": "معالجة المشكلة مهمة.",
+          "en": "Dealing with the problem is important."
+        }
+      }
+    ],
+    "example": "The doctor عَالَجَ the patient, and the عِلَاج worked."
+  },
+  {
+    "arabic": "ن و م",
+    "translit": "n-w-m",
+    "meaning": "Sleeping",
+    "mnemonic": "Night Wraps Me. N-W-M is the root of sleep.",
+    "words": [
+      {
+        "arabic": "نَامَ",
+        "translit": "nāma",
+        "meaning": "to sleep",
+        "pattern": "form1",
+        "note": "Present tense: يَنَامُ (yanāmu)",
+        "example": {
+          "ar": "نام الطفل مبكرا.",
+          "en": "The child slept early."
+        }
+      },
+      {
+        "arabic": "نَوْم",
+        "translit": "nawm",
+        "meaning": "sleep",
+        "pattern": "act",
+        "example": {
+          "ar": "النوم مهم للصحة.",
+          "en": "Sleep is important for health."
+        }
+      },
+      {
+        "arabic": "نَائِم",
+        "translit": "nāʾim",
+        "meaning": "asleep",
+        "pattern": "doer",
+        "example": {
+          "ar": "الطفل نائم الآن.",
+          "en": "The child is asleep now."
+        }
+      }
+    ],
+    "example": "He نَامَ early; a good نَوْم fixes most things."
+  },
+  {
+    "arabic": "ت ع ب",
+    "translit": "t-ʿ-b",
+    "meaning": "Tiredness",
+    "mnemonic": "Too Exhausted to Budge. T-ʿ-B is the root of tiredness and effort.",
+    "words": [
+      {
+        "arabic": "تَعِبَ",
+        "translit": "taʿiba",
+        "meaning": "to get tired",
+        "pattern": "form1",
+        "note": "Present tense: يَتْعَبُ (yatʿabu)",
+        "example": {
+          "ar": "تعب الرجل من العمل.",
+          "en": "The man got tired from work."
+        }
+      },
+      {
+        "arabic": "تَعَب",
+        "translit": "taʿab",
+        "meaning": "tiredness, effort",
+        "example": {
+          "ar": "أشعر بتعب شديد.",
+          "en": "I feel very tired."
+        }
+      },
+      {
+        "arabic": "تَعْبَان",
+        "translit": "taʿbān",
+        "meaning": "tired",
+        "example": {
+          "ar": "أنا تعبان اليوم.",
+          "en": "I am tired today."
+        }
+      },
+      {
+        "arabic": "مُتْعِب",
+        "translit": "mutʿib",
+        "meaning": "tiring",
+        "example": {
+          "ar": "هذا عمل متعب.",
+          "en": "This is tiring work."
+        }
+      }
+    ],
+    "example": "After the تَعَب of the day he was تَعْبَان."
+  },
+  {
+    "arabic": "ق و ي",
+    "translit": "q-w-y",
+    "meaning": "Strength",
+    "mnemonic": "A Quiet Will Yields power. Q-W-Y is the root of strength.",
+    "words": [
+      {
+        "arabic": "قَوِيّ",
+        "translit": "qawī",
+        "meaning": "strong",
+        "pattern": "adj",
+        "example": {
+          "ar": "هو رجل قوي.",
+          "en": "He is a strong man."
+        }
+      },
+      {
+        "arabic": "قُوَّة",
+        "translit": "quwwa",
+        "meaning": "strength, power",
+        "example": {
+          "ar": "المعرفة قوة.",
+          "en": "Knowledge is power."
+        }
+      },
+      {
+        "arabic": "أَقْوَى",
+        "translit": "ʾaqwā",
+        "meaning": "stronger, strongest",
+        "pattern": "comparative",
+        "example": {
+          "ar": "هو أقوى من أخيه.",
+          "en": "He is stronger than his brother."
+        }
+      }
+    ],
+    "example": "A قَوِيّ body has قُوَّة."
+  },
+  {
+    "arabic": "ض ع ف",
+    "translit": "ḍ-ʿ-f",
+    "meaning": "Weakness",
+    "mnemonic": "Drained And Faint. Ḍ-ʿ-F is the root of weakness.",
+    "words": [
+      {
+        "arabic": "ضَعُفَ",
+        "translit": "ḍaʿufa",
+        "meaning": "to become weak",
+        "pattern": "form1",
+        "note": "Present tense: يَضْعُفُ (yaḍʿufu)",
+        "example": {
+          "ar": "ضعف صوته من التعب.",
+          "en": "His voice grew weak from tiredness."
+        }
+      },
+      {
+        "arabic": "ضَعْف",
+        "translit": "ḍaʿf",
+        "meaning": "weakness",
+        "pattern": "act",
+        "example": {
+          "ar": "هذه نقطة ضعف.",
+          "en": "This is a weak point."
+        }
+      },
+      {
+        "arabic": "ضَعِيف",
+        "translit": "ḍaʿīf",
+        "meaning": "weak",
+        "pattern": "adj",
+        "example": {
+          "ar": "الإنترنت ضعيف هنا.",
+          "en": "The internet is weak here."
+        }
+      }
+    ],
+    "example": "A ضَعِيف voice shows ضَعْف."
+  },
+  {
+    "arabic": "ر ي ض",
+    "translit": "r-y-ḍ",
+    "meaning": "Exercise, training",
+    "mnemonic": "Run Your Distance. R-Y-Ḍ is the root of sport and exercise.",
+    "words": [
+      {
+        "arabic": "رِيَاضَة",
+        "translit": "riyāḍa",
+        "meaning": "sport, exercise",
+        "pattern": "craft",
+        "example": {
+          "ar": "الرياضة مفيدة للجسم.",
+          "en": "Exercise is good for the body."
+        }
+      },
+      {
+        "arabic": "رِيَاضِيّ",
+        "translit": "riyāḍī",
+        "meaning": "athletic; an athlete",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هو رياضي مشهور.",
+          "en": "He is a famous athlete."
+        }
+      },
+      {
+        "arabic": "رِيَاضِيَّات",
+        "translit": "riyāḍiyyāt",
+        "meaning": "mathematics",
+        "example": {
+          "ar": "أحب الرياضيات.",
+          "en": "I like mathematics."
+        }
+      }
+    ],
+    "example": "He loves رِيَاضَة and is very رِيَاضِيّ."
+  }
+]

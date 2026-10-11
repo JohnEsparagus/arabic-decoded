@@ -53,6 +53,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -97,3 +98,14 @@ flutter:
     - family: Noto Kufi Arabic
       fonts:
         - asset: assets/fonts/NotoKufiArabic.ttf
+
+# App icon for Android and iOS, generated from assets/icon/ by
+# `dart run flutter_launcher_icons`. Replace the two images and run that
+# again to change it.
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/icon/icon.png
+  remove_alpha_ios: true
+  adaptive_icon_background: "#1F5C4A"
+  adaptive_icon_foreground: assets/icon/icon_foreground.png

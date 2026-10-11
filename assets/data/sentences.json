@@ -1,1474 +1,2110 @@
 [
-  {
-    "arabic": "كتب الطالب رسالة.",
-    "english": "The student wrote a letter."
-  },
-  {
-    "arabic": "هذا كتاب جديد.",
-    "english": "This is a new book."
-  },
-  {
-    "arabic": "الكاتب يكتب قصة.",
-    "english": "The writer is writing a story."
-  },
-  {
-    "arabic": "أدرس في المكتبة.",
-    "english": "I study in the library."
-  },
-  {
-    "arabic": "الكتابة مهارة مهمة.",
-    "english": "Writing is an important skill."
-  },
-  {
-    "arabic": "قال الرجل الحقيقة.",
-    "english": "The man told the truth."
-  },
-  {
-    "arabic": "هذا قول مشهور.",
-    "english": "This is a famous saying."
-  },
-  {
-    "arabic": "قرأت مقالا في الجريدة.",
-    "english": "I read an article in the newspaper."
-  },
-  {
-    "arabic": "علم الأب بالخبر.",
-    "english": "The father learned of the news."
-  },
-  {
-    "arabic": "العلم نور.",
-    "english": "Knowledge is light."
-  },
-  {
-    "arabic": "المعلم في الصف.",
-    "english": "The teacher is in the classroom."
-  },
-  {
-    "arabic": "هو عالم كبير.",
-    "english": "He is a great scientist."
-  },
-  {
-    "arabic": "التعليم حق للجميع.",
-    "english": "Education is a right for everyone."
-  },
-  {
-    "arabic": "عمل أبي في المصنع.",
-    "english": "My father worked in the factory."
-  },
-  {
-    "arabic": "عندي عمل كثير اليوم.",
-    "english": "I have a lot of work today."
-  },
-  {
-    "arabic": "العامل في المصنع.",
-    "english": "The worker is in the factory."
-  },
-  {
-    "arabic": "يعمل الطبيب في المعمل.",
-    "english": "The doctor works in the laboratory."
-  },
-  {
-    "arabic": "كان الجو جميلا.",
-    "english": "The weather was beautiful."
-  },
-  {
-    "arabic": "الكون واسع جدا.",
-    "english": "The universe is very vast."
-  },
-  {
-    "arabic": "هذا مكان هادئ.",
-    "english": "This is a quiet place."
-  },
-  {
-    "arabic": "قرأ الولد الكتاب.",
-    "english": "The boy read the book."
-  },
-  {
-    "arabic": "أحب القراءة.",
-    "english": "I love reading."
-  },
-  {
-    "arabic": "هو قارئ جيد.",
-    "english": "He is a good reader."
-  },
-  {
-    "arabic": "رأى الطفل القمر.",
-    "english": "The child saw the moon."
-  },
-  {
-    "arabic": "ما رأيك؟",
-    "english": "What is your opinion?"
-  },
-  {
-    "arabic": "الرؤية واضحة اليوم.",
-    "english": "Visibility is clear today."
-  },
-  {
-    "arabic": "عرف الطالب الجواب.",
-    "english": "The student knew the answer."
-  },
-  {
-    "arabic": "هو كاتب معروف.",
-    "english": "He is a well-known writer."
-  },
-  {
-    "arabic": "المعرفة قوة.",
-    "english": "Knowledge is power."
-  },
-  {
-    "arabic": "فهم الطالب الدرس.",
-    "english": "The student understood the lesson."
-  },
-  {
-    "arabic": "الفهم أهم من الحفظ.",
-    "english": "Understanding is more important than memorizing."
-  },
-  {
-    "arabic": "هذا مفهوم جديد.",
-    "english": "This is a new concept."
-  },
-  {
-    "arabic": "سمع الولد صوتا.",
-    "english": "The boy heard a sound."
-  },
-  {
-    "arabic": "أحب سماع الموسيقى.",
-    "english": "I like listening to music."
-  },
-  {
-    "arabic": "صوتك مسموع.",
-    "english": "Your voice is audible."
-  },
-  {
-    "arabic": "نظر الرجل إلى السماء.",
-    "english": "The man looked at the sky."
-  },
-  {
-    "arabic": "نظرة واحدة تكفي.",
-    "english": "One look is enough."
-  },
-  {
-    "arabic": "المنظر جميل من هنا.",
-    "english": "The view is beautiful from here."
-  },
-  {
-    "arabic": "وجد الولد المفتاح.",
-    "english": "The boy found the key."
-  },
-  {
-    "arabic": "المدير موجود الآن.",
-    "english": "The manager is here now."
-  },
-  {
-    "arabic": "شكرا على وجودك معنا.",
-    "english": "Thank you for being with us."
-  },
-  {
-    "arabic": "أخذ الطالب القلم.",
-    "english": "The student took the pen."
-  },
-  {
-    "arabic": "الأخذ والعطاء.",
-    "english": "Taking and giving."
-  },
-  {
-    "arabic": "هذا الكلام مأخوذ من كتاب.",
-    "english": "These words are taken from a book."
-  },
-  {
-    "arabic": "جعل البيت جميلا.",
-    "english": "He made the house beautiful."
-  },
-  {
-    "arabic": "هذا المكان مجعول للراحة.",
-    "english": "This place is made for rest."
-  },
-  {
-    "arabic": "ماذا فعل الولد؟",
-    "english": "What did the boy do?"
-  },
-  {
-    "arabic": "هذا فعل جيد.",
-    "english": "This is a good deed."
-  },
-  {
-    "arabic": "من الفاعل؟",
-    "english": "Who is the doer?"
-  },
-  {
-    "arabic": "أين المفعول في الجملة؟",
-    "english": "Where is the object in the sentence?"
-  },
-  {
-    "arabic": "ذهب الولد إلى المدرسة.",
-    "english": "The boy went to school."
-  },
-  {
-    "arabic": "أنا ذاهب إلى السوق.",
-    "english": "I am going to the market."
-  },
-  {
-    "arabic": "الذهاب إلى العمل صعب اليوم.",
-    "english": "Going to work is hard today."
-  },
-  {
-    "arabic": "جاء الضيف مساء.",
-    "english": "The guest came in the evening."
-  },
-  {
-    "arabic": "شكرا على مجيئك.",
-    "english": "Thank you for coming."
-  },
-  {
-    "arabic": "دخل المعلم الصف.",
-    "english": "The teacher entered the classroom."
-  },
-  {
-    "arabic": "القطة داخل البيت.",
-    "english": "The cat is inside the house."
-  },
-  {
-    "arabic": "أين مدخل الفندق؟",
-    "english": "Where is the hotel entrance?"
-  },
-  {
-    "arabic": "الدخول من هنا.",
-    "english": "Entry is from here."
-  },
-  {
-    "arabic": "خرج الولد من البيت.",
-    "english": "The boy went out of the house."
-  },
-  {
-    "arabic": "الأطفال خارج البيت.",
-    "english": "The children are outside the house."
-  },
-  {
-    "arabic": "المخرج على اليمين.",
-    "english": "The exit is on the right."
-  },
-  {
-    "arabic": "الخروج ممنوع الآن.",
-    "english": "Going out is not allowed now."
-  },
-  {
-    "arabic": "وصل القطار في الوقت.",
-    "english": "The train arrived on time."
-  },
-  {
-    "arabic": "ما وقت الوصول؟",
-    "english": "What is the arrival time?"
-  },
-  {
-    "arabic": "هل أنت متصل بالإنترنت؟",
-    "english": "Are you connected to the internet?"
-  },
-  {
-    "arabic": "رجع أبي من العمل.",
-    "english": "My father returned from work."
-  },
-  {
-    "arabic": "الرجوع إلى البيت.",
-    "english": "Returning home."
-  },
-  {
-    "arabic": "قام الطالب من الكرسي.",
-    "english": "The student got up from the chair."
-  },
-  {
-    "arabic": "القيام مبكرا مفيد.",
-    "english": "Getting up early is beneficial."
-  },
-  {
-    "arabic": "جلس الرجل على الكرسي.",
-    "english": "The man sat on the chair."
-  },
-  {
-    "arabic": "الجلوس طويلا متعب.",
-    "english": "Sitting for a long time is tiring."
-  },
-  {
-    "arabic": "اجتمع المجلس اليوم.",
-    "english": "The council met today."
-  },
-  {
-    "arabic": "فتح الولد الباب.",
-    "english": "The boy opened the door."
-  },
-  {
-    "arabic": "الباب مفتوح.",
-    "english": "The door is open."
-  },
-  {
-    "arabic": "أين مفتاح السيارة؟",
-    "english": "Where is the car key?"
-  },
-  {
-    "arabic": "أغلق الولد الباب.",
-    "english": "The boy closed the door."
-  },
-  {
-    "arabic": "المحل مغلق اليوم.",
-    "english": "The shop is closed today."
-  },
-  {
-    "arabic": "حمل الرجل الحقيبة.",
-    "english": "The man carried the bag."
-  },
-  {
-    "arabic": "هو حامل الرسالة.",
-    "english": "He is the bearer of the letter."
-  },
-  {
-    "arabic": "هذا حمل ثقيل.",
-    "english": "This is a heavy load."
-  },
-  {
-    "arabic": "ترك الولد كتابه في البيت.",
-    "english": "The boy left his book at home."
-  },
-  {
-    "arabic": "هذا بيت متروك.",
-    "english": "This is an abandoned house."
-  },
-  {
-    "arabic": "وضع الكتاب على الطاولة.",
-    "english": "He put the book on the table."
-  },
-  {
-    "arabic": "الوضع جيد الآن.",
-    "english": "The situation is good now."
-  },
-  {
-    "arabic": "ما موضوع الدرس؟",
-    "english": "What is the topic of the lesson?"
-  },
-  {
-    "arabic": "وقفت السيارة أمام البيت.",
-    "english": "The car stopped in front of the house."
-  },
-  {
-    "arabic": "أين موقف الحافلة؟",
-    "english": "Where is the bus stop?"
-  },
-  {
-    "arabic": "مشى الرجل في الحديقة.",
-    "english": "The man walked in the garden."
-  },
-  {
-    "arabic": "المشي مفيد للصحة.",
-    "english": "Walking is good for your health."
-  },
-  {
-    "arabic": "سأل الطالب المعلم.",
-    "english": "The student asked the teacher."
-  },
-  {
-    "arabic": "عندي سؤال.",
-    "english": "I have a question."
-  },
-  {
-    "arabic": "أجاب الطالب عن السؤال.",
-    "english": "The student answered the question."
-  },
-  {
-    "arabic": "هذا جواب صحيح.",
-    "english": "This is a correct answer."
-  },
-  {
-    "arabic": "شكرا على الإجابة.",
-    "english": "Thank you for the answer."
-  },
-  {
-    "arabic": "ذكر المعلم اسمي.",
-    "english": "The teacher mentioned my name."
-  },
-  {
-    "arabic": "هذه ذكرى جميلة.",
-    "english": "This is a beautiful memory."
-  },
-  {
-    "arabic": "شكرا على التذكير.",
-    "english": "Thanks for the reminder."
-  },
-  {
-    "arabic": "نسي الولد كتابه.",
-    "english": "The boy forgot his book."
-  },
-  {
-    "arabic": "النسيان مشكلة.",
-    "english": "Forgetfulness is a problem."
-  },
-  {
-    "arabic": "درس الطالب اللغة العربية.",
-    "english": "The student studied Arabic."
-  },
-  {
-    "arabic": "الدرس سهل اليوم.",
-    "english": "The lesson is easy today."
-  },
-  {
-    "arabic": "الدراسة في الجامعة صعبة.",
-    "english": "Studying at university is hard."
-  },
-  {
-    "arabic": "المدرسة قريبة من البيت.",
-    "english": "The school is near the house."
-  },
-  {
-    "arabic": "شرح المعلم الدرس.",
-    "english": "The teacher explained the lesson."
-  },
-  {
-    "arabic": "هذا شرح واضح.",
-    "english": "This is a clear explanation."
-  },
-  {
-    "arabic": "بحث الولد عن المفتاح.",
-    "english": "The boy searched for the key."
-  },
-  {
-    "arabic": "كتب الطالب بحثا.",
-    "english": "The student wrote a research paper."
-  },
-  {
-    "arabic": "هو باحث في الجامعة.",
-    "english": "He is a researcher at the university."
-  },
-  {
-    "arabic": "سمعت خبرا جيدا.",
-    "english": "I heard good news."
-  },
-  {
-    "arabic": "أخبر الولد أمه.",
-    "english": "The boy told his mother."
-  },
-  {
-    "arabic": "هو خبير في الاقتصاد.",
-    "english": "He is an expert in economics."
-  },
-  {
-    "arabic": "ترجم الكاتب الكتاب.",
-    "english": "The writer translated the book."
-  },
-  {
-    "arabic": "هذه ترجمة جيدة.",
-    "english": "This is a good translation."
-  },
-  {
-    "arabic": "يعمل أخي مترجما.",
-    "english": "My brother works as a translator."
-  },
-  {
-    "arabic": "قرر الرجل السفر.",
-    "english": "The man decided to travel."
-  },
-  {
-    "arabic": "هذا قرار صعب.",
-    "english": "This is a difficult decision."
-  },
-  {
-    "arabic": "حسب التاجر المال.",
-    "english": "The merchant counted the money."
-  },
-  {
-    "arabic": "الحساب من فضلك.",
-    "english": "The bill, please."
-  },
-  {
-    "arabic": "أعمل على الحاسوب.",
-    "english": "I work on the computer."
-  },
-  {
-    "arabic": "قدر الولد على حمل الحقيبة.",
-    "english": "The boy was able to carry the bag."
-  },
-  {
-    "arabic": "عنده قدرة كبيرة.",
-    "english": "He has great ability."
-  },
-  {
-    "arabic": "ما مقدار السكر؟",
-    "english": "What is the amount of sugar?"
-  },
-  {
-    "arabic": "بين المعلم المعنى.",
-    "english": "The teacher made the meaning clear."
-  },
-  {
-    "arabic": "قرأ الوزير البيان.",
-    "english": "The minister read the statement."
-  },
-  {
-    "arabic": "البيت بين المدرسة والسوق.",
-    "english": "The house is between the school and the market."
-  },
-  {
-    "arabic": "ناقش الطلاب الموضوع.",
-    "english": "The students discussed the topic."
-  },
-  {
-    "arabic": "كان النقاش طويلا.",
-    "english": "The discussion was long."
-  },
-  {
-    "arabic": "بعد المناقشة فهمنا الدرس.",
-    "english": "After the discussion we understood the lesson."
-  },
-  {
-    "arabic": "حفظ الولد الدرس.",
-    "english": "The boy memorized the lesson."
-  },
-  {
-    "arabic": "الحفظ يحتاج إلى وقت.",
-    "english": "Memorization takes time."
-  },
-  {
-    "arabic": "المال محفوظ في البنك.",
-    "english": "The money is kept safe in the bank."
-  },
-  {
-    "arabic": "ولدت الأم بنتا.",
-    "english": "The mother gave birth to a girl."
-  },
-  {
-    "arabic": "الولد يلعب في الحديقة.",
-    "english": "The boy is playing in the garden."
-  },
-  {
-    "arabic": "والدي طبيب.",
-    "english": "My father is a doctor."
-  },
-  {
-    "arabic": "المولود بخير.",
-    "english": "The newborn is well."
-  },
-  {
-    "arabic": "أسكن في حي هادئ.",
-    "english": "I live in a quiet neighbourhood."
-  },
-  {
-    "arabic": "الحياة جميلة.",
-    "english": "Life is beautiful."
-  },
-  {
-    "arabic": "تحية طيبة للجميع.",
-    "english": "Warm greetings to everyone."
-  },
-  {
-    "arabic": "مات الملك.",
-    "english": "The king died."
-  },
-  {
-    "arabic": "الموت حق.",
-    "english": "Death is certain."
-  },
-  {
-    "arabic": "البحر الميت في الأردن.",
-    "english": "The Dead Sea is in Jordan."
-  },
-  {
-    "arabic": "أحب الولد أمه.",
-    "english": "The boy loved his mother."
-  },
-  {
-    "arabic": "الحب جميل.",
-    "english": "Love is beautiful."
-  },
-  {
-    "arabic": "هو معلم محبوب.",
-    "english": "He is a well-loved teacher."
-  },
-  {
-    "arabic": "أنت صديق حبيب.",
-    "english": "You are a dear friend."
-  },
-  {
-    "arabic": "كره الولد الظلم.",
-    "english": "The boy hated injustice."
-  },
-  {
-    "arabic": "الكراهية لا تفيد.",
-    "english": "Hatred is no use."
-  },
-  {
-    "arabic": "الكذب مكروه.",
-    "english": "Lying is hateful."
-  },
-  {
-    "arabic": "ساعد الولد أباه.",
-    "english": "The boy helped his father."
-  },
-  {
-    "arabic": "أحتاج إلى مساعدة.",
-    "english": "I need help."
-  },
-  {
-    "arabic": "أنا سعيد اليوم.",
-    "english": "I am happy today."
-  },
-  {
-    "arabic": "السعادة في البيت.",
-    "english": "Happiness is at home."
-  },
-  {
-    "arabic": "دعا الرجل أصدقاءه.",
-    "english": "The man invited his friends."
-  },
-  {
-    "arabic": "شكرا على الدعوة.",
-    "english": "Thank you for the invitation."
-  },
-  {
-    "arabic": "دعاء الأم مهم.",
-    "english": "A mother's prayer is important."
-  },
-  {
-    "arabic": "شهد الرجل الحادث.",
-    "english": "The man witnessed the accident."
-  },
-  {
-    "arabic": "هو شاهد في المحكمة.",
-    "english": "He is a witness in court."
-  },
-  {
-    "arabic": "حصل على شهادة جامعية.",
-    "english": "He obtained a university degree."
-  },
-  {
-    "arabic": "زوجها مهندس.",
-    "english": "Her husband is an engineer."
-  },
-  {
-    "arabic": "زوجته طبيبة.",
-    "english": "His wife is a doctor."
-  },
-  {
-    "arabic": "تزوج أخي في الصيف.",
-    "english": "My brother got married in the summer."
-  },
-  {
-    "arabic": "الزواج مسؤولية.",
-    "english": "Marriage is a responsibility."
-  },
-  {
-    "arabic": "أهلي في القرية.",
-    "english": "My family is in the village."
-  },
-  {
-    "arabic": "أهلا بك في بيتنا.",
-    "english": "Welcome to our home."
-  },
-  {
-    "arabic": "هذا بنك أهلي.",
-    "english": "This is a national bank."
-  },
-  {
-    "arabic": "أكل الولد التفاحة.",
-    "english": "The boy ate the apple."
-  },
-  {
-    "arabic": "الأكل جاهز.",
-    "english": "The food is ready."
-  },
-  {
-    "arabic": "هذا مطعم مأكولات بحرية.",
-    "english": "This is a seafood restaurant."
-  },
-  {
-    "arabic": "شرب الولد الماء.",
-    "english": "The boy drank the water."
-  },
-  {
-    "arabic": "هذا شراب لذيذ.",
-    "english": "This is a delicious drink."
-  },
-  {
-    "arabic": "ما مشروبك المفضل؟",
-    "english": "What is your favourite drink?"
-  },
-  {
-    "arabic": "لبس الولد قميصا جديدا.",
-    "english": "The boy wore a new shirt."
-  },
-  {
-    "arabic": "هذا لباس تقليدي.",
-    "english": "This is traditional dress."
-  },
-  {
-    "arabic": "اشتريت ملابس جديدة.",
-    "english": "I bought new clothes."
-  },
-  {
-    "arabic": "طبخت الأم العشاء.",
-    "english": "The mother cooked dinner."
-  },
-  {
-    "arabic": "أحب الطبخ.",
-    "english": "I love cooking."
-  },
-  {
-    "arabic": "الأم في المطبخ.",
-    "english": "The mother is in the kitchen."
-  },
-  {
-    "arabic": "سكن الرجل في المدينة.",
-    "english": "The man lived in the city."
-  },
-  {
-    "arabic": "هو ساكن جديد في الحي.",
-    "english": "He is a new resident in the neighbourhood."
-  },
-  {
-    "arabic": "السكن غال هنا.",
-    "english": "Housing is expensive here."
-  },
-  {
-    "arabic": "هذا مسكن جميل.",
-    "english": "This is a beautiful home."
-  },
-  {
-    "arabic": "بنى الرجل بيتا.",
-    "english": "The man built a house."
-  },
-  {
-    "arabic": "البناء يحتاج إلى وقت.",
-    "english": "Construction takes time."
-  },
-  {
-    "arabic": "هذا مبنى قديم.",
-    "english": "This is an old building."
-  },
-  {
-    "arabic": "صنع النجار طاولة.",
-    "english": "The carpenter made a table."
-  },
-  {
-    "arabic": "صناعة السيارات مهمة.",
-    "english": "The car industry is important."
-  },
-  {
-    "arabic": "يعمل أبي في مصنع.",
-    "english": "My father works in a factory."
-  },
-  {
-    "arabic": "استعمل الولد القلم.",
-    "english": "The boy used the pen."
-  },
-  {
-    "arabic": "هذا للاستعمال اليومي.",
-    "english": "This is for daily use."
-  },
-  {
-    "arabic": "ملك الرجل بيتا كبيرا.",
-    "english": "The man owned a big house."
-  },
-  {
-    "arabic": "الملك في القصر.",
-    "english": "The king is in the palace."
-  },
-  {
-    "arabic": "هذا البيت ملك أبي.",
-    "english": "This house is my father's property."
-  },
-  {
-    "arabic": "هذه مملكة قديمة.",
-    "english": "This is an ancient kingdom."
-  },
-  {
-    "arabic": "باع الرجل سيارته.",
-    "english": "The man sold his car."
-  },
-  {
-    "arabic": "البيت للبيع.",
-    "english": "The house is for sale."
-  },
-  {
-    "arabic": "سألت البائع عن السعر.",
-    "english": "I asked the seller about the price."
-  },
-  {
-    "arabic": "اشترى الولد كتابا.",
-    "english": "The boy bought a book."
-  },
-  {
-    "arabic": "أريد شراء سيارة.",
-    "english": "I want to buy a car."
-  },
-  {
-    "arabic": "دفع الرجل الحساب.",
-    "english": "The man paid the bill."
-  },
-  {
-    "arabic": "الدفع عند الباب.",
-    "english": "Payment is at the door."
-  },
-  {
-    "arabic": "هذه الدفعة الأولى.",
-    "english": "This is the first instalment."
-  },
-  {
-    "arabic": "الحساب مدفوع.",
-    "english": "The bill is paid."
-  },
-  {
-    "arabic": "أعطى الأب ابنه هدية.",
-    "english": "The father gave his son a gift."
-  },
-  {
-    "arabic": "العطاء يجلب السعادة.",
-    "english": "Giving brings happiness."
-  },
-  {
-    "arabic": "ربح الفريق المباراة.",
-    "english": "The team won the match."
-  },
-  {
-    "arabic": "الربح قليل هذا العام.",
-    "english": "The profit is small this year."
-  },
-  {
-    "arabic": "من الرابح؟",
-    "english": "Who is the winner?"
-  },
-  {
-    "arabic": "خسر الفريق المباراة.",
-    "english": "The team lost the match."
-  },
-  {
-    "arabic": "هذه خسارة كبيرة.",
-    "english": "This is a big loss."
-  },
-  {
-    "arabic": "لا يوجد خاسر هنا.",
-    "english": "There is no loser here."
-  },
-  {
-    "arabic": "زرع الفلاح القمح.",
-    "english": "The farmer planted wheat."
-  },
-  {
-    "arabic": "الزراعة مهمة للبلد.",
-    "english": "Agriculture is important for the country."
-  },
-  {
-    "arabic": "يعيش جدي في مزرعة.",
-    "english": "My grandfather lives on a farm."
-  },
-  {
-    "arabic": "أثمرت الشجرة.",
-    "english": "The tree bore fruit."
-  },
-  {
-    "arabic": "هذه ثمرة العمل.",
-    "english": "This is the fruit of the work."
-  },
-  {
-    "arabic": "الثمار ناضجة.",
-    "english": "The fruits are ripe."
-  },
-  {
-    "arabic": "حصل الطالب على جائزة.",
-    "english": "The student obtained a prize."
-  },
-  {
-    "arabic": "الحصول على عمل صعب.",
-    "english": "Getting a job is hard."
-  },
-  {
-    "arabic": "المحصول جيد هذا العام.",
-    "english": "The crop is good this year."
-  },
-  {
-    "arabic": "احتاج الولد إلى مساعدة.",
-    "english": "The boy needed help."
-  },
-  {
-    "arabic": "أنا في حاجة إلى الراحة.",
-    "english": "I am in need of rest."
-  },
-  {
-    "arabic": "خدم الرجل بلده.",
-    "english": "The man served his country."
-  },
-  {
-    "arabic": "الخدمة ممتازة هنا.",
-    "english": "The service is excellent here."
-  },
-  {
-    "arabic": "الخادم لا يعمل الآن.",
-    "english": "The server is not working now."
-  },
-  {
-    "arabic": "حكم الملك البلد.",
-    "english": "The king ruled the country."
-  },
-  {
-    "arabic": "هذا حكم عادل.",
-    "english": "This is a fair verdict."
-  },
-  {
-    "arabic": "الحاكم في العاصمة.",
-    "english": "The ruler is in the capital."
-  },
-  {
-    "arabic": "الحكومة جديدة.",
-    "english": "The government is new."
-  },
-  {
-    "arabic": "ذهب المحامي إلى المحكمة.",
-    "english": "The lawyer went to the court."
-  },
-  {
-    "arabic": "العدل أساس الملك.",
-    "english": "Justice is the foundation of rule."
-  },
-  {
-    "arabic": "هو قاض عادل.",
-    "english": "He is a fair judge."
-  },
-  {
-    "arabic": "نريد العدالة للجميع.",
-    "english": "We want justice for all."
-  },
-  {
-    "arabic": "هذه هي الحقيقة.",
-    "english": "This is the truth."
-  },
-  {
-    "arabic": "بدأت الشرطة التحقيق.",
-    "english": "The police began the investigation."
-  },
-  {
-    "arabic": "ظلم الحاكم الناس.",
-    "english": "The ruler oppressed the people."
-  },
-  {
-    "arabic": "الظلم لا يدوم.",
-    "english": "Injustice does not last."
-  },
-  {
-    "arabic": "هو حاكم ظالم.",
-    "english": "He is an unjust ruler."
-  },
-  {
-    "arabic": "ساعد القاضي المظلوم.",
-    "english": "The judge helped the wronged man."
-  },
-  {
-    "arabic": "الأمن مهم في المدينة.",
-    "english": "Security is important in the city."
-  },
-  {
-    "arabic": "هذا مكان آمن.",
-    "english": "This is a safe place."
-  },
-  {
-    "arabic": "نعيش في أمان.",
-    "english": "We live in safety."
-  },
-  {
-    "arabic": "هو رجل أمين.",
-    "english": "He is an honest man."
-  },
-  {
-    "arabic": "انتهت الحرب.",
-    "english": "The war ended."
-  },
-  {
-    "arabic": "الحروب تدمر البلاد.",
-    "english": "Wars destroy countries."
-  },
-  {
-    "arabic": "كان جدي محاربا.",
-    "english": "My grandfather was a fighter."
-  },
-  {
-    "arabic": "نريد السلام.",
-    "english": "We want peace."
-  },
-  {
-    "arabic": "في السلم وفي الحرب.",
-    "english": "In peace and in war."
-  },
-  {
-    "arabic": "العقل السليم في الجسم السليم.",
-    "english": "A sound mind in a sound body."
-  },
-  {
-    "arabic": "استسلم الجيش.",
-    "english": "The army surrendered."
-  },
-  {
-    "arabic": "هذا قانون جديد.",
-    "english": "This is a new law."
-  },
-  {
-    "arabic": "القوانين مهمة للمجتمع.",
-    "english": "Laws are important for society."
-  },
-  {
-    "arabic": "نظم الطلاب رحلة.",
-    "english": "The students organized a trip."
-  },
-  {
-    "arabic": "هذا نظام جديد.",
-    "english": "This is a new system."
-  },
-  {
-    "arabic": "التنظيم مهم في العمل.",
-    "english": "Organization is important at work."
-  },
-  {
-    "arabic": "يعمل في منظمة دولية.",
-    "english": "He works at an international organization."
-  },
-  {
-    "arabic": "الشعب يريد السلام.",
-    "english": "The people want peace."
-  },
-  {
-    "arabic": "شعوب العالم كثيرة.",
-    "english": "The peoples of the world are many."
-  },
-  {
-    "arabic": "هذا مطعم شعبي.",
-    "english": "This is a popular local restaurant."
-  },
-  {
-    "arabic": "الأرض كبيرة.",
-    "english": "The earth is big."
-  },
-  {
-    "arabic": "هذه أراض زراعية.",
-    "english": "These are agricultural lands."
-  },
-  {
-    "arabic": "أسكن في الطابق الأرضي.",
-    "english": "I live on the ground floor."
-  },
-  {
-    "arabic": "السماء زرقاء.",
-    "english": "The sky is blue."
-  },
-  {
-    "arabic": "خلق الله السماوات والأرض.",
-    "english": "God created the heavens and the earth."
-  },
-  {
-    "arabic": "قميصه سماوي اللون.",
-    "english": "His shirt is sky-blue."
-  },
-  {
-    "arabic": "صاحب السمو الأمير.",
-    "english": "His Highness the Prince."
-  },
-  {
-    "arabic": "الشمس حارة اليوم.",
-    "english": "The sun is hot today."
-  },
-  {
-    "arabic": "هذه طاقة شمسية.",
-    "english": "This is solar energy."
-  },
-  {
-    "arabic": "القمر جميل الليلة.",
-    "english": "The moon is beautiful tonight."
-  },
-  {
-    "arabic": "لهذا الكوكب أقمار كثيرة.",
-    "english": "This planet has many moons."
-  },
-  {
-    "arabic": "هذا شهر قمري.",
-    "english": "This is a lunar month."
-  },
-  {
-    "arabic": "الليل هادئ.",
-    "english": "The night is quiet."
-  },
-  {
-    "arabic": "كانت ليلة جميلة.",
-    "english": "It was a beautiful night."
-  },
-  {
-    "arabic": "بقينا هناك ثلاث ليال.",
-    "english": "We stayed there three nights."
-  },
-  {
-    "arabic": "أعمل في دوام ليلي.",
-    "english": "I work a night shift."
-  },
-  {
-    "arabic": "البحر هادئ اليوم.",
-    "english": "The sea is calm today."
-  },
-  {
-    "arabic": "البحار واسعة.",
-    "english": "The seas are vast."
-  },
-  {
-    "arabic": "أحب الطعام البحري.",
-    "english": "I like seafood."
-  },
-  {
-    "arabic": "هذا جبل عال.",
-    "english": "This is a high mountain."
-  },
-  {
-    "arabic": "الجبال جميلة في الشتاء.",
-    "english": "The mountains are beautiful in winter."
-  },
-  {
-    "arabic": "هذه منطقة جبلية.",
-    "english": "This is a mountainous region."
-  },
-  {
-    "arabic": "الريح قوية اليوم.",
-    "english": "The wind is strong today."
-  },
-  {
-    "arabic": "الرياح باردة في الشتاء.",
-    "english": "The winds are cold in winter."
-  },
-  {
-    "arabic": "المطر غزير اليوم.",
-    "english": "The rain is heavy today."
-  },
-  {
-    "arabic": "الأمطار كثيرة في الشتاء.",
-    "english": "Rains are plentiful in winter."
-  },
-  {
-    "arabic": "الجو ممطر اليوم.",
-    "english": "The weather is rainy today."
-  },
-  {
-    "arabic": "نور الشمس قوي.",
-    "english": "The sunlight is strong."
-  },
-  {
-    "arabic": "أنوار المدينة جميلة.",
-    "english": "The city lights are beautiful."
-  },
-  {
-    "arabic": "القمر منير الليلة.",
-    "english": "The moon is bright tonight."
-  },
-  {
-    "arabic": "النار حارة.",
-    "english": "Fire is hot."
-  },
-  {
-    "arabic": "بدأ الدرس الآن.",
-    "english": "The lesson has begun now."
-  },
-  {
-    "arabic": "هذه بداية جديدة.",
-    "english": "This is a new beginning."
-  },
-  {
-    "arabic": "تم العمل بنجاح.",
-    "english": "The work was completed successfully."
-  },
-  {
-    "arabic": "كل شيء تمام.",
-    "english": "Everything is fine."
-  },
-  {
-    "arabic": "أنا في راحة تامة.",
-    "english": "I am in complete comfort."
-  },
-  {
-    "arabic": "زاد عدد الطلاب.",
-    "english": "The number of students increased."
-  },
-  {
-    "arabic": "هناك زيادة في الأسعار.",
-    "english": "There is an increase in prices."
-  },
-  {
-    "arabic": "اثنان زائد اثنين.",
-    "english": "Two plus two."
-  },
-  {
-    "arabic": "نقص عدد الطلاب.",
-    "english": "The number of students decreased."
-  },
-  {
-    "arabic": "هناك نقص في الماء.",
-    "english": "There is a shortage of water."
-  },
-  {
-    "arabic": "العمل ناقص.",
-    "english": "The work is incomplete."
-  },
-  {
-    "arabic": "كبر الولد بسرعة.",
-    "english": "The boy grew up quickly."
-  },
-  {
-    "arabic": "هذا بيت كبير.",
-    "english": "This is a big house."
-  },
-  {
-    "arabic": "أخي أكبر مني.",
-    "english": "My brother is older than me."
-  },
-  {
-    "arabic": "صغر القميص بعد الغسل.",
-    "english": "The shirt shrank after washing."
-  },
-  {
-    "arabic": "هذا بيت صغير.",
-    "english": "This is a small house."
-  },
-  {
-    "arabic": "أختي أصغر مني.",
-    "english": "My sister is younger than me."
-  },
-  {
-    "arabic": "غير الرجل رأيه.",
-    "english": "The man changed his mind."
-  },
-  {
-    "arabic": "نحتاج إلى تغيير.",
-    "english": "We need a change."
-  },
-  {
-    "arabic": "الجو متغير اليوم.",
-    "english": "The weather is changeable today."
-  },
-  {
-    "arabic": "هذا غير ممكن.",
-    "english": "This is not possible."
-  },
-  {
-    "arabic": "ثبت أن الخبر صحيح.",
-    "english": "It was proven that the news is true."
-  },
-  {
-    "arabic": "السعر ثابت.",
-    "english": "The price is fixed."
-  },
-  {
-    "arabic": "الثبات مهم في العمل.",
-    "english": "Stability is important at work."
-  },
-  {
-    "arabic": "اقترب الشتاء.",
-    "english": "Winter has approached."
-  },
-  {
-    "arabic": "البيت قرب المدرسة.",
-    "english": "The house is near the school."
-  },
-  {
-    "arabic": "السوق قريب من هنا.",
-    "english": "The market is near here."
-  },
-  {
-    "arabic": "ما أقرب محطة؟",
-    "english": "What is the nearest station?"
-  },
-  {
-    "arabic": "بيننا قرابة.",
-    "english": "We are related."
-  },
-  {
-    "arabic": "يبعد البيت عن المدرسة.",
-    "english": "The house is far from the school."
-  },
-  {
-    "arabic": "المطار بعيد عن المدينة.",
-    "english": "The airport is far from the city."
-  },
-  {
-    "arabic": "هذا أبعد مكان.",
-    "english": "This is the farthest place."
-  },
-  {
-    "arabic": "أراك بعد الدرس.",
-    "english": "I will see you after the lesson."
-  },
-  {
-    "arabic": "ما سبب المشكلة؟",
-    "english": "What is the cause of the problem?"
-  },
-  {
-    "arabic": "الأسباب كثيرة.",
-    "english": "The reasons are many."
-  },
-  {
-    "arabic": "سبب المطر مشاكل كثيرة.",
-    "english": "The rain caused many problems."
-  },
-  {
-    "arabic": "نتج عن ذلك مشكلة.",
-    "english": "A problem resulted from that."
-  },
-  {
-    "arabic": "النتيجة جيدة.",
-    "english": "The result is good."
-  },
-  {
-    "arabic": "أنتج المصنع سيارات.",
-    "english": "The factory produced cars."
-  },
-  {
-    "arabic": "زاد الإنتاج هذا العام.",
-    "english": "Production increased this year."
-  },
-  {
-    "arabic": "هذا منتج محلي.",
-    "english": "This is a local product."
-  },
-  {
-    "arabic": "ما شكل البيت؟",
-    "english": "What does the house look like?"
-  },
-  {
-    "arabic": "رسم الطفل أشكالا كثيرة.",
-    "english": "The child drew many shapes."
-  },
-  {
-    "arabic": "شكل الرئيس حكومة جديدة.",
-    "english": "The president formed a new government."
-  },
-  {
-    "arabic": "التشكيل يساعد على القراءة.",
-    "english": "Vowel marks help with reading."
-  },
-  {
-    "arabic": "عندي مشكلة صغيرة.",
-    "english": "I have a small problem."
-  },
-  {
-    "arabic": "هو مثل أخيه.",
-    "english": "He is like his brother."
-  },
-  {
-    "arabic": "هذا مثال جيد.",
-    "english": "This is a good example."
-  },
-  {
-    "arabic": "مثل اللاعب بلده.",
-    "english": "The player represented his country."
-  },
-  {
-    "arabic": "يدرس التمثيل في الجامعة.",
-    "english": "He studies acting at university."
-  },
-  {
-    "arabic": "هو ممثل مشهور.",
-    "english": "He is a famous actor."
-  },
-  {
-    "arabic": "جمع الولد الكتب.",
-    "english": "The boy gathered the books."
-  },
-  {
-    "arabic": "ما جمع هذه الكلمة؟",
-    "english": "What is the plural of this word?"
-  },
-  {
-    "arabic": "جاءت جماعة من الطلاب.",
-    "english": "A group of students came."
-  },
-  {
-    "arabic": "عندي مجموعة كتب.",
-    "english": "I have a collection of books."
-  },
-  {
-    "arabic": "أدرس في الجامعة.",
-    "english": "I study at the university."
-  },
-  {
-    "arabic": "ما الفرق بينهما؟",
-    "english": "What is the difference between them?"
-  },
-  {
-    "arabic": "فرق المعلم بين الطالبين.",
-    "english": "The teacher separated the two students."
-  },
-  {
-    "arabic": "فاز الفريق بالمباراة.",
-    "english": "The team won the match."
-  },
-  {
-    "arabic": "هذه فرقة موسيقية.",
-    "english": "This is a music band."
-  },
-  {
-    "arabic": "قطع الرجل الخبز.",
-    "english": "The man cut the bread."
-  },
-  {
-    "arabic": "قطع الأشجار ممنوع.",
-    "english": "Cutting down trees is forbidden."
-  },
-  {
-    "arabic": "أريد قطعة خبز.",
-    "english": "I want a piece of bread."
-  },
-  {
-    "arabic": "الماء مقطوع اليوم.",
-    "english": "The water is cut off today."
-  },
-  {
-    "arabic": "شاهدت مقطعا قصيرا.",
-    "english": "I watched a short clip."
-  },
-  {
-    "arabic": "هذه همزة وصل.",
-    "english": "This is a connecting hamza."
-  },
-  {
-    "arabic": "وصل السائق الطلب.",
-    "english": "The driver delivered the order."
-  },
-  {
-    "arabic": "شكرا على الاتصال.",
-    "english": "Thank you for calling."
-  },
-  {
-    "arabic": "لا صلة بينهما.",
-    "english": "There is no link between them."
-  },
-  {
-    "arabic": "قسم الأب الخبز.",
-    "english": "The father divided the bread."
-  },
-  {
-    "arabic": "أعمل في قسم المبيعات.",
-    "english": "I work in the sales department."
-  },
-  {
-    "arabic": "في الجامعة أقسام كثيرة.",
-    "english": "The university has many departments."
-  },
-  {
-    "arabic": "هذه قسمة عادلة.",
-    "english": "This is a fair division."
-  },
-  {
-    "arabic": "تقسيم العمل مهم.",
-    "english": "Dividing up the work is important."
-  },
-  {
-    "arabic": "ما نوع السيارة؟",
-    "english": "What type of car is it?"
-  },
-  {
-    "arabic": "هناك أنواع كثيرة.",
-    "english": "There are many types."
-  },
-  {
-    "arabic": "التنوع جميل.",
-    "english": "Diversity is beautiful."
-  },
-  {
-    "arabic": "الطعام متنوع هنا.",
-    "english": "The food is varied here."
-  }
+ {
+  "arabic": "كتب الطالب رسالة.",
+  "english": "The student wrote a letter."
+ },
+ {
+  "arabic": "هذا كتاب جديد.",
+  "english": "This is a new book."
+ },
+ {
+  "arabic": "الكاتب يكتب قصة.",
+  "english": "The writer is writing a story."
+ },
+ {
+  "arabic": "أدرس في المكتبة.",
+  "english": "I study in the library."
+ },
+ {
+  "arabic": "الكتابة مهارة مهمة.",
+  "english": "Writing is an important skill."
+ },
+ {
+  "arabic": "قال الرجل الحقيقة.",
+  "english": "The man told the truth."
+ },
+ {
+  "arabic": "هذا قول مشهور.",
+  "english": "This is a famous saying."
+ },
+ {
+  "arabic": "قرأت مقالا في الجريدة.",
+  "english": "I read an article in the newspaper."
+ },
+ {
+  "arabic": "علم الأب بالخبر.",
+  "english": "The father learned of the news."
+ },
+ {
+  "arabic": "العلم نور.",
+  "english": "Knowledge is light."
+ },
+ {
+  "arabic": "المعلم في الصف.",
+  "english": "The teacher is in the classroom."
+ },
+ {
+  "arabic": "هو عالم كبير.",
+  "english": "He is a great scientist."
+ },
+ {
+  "arabic": "التعليم حق للجميع.",
+  "english": "Education is a right for everyone."
+ },
+ {
+  "arabic": "عمل أبي في المصنع.",
+  "english": "My father worked in the factory."
+ },
+ {
+  "arabic": "عندي عمل كثير اليوم.",
+  "english": "I have a lot of work today."
+ },
+ {
+  "arabic": "العامل في المصنع.",
+  "english": "The worker is in the factory."
+ },
+ {
+  "arabic": "يعمل الطبيب في المعمل.",
+  "english": "The doctor works in the laboratory."
+ },
+ {
+  "arabic": "كان الجو جميلا.",
+  "english": "The weather was beautiful."
+ },
+ {
+  "arabic": "الكون واسع جدا.",
+  "english": "The universe is very vast."
+ },
+ {
+  "arabic": "هذا مكان هادئ.",
+  "english": "This is a quiet place."
+ },
+ {
+  "arabic": "قرأ الولد الكتاب.",
+  "english": "The boy read the book."
+ },
+ {
+  "arabic": "أحب القراءة.",
+  "english": "I love reading."
+ },
+ {
+  "arabic": "هو قارئ جيد.",
+  "english": "He is a good reader."
+ },
+ {
+  "arabic": "رأى الطفل القمر.",
+  "english": "The child saw the moon."
+ },
+ {
+  "arabic": "ما رأيك؟",
+  "english": "What is your opinion?"
+ },
+ {
+  "arabic": "الرؤية واضحة اليوم.",
+  "english": "Visibility is clear today."
+ },
+ {
+  "arabic": "عرف الطالب الجواب.",
+  "english": "The student knew the answer."
+ },
+ {
+  "arabic": "هو كاتب معروف.",
+  "english": "He is a well-known writer."
+ },
+ {
+  "arabic": "المعرفة قوة.",
+  "english": "Knowledge is power."
+ },
+ {
+  "arabic": "فهم الطالب الدرس.",
+  "english": "The student understood the lesson."
+ },
+ {
+  "arabic": "الفهم أهم من الحفظ.",
+  "english": "Understanding is more important than memorizing."
+ },
+ {
+  "arabic": "هذا مفهوم جديد.",
+  "english": "This is a new concept."
+ },
+ {
+  "arabic": "سمع الولد صوتا.",
+  "english": "The boy heard a sound."
+ },
+ {
+  "arabic": "أحب سماع الموسيقى.",
+  "english": "I like listening to music."
+ },
+ {
+  "arabic": "صوتك مسموع.",
+  "english": "Your voice is audible."
+ },
+ {
+  "arabic": "نظر الرجل إلى السماء.",
+  "english": "The man looked at the sky."
+ },
+ {
+  "arabic": "نظرة واحدة تكفي.",
+  "english": "One look is enough."
+ },
+ {
+  "arabic": "المنظر جميل من هنا.",
+  "english": "The view is beautiful from here."
+ },
+ {
+  "arabic": "وجد الولد المفتاح.",
+  "english": "The boy found the key."
+ },
+ {
+  "arabic": "المدير موجود الآن.",
+  "english": "The manager is here now."
+ },
+ {
+  "arabic": "شكرا على وجودك معنا.",
+  "english": "Thank you for being with us."
+ },
+ {
+  "arabic": "أخذ الطالب القلم.",
+  "english": "The student took the pen."
+ },
+ {
+  "arabic": "الأخذ والعطاء.",
+  "english": "Taking and giving."
+ },
+ {
+  "arabic": "هذا الكلام مأخوذ من كتاب.",
+  "english": "These words are taken from a book."
+ },
+ {
+  "arabic": "جعل البيت جميلا.",
+  "english": "He made the house beautiful."
+ },
+ {
+  "arabic": "هذا المكان مجعول للراحة.",
+  "english": "This place is made for rest."
+ },
+ {
+  "arabic": "ماذا فعل الولد؟",
+  "english": "What did the boy do?"
+ },
+ {
+  "arabic": "هذا فعل جيد.",
+  "english": "This is a good deed."
+ },
+ {
+  "arabic": "من الفاعل؟",
+  "english": "Who is the doer?"
+ },
+ {
+  "arabic": "أين المفعول في الجملة؟",
+  "english": "Where is the object in the sentence?"
+ },
+ {
+  "arabic": "ذهب الولد إلى المدرسة.",
+  "english": "The boy went to school."
+ },
+ {
+  "arabic": "أنا ذاهب إلى السوق.",
+  "english": "I am going to the market."
+ },
+ {
+  "arabic": "الذهاب إلى العمل صعب اليوم.",
+  "english": "Going to work is hard today."
+ },
+ {
+  "arabic": "جاء الضيف مساء.",
+  "english": "The guest came in the evening."
+ },
+ {
+  "arabic": "شكرا على مجيئك.",
+  "english": "Thank you for coming."
+ },
+ {
+  "arabic": "دخل المعلم الصف.",
+  "english": "The teacher entered the classroom."
+ },
+ {
+  "arabic": "القطة داخل البيت.",
+  "english": "The cat is inside the house."
+ },
+ {
+  "arabic": "أين مدخل الفندق؟",
+  "english": "Where is the hotel entrance?"
+ },
+ {
+  "arabic": "الدخول من هنا.",
+  "english": "Entry is from here."
+ },
+ {
+  "arabic": "خرج الولد من البيت.",
+  "english": "The boy went out of the house."
+ },
+ {
+  "arabic": "الأطفال خارج البيت.",
+  "english": "The children are outside the house."
+ },
+ {
+  "arabic": "المخرج على اليمين.",
+  "english": "The exit is on the right."
+ },
+ {
+  "arabic": "الخروج ممنوع الآن.",
+  "english": "Going out is not allowed now."
+ },
+ {
+  "arabic": "وصل القطار في الوقت.",
+  "english": "The train arrived on time."
+ },
+ {
+  "arabic": "ما وقت الوصول؟",
+  "english": "What is the arrival time?"
+ },
+ {
+  "arabic": "هل أنت متصل بالإنترنت؟",
+  "english": "Are you connected to the internet?"
+ },
+ {
+  "arabic": "رجع أبي من العمل.",
+  "english": "My father returned from work."
+ },
+ {
+  "arabic": "الرجوع إلى البيت.",
+  "english": "Returning home."
+ },
+ {
+  "arabic": "قام الطالب من الكرسي.",
+  "english": "The student got up from the chair."
+ },
+ {
+  "arabic": "القيام مبكرا مفيد.",
+  "english": "Getting up early is beneficial."
+ },
+ {
+  "arabic": "جلس الرجل على الكرسي.",
+  "english": "The man sat on the chair."
+ },
+ {
+  "arabic": "الجلوس طويلا متعب.",
+  "english": "Sitting for a long time is tiring."
+ },
+ {
+  "arabic": "اجتمع المجلس اليوم.",
+  "english": "The council met today."
+ },
+ {
+  "arabic": "فتح الولد الباب.",
+  "english": "The boy opened the door."
+ },
+ {
+  "arabic": "الباب مفتوح.",
+  "english": "The door is open."
+ },
+ {
+  "arabic": "أين مفتاح السيارة؟",
+  "english": "Where is the car key?"
+ },
+ {
+  "arabic": "أغلق الولد الباب.",
+  "english": "The boy closed the door."
+ },
+ {
+  "arabic": "المحل مغلق اليوم.",
+  "english": "The shop is closed today."
+ },
+ {
+  "arabic": "حمل الرجل الحقيبة.",
+  "english": "The man carried the bag."
+ },
+ {
+  "arabic": "هو حامل الرسالة.",
+  "english": "He is the bearer of the letter."
+ },
+ {
+  "arabic": "هذا حمل ثقيل.",
+  "english": "This is a heavy load."
+ },
+ {
+  "arabic": "ترك الولد كتابه في البيت.",
+  "english": "The boy left his book at home."
+ },
+ {
+  "arabic": "هذا بيت متروك.",
+  "english": "This is an abandoned house."
+ },
+ {
+  "arabic": "وضع الكتاب على الطاولة.",
+  "english": "He put the book on the table."
+ },
+ {
+  "arabic": "الوضع جيد الآن.",
+  "english": "The situation is good now."
+ },
+ {
+  "arabic": "ما موضوع الدرس؟",
+  "english": "What is the topic of the lesson?"
+ },
+ {
+  "arabic": "وقفت السيارة أمام البيت.",
+  "english": "The car stopped in front of the house."
+ },
+ {
+  "arabic": "أين موقف الحافلة؟",
+  "english": "Where is the bus stop?"
+ },
+ {
+  "arabic": "مشى الرجل في الحديقة.",
+  "english": "The man walked in the garden."
+ },
+ {
+  "arabic": "المشي مفيد للصحة.",
+  "english": "Walking is good for your health."
+ },
+ {
+  "arabic": "سأل الطالب المعلم.",
+  "english": "The student asked the teacher."
+ },
+ {
+  "arabic": "عندي سؤال.",
+  "english": "I have a question."
+ },
+ {
+  "arabic": "أجاب الطالب عن السؤال.",
+  "english": "The student answered the question."
+ },
+ {
+  "arabic": "هذا جواب صحيح.",
+  "english": "This is a correct answer."
+ },
+ {
+  "arabic": "شكرا على الإجابة.",
+  "english": "Thank you for the answer."
+ },
+ {
+  "arabic": "ذكر المعلم اسمي.",
+  "english": "The teacher mentioned my name."
+ },
+ {
+  "arabic": "هذه ذكرى جميلة.",
+  "english": "This is a beautiful memory."
+ },
+ {
+  "arabic": "شكرا على التذكير.",
+  "english": "Thanks for the reminder."
+ },
+ {
+  "arabic": "نسي الولد كتابه.",
+  "english": "The boy forgot his book."
+ },
+ {
+  "arabic": "النسيان مشكلة.",
+  "english": "Forgetfulness is a problem."
+ },
+ {
+  "arabic": "درس الطالب اللغة العربية.",
+  "english": "The student studied Arabic."
+ },
+ {
+  "arabic": "الدرس سهل اليوم.",
+  "english": "The lesson is easy today."
+ },
+ {
+  "arabic": "الدراسة في الجامعة صعبة.",
+  "english": "Studying at university is hard."
+ },
+ {
+  "arabic": "المدرسة قريبة من البيت.",
+  "english": "The school is near the house."
+ },
+ {
+  "arabic": "شرح المعلم الدرس.",
+  "english": "The teacher explained the lesson."
+ },
+ {
+  "arabic": "هذا شرح واضح.",
+  "english": "This is a clear explanation."
+ },
+ {
+  "arabic": "بحث الولد عن المفتاح.",
+  "english": "The boy searched for the key."
+ },
+ {
+  "arabic": "كتب الطالب بحثا.",
+  "english": "The student wrote a research paper."
+ },
+ {
+  "arabic": "هو باحث في الجامعة.",
+  "english": "He is a researcher at the university."
+ },
+ {
+  "arabic": "سمعت خبرا جيدا.",
+  "english": "I heard good news."
+ },
+ {
+  "arabic": "أخبر الولد أمه.",
+  "english": "The boy told his mother."
+ },
+ {
+  "arabic": "هو خبير في الاقتصاد.",
+  "english": "He is an expert in economics."
+ },
+ {
+  "arabic": "ترجم الكاتب الكتاب.",
+  "english": "The writer translated the book."
+ },
+ {
+  "arabic": "هذه ترجمة جيدة.",
+  "english": "This is a good translation."
+ },
+ {
+  "arabic": "يعمل أخي مترجما.",
+  "english": "My brother works as a translator."
+ },
+ {
+  "arabic": "قرر الرجل السفر.",
+  "english": "The man decided to travel."
+ },
+ {
+  "arabic": "هذا قرار صعب.",
+  "english": "This is a difficult decision."
+ },
+ {
+  "arabic": "حسب التاجر المال.",
+  "english": "The merchant counted the money."
+ },
+ {
+  "arabic": "الحساب من فضلك.",
+  "english": "The bill, please."
+ },
+ {
+  "arabic": "أعمل على الحاسوب.",
+  "english": "I work on the computer."
+ },
+ {
+  "arabic": "قدر الولد على حمل الحقيبة.",
+  "english": "The boy was able to carry the bag."
+ },
+ {
+  "arabic": "عنده قدرة كبيرة.",
+  "english": "He has great ability."
+ },
+ {
+  "arabic": "ما مقدار السكر؟",
+  "english": "What is the amount of sugar?"
+ },
+ {
+  "arabic": "بين المعلم المعنى.",
+  "english": "The teacher made the meaning clear."
+ },
+ {
+  "arabic": "قرأ الوزير البيان.",
+  "english": "The minister read the statement."
+ },
+ {
+  "arabic": "البيت بين المدرسة والسوق.",
+  "english": "The house is between the school and the market."
+ },
+ {
+  "arabic": "ناقش الطلاب الموضوع.",
+  "english": "The students discussed the topic."
+ },
+ {
+  "arabic": "كان النقاش طويلا.",
+  "english": "The discussion was long."
+ },
+ {
+  "arabic": "بعد المناقشة فهمنا الدرس.",
+  "english": "After the discussion we understood the lesson."
+ },
+ {
+  "arabic": "حفظ الولد الدرس.",
+  "english": "The boy memorized the lesson."
+ },
+ {
+  "arabic": "الحفظ يحتاج إلى وقت.",
+  "english": "Memorization takes time."
+ },
+ {
+  "arabic": "المال محفوظ في البنك.",
+  "english": "The money is kept safe in the bank."
+ },
+ {
+  "arabic": "ولدت الأم بنتا.",
+  "english": "The mother gave birth to a girl."
+ },
+ {
+  "arabic": "الولد يلعب في الحديقة.",
+  "english": "The boy is playing in the garden."
+ },
+ {
+  "arabic": "والدي طبيب.",
+  "english": "My father is a doctor."
+ },
+ {
+  "arabic": "المولود بخير.",
+  "english": "The newborn is well."
+ },
+ {
+  "arabic": "أسكن في حي هادئ.",
+  "english": "I live in a quiet neighbourhood."
+ },
+ {
+  "arabic": "الحياة جميلة.",
+  "english": "Life is beautiful."
+ },
+ {
+  "arabic": "تحية طيبة للجميع.",
+  "english": "Warm greetings to everyone."
+ },
+ {
+  "arabic": "مات الملك.",
+  "english": "The king died."
+ },
+ {
+  "arabic": "الموت حق.",
+  "english": "Death is certain."
+ },
+ {
+  "arabic": "البحر الميت في الأردن.",
+  "english": "The Dead Sea is in Jordan."
+ },
+ {
+  "arabic": "أحب الولد أمه.",
+  "english": "The boy loved his mother."
+ },
+ {
+  "arabic": "الحب جميل.",
+  "english": "Love is beautiful."
+ },
+ {
+  "arabic": "هو معلم محبوب.",
+  "english": "He is a well-loved teacher."
+ },
+ {
+  "arabic": "أنت صديق حبيب.",
+  "english": "You are a dear friend."
+ },
+ {
+  "arabic": "كره الولد الظلم.",
+  "english": "The boy hated injustice."
+ },
+ {
+  "arabic": "الكراهية لا تفيد.",
+  "english": "Hatred is no use."
+ },
+ {
+  "arabic": "الكذب مكروه.",
+  "english": "Lying is hateful."
+ },
+ {
+  "arabic": "ساعد الولد أباه.",
+  "english": "The boy helped his father."
+ },
+ {
+  "arabic": "أحتاج إلى مساعدة.",
+  "english": "I need help."
+ },
+ {
+  "arabic": "أنا سعيد اليوم.",
+  "english": "I am happy today."
+ },
+ {
+  "arabic": "السعادة في البيت.",
+  "english": "Happiness is at home."
+ },
+ {
+  "arabic": "دعا الرجل أصدقاءه.",
+  "english": "The man invited his friends."
+ },
+ {
+  "arabic": "شكرا على الدعوة.",
+  "english": "Thank you for the invitation."
+ },
+ {
+  "arabic": "دعاء الأم مهم.",
+  "english": "A mother's prayer is important."
+ },
+ {
+  "arabic": "شهد الرجل الحادث.",
+  "english": "The man witnessed the accident."
+ },
+ {
+  "arabic": "هو شاهد في المحكمة.",
+  "english": "He is a witness in court."
+ },
+ {
+  "arabic": "حصل على شهادة جامعية.",
+  "english": "He obtained a university degree."
+ },
+ {
+  "arabic": "زوجها مهندس.",
+  "english": "Her husband is an engineer."
+ },
+ {
+  "arabic": "زوجته طبيبة.",
+  "english": "His wife is a doctor."
+ },
+ {
+  "arabic": "تزوج أخي في الصيف.",
+  "english": "My brother got married in the summer."
+ },
+ {
+  "arabic": "الزواج مسؤولية.",
+  "english": "Marriage is a responsibility."
+ },
+ {
+  "arabic": "أهلي في القرية.",
+  "english": "My family is in the village."
+ },
+ {
+  "arabic": "أهلا بك في بيتنا.",
+  "english": "Welcome to our home."
+ },
+ {
+  "arabic": "هذا بنك أهلي.",
+  "english": "This is a national bank."
+ },
+ {
+  "arabic": "أكل الولد التفاحة.",
+  "english": "The boy ate the apple."
+ },
+ {
+  "arabic": "الأكل جاهز.",
+  "english": "The food is ready."
+ },
+ {
+  "arabic": "هذا مطعم مأكولات بحرية.",
+  "english": "This is a seafood restaurant."
+ },
+ {
+  "arabic": "شرب الولد الماء.",
+  "english": "The boy drank the water."
+ },
+ {
+  "arabic": "هذا شراب لذيذ.",
+  "english": "This is a delicious drink."
+ },
+ {
+  "arabic": "ما مشروبك المفضل؟",
+  "english": "What is your favourite drink?"
+ },
+ {
+  "arabic": "لبس الولد قميصا جديدا.",
+  "english": "The boy wore a new shirt."
+ },
+ {
+  "arabic": "هذا لباس تقليدي.",
+  "english": "This is traditional dress."
+ },
+ {
+  "arabic": "اشتريت ملابس جديدة.",
+  "english": "I bought new clothes."
+ },
+ {
+  "arabic": "طبخت الأم العشاء.",
+  "english": "The mother cooked dinner."
+ },
+ {
+  "arabic": "أحب الطبخ.",
+  "english": "I love cooking."
+ },
+ {
+  "arabic": "الأم في المطبخ.",
+  "english": "The mother is in the kitchen."
+ },
+ {
+  "arabic": "سكن الرجل في المدينة.",
+  "english": "The man lived in the city."
+ },
+ {
+  "arabic": "هو ساكن جديد في الحي.",
+  "english": "He is a new resident in the neighbourhood."
+ },
+ {
+  "arabic": "السكن غال هنا.",
+  "english": "Housing is expensive here."
+ },
+ {
+  "arabic": "هذا مسكن جميل.",
+  "english": "This is a beautiful home."
+ },
+ {
+  "arabic": "بنى الرجل بيتا.",
+  "english": "The man built a house."
+ },
+ {
+  "arabic": "البناء يحتاج إلى وقت.",
+  "english": "Construction takes time."
+ },
+ {
+  "arabic": "هذا مبنى قديم.",
+  "english": "This is an old building."
+ },
+ {
+  "arabic": "صنع النجار طاولة.",
+  "english": "The carpenter made a table."
+ },
+ {
+  "arabic": "صناعة السيارات مهمة.",
+  "english": "The car industry is important."
+ },
+ {
+  "arabic": "يعمل أبي في مصنع.",
+  "english": "My father works in a factory."
+ },
+ {
+  "arabic": "استعمل الولد القلم.",
+  "english": "The boy used the pen."
+ },
+ {
+  "arabic": "هذا للاستعمال اليومي.",
+  "english": "This is for daily use."
+ },
+ {
+  "arabic": "ملك الرجل بيتا كبيرا.",
+  "english": "The man owned a big house."
+ },
+ {
+  "arabic": "الملك في القصر.",
+  "english": "The king is in the palace."
+ },
+ {
+  "arabic": "هذا البيت ملك أبي.",
+  "english": "This house is my father's property."
+ },
+ {
+  "arabic": "هذه مملكة قديمة.",
+  "english": "This is an ancient kingdom."
+ },
+ {
+  "arabic": "باع الرجل سيارته.",
+  "english": "The man sold his car."
+ },
+ {
+  "arabic": "البيت للبيع.",
+  "english": "The house is for sale."
+ },
+ {
+  "arabic": "سألت البائع عن السعر.",
+  "english": "I asked the seller about the price."
+ },
+ {
+  "arabic": "اشترى الولد كتابا.",
+  "english": "The boy bought a book."
+ },
+ {
+  "arabic": "أريد شراء سيارة.",
+  "english": "I want to buy a car."
+ },
+ {
+  "arabic": "دفع الرجل الحساب.",
+  "english": "The man paid the bill."
+ },
+ {
+  "arabic": "الدفع عند الباب.",
+  "english": "Payment is at the door."
+ },
+ {
+  "arabic": "هذه الدفعة الأولى.",
+  "english": "This is the first instalment."
+ },
+ {
+  "arabic": "الحساب مدفوع.",
+  "english": "The bill is paid."
+ },
+ {
+  "arabic": "أعطى الأب ابنه هدية.",
+  "english": "The father gave his son a gift."
+ },
+ {
+  "arabic": "العطاء يجلب السعادة.",
+  "english": "Giving brings happiness."
+ },
+ {
+  "arabic": "ربح الفريق المباراة.",
+  "english": "The team won the match."
+ },
+ {
+  "arabic": "الربح قليل هذا العام.",
+  "english": "The profit is small this year."
+ },
+ {
+  "arabic": "من الرابح؟",
+  "english": "Who is the winner?"
+ },
+ {
+  "arabic": "خسر الفريق المباراة.",
+  "english": "The team lost the match."
+ },
+ {
+  "arabic": "هذه خسارة كبيرة.",
+  "english": "This is a big loss."
+ },
+ {
+  "arabic": "لا يوجد خاسر هنا.",
+  "english": "There is no loser here."
+ },
+ {
+  "arabic": "زرع الفلاح القمح.",
+  "english": "The farmer planted wheat."
+ },
+ {
+  "arabic": "الزراعة مهمة للبلد.",
+  "english": "Agriculture is important for the country."
+ },
+ {
+  "arabic": "يعيش جدي في مزرعة.",
+  "english": "My grandfather lives on a farm."
+ },
+ {
+  "arabic": "أثمرت الشجرة.",
+  "english": "The tree bore fruit."
+ },
+ {
+  "arabic": "هذه ثمرة العمل.",
+  "english": "This is the fruit of the work."
+ },
+ {
+  "arabic": "الثمار ناضجة.",
+  "english": "The fruits are ripe."
+ },
+ {
+  "arabic": "حصل الطالب على جائزة.",
+  "english": "The student obtained a prize."
+ },
+ {
+  "arabic": "الحصول على عمل صعب.",
+  "english": "Getting a job is hard."
+ },
+ {
+  "arabic": "المحصول جيد هذا العام.",
+  "english": "The crop is good this year."
+ },
+ {
+  "arabic": "احتاج الولد إلى مساعدة.",
+  "english": "The boy needed help."
+ },
+ {
+  "arabic": "أنا في حاجة إلى الراحة.",
+  "english": "I am in need of rest."
+ },
+ {
+  "arabic": "خدم الرجل بلده.",
+  "english": "The man served his country."
+ },
+ {
+  "arabic": "الخدمة ممتازة هنا.",
+  "english": "The service is excellent here."
+ },
+ {
+  "arabic": "الخادم لا يعمل الآن.",
+  "english": "The server is not working now."
+ },
+ {
+  "arabic": "حكم الملك البلد.",
+  "english": "The king ruled the country."
+ },
+ {
+  "arabic": "هذا حكم عادل.",
+  "english": "This is a fair verdict."
+ },
+ {
+  "arabic": "الحاكم في العاصمة.",
+  "english": "The ruler is in the capital."
+ },
+ {
+  "arabic": "الحكومة جديدة.",
+  "english": "The government is new."
+ },
+ {
+  "arabic": "ذهب المحامي إلى المحكمة.",
+  "english": "The lawyer went to the court."
+ },
+ {
+  "arabic": "العدل أساس الملك.",
+  "english": "Justice is the foundation of rule."
+ },
+ {
+  "arabic": "هو قاض عادل.",
+  "english": "He is a fair judge."
+ },
+ {
+  "arabic": "نريد العدالة للجميع.",
+  "english": "We want justice for all."
+ },
+ {
+  "arabic": "هذه هي الحقيقة.",
+  "english": "This is the truth."
+ },
+ {
+  "arabic": "بدأت الشرطة التحقيق.",
+  "english": "The police began the investigation."
+ },
+ {
+  "arabic": "ظلم الحاكم الناس.",
+  "english": "The ruler oppressed the people."
+ },
+ {
+  "arabic": "الظلم لا يدوم.",
+  "english": "Injustice does not last."
+ },
+ {
+  "arabic": "هو حاكم ظالم.",
+  "english": "He is an unjust ruler."
+ },
+ {
+  "arabic": "ساعد القاضي المظلوم.",
+  "english": "The judge helped the wronged man."
+ },
+ {
+  "arabic": "الأمن مهم في المدينة.",
+  "english": "Security is important in the city."
+ },
+ {
+  "arabic": "هذا مكان آمن.",
+  "english": "This is a safe place."
+ },
+ {
+  "arabic": "نعيش في أمان.",
+  "english": "We live in safety."
+ },
+ {
+  "arabic": "هو رجل أمين.",
+  "english": "He is an honest man."
+ },
+ {
+  "arabic": "انتهت الحرب.",
+  "english": "The war ended."
+ },
+ {
+  "arabic": "الحروب تدمر البلاد.",
+  "english": "Wars destroy countries."
+ },
+ {
+  "arabic": "كان جدي محاربا.",
+  "english": "My grandfather was a fighter."
+ },
+ {
+  "arabic": "نريد السلام.",
+  "english": "We want peace."
+ },
+ {
+  "arabic": "في السلم وفي الحرب.",
+  "english": "In peace and in war."
+ },
+ {
+  "arabic": "العقل السليم في الجسم السليم.",
+  "english": "A sound mind in a sound body."
+ },
+ {
+  "arabic": "استسلم الجيش.",
+  "english": "The army surrendered."
+ },
+ {
+  "arabic": "هذا قانون جديد.",
+  "english": "This is a new law."
+ },
+ {
+  "arabic": "القوانين مهمة للمجتمع.",
+  "english": "Laws are important for society."
+ },
+ {
+  "arabic": "نظم الطلاب رحلة.",
+  "english": "The students organized a trip."
+ },
+ {
+  "arabic": "هذا نظام جديد.",
+  "english": "This is a new system."
+ },
+ {
+  "arabic": "التنظيم مهم في العمل.",
+  "english": "Organization is important at work."
+ },
+ {
+  "arabic": "يعمل في منظمة دولية.",
+  "english": "He works at an international organization."
+ },
+ {
+  "arabic": "الشعب يريد السلام.",
+  "english": "The people want peace."
+ },
+ {
+  "arabic": "شعوب العالم كثيرة.",
+  "english": "The peoples of the world are many."
+ },
+ {
+  "arabic": "هذا مطعم شعبي.",
+  "english": "This is a popular local restaurant."
+ },
+ {
+  "arabic": "الأرض كبيرة.",
+  "english": "The earth is big."
+ },
+ {
+  "arabic": "هذه أراض زراعية.",
+  "english": "These are agricultural lands."
+ },
+ {
+  "arabic": "أسكن في الطابق الأرضي.",
+  "english": "I live on the ground floor."
+ },
+ {
+  "arabic": "السماء زرقاء.",
+  "english": "The sky is blue."
+ },
+ {
+  "arabic": "خلق الله السماوات والأرض.",
+  "english": "God created the heavens and the earth."
+ },
+ {
+  "arabic": "قميصه سماوي اللون.",
+  "english": "His shirt is sky-blue."
+ },
+ {
+  "arabic": "صاحب السمو الأمير.",
+  "english": "His Highness the Prince."
+ },
+ {
+  "arabic": "الشمس حارة اليوم.",
+  "english": "The sun is hot today."
+ },
+ {
+  "arabic": "هذه طاقة شمسية.",
+  "english": "This is solar energy."
+ },
+ {
+  "arabic": "القمر جميل الليلة.",
+  "english": "The moon is beautiful tonight."
+ },
+ {
+  "arabic": "لهذا الكوكب أقمار كثيرة.",
+  "english": "This planet has many moons."
+ },
+ {
+  "arabic": "هذا شهر قمري.",
+  "english": "This is a lunar month."
+ },
+ {
+  "arabic": "الليل هادئ.",
+  "english": "The night is quiet."
+ },
+ {
+  "arabic": "كانت ليلة جميلة.",
+  "english": "It was a beautiful night."
+ },
+ {
+  "arabic": "بقينا هناك ثلاث ليال.",
+  "english": "We stayed there three nights."
+ },
+ {
+  "arabic": "أعمل في دوام ليلي.",
+  "english": "I work a night shift."
+ },
+ {
+  "arabic": "البحر هادئ اليوم.",
+  "english": "The sea is calm today."
+ },
+ {
+  "arabic": "البحار واسعة.",
+  "english": "The seas are vast."
+ },
+ {
+  "arabic": "أحب الطعام البحري.",
+  "english": "I like seafood."
+ },
+ {
+  "arabic": "هذا جبل عال.",
+  "english": "This is a high mountain."
+ },
+ {
+  "arabic": "الجبال جميلة في الشتاء.",
+  "english": "The mountains are beautiful in winter."
+ },
+ {
+  "arabic": "هذه منطقة جبلية.",
+  "english": "This is a mountainous region."
+ },
+ {
+  "arabic": "الريح قوية اليوم.",
+  "english": "The wind is strong today."
+ },
+ {
+  "arabic": "الرياح باردة في الشتاء.",
+  "english": "The winds are cold in winter."
+ },
+ {
+  "arabic": "المطر غزير اليوم.",
+  "english": "The rain is heavy today."
+ },
+ {
+  "arabic": "الأمطار كثيرة في الشتاء.",
+  "english": "Rains are plentiful in winter."
+ },
+ {
+  "arabic": "الجو ممطر اليوم.",
+  "english": "The weather is rainy today."
+ },
+ {
+  "arabic": "نور الشمس قوي.",
+  "english": "The sunlight is strong."
+ },
+ {
+  "arabic": "أنوار المدينة جميلة.",
+  "english": "The city lights are beautiful."
+ },
+ {
+  "arabic": "القمر منير الليلة.",
+  "english": "The moon is bright tonight."
+ },
+ {
+  "arabic": "النار حارة.",
+  "english": "Fire is hot."
+ },
+ {
+  "arabic": "بدأ الدرس الآن.",
+  "english": "The lesson has begun now."
+ },
+ {
+  "arabic": "هذه بداية جديدة.",
+  "english": "This is a new beginning."
+ },
+ {
+  "arabic": "تم العمل بنجاح.",
+  "english": "The work was completed successfully."
+ },
+ {
+  "arabic": "كل شيء تمام.",
+  "english": "Everything is fine."
+ },
+ {
+  "arabic": "أنا في راحة تامة.",
+  "english": "I am in complete comfort."
+ },
+ {
+  "arabic": "زاد عدد الطلاب.",
+  "english": "The number of students increased."
+ },
+ {
+  "arabic": "هناك زيادة في الأسعار.",
+  "english": "There is an increase in prices."
+ },
+ {
+  "arabic": "اثنان زائد اثنين.",
+  "english": "Two plus two."
+ },
+ {
+  "arabic": "نقص عدد الطلاب.",
+  "english": "The number of students decreased."
+ },
+ {
+  "arabic": "هناك نقص في الماء.",
+  "english": "There is a shortage of water."
+ },
+ {
+  "arabic": "العمل ناقص.",
+  "english": "The work is incomplete."
+ },
+ {
+  "arabic": "كبر الولد بسرعة.",
+  "english": "The boy grew up quickly."
+ },
+ {
+  "arabic": "هذا بيت كبير.",
+  "english": "This is a big house."
+ },
+ {
+  "arabic": "أخي أكبر مني.",
+  "english": "My brother is older than me."
+ },
+ {
+  "arabic": "صغر القميص بعد الغسل.",
+  "english": "The shirt shrank after washing."
+ },
+ {
+  "arabic": "هذا بيت صغير.",
+  "english": "This is a small house."
+ },
+ {
+  "arabic": "أختي أصغر مني.",
+  "english": "My sister is younger than me."
+ },
+ {
+  "arabic": "غير الرجل رأيه.",
+  "english": "The man changed his mind."
+ },
+ {
+  "arabic": "نحتاج إلى تغيير.",
+  "english": "We need a change."
+ },
+ {
+  "arabic": "الجو متغير اليوم.",
+  "english": "The weather is changeable today."
+ },
+ {
+  "arabic": "هذا غير ممكن.",
+  "english": "This is not possible."
+ },
+ {
+  "arabic": "ثبت أن الخبر صحيح.",
+  "english": "It was proven that the news is true."
+ },
+ {
+  "arabic": "السعر ثابت.",
+  "english": "The price is fixed."
+ },
+ {
+  "arabic": "الثبات مهم في العمل.",
+  "english": "Stability is important at work."
+ },
+ {
+  "arabic": "اقترب الشتاء.",
+  "english": "Winter has approached."
+ },
+ {
+  "arabic": "البيت قرب المدرسة.",
+  "english": "The house is near the school."
+ },
+ {
+  "arabic": "السوق قريب من هنا.",
+  "english": "The market is near here."
+ },
+ {
+  "arabic": "ما أقرب محطة؟",
+  "english": "What is the nearest station?"
+ },
+ {
+  "arabic": "بيننا قرابة.",
+  "english": "We are related."
+ },
+ {
+  "arabic": "يبعد البيت عن المدرسة.",
+  "english": "The house is far from the school."
+ },
+ {
+  "arabic": "المطار بعيد عن المدينة.",
+  "english": "The airport is far from the city."
+ },
+ {
+  "arabic": "هذا أبعد مكان.",
+  "english": "This is the farthest place."
+ },
+ {
+  "arabic": "أراك بعد الدرس.",
+  "english": "I will see you after the lesson."
+ },
+ {
+  "arabic": "ما سبب المشكلة؟",
+  "english": "What is the cause of the problem?"
+ },
+ {
+  "arabic": "الأسباب كثيرة.",
+  "english": "The reasons are many."
+ },
+ {
+  "arabic": "سبب المطر مشاكل كثيرة.",
+  "english": "The rain caused many problems."
+ },
+ {
+  "arabic": "نتج عن ذلك مشكلة.",
+  "english": "A problem resulted from that."
+ },
+ {
+  "arabic": "النتيجة جيدة.",
+  "english": "The result is good."
+ },
+ {
+  "arabic": "أنتج المصنع سيارات.",
+  "english": "The factory produced cars."
+ },
+ {
+  "arabic": "زاد الإنتاج هذا العام.",
+  "english": "Production increased this year."
+ },
+ {
+  "arabic": "هذا منتج محلي.",
+  "english": "This is a local product."
+ },
+ {
+  "arabic": "ما شكل البيت؟",
+  "english": "What does the house look like?"
+ },
+ {
+  "arabic": "رسم الطفل أشكالا كثيرة.",
+  "english": "The child drew many shapes."
+ },
+ {
+  "arabic": "شكل الرئيس حكومة جديدة.",
+  "english": "The president formed a new government."
+ },
+ {
+  "arabic": "التشكيل يساعد على القراءة.",
+  "english": "Vowel marks help with reading."
+ },
+ {
+  "arabic": "عندي مشكلة صغيرة.",
+  "english": "I have a small problem."
+ },
+ {
+  "arabic": "هو مثل أخيه.",
+  "english": "He is like his brother."
+ },
+ {
+  "arabic": "هذا مثال جيد.",
+  "english": "This is a good example."
+ },
+ {
+  "arabic": "مثل اللاعب بلده.",
+  "english": "The player represented his country."
+ },
+ {
+  "arabic": "يدرس التمثيل في الجامعة.",
+  "english": "He studies acting at university."
+ },
+ {
+  "arabic": "هو ممثل مشهور.",
+  "english": "He is a famous actor."
+ },
+ {
+  "arabic": "جمع الولد الكتب.",
+  "english": "The boy gathered the books."
+ },
+ {
+  "arabic": "ما جمع هذه الكلمة؟",
+  "english": "What is the plural of this word?"
+ },
+ {
+  "arabic": "جاءت جماعة من الطلاب.",
+  "english": "A group of students came."
+ },
+ {
+  "arabic": "عندي مجموعة كتب.",
+  "english": "I have a collection of books."
+ },
+ {
+  "arabic": "أدرس في الجامعة.",
+  "english": "I study at the university."
+ },
+ {
+  "arabic": "ما الفرق بينهما؟",
+  "english": "What is the difference between them?"
+ },
+ {
+  "arabic": "فرق المعلم بين الطالبين.",
+  "english": "The teacher separated the two students."
+ },
+ {
+  "arabic": "فاز الفريق بالمباراة.",
+  "english": "The team won the match."
+ },
+ {
+  "arabic": "هذه فرقة موسيقية.",
+  "english": "This is a music band."
+ },
+ {
+  "arabic": "قطع الرجل الخبز.",
+  "english": "The man cut the bread."
+ },
+ {
+  "arabic": "قطع الأشجار ممنوع.",
+  "english": "Cutting down trees is forbidden."
+ },
+ {
+  "arabic": "أريد قطعة خبز.",
+  "english": "I want a piece of bread."
+ },
+ {
+  "arabic": "الماء مقطوع اليوم.",
+  "english": "The water is cut off today."
+ },
+ {
+  "arabic": "شاهدت مقطعا قصيرا.",
+  "english": "I watched a short clip."
+ },
+ {
+  "arabic": "هذه همزة وصل.",
+  "english": "This is a connecting hamza."
+ },
+ {
+  "arabic": "وصل السائق الطلب.",
+  "english": "The driver delivered the order."
+ },
+ {
+  "arabic": "شكرا على الاتصال.",
+  "english": "Thank you for calling."
+ },
+ {
+  "arabic": "لا صلة بينهما.",
+  "english": "There is no link between them."
+ },
+ {
+  "arabic": "قسم الأب الخبز.",
+  "english": "The father divided the bread."
+ },
+ {
+  "arabic": "أعمل في قسم المبيعات.",
+  "english": "I work in the sales department."
+ },
+ {
+  "arabic": "في الجامعة أقسام كثيرة.",
+  "english": "The university has many departments."
+ },
+ {
+  "arabic": "هذه قسمة عادلة.",
+  "english": "This is a fair division."
+ },
+ {
+  "arabic": "تقسيم العمل مهم.",
+  "english": "Dividing up the work is important."
+ },
+ {
+  "arabic": "ما نوع السيارة؟",
+  "english": "What type of car is it?"
+ },
+ {
+  "arabic": "هناك أنواع كثيرة.",
+  "english": "There are many types."
+ },
+ {
+  "arabic": "التنوع جميل.",
+  "english": "Diversity is beautiful."
+ },
+ {
+  "arabic": "الطعام متنوع هنا.",
+  "english": "The food is varied here."
+ },
+ {
+  "arabic": "الجسم يحتاج إلى الماء.",
+  "english": "The body needs water."
+ },
+ {
+  "arabic": "هذه أجسام صغيرة جدا.",
+  "english": "These are very small bodies."
+ },
+ {
+  "arabic": "هذا تعب جسمي.",
+  "english": "This is physical tiredness."
+ },
+ {
+  "arabic": "الصحة أهم من المال.",
+  "english": "Health is more important than money."
+ },
+ {
+  "arabic": "هذا طعام صحي.",
+  "english": "This is healthy food."
+ },
+ {
+  "arabic": "مرض الولد في الشتاء.",
+  "english": "The boy fell ill in the winter."
+ },
+ {
+  "arabic": "هذا مرض خطير.",
+  "english": "This is a serious illness."
+ },
+ {
+  "arabic": "المريض في المستشفى.",
+  "english": "The patient is in the hospital."
+ },
+ {
+  "arabic": "الممرض يساعد الطبيب.",
+  "english": "The nurse helps the doctor."
+ },
+ {
+  "arabic": "يدرس أخي الطب.",
+  "english": "My brother studies medicine."
+ },
+ {
+  "arabic": "ذهبت إلى الطبيب.",
+  "english": "I went to the doctor."
+ },
+ {
+  "arabic": "أحتاج إلى فحص طبي.",
+  "english": "I need a medical check-up."
+ },
+ {
+  "arabic": "عالج الطبيب المريض.",
+  "english": "The doctor treated the patient."
+ },
+ {
+  "arabic": "هذا علاج جديد.",
+  "english": "This is a new treatment."
+ },
+ {
+  "arabic": "معالجة المشكلة مهمة.",
+  "english": "Dealing with the problem is important."
+ },
+ {
+  "arabic": "نام الطفل مبكرا.",
+  "english": "The child slept early."
+ },
+ {
+  "arabic": "النوم مهم للصحة.",
+  "english": "Sleep is important for health."
+ },
+ {
+  "arabic": "الطفل نائم الآن.",
+  "english": "The child is asleep now."
+ },
+ {
+  "arabic": "تعب الرجل من العمل.",
+  "english": "The man got tired from work."
+ },
+ {
+  "arabic": "أشعر بتعب شديد.",
+  "english": "I feel very tired."
+ },
+ {
+  "arabic": "أنا تعبان اليوم.",
+  "english": "I am tired today."
+ },
+ {
+  "arabic": "هذا عمل متعب.",
+  "english": "This is tiring work."
+ },
+ {
+  "arabic": "هو رجل قوي.",
+  "english": "He is a strong man."
+ },
+ {
+  "arabic": "هو أقوى من أخيه.",
+  "english": "He is stronger than his brother."
+ },
+ {
+  "arabic": "ضعف صوته من التعب.",
+  "english": "His voice grew weak from tiredness."
+ },
+ {
+  "arabic": "هذه نقطة ضعف.",
+  "english": "This is a weak point."
+ },
+ {
+  "arabic": "الإنترنت ضعيف هنا.",
+  "english": "The internet is weak here."
+ },
+ {
+  "arabic": "الرياضة مفيدة للجسم.",
+  "english": "Exercise is good for the body."
+ },
+ {
+  "arabic": "هو رياضي مشهور.",
+  "english": "He is a famous athlete."
+ },
+ {
+  "arabic": "أحب الرياضيات.",
+  "english": "I like mathematics."
+ },
+ {
+  "arabic": "سافر أبي إلى مصر.",
+  "english": "My father travelled to Egypt."
+ },
+ {
+  "arabic": "السفر متعة.",
+  "english": "Travel is a pleasure."
+ },
+ {
+  "arabic": "المسافر ينتظر القطار.",
+  "english": "The traveller is waiting for the train."
+ },
+ {
+  "arabic": "ذهبت إلى السفارة.",
+  "english": "I went to the embassy."
+ },
+ {
+  "arabic": "رحل الضيوف في الصباح.",
+  "english": "The guests left in the morning."
+ },
+ {
+  "arabic": "كانت رحلة جميلة.",
+  "english": "It was a beautiful trip."
+ },
+ {
+  "arabic": "الكاتب الراحل مشهور.",
+  "english": "The late writer is famous."
+ },
+ {
+  "arabic": "طار الطير فوق البحر.",
+  "english": "The bird flew over the sea."
+ },
+ {
+  "arabic": "وصلت الطائرة في الوقت.",
+  "english": "The plane arrived on time."
+ },
+ {
+  "arabic": "الطير على الشجرة.",
+  "english": "The bird is on the tree."
+ },
+ {
+  "arabic": "ركب الولد الحافلة.",
+  "english": "The boy got on the bus."
+ },
+ {
+  "arabic": "الراكب في القطار.",
+  "english": "The passenger is on the train."
+ },
+ {
+  "arabic": "ركوب الخيل ممتع.",
+  "english": "Horse riding is fun."
+ },
+ {
+  "arabic": "ساق الرجل السيارة.",
+  "english": "The man drove the car."
+ },
+ {
+  "arabic": "سألت السائق عن الطريق.",
+  "english": "I asked the driver about the road."
+ },
+ {
+  "arabic": "نزل الرجل من القطار.",
+  "english": "The man got off the train."
+ },
+ {
+  "arabic": "النزول من هنا.",
+  "english": "Get off here."
+ },
+ {
+  "arabic": "هذا منزل جميل.",
+  "english": "This is a beautiful house."
+ },
+ {
+  "arabic": "زار الولد جده.",
+  "english": "The boy visited his grandfather."
+ },
+ {
+  "arabic": "شكرا على الزيارة.",
+  "english": "Thank you for the visit."
+ },
+ {
+  "arabic": "الزائر في الغرفة.",
+  "english": "The visitor is in the room."
+ },
+ {
+  "arabic": "عبر الولد الشارع.",
+  "english": "The boy crossed the street."
+ },
+ {
+  "arabic": "عبور النهر صعب.",
+  "english": "Crossing the river is hard."
+ },
+ {
+  "arabic": "هذه عبارة مشهورة.",
+  "english": "This is a well-known phrase."
+ },
+ {
+  "arabic": "هذا تعبير جميل.",
+  "english": "This is a beautiful expression."
+ },
+ {
+  "arabic": "الطريق طويل.",
+  "english": "The road is long."
+ },
+ {
+  "arabic": "هذه طريقة سهلة.",
+  "english": "This is an easy way."
+ },
+ {
+  "arabic": "هناك طرق كثيرة.",
+  "english": "There are many ways."
+ },
+ {
+  "arabic": "هذا بلد جميل.",
+  "english": "This is a beautiful country."
+ },
+ {
+  "arabic": "زرت بلادا كثيرة.",
+  "english": "I visited many countries."
+ },
+ {
+  "arabic": "هذا خبز بلدي.",
+  "english": "This is local bread."
+ },
+ {
+  "arabic": "فرح الولد بالهدية.",
+  "english": "The boy was glad about the gift."
+ },
+ {
+  "arabic": "هذا يوم فرح.",
+  "english": "This is a day of joy."
+ },
+ {
+  "arabic": "أنا فرحان جدا.",
+  "english": "I am very happy."
+ },
+ {
+  "arabic": "حزن الولد على صديقه.",
+  "english": "The boy was sad about his friend."
+ },
+ {
+  "arabic": "الحزن لا يدوم.",
+  "english": "Sadness does not last."
+ },
+ {
+  "arabic": "لماذا أنت حزين؟",
+  "english": "Why are you sad?"
+ },
+ {
+  "arabic": "خاف الطفل من الكلب.",
+  "english": "The child was afraid of the dog."
+ },
+ {
+  "arabic": "الخوف شيء طبيعي.",
+  "english": "Fear is a natural thing."
+ },
+ {
+  "arabic": "لست خائفا.",
+  "english": "I am not afraid."
+ },
+ {
+  "arabic": "غضب الأب من ابنه.",
+  "english": "The father got angry with his son."
+ },
+ {
+  "arabic": "الغضب لا يفيد.",
+  "english": "Anger does no good."
+ },
+ {
+  "arabic": "هل أنت غاضب مني؟",
+  "english": "Are you angry with me?"
+ },
+ {
+  "arabic": "صبر الرجل على التعب.",
+  "english": "The man bore the tiredness patiently."
+ },
+ {
+  "arabic": "الصبر مفتاح الفرج.",
+  "english": "Patience is the key to relief."
+ },
+ {
+  "arabic": "هو رجل صابر.",
+  "english": "He is a patient man."
+ },
+ {
+  "arabic": "شكر الضيف صاحب البيت.",
+  "english": "The guest thanked the host."
+ },
+ {
+  "arabic": "لك كل الشكر.",
+  "english": "All thanks to you."
+ },
+ {
+  "arabic": "شكرا على المساعدة.",
+  "english": "Thank you for the help."
+ },
+ {
+  "arabic": "صدق الولد في كلامه.",
+  "english": "The boy told the truth."
+ },
+ {
+  "arabic": "الصدق أفضل طريق.",
+  "english": "Honesty is the best way."
+ },
+ {
+  "arabic": "هو رجل صادق.",
+  "english": "He is a truthful man."
+ },
+ {
+  "arabic": "هذا صديقي.",
+  "english": "This is my friend."
+ },
+ {
+  "arabic": "كذب الولد على أمه.",
+  "english": "The boy lied to his mother."
+ },
+ {
+  "arabic": "هذا خبر كاذب.",
+  "english": "This is false news."
+ },
+ {
+  "arabic": "الكرم من أخلاق العرب.",
+  "english": "Generosity is an Arab virtue."
+ },
+ {
+  "arabic": "هو رجل كريم.",
+  "english": "He is a generous man."
+ },
+ {
+  "arabic": "أكرم الرجل ضيفه.",
+  "english": "The man honoured his guest."
+ },
+ {
+  "arabic": "هو أكرم من أخيه.",
+  "english": "He is more generous than his brother."
+ },
+ {
+  "arabic": "رحم الله الجميع.",
+  "english": "May God have mercy on everyone."
+ },
+ {
+  "arabic": "المطر رحمة.",
+  "english": "Rain is a mercy."
+ },
+ {
+  "arabic": "هو قاض رحيم.",
+  "english": "He is a merciful judge."
+ },
+ {
+  "arabic": "فكر الطالب في الجواب.",
+  "english": "The student thought about the answer."
+ },
+ {
+  "arabic": "هذا فكر جديد.",
+  "english": "This is new thinking."
+ },
+ {
+  "arabic": "عندي فكرة جيدة.",
+  "english": "I have a good idea."
+ },
+ {
+  "arabic": "التفكير يحتاج إلى وقت.",
+  "english": "Thinking takes time."
+ },
+ {
+  "arabic": "العقل نعمة.",
+  "english": "The mind is a blessing."
+ },
+ {
+  "arabic": "هو ولد عاقل.",
+  "english": "He is a sensible boy."
+ },
+ {
+  "arabic": "هذا سعر معقول.",
+  "english": "This is a reasonable price."
+ },
+ {
+  "arabic": "ظن الرجل أن الباب مغلق.",
+  "english": "The man thought the door was closed."
+ },
+ {
+  "arabic": "هذا مجرد ظن.",
+  "english": "This is only a supposition."
+ },
+ {
+  "arabic": "شعر الولد بالبرد.",
+  "english": "The boy felt the cold."
+ },
+ {
+  "arabic": "هذا شعور جميل.",
+  "english": "This is a beautiful feeling."
+ },
+ {
+  "arabic": "أحب الشعر العربي.",
+  "english": "I love Arabic poetry."
+ },
+ {
+  "arabic": "هو شاعر مشهور.",
+  "english": "He is a famous poet."
+ },
+ {
+  "arabic": "أراد الولد أن يلعب.",
+  "english": "The boy wanted to play."
+ },
+ {
+  "arabic": "عنده إرادة قوية.",
+  "english": "He has strong willpower."
+ },
+ {
+  "arabic": "هذا هو المراد.",
+  "english": "This is what is wanted."
+ },
+ {
+  "arabic": "حاول الطالب مرة أخرى.",
+  "english": "The student tried once more."
+ },
+ {
+  "arabic": "هذه محاولة جيدة.",
+  "english": "This is a good attempt."
+ },
+ {
+  "arabic": "كيف الحال؟",
+  "english": "How are things?"
+ },
+ {
+  "arabic": "جلسنا حول الطاولة.",
+  "english": "We sat around the table."
+ },
+ {
+  "arabic": "اختار الولد كتابا.",
+  "english": "The boy chose a book."
+ },
+ {
+  "arabic": "هذا اختيار صعب.",
+  "english": "This is a hard choice."
+ },
+ {
+  "arabic": "صباح الخير.",
+  "english": "Good morning."
+ },
+ {
+  "arabic": "نجح الطالب في الامتحان.",
+  "english": "The student passed the exam."
+ },
+ {
+  "arabic": "النجاح يحتاج إلى عمل.",
+  "english": "Success takes work."
+ },
+ {
+  "arabic": "هو تاجر ناجح.",
+  "english": "He is a successful merchant."
+ },
+ {
+  "arabic": "فشل المشروع.",
+  "english": "The project failed."
+ },
+ {
+  "arabic": "الفشل بداية النجاح.",
+  "english": "Failure is the beginning of success."
+ },
+ {
+  "arabic": "هذه محاولة فاشلة.",
+  "english": "This is a failed attempt."
+ },
+ {
+  "arabic": "ما هدفك؟",
+  "english": "What is your goal?"
+ },
+ {
+  "arabic": "عندي أهداف كثيرة.",
+  "english": "I have many goals."
+ },
+ {
+  "arabic": "استهدف المشروع الشباب.",
+  "english": "The project targeted young people."
+ },
+ {
+  "arabic": "هذه مدينة كبيرة.",
+  "english": "This is a big city."
+ },
+ {
+  "arabic": "زرت مدنا كثيرة.",
+  "english": "I visited many cities."
+ },
+ {
+  "arabic": "هذا قانون مدني.",
+  "english": "This is a civil law."
+ },
+ {
+  "arabic": "هذا شارع طويل.",
+  "english": "This is a long street."
+ },
+ {
+  "arabic": "هذا مشروع جديد.",
+  "english": "This is a new project."
+ },
+ {
+  "arabic": "شوارع المدينة واسعة.",
+  "english": "The city's streets are wide."
+ },
+ {
+  "arabic": "شارك الطلاب في الرحلة.",
+  "english": "The students took part in the trip."
+ },
+ {
+  "arabic": "يعمل في شركة كبيرة.",
+  "english": "He works at a big company."
+ },
+ {
+  "arabic": "هو شريكي في العمل.",
+  "english": "He is my business partner."
+ },
+ {
+  "arabic": "شكرا على المشاركة.",
+  "english": "Thank you for taking part."
+ },
+ {
+  "arabic": "أبحث عن وظيفة.",
+  "english": "I am looking for a job."
+ },
+ {
+  "arabic": "الموظف في المكتب.",
+  "english": "The employee is in the office."
+ },
+ {
+  "arabic": "وظفت الشركة عمالا جددا.",
+  "english": "The company hired new workers."
+ },
+ {
+  "arabic": "أرسل الولد رسالة.",
+  "english": "The boy sent a letter."
+ },
+ {
+  "arabic": "وصلت الرسالة اليوم.",
+  "english": "The letter arrived today."
+ },
+ {
+  "arabic": "جاء رسول من الملك.",
+  "english": "A messenger came from the king."
+ },
+ {
+  "arabic": "هذه صورة جميلة.",
+  "english": "This is a beautiful picture."
+ },
+ {
+  "arabic": "صور الرجل الجبل.",
+  "english": "The man photographed the mountain."
+ },
+ {
+  "arabic": "التصوير ممنوع هنا.",
+  "english": "Photography is forbidden here."
+ },
+ {
+  "arabic": "هو مصور مشهور.",
+  "english": "He is a famous photographer."
+ },
+ {
+  "arabic": "طبع الكاتب كتابه.",
+  "english": "The writer printed his book."
+ },
+ {
+  "arabic": "يعمل أبي في مطبعة.",
+  "english": "My father works at a printing press."
+ },
+ {
+  "arabic": "أحب الطبيعة.",
+  "english": "I love nature."
+ },
+ {
+  "arabic": "هذا شيء طبيعي.",
+  "english": "This is a natural thing."
+ },
+ {
+  "arabic": "نشر الكاتب مقالا.",
+  "english": "The writer published an article."
+ },
+ {
+  "arabic": "هذه دار نشر.",
+  "english": "This is a publishing house."
+ },
+ {
+  "arabic": "الناشر يريد الكتاب.",
+  "english": "The publisher wants the book."
+ },
+ {
+  "arabic": "قرأت منشورا جديدا.",
+  "english": "I read a new post."
+ },
+ {
+  "arabic": "أعلنت الحكومة القرار.",
+  "english": "The government announced the decision."
+ },
+ {
+  "arabic": "رأيت إعلانا في الشارع.",
+  "english": "I saw an advertisement in the street."
+ },
+ {
+  "arabic": "هذا اجتماع علني.",
+  "english": "This is a public meeting."
+ },
+ {
+  "arabic": "ماذا حدث هنا؟",
+  "english": "What happened here?"
+ },
+ {
+  "arabic": "هذا بيت حديث.",
+  "english": "This is a modern house."
+ },
+ {
+  "arabic": "وقع حادث في الشارع.",
+  "english": "An accident happened in the street."
+ },
+ {
+  "arabic": "تحدث الرجل مع جاره.",
+  "english": "The man spoke with his neighbour."
+ }
 ]

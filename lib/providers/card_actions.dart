@@ -46,6 +46,13 @@ class CardActions {
     _refresh(queueChanged: true);
   }
 
+  /// Marks a read-once card as read, so it isn't put in front of the user
+  /// again in a study session.
+  Future<void> markSeen(Flashcard card) async {
+    await _ref.read(flashcardRepositoryProvider).markSeen(card.id!);
+    _refresh(queueChanged: true);
+  }
+
   Future<void> reset(Flashcard card) async {
     await _ref.read(flashcardRepositoryProvider).resetFlashcard(card.id!);
     _refresh(queueChanged: true);

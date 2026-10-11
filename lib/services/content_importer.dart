@@ -7,6 +7,8 @@ import '../config/campaign_sources.dart';
 import '../models/deck.dart';
 import '../models/flashcard.dart';
 import '../repositories/flashcard_repository.dart';
+import '../utils/arabic_normalize.dart';
+import '../utils/sentence_tokens.dart';
 
 /// Imports flashcards from a bundled JSON asset into a named deck.
 ///
@@ -77,8 +79,10 @@ class ContentImporter {
     }
     decks.add(await importPatterns());
     decks.add(await importAlphabet());
-    decks.add(await importSentences());
-    decks.add(await importExtras());
+    await importSentences();
+    for (final source in readOnceSources) {
+      await importReadOnce(source);
+    }
     return decks;
   }
 
@@ -201,74 +205,85 @@ class ContentImporter {
     return deck;
   }
 
-  /// Imports assets/data/sentences.json into the [sentencesSource] deck,
-  /// one card per sentence:
+  /// Loads assets/data/sentences.json into the sentence corpus, if this
+  /// build's edition of it ([sentencesVersion]) isn't the one already
+  /// loaded. On every launch after the first that's one small query and
+  /// nothing else: the file isn't even opened.
   ///
   /// ```json
   /// [{"arabic": "هذا كتاب جديد.", "english": "This is a new book."}]
   /// ```
   ///
-  /// `translit` and `note` are optional. The file is the whole corpus:
-  /// replace it and sentences that are gone from it disappear from the
-  /// app too, except ones the user has already studied.
-  Future<Deck> importSentences([
-    CampaignSource source = sentencesSource,
-  ]) async {
-    final deck = await _repository.getOrCreateDeck(
-      source.deckName,
-      description: source.description,
-    );
-    final entries = await _loadEntries(source.assetPath);
-    await _store(deck, prune: true, [
+  /// The file is the whole corpus: loading a new edition replaces the old
+  /// one. Sentences the user has added to their queue are flashcards by
+  /// then, and stay whatever happens to the file.
+  Future<void> importSentences({int version = sentencesVersion}) async {
+    if (await _repository.getSentencesVersion() == version) return;
+    final entries = await _loadEntries(sentencesSource.assetPath);
+    await _repository.replaceSentences(version: version, [
       for (final entry in entries)
-        Flashcard.newCard(
-          arabicWord: entry['arabic'] as String,
-          englishTranslation: entry['english'] as String? ?? '',
-          exampleSentence: '',
-          deckId: deck.id!,
-          transliteration: entry['translit'] as String?,
-          note: entry['note'] as String?,
-          kind: CardKind.sentence,
-        ),
+        if (entry['arabic'] case final String arabic when arabic.isNotEmpty)
+          (
+            arabic: arabic,
+            english: entry['english'] as String? ?? '',
+            search:
+                '${normalizeArabic(arabic)}\n'
+                '${(entry['english'] as String? ?? '').toLowerCase()}',
+            keys: sentenceKeys(arabic),
+          ),
     ]);
-    return deck;
   }
 
-  /// Imports assets/data/extras.json into the [extrasSource] deck: cards
-  /// about anything at all, to be read once rather than learned. Each is
-  /// shown in the study session once `after_roots` roots have been
-  /// introduced, with a single "Continue" button instead of grades:
+  /// Imports one file of read-once cards (lessons, stories, anything)
+  /// into its deck. These are read rather than learned: each is shown in
+  /// the study session once `after_roots` roots have been introduced,
+  /// with a single "Continue" button instead of grades.
   ///
   /// ```json
   /// [
   ///   {
-  ///     "title": "Why three letters?",
-  ///     "label": "Did you know?",
-  ///     "body": "Almost every Arabic word grows from a root of three...",
-  ///     "after_roots": 10
+  ///     "title": "The doer",
+  ///     "body": "A long ā after the first letter gives the one who...",
+  ///     "after_roots": 6,
+  ///     "arabic": "فَاعِل",
+  ///     "translit": "fāʿil",
+  ///     "examples": [
+  ///       {"arabic": "كَاتِب", "translit": "kātib", "meaning": "writer"}
+  ///     ]
   ///   }
   /// ]
   /// ```
   ///
-  /// `title` is what identifies a card, so it has to be unique; `label`
-  /// (the small heading above it) and `after_roots` (0 if left out: shown
-  /// at the very start) are optional. Adding an entry adds a card, and
-  /// deleting one removes it, whether or not it has been read.
-  Future<Deck> importExtras([CampaignSource source = extrasSource]) async {
-    final deck = await _repository.getOrCreateDeck(
-      source.deckName,
-      description: source.description,
-    );
+  /// Only `title` is required, and it's what identifies a card, so it has
+  /// to be unique within the file. `after_roots` is 0 if left out (shown
+  /// at the very start); `label` overrides the file's own; `arabic` is a
+  /// headline in Arabic script. An example whose `arabic` is a word the
+  /// app teaches links to that word's card.
+  ///
+  /// The deck mirrors the file: adding an entry adds a card, and deleting
+  /// one removes it, whether or not it has been read.
+  Future<Deck> importReadOnce(ReadOnceSource source) async {
+    final deck = await _repository.getOrCreateDeck(source.deckName);
     final entries = await _loadEntries(source.assetPath);
     await _store(deck, prune: true, [
       for (final entry in entries)
         Flashcard.newCard(
           arabicWord: entry['title'] as String,
-          englishTranslation: entry['label'] as String? ?? '',
+          englishTranslation: entry['label'] as String? ?? source.label,
           exampleSentence: entry['body'] as String? ?? '',
           deckId: deck.id!,
           kind: CardKind.info,
           unlockAfter: entry['after_roots'] as int?,
+          note: entry['arabic'] as String?,
+          transliteration: entry['translit'] as String?,
+          relatedWords: [
+            for (final example in entry['examples'] as List? ?? const [])
+              ReadOnceExample(
+                arabic: example['arabic'] as String,
+                translit: example['translit'] as String? ?? '',
+                meaning: example['meaning'] as String? ?? '',
+              ).encode(),
+          ],
         ),
     ]);
     return deck;
@@ -290,15 +305,19 @@ class ContentImporter {
       for (final card in await _repository.getFlashcardsForDeck(deck.id!))
         card.arabicWord: card,
     };
+    // New cards are gathered up and written together; see
+    // `DatabaseService.insertFlashcards` for why that matters.
+    final added = <Flashcard>[];
     for (final card in cards) {
       final stored = existing[card.arabicWord];
       if (stored == null) {
-        await _repository.insertFlashcard(card);
+        added.add(card);
         existing[card.arabicWord] = card;
       } else if (!mapEquals(stored.contentMap(), card.contentMap())) {
         await _repository.updateFlashcardContent(card.copyWith(id: stored.id));
       }
     }
+    await _repository.insertFlashcards(added);
     if (!prune) return;
     final wanted = {for (final card in cards) card.arabicWord};
     for (final stored in existing.values) {

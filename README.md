@@ -20,6 +20,13 @@ Web (`-d chrome`) is not supported: the app stores its data in SQLite.
 - **Content** is bundled with the app as JSON in `assets/data/`. To add a
   campaign, drop in a JSON file and list it in
   `lib/config/campaign_sources.dart`.
+  - `lessons.json` and `stories.json` are read-once cards, each shown
+    after `after_roots` roots have been introduced. Add or delete an entry
+    and the card follows.
+  - `sentences.json` is the sentence corpus. It is loaded into its own
+    indexed table once per edition, so **bump `sentencesVersion`** in
+    `campaign_sources.dart` whenever you change the file (a test fails if
+    you forget). It is built to hold thousands of sentences.
 - **Progress** lives in an on-device SQLite database
   (`lib/services/database_service.dart`). The app always reads and writes
   that, so it works offline and without an account.

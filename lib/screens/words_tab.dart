@@ -6,6 +6,7 @@ import '../providers/database_providers.dart';
 import '../providers/settings_providers.dart';
 import '../theme/app_theme.dart';
 import '../widgets/root_preview_card.dart';
+import '../widgets/tile_grid.dart';
 import 'word_detail_screen.dart';
 
 /// The Words part of the Campaigns tab: every word learnt so far, then the
@@ -89,9 +90,7 @@ class _WordGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      spacing: 10,
-      runSpacing: 10,
+    return TileGrid(
       children: words
           .map(
             (card) => RootPreviewCard(

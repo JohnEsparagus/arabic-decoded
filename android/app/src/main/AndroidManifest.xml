@@ -3,7 +3,7 @@
          aloud is only offered while online. -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:label="arabic_decoded"
+        android:label="Arabic Decoded"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

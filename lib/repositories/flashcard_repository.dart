@@ -22,6 +22,7 @@ abstract class FlashcardRepository {
   Future<Deck> getOrCreateDeck(String name, {String? description});
 
   Future<void> insertFlashcard(Flashcard card);
+  Future<void> insertFlashcards(List<Flashcard> cards);
   Future<void> updateFlashcard(Flashcard card);
 
   /// Replaces a card's content without touching its progress.
@@ -54,4 +55,13 @@ abstract class FlashcardRepository {
   Future<List<Flashcard>> getQueuedFlashcards();
   Future<int> countIntroducedSince(DateTime cutoff);
   Future<List<Flashcard>> searchFlashcards(String query);
+
+  /// The sentence corpus (see "Sentences" in `DatabaseService`): which
+  /// version of the bundled file is loaded, and loading a new one.
+  Future<int?> getSentencesVersion();
+  Future<void> replaceSentences(
+    List<({String arabic, String english, String search, Set<String> keys})>
+    sentences, {
+    required int version,
+  });
 }

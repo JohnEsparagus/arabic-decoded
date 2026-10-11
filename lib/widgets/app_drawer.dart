@@ -5,6 +5,7 @@ import '../config/app_info.dart';
 import '../providers/auth_providers.dart';
 import '../screens/about_screen.dart';
 import '../screens/account_screen.dart';
+import '../screens/read_once_list_screen.dart';
 import '../screens/sentences_screen.dart';
 import '../screens/settings_screen.dart';
 import '../screens/stats_screen.dart';
@@ -12,8 +13,8 @@ import '../screens/updates_screen.dart';
 import '../theme/app_theme.dart';
 
 /// The sidebar that slides out from the top-left menu button: the account
-/// at the top, then learning stats, sentences, settings, About and the
-/// update log.
+/// at the top, then learning stats, lessons, stories, sentences, settings,
+/// About and the update log.
 /// Everything that isn't one of the three study tabs lives here.
 class AppDrawer extends ConsumerWidget {
   const AppDrawer({super.key});
@@ -48,6 +49,34 @@ class AppDrawer extends ConsumerWidget {
               icon: Icons.short_text,
               label: 'Sentences',
               onTap: () => open(const SentencesScreen()),
+            ),
+            _DrawerItem(
+              icon: Icons.school_outlined,
+              label: 'Lessons',
+              onTap: () => open(
+                const ReadOnceListScreen(
+                  label: 'Lesson',
+                  title: 'Lessons',
+                  blurb:
+                      'How Arabic builds words out of roots, one pattern at '
+                      'a time. Each lesson opens up once you have met '
+                      'enough examples of it.',
+                ),
+              ),
+            ),
+            _DrawerItem(
+              icon: Icons.auto_stories_outlined,
+              label: 'Stories',
+              onTap: () => open(
+                const ReadOnceListScreen(
+                  label: 'Story',
+                  title: 'Stories',
+                  blurb:
+                      'Famous stories of Arab culture. One opens up each '
+                      'time you finish a campaign, told with the words that '
+                      'campaign taught you.',
+                ),
+              ),
             ),
             _DrawerItem(
               icon: Icons.settings_outlined,

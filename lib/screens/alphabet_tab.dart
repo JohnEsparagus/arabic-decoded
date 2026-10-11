@@ -6,6 +6,7 @@ import '../providers/database_providers.dart';
 import '../providers/settings_providers.dart';
 import '../theme/app_theme.dart';
 import '../widgets/root_preview_card.dart';
+import '../widgets/tile_grid.dart';
 import 'word_detail_screen.dart';
 
 /// The Alphabet part of the Campaigns tab: the 28 letters as tiles, for
@@ -66,11 +67,9 @@ class AlphabetTab extends ConsumerWidget {
           style: TextStyle(color: colors.inkMuted),
         ),
         const SizedBox(height: 14),
-        Wrap(
+        TileGrid(
           // Laid out the way the script runs.
           textDirection: TextDirection.rtl,
-          spacing: 10,
-          runSpacing: 10,
           children: [
             for (final card in letters)
               RootPreviewCard(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../providers/sync_providers.dart';
+import '../providers/tts_providers.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/pattern_divider.dart';
 import 'campaign_screen.dart';
@@ -18,7 +19,8 @@ import 'dictionary_screen.dart';
 /// Also where background sync is anchored, since this widget lives for as
 /// long as the app does: it keeps [syncProvider] alive (which syncs on
 /// launch and on sign-in) and syncs again whenever the app returns to the
-/// foreground, to pick up anything studied on another device meanwhile.
+/// foreground, to pick up anything studied on another device meanwhile,
+/// and whenever a lost connection comes back.
 class RootShell extends ConsumerStatefulWidget {
   const RootShell({super.key});
 
@@ -52,6 +54,15 @@ class _RootShellState extends ConsumerState<RootShell> {
     // `listen` rather than `watch`: this only needs the provider kept
     // alive, not a rebuild of the whole shell on every sync.
     ref.listen(syncProvider, (_, _) {});
+    // Everything works offline against the local database; whatever was
+    // done meanwhile is flagged for upload. The moment a connection comes
+    // back, send it and fetch what other devices did.
+    ref.listen(onlineProvider, (previous, next) {
+      final wasOnline = previous?.asData?.value ?? false;
+      if (!wasOnline && (next.asData?.value ?? false)) {
+        ref.read(syncProvider.notifier).sync();
+      }
+    });
     return Scaffold(
       appBar: AppBar(title: Text(_titles[_index])),
       drawer: const AppDrawer(),

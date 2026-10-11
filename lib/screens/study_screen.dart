@@ -39,6 +39,7 @@ class StudySessionView extends ConsumerWidget {
         children: [
           Expanded(
             child: FlashcardFrame(
+              accent: readOnceStyle(context, card).color,
               child: Center(child: FlashcardDetailContent(card: card)),
             ),
           ),

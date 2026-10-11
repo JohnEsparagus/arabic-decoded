@@ -21,6 +21,7 @@ class WordDetailScreen extends StatelessWidget {
   String get _title => switch (card.kind) {
     CardKind.letter => card.transliteration ?? card.arabicWord,
     CardKind.sentence => 'Sentence',
+    CardKind.info => card.arabicWord,
     _ => card.englishTranslation,
   };
 
@@ -41,6 +42,9 @@ class WordDetailScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: FlashcardFrame(
+            accent: card.kind == CardKind.info
+                ? readOnceStyle(context, card).color
+                : null,
             child: Center(child: FlashcardDetailContent(card: card)),
           ),
         ),

@@ -1,0 +1,412 @@
+[
+  {
+    "arabic": "ف ر ح",
+    "translit": "f-r-ḥ",
+    "meaning": "Joy",
+    "mnemonic": "Friends Rejoice Heartily. F-R-Ḥ is the root of joy.",
+    "words": [
+      {
+        "arabic": "فَرِحَ",
+        "translit": "fariḥa",
+        "meaning": "to be glad",
+        "pattern": "form1",
+        "note": "Present tense: يَفْرَحُ (yafraḥu)",
+        "example": {
+          "ar": "فرح الولد بالهدية.",
+          "en": "The boy was glad about the gift."
+        }
+      },
+      {
+        "arabic": "فَرَح",
+        "translit": "faraḥ",
+        "meaning": "joy; wedding party",
+        "example": {
+          "ar": "هذا يوم فرح.",
+          "en": "This is a day of joy."
+        }
+      },
+      {
+        "arabic": "فَرْحَان",
+        "translit": "farḥān",
+        "meaning": "glad, happy",
+        "example": {
+          "ar": "أنا فرحان جدا.",
+          "en": "I am very happy."
+        }
+      }
+    ],
+    "example": "He فَرِحَ at the news; فَرَح filled the house."
+  },
+  {
+    "arabic": "ح ز ن",
+    "translit": "ḥ-z-n",
+    "meaning": "Sadness",
+    "mnemonic": "Heavy Zeal Numbs. Ḥ-Z-N is the root of sadness.",
+    "words": [
+      {
+        "arabic": "حَزِنَ",
+        "translit": "ḥazina",
+        "meaning": "to be sad",
+        "pattern": "form1",
+        "note": "Present tense: يَحْزَنُ (yaḥzanu)",
+        "example": {
+          "ar": "حزن الولد على صديقه.",
+          "en": "The boy was sad about his friend."
+        }
+      },
+      {
+        "arabic": "حُزْن",
+        "translit": "ḥuzn",
+        "meaning": "sadness",
+        "example": {
+          "ar": "الحزن لا يدوم.",
+          "en": "Sadness does not last."
+        }
+      },
+      {
+        "arabic": "حَزِين",
+        "translit": "ḥazīn",
+        "meaning": "sad",
+        "pattern": "adj",
+        "example": {
+          "ar": "لماذا أنت حزين؟",
+          "en": "Why are you sad?"
+        }
+      }
+    ],
+    "example": "He was حَزِين, and his حُزْن showed."
+  },
+  {
+    "arabic": "خ و ف",
+    "translit": "kh-w-f",
+    "meaning": "Fear",
+    "mnemonic": "KHills Wake Fright. KH-W-F is the root of fear.",
+    "words": [
+      {
+        "arabic": "خَافَ",
+        "translit": "khāfa",
+        "meaning": "to fear",
+        "pattern": "form1",
+        "note": "Present tense: يَخَافُ (yakhāfu)",
+        "example": {
+          "ar": "خاف الطفل من الكلب.",
+          "en": "The child was afraid of the dog."
+        }
+      },
+      {
+        "arabic": "خَوْف",
+        "translit": "khawf",
+        "meaning": "fear",
+        "pattern": "act",
+        "example": {
+          "ar": "الخوف شيء طبيعي.",
+          "en": "Fear is a natural thing."
+        }
+      },
+      {
+        "arabic": "خَائِف",
+        "translit": "khāʾif",
+        "meaning": "afraid",
+        "pattern": "doer",
+        "example": {
+          "ar": "لست خائفا.",
+          "en": "I am not afraid."
+        }
+      }
+    ],
+    "example": "He خَافَ of the dark; خَوْف is natural."
+  },
+  {
+    "arabic": "غ ض ب",
+    "translit": "gh-ḍ-b",
+    "meaning": "Anger",
+    "mnemonic": "GHrowls and Dark Brows. GH-Ḍ-B is the root of anger.",
+    "words": [
+      {
+        "arabic": "غَضِبَ",
+        "translit": "ghaḍiba",
+        "meaning": "to get angry",
+        "pattern": "form1",
+        "note": "Present tense: يَغْضَبُ (yaghḍabu)",
+        "example": {
+          "ar": "غضب الأب من ابنه.",
+          "en": "The father got angry with his son."
+        }
+      },
+      {
+        "arabic": "غَضَب",
+        "translit": "ghaḍab",
+        "meaning": "anger",
+        "example": {
+          "ar": "الغضب لا يفيد.",
+          "en": "Anger does no good."
+        }
+      },
+      {
+        "arabic": "غَاضِب",
+        "translit": "ghāḍib",
+        "meaning": "angry",
+        "pattern": "doer",
+        "example": {
+          "ar": "هل أنت غاضب مني؟",
+          "en": "Are you angry with me?"
+        }
+      }
+    ],
+    "example": "His غَضَب passed; he is no longer غَاضِب."
+  },
+  {
+    "arabic": "ص ب ر",
+    "translit": "ṣ-b-r",
+    "meaning": "Patience",
+    "mnemonic": "Stay Brave and Resolute. Ṣ-B-R is the root of patience and endurance.",
+    "words": [
+      {
+        "arabic": "صَبَرَ",
+        "translit": "ṣabara",
+        "meaning": "to be patient",
+        "pattern": "form1",
+        "note": "Present tense: يَصْبِرُ (yaṣbiru)",
+        "example": {
+          "ar": "صبر الرجل على التعب.",
+          "en": "The man bore the tiredness patiently."
+        }
+      },
+      {
+        "arabic": "صَبْر",
+        "translit": "ṣabr",
+        "meaning": "patience",
+        "pattern": "act",
+        "example": {
+          "ar": "الصبر مفتاح الفرج.",
+          "en": "Patience is the key to relief."
+        }
+      },
+      {
+        "arabic": "صَابِر",
+        "translit": "ṣābir",
+        "meaning": "patient, enduring",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو رجل صابر.",
+          "en": "He is a patient man."
+        }
+      }
+    ],
+    "example": "صَبْر is a virtue; the صَابِر wins in the end."
+  },
+  {
+    "arabic": "ش ك ر",
+    "translit": "sh-k-r",
+    "meaning": "Thanking",
+    "mnemonic": "SHow Kind Regard. SH-K-R is the root of thanks.",
+    "words": [
+      {
+        "arabic": "شَكَرَ",
+        "translit": "shakara",
+        "meaning": "to thank",
+        "pattern": "form1",
+        "note": "Present tense: يَشْكُرُ (yashkuru)",
+        "example": {
+          "ar": "شكر الضيف صاحب البيت.",
+          "en": "The guest thanked the host."
+        }
+      },
+      {
+        "arabic": "شُكْر",
+        "translit": "shukr",
+        "meaning": "thanks, gratitude",
+        "example": {
+          "ar": "لك كل الشكر.",
+          "en": "All thanks to you."
+        }
+      },
+      {
+        "arabic": "شُكْرًا",
+        "translit": "shukran",
+        "meaning": "thank you",
+        "example": {
+          "ar": "شكرا على المساعدة.",
+          "en": "Thank you for the help."
+        }
+      }
+    ],
+    "example": "شُكْرًا comes from شُكْر: he شَكَرَ his host."
+  },
+  {
+    "arabic": "ص د ق",
+    "translit": "ṣ-d-q",
+    "meaning": "Truthfulness, friendship",
+    "mnemonic": "Sincere, Dependable, Quite true. Ṣ-D-Q is the root of telling the truth, and of the friend who does.",
+    "words": [
+      {
+        "arabic": "صَدَقَ",
+        "translit": "ṣadaqa",
+        "meaning": "to tell the truth",
+        "pattern": "form1",
+        "note": "Present tense: يَصْدُقُ (yaṣduqu)",
+        "example": {
+          "ar": "صدق الولد في كلامه.",
+          "en": "The boy told the truth."
+        }
+      },
+      {
+        "arabic": "صِدْق",
+        "translit": "ṣidq",
+        "meaning": "truthfulness, honesty",
+        "example": {
+          "ar": "الصدق أفضل طريق.",
+          "en": "Honesty is the best way."
+        }
+      },
+      {
+        "arabic": "صَادِق",
+        "translit": "ṣādiq",
+        "meaning": "truthful, sincere",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو رجل صادق.",
+          "en": "He is a truthful man."
+        }
+      },
+      {
+        "arabic": "صَدِيق",
+        "translit": "ṣadīq",
+        "meaning": "friend",
+        "pattern": "adj",
+        "example": {
+          "ar": "هذا صديقي.",
+          "en": "This is my friend."
+        }
+      }
+    ],
+    "example": "A صَدِيق is one who is صَادِق with you."
+  },
+  {
+    "arabic": "ك ذ ب",
+    "translit": "k-dh-b",
+    "meaning": "Lying",
+    "mnemonic": "Keen DHeceivers Bluff. K-DH-B is the root of lying.",
+    "words": [
+      {
+        "arabic": "كَذَبَ",
+        "translit": "kadhaba",
+        "meaning": "to lie",
+        "pattern": "form1",
+        "note": "Present tense: يَكْذِبُ (yakdhibu)",
+        "example": {
+          "ar": "كذب الولد على أمه.",
+          "en": "The boy lied to his mother."
+        }
+      },
+      {
+        "arabic": "كَذِب",
+        "translit": "kadhib",
+        "meaning": "lying, lies",
+        "example": {
+          "ar": "الكذب مكروه.",
+          "en": "Lying is hateful."
+        }
+      },
+      {
+        "arabic": "كَاذِب",
+        "translit": "kādhib",
+        "meaning": "liar; false",
+        "pattern": "doer",
+        "example": {
+          "ar": "هذا خبر كاذب.",
+          "en": "This is false news."
+        }
+      }
+    ],
+    "example": "A كَاذِب tells a كَذِب."
+  },
+  {
+    "arabic": "ك ر م",
+    "translit": "k-r-m",
+    "meaning": "Generosity, honour",
+    "mnemonic": "Kindly Rich in Mercy. K-R-M is the root of generosity and nobility.",
+    "words": [
+      {
+        "arabic": "كَرَم",
+        "translit": "karam",
+        "meaning": "generosity",
+        "example": {
+          "ar": "الكرم من أخلاق العرب.",
+          "en": "Generosity is an Arab virtue."
+        }
+      },
+      {
+        "arabic": "كَرِيم",
+        "translit": "karīm",
+        "meaning": "generous, noble",
+        "pattern": "adj",
+        "example": {
+          "ar": "هو رجل كريم.",
+          "en": "He is a generous man."
+        }
+      },
+      {
+        "arabic": "أَكْرَمَ",
+        "translit": "ʾakrama",
+        "meaning": "to honour, treat generously",
+        "pattern": "form4",
+        "note": "Present tense: يُكْرِمُ (yukrimu)",
+        "example": {
+          "ar": "أكرم الرجل ضيفه.",
+          "en": "The man honoured his guest."
+        }
+      },
+      {
+        "arabic": "أَكْرَم",
+        "translit": "ʾakram",
+        "meaning": "more generous, most generous",
+        "pattern": "comparative",
+        "example": {
+          "ar": "هو أكرم من أخيه.",
+          "en": "He is more generous than his brother."
+        }
+      }
+    ],
+    "example": "A كَرِيم host shows كَرَم to every guest."
+  },
+  {
+    "arabic": "ر ح م",
+    "translit": "r-ḥ-m",
+    "meaning": "Mercy",
+    "mnemonic": "Relief, Help and Mercy. R-Ḥ-M is the root of mercy and compassion.",
+    "words": [
+      {
+        "arabic": "رَحِمَ",
+        "translit": "raḥima",
+        "meaning": "to have mercy on",
+        "pattern": "form1",
+        "note": "Present tense: يَرْحَمُ (yarḥamu)",
+        "example": {
+          "ar": "رحم الله الجميع.",
+          "en": "May God have mercy on everyone."
+        }
+      },
+      {
+        "arabic": "رَحْمَة",
+        "translit": "raḥma",
+        "meaning": "mercy",
+        "example": {
+          "ar": "المطر رحمة.",
+          "en": "Rain is a mercy."
+        }
+      },
+      {
+        "arabic": "رَحِيم",
+        "translit": "raḥīm",
+        "meaning": "merciful",
+        "pattern": "adj",
+        "example": {
+          "ar": "هو قاض رحيم.",
+          "en": "He is a merciful judge."
+        }
+      }
+    ],
+    "example": "رَحْمَة is mercy; the رَحِيم shows it."
+  }
+]

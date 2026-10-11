@@ -1,6 +1,19 @@
 [
   {
     "date": "2026-10-11",
+    "title": "More roots, lessons, stories and a sentence explorer",
+    "changes": [
+      "Five new campaigns, 50 more roots: Body & Health, Travel & Places, Feelings & Character, Mind & Will, City & Media.",
+      "Lessons: short cards on how Arabic builds words from roots, each appearing once you have met enough examples. Find them again under Lessons in the sidebar.",
+      "Stories: a famous story of Arab culture after each campaign, told with the words you just learned. They live under Stories in the sidebar.",
+      "Sentence explorer: search the sentences, with every word you are studying underlined in the colour of how well you know it.",
+      "Open the Sentences section on any word or root to see it used.",
+      "Works fully offline, and syncs by itself the moment you are back online.",
+      "Faster first launch."
+    ]
+  },
+  {
+    "date": "2026-10-11",
     "title": "Stats, sidebar and collections",
     "changes": [
       "A sidebar with your account, learning stats, settings, About and these updates.",
