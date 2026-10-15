@@ -13,7 +13,9 @@ flutter run -d linux      # or an Android / iOS device
 flutter test
 ```
 
-Web (`-d chrome`) is not supported: the app stores its data in SQLite.
+It also runs in a browser (`flutter run -d chrome`), where SQLite runs as
+WebAssembly and keeps its data in the browser's storage, offline included.
+Pushes to `main` publish it to GitHub Pages (`.github/workflows/web.yml`).
 
 ## How it fits together
 

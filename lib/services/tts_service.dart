@@ -10,9 +10,9 @@ import 'package:flutter_tts/flutter_tts.dart';
 class TtsService {
   FlutterTts? _tts;
 
-  /// `flutter_tts` has no Linux implementation, and the app doesn't run on
-  /// the web at all.
-  static bool get isSupported => !kIsWeb && !Platform.isLinux;
+  /// `flutter_tts` has no Linux implementation. In a browser it uses the
+  /// browser's own speech (the Web Speech API).
+  static bool get isSupported => kIsWeb || !Platform.isLinux;
 
   /// Speaks [text], cutting off anything still being read. A device with
   /// no Arabic voice just stays silent rather than throwing.

@@ -1,0 +1,45 @@
+# Publishes the web version to GitHub Pages on every push to main, at
+# https://johnesparagus.github.io/arabic-decoded/. One-time setup: in the
+# repository's Settings > Pages, set Source to "GitHub Actions".
+name: Web
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never two deployments at once; a newer push replaces one still queued.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      # The site lives under /arabic-decoded/, not at the root of the domain.
+      - run: flutter build web --release --base-href /arabic-decoded/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

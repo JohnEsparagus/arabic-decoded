@@ -43,6 +43,8 @@ dependencies:
   google_sign_in: ^7.2.0
   flutter_tts: ^4.2.5
   connectivity_plus: ^7.3.2
+  sqflite_common_ffi_web: ^1.2.0
+  web: ^1.1.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -99,7 +101,7 @@ flutter:
       fonts:
         - asset: assets/fonts/NotoKufiArabic.ttf
 
-# App icon for Android and iOS, generated from assets/icon/ by
+# App icon for Android, iOS and the web, generated from assets/icon/ by
 # `dart run flutter_launcher_icons`. Replace the two images and run that
 # again to change it.
 flutter_launcher_icons:
@@ -109,3 +111,8 @@ flutter_launcher_icons:
   remove_alpha_ios: true
   adaptive_icon_background: "#1F5C4A"
   adaptive_icon_foreground: assets/icon/icon_foreground.png
+  web:
+    generate: true
+    image_path: assets/icon/icon.png
+    background_color: "#F7EFDC"
+    theme_color: "#1F5C4A"

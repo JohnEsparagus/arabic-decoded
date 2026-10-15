@@ -7,6 +7,19 @@ import 'package:path/path.dart' as p;
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 void main() {
+  test('callers arriving together share one connection', () async {
+    // Several providers ask for the database at once on launch. Opening
+    // the file once per caller worked natively but stalls the browser's
+    // SQLite, so they must all get the same one.
+    final dir = Directory.systemTemp.createTempSync('arabic_decoded_test_');
+    addTearDown(() => dir.deleteSync(recursive: true));
+    final db = DatabaseService(pathOverride: p.join(dir.path, 'test.db'));
+    final connections = await Future.wait([
+      for (var i = 0; i < 5; i++) db.database,
+    ]);
+    expect(connections.toSet(), hasLength(1));
+  });
+
   test('resetDatabase wipes all data and leaves the DB usable', () async {
     final dir = Directory.systemTemp.createTempSync('arabic_decoded_test_');
     addTearDown(() => dir.deleteSync(recursive: true));

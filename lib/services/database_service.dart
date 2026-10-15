@@ -1,9 +1,5 @@
-import 'dart:io' show Platform;
-
-import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:path/path.dart' as p;
 import 'package:sqflite/sqflite.dart';
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 import '../config/campaign_sources.dart';
 import '../models/card_collection.dart';
@@ -14,6 +10,7 @@ import '../models/review_log_entry.dart';
 import '../models/sentence.dart';
 import '../models/synced_extras.dart';
 import '../utils/arabic_normalize.dart';
+import 'platform_database.dart';
 
 /// Owns the single sqflite [Database] connection and all reads/writes for
 /// decks and flashcards. Deliberately a thin wrapper around raw SQL rather
@@ -32,41 +29,32 @@ class DatabaseService {
   static final DatabaseService instance = DatabaseService();
 
   final String? pathOverride;
-  Database? _db;
+
+  /// The connection once it's being opened. Kept as the future, not the
+  /// result, so that callers arriving while it's still opening wait for
+  /// that one instead of each opening the file again; the browser's
+  /// SQLite stalls if the same file is opened twice at once.
+  Future<Database>? _db;
   String? _resolvedPath;
 
-  /// The plain `sqflite` package only ships plugin implementations for
-  /// Android/iOS/macOS. This project also has Linux/Windows desktop
-  /// scaffolding, so on those platforms this points sqflite at
-  /// `sqflite_common_ffi` instead — otherwise the very first database call
-  /// throws on desktop. Idempotent and cheap, so it's safe to call this
-  /// both eagerly from `main()` and again here as a fallback for anything
-  /// (e.g. tests) that constructs a [DatabaseService] directly.
-  static void configureDatabaseFactory() {
-    if (kIsWeb) return;
-    if (Platform.isLinux || Platform.isWindows) {
-      sqfliteFfiInit();
-      databaseFactory = databaseFactoryFfi;
-    }
-  }
+  /// Points sqflite at the right SQLite for this platform: the plugin on
+  /// Android, iOS and macOS, the system library on Linux and Windows, and
+  /// WebAssembly in a browser (see `platform_database.dart`). Without it
+  /// the very first database call throws everywhere but the first three.
+  /// Idempotent and cheap, so it's safe to call this both eagerly from
+  /// `main()` and again here as a fallback for anything (e.g. tests) that
+  /// constructs a [DatabaseService] directly.
+  static void configureDatabaseFactory() => configurePlatformDatabaseFactory();
 
   Future<Database> get database async {
-    _db ??= await _initDatabase();
-    return _db!;
+    return _db ??= _initDatabase().catchError((Object error) {
+      // Don't keep handing out a failed open: let the next caller retry.
+      _db = null;
+      throw error;
+    });
   }
 
   Future<Database> _initDatabase() async {
-    if (kIsWeb) {
-      // sqflite has no web backend (it would need a separate
-      // IndexedDB-backed package); fail with a message that actually says
-      // why, instead of the generic "databaseFactory not initialized"
-      // error that shows up otherwise.
-      throw StateError(
-        'Arabic Decoded needs SQLite storage, which isn\'t supported when '
-        'running in a browser. Run this app on Android, iOS, or as a '
-        'desktop app (e.g. `flutter run -d linux`) instead of `-d chrome`.',
-      );
-    }
     final path =
         pathOverride ?? p.join(await getDatabasesPath(), 'arabic_decoded.db');
     _resolvedPath = path;
@@ -78,8 +66,10 @@ class DatabaseService {
       // on-disk path (only ever opened once, by the DatabaseService
       // singleton) but silently shares ONE database across every test that
       // uses `inMemoryDatabasePath` — they all pass the exact same ":memory:"
-      // string. Disabling it gives each DatabaseService its own connection.
-      singleInstance: false,
+      // string. Disabling it gives each of those its own connection. The
+      // app's own database keeps the default, which the browser's SQLite
+      // insists on: it refuses to open one file more than once.
+      singleInstance: pathOverride == null,
       onConfigure: (db) => db.execute('PRAGMA foreign_keys = ON'),
       onCreate: (db, version) async {
         await db.execute('''
@@ -358,11 +348,10 @@ class DatabaseService {
   /// the next call to [database] reopen (and re-run `onCreate`) from
   /// scratch.
   Future<void> resetDatabase() async {
-    if (kIsWeb) return;
     final db = _db;
     final path = _resolvedPath;
     _db = null;
-    if (db != null) await db.close();
+    if (db != null) await (await db).close();
     if (path != null) await databaseFactory.deleteDatabase(path);
   }
 
