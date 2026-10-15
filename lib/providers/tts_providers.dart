@@ -20,10 +20,16 @@ final onlineProvider = StreamProvider<bool>((ref) async* {
   yield* connectivity.onConnectivityChanged.map(isOnline);
 });
 
+/// Reading aloud is switched off for now. Most browsers have no Arabic
+/// voice (Chrome on Windows or Linux, for one), so the text gets read by
+/// an English voice and comes out as gibberish. Flip this back once the
+/// audio comes from somewhere that reliably speaks Arabic.
+const _readingAloudEnabled = false;
+
 /// Whether to offer reading aloud at all: only on a platform that has a
 /// speech engine, and only while there's a connection. Anything that shows
 /// a speaker button watches this and hides the button when it's false.
 final canSpeakProvider = Provider<bool>((ref) {
-  if (!TtsService.isSupported) return false;
+  if (!_readingAloudEnabled || !TtsService.isSupported) return false;
   return ref.watch(onlineProvider).asData?.value ?? false;
 });
