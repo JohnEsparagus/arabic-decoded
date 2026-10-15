@@ -56,8 +56,7 @@
           "en": "Writing is an important skill."
         }
       }
-    ],
-    "example": "A كاتب writes a كتاب in a مكتبة, producing كتابة."
+    ]
   },
   {
     "arabic": "ق و ل",
@@ -95,8 +94,7 @@
           "en": "I read an article in the newspaper."
         }
       }
-    ],
-    "example": "He قال what he wanted to say, and it became his قول, later a مقال."
+    ]
   },
   {
     "arabic": "ع ل م",
@@ -153,8 +151,7 @@
           "en": "Education is a right for everyone."
         }
       }
-    ],
-    "example": "A معلم gives تعليم so students gain علم."
+    ]
   },
   {
     "arabic": "ع م ل",
@@ -202,8 +199,7 @@
           "en": "The doctor works in the laboratory."
         }
       }
-    ],
-    "example": "A عامل goes to the معمل to عمل every day."
+    ]
   },
   {
     "arabic": "ك و ن",
@@ -242,8 +238,7 @@
           "en": "This is a quiet place."
         }
       }
-    ],
-    "example": "It كان there, and it still يكون in that مكان."
+    ]
   },
   {
     "arabic": "ق ر أ",
@@ -282,8 +277,7 @@
           "en": "He is a good reader."
         }
       }
-    ],
-    "example": "A قارئ enjoys قراءة every day."
+    ]
   },
   {
     "arabic": "ر أ ي",
@@ -321,8 +315,7 @@
           "en": "Visibility is clear today."
         }
       }
-    ],
-    "example": "His رأي changed after the رؤية."
+    ]
   },
   {
     "arabic": "ع ر ف",
@@ -360,8 +353,7 @@
           "en": "Knowledge is power."
         }
       }
-    ],
-    "example": "She عرف the معروف scientist from television."
+    ]
   },
   {
     "arabic": "ف ه م",
@@ -400,8 +392,7 @@
           "en": "This is a new concept."
         }
       }
-    ],
-    "example": "Students فهم the new مفهوم quickly."
+    ]
   },
   {
     "arabic": "س م ع",
@@ -439,8 +430,7 @@
           "en": "Your voice is audible."
         }
       }
-    ],
-    "example": "Everyone سمع the news immediately."
+    ]
   },
   {
     "arabic": "ن ظ ر",
@@ -478,8 +468,7 @@
           "en": "The view is beautiful from here."
         }
       }
-    ],
-    "example": "The منظر was beautiful to نظر at."
+    ]
   },
   {
     "arabic": "و ج د",
@@ -518,8 +507,7 @@
           "en": "Thank you for being with us."
         }
       }
-    ],
-    "example": "He وجد the keys and they were موجود the whole time."
+    ]
   },
   {
     "arabic": "أ خ ذ",
@@ -558,8 +546,7 @@
           "en": "These words are taken from a book."
         }
       }
-    ],
-    "example": "She أخذ the last slice, يأخذ it fast, leaving nothing but مأخوذ looks."
+    ]
   },
   {
     "arabic": "ج ع ل",
@@ -588,8 +575,7 @@
           "en": "This place is made for rest."
         }
       }
-    ],
-    "example": "The trick جعل the audience gasp, as it always يجعل them do."
+    ]
   },
   {
     "arabic": "ف ع ل",
@@ -637,7 +623,6 @@
           "en": "Where is the object in the sentence?"
         }
       }
-    ],
-    "example": "He فعل what needed to be done, since he is always the فاعل."
+    ]
   }
 ]

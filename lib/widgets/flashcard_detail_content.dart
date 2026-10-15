@@ -6,6 +6,7 @@ import '../providers/database_providers.dart';
 import '../providers/sentence_providers.dart';
 import '../screens/word_detail_screen.dart';
 import '../theme/app_theme.dart';
+import '../utils/spoken_text.dart';
 import 'card_actions_sheet.dart';
 import 'sentence_text.dart';
 import 'sentence_tile.dart';
@@ -67,7 +68,7 @@ class FlashcardDetailContent extends ConsumerWidget {
               ),
             ),
           ],
-          SpeakButton(text: card.arabicWord),
+          SpeakButton(text: spokenText(card)),
           const SizedBox(height: 6),
           Text('✦', style: TextStyle(color: colors.gold, fontSize: 14)),
           const SizedBox(height: 10),

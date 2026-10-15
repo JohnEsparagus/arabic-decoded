@@ -23,8 +23,10 @@ class TtsService {
       if (tts == null) {
         tts = _tts = FlutterTts();
         await tts.setLanguage('ar');
-        // A little under normal speed: these are words being learned.
-        await tts.setSpeechRate(0.4);
+        // A little under normal speed: these are words being learned. The
+        // scales differ: on phones 0.5 is normal speed, in a browser 1.0
+        // is, so the phones' 0.4 there would drag every word out.
+        await tts.setSpeechRate(kIsWeb ? 0.85 : 0.4);
       }
       await tts.stop();
       await tts.speak(text);

@@ -25,8 +25,7 @@
           "en": "I have a question."
         }
       }
-    ],
-    "example": "He سأل the guide, and every سؤال he يسأل gets answered."
+    ]
   },
   {
     "arabic": "ج و ب",
@@ -63,8 +62,7 @@
           "en": "Thank you for the answer."
         }
       }
-    ],
-    "example": "He أجاب quickly, and his جواب became the official إجابة."
+    ]
   },
   {
     "arabic": "ذ ك ر",
@@ -102,8 +100,7 @@
           "en": "Thanks for the reminder."
         }
       }
-    ],
-    "example": "He ذكر the event, and it became a ذكرى he still يذكر."
+    ]
   },
   {
     "arabic": "ن س ي",
@@ -131,8 +128,7 @@
           "en": "Forgetfulness is a problem."
         }
       }
-    ],
-    "example": "He نسي the name, and ينسى it again due to his نسيان."
+    ]
   },
   {
     "arabic": "د ر س",
@@ -181,8 +177,7 @@
           "en": "The school is near the house."
         }
       }
-    ],
-    "example": "She درس hard at the مدرسة, her دراسة paying off."
+    ]
   },
   {
     "arabic": "ش ر ح",
@@ -211,8 +206,7 @@
           "en": "This is a clear explanation."
         }
       }
-    ],
-    "example": "The teacher شرح the lesson, and his شرح made it clear."
+    ]
   },
   {
     "arabic": "ب ح ث",
@@ -251,8 +245,7 @@
           "en": "He is a researcher at the university."
         }
       }
-    ],
-    "example": "The باحث بحث for years, and still يبحث for answers."
+    ]
   },
   {
     "arabic": "خ ب ر",
@@ -290,8 +283,7 @@
           "en": "He is an expert in economics."
         }
       }
-    ],
-    "example": "He أخبر the king of the خبر, since he is a trusted خبير."
+    ]
   },
   {
     "arabic": "ت ر ج م",
@@ -327,8 +319,7 @@
           "en": "My brother works as a translator."
         }
       }
-    ],
-    "example": "The مترجم ترجم the speech, its ترجمة finished quickly."
+    ]
   },
   {
     "arabic": "ق ر ر",
@@ -356,8 +347,7 @@
           "en": "This is a difficult decision."
         }
       }
-    ],
-    "example": "She قرر to leave, and her قرار was final."
+    ]
   },
   {
     "arabic": "ح س ب",
@@ -395,8 +385,7 @@
           "en": "I work on the computer."
         }
       }
-    ],
-    "example": "He حسب the total, using a حاسوب for the حساب."
+    ]
   },
   {
     "arabic": "ق د ر",
@@ -433,8 +422,7 @@
           "en": "What is the amount of sugar?"
         }
       }
-    ],
-    "example": "She يقدر the distance well, since her قدرة for judging a مقدار is strong."
+    ]
   },
   {
     "arabic": "ب ي ن",
@@ -471,8 +459,7 @@
           "en": "The house is between the school and the market."
         }
       }
-    ],
-    "example": "He بين his point clearly, so the بيان left nothing بين the lines."
+    ]
   },
   {
     "arabic": "ن ق ش",
@@ -511,8 +498,7 @@
           "en": "After the discussion we understood the lesson."
         }
       }
-    ],
-    "example": "They ناقش the plan, and the نقاش turned into a full مناقشة."
+    ]
   },
   {
     "arabic": "ح ف ظ",
@@ -550,7 +536,6 @@
           "en": "The money is kept safe in the bank."
         }
       }
-    ],
-    "example": "She حفظ the poem by heart, keeping it محفوظ forever."
+    ]
   }
 ]

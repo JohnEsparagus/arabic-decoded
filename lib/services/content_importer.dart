@@ -13,7 +13,7 @@ import '../utils/sentence_tokens.dart';
 /// Imports flashcards from a bundled JSON asset into a named deck.
 ///
 /// The JSON is a flat array of roots shaped like assets/data/*.json — each
-/// needs at least `arabic` and `meaning`; `example`, `translit`,
+/// needs at least `arabic` and `meaning`; `translit`,
 /// `mnemonic` and `words` are all optional:
 ///
 /// ```json
@@ -23,7 +23,6 @@ import '../utils/sentence_tokens.dart';
 ///     "meaning": "Writing",
 ///     "translit": "k-t-b",
 ///     "mnemonic": "Imagine a writer carrying books into a library.",
-///     "example": "A كاتب works in a مكتبة.",
 ///     "words": [
 ///       {
 ///         "arabic": "كِتَاب",
@@ -136,7 +135,9 @@ class ContentImporter {
         Flashcard.newCard(
           arabicWord: arabic,
           englishTranslation: entry['meaning'] as String? ?? '',
-          exampleSentence: entry['example'] as String? ?? '',
+          // A root's own card has its English mnemonic; its words carry
+          // the real Arabic examples.
+          exampleSentence: '',
           deckId: deck.id!,
           transliteration: entry['translit'] as String?,
           mnemonic: entry['mnemonic'] as String?,

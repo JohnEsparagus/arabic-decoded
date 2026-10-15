@@ -26,8 +26,7 @@
           "en": "I want to buy a car."
         }
       }
-    ],
-    "example": "She اشترى a new bag, and her شراء habit means she يشتري often."
+    ]
   },
   {
     "arabic": "د ف ع",
@@ -75,8 +74,7 @@
           "en": "The bill is paid."
         }
       }
-    ],
-    "example": "He دفع the bill in one دفعة, and it stayed مدفوع."
+    ]
   },
   {
     "arabic": "ع ط ي",
@@ -104,8 +102,7 @@
           "en": "Giving brings happiness."
         }
       }
-    ],
-    "example": "He أعطى a gift kindly, and his عطاء never stops as he يعطي often."
+    ]
   },
   {
     "arabic": "ر ب ح",
@@ -143,8 +140,7 @@
           "en": "Who is the winner?"
         }
       }
-    ],
-    "example": "The trader ربح a fortune, and every deal يربح makes him a رابح."
+    ]
   },
   {
     "arabic": "خ س ر",
@@ -183,8 +179,7 @@
           "en": "There is no loser here."
         }
       }
-    ],
-    "example": "He خسر the match, and the خسارة still stings as he يخسر again."
+    ]
   },
   {
     "arabic": "ز ر ع",
@@ -223,8 +218,7 @@
           "en": "My grandfather lives on a farm."
         }
       }
-    ],
-    "example": "The farmer زرع the field, his زراعة thriving on the مزرعة."
+    ]
   },
   {
     "arabic": "ث م ر",
@@ -262,8 +256,7 @@
           "en": "The fruits are ripe."
         }
       }
-    ],
-    "example": "The tree ثمر sweet apples, and every ثمرة among the ثمار was ripe."
+    ]
   },
   {
     "arabic": "ح ص ل",
@@ -302,8 +295,7 @@
           "en": "The crop is good this year."
         }
       }
-    ],
-    "example": "He حصل on the prize, since he يحصل on rewards through hard work."
+    ]
   },
   {
     "arabic": "ح ت ا ج",
@@ -331,8 +323,7 @@
           "en": "I am in need of rest."
         }
       }
-    ],
-    "example": "He احتاج help urgently, and his حاجة grows as he يحتاج more."
+    ]
   },
   {
     "arabic": "خ د م",
@@ -370,7 +361,6 @@
           "en": "The server is not working now."
         }
       }
-    ],
-    "example": "The خادم خدم the guests well, his خدمة praised by all."
+    ]
   }
 ]
