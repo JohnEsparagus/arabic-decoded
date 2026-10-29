@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/dev_update.dart';
 import '../theme/app_theme.dart';
 import '../utils/date_labels.dart';
+import '../widgets/gold_diamond.dart';
 import '../widgets/pattern_divider.dart';
 
 /// The update log, as written in assets/data/dev_updates.json.
@@ -84,7 +85,10 @@ class _UpdateCard extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('✦  ', style: TextStyle(color: colors.gold)),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(2, 7, 12, 0),
+                      child: GoldDiamond(size: 6),
+                    ),
                     Expanded(
                       child: Text(
                         change,

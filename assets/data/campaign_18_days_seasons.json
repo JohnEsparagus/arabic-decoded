@@ -1,0 +1,343 @@
+[
+  {
+    "arabic": "ي و م",
+    "translit": "y-w-m",
+    "meaning": "Day",
+    "mnemonic": "Yesterday, Week, Month. Y-W-M is the root of the day.",
+    "words": [
+      {
+        "arabic": "يَوْم",
+        "translit": "yawm",
+        "meaning": "day",
+        "pattern": "act",
+        "example": {
+          "ar": "اليوم يوم جميل.",
+          "en": "Today is a beautiful day."
+        }
+      },
+      {
+        "arabic": "أَيَّام",
+        "translit": "ʾayyām",
+        "meaning": "days",
+        "example": {
+          "ar": "بقيت هناك ثلاثة أيام.",
+          "en": "I stayed there three days."
+        }
+      },
+      {
+        "arabic": "يَوْمِيّ",
+        "translit": "yawmī",
+        "meaning": "daily",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا عملي اليومي.",
+          "en": "This is my daily work."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ش ه ر",
+    "translit": "sh-h-r",
+    "meaning": "Month; fame",
+    "mnemonic": "SHining Herald, Revealed. SH-H-R is the root of the month, once announced by the new moon, and of fame.",
+    "words": [
+      {
+        "arabic": "شَهْر",
+        "translit": "shahr",
+        "meaning": "month",
+        "pattern": "act",
+        "example": {
+          "ar": "أسافر الشهر القادم.",
+          "en": "I travel next month."
+        }
+      },
+      {
+        "arabic": "شُهُور",
+        "translit": "shuhūr",
+        "meaning": "months",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "مرت شهور كثيرة.",
+          "en": "Many months passed."
+        }
+      },
+      {
+        "arabic": "مَشْهُور",
+        "translit": "mashhūr",
+        "meaning": "famous",
+        "pattern": "done",
+        "example": {
+          "ar": "هو كاتب مشهور.",
+          "en": "He is a famous writer."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "س ن و",
+    "translit": "s-n-w",
+    "meaning": "Year",
+    "mnemonic": "Seasons Never Wait. S-N-W is the root of the year.",
+    "words": [
+      {
+        "arabic": "سَنَة",
+        "translit": "sana",
+        "meaning": "year",
+        "example": {
+          "ar": "كل سنة وأنت بخير.",
+          "en": "Many happy returns."
+        }
+      },
+      {
+        "arabic": "سَنَوَات",
+        "translit": "sanawāt",
+        "meaning": "years",
+        "example": {
+          "ar": "عشت هناك خمس سنوات.",
+          "en": "I lived there five years."
+        }
+      },
+      {
+        "arabic": "سَنَوِيّ",
+        "translit": "sanawī",
+        "meaning": "annual, yearly",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا احتفال سنوي.",
+          "en": "This is an annual celebration."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ص ب ح",
+    "translit": "ṣ-b-ḥ",
+    "meaning": "Morning",
+    "mnemonic": "Sunrise Brings Hope. Ṣ-B-Ḥ is the root of the morning, and of becoming.",
+    "words": [
+      {
+        "arabic": "صَبَاح",
+        "translit": "ṣabāḥ",
+        "meaning": "morning",
+        "example": {
+          "ar": "صباح الخير!",
+          "en": "Good morning!"
+        }
+      },
+      {
+        "arabic": "أَصْبَحَ",
+        "translit": "ʾaṣbaḥa",
+        "meaning": "to become",
+        "pattern": "form4",
+        "note": "Present tense: يُصْبِحُ (yuṣbiḥu)",
+        "example": {
+          "ar": "أصبح الجو باردا.",
+          "en": "The weather became cold."
+        }
+      },
+      {
+        "arabic": "مِصْبَاح",
+        "translit": "miṣbāḥ",
+        "meaning": "lamp",
+        "example": {
+          "ar": "أطفئ المصباح من فضلك.",
+          "en": "Turn off the lamp, please."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "م س و",
+    "translit": "m-s-w",
+    "meaning": "Evening",
+    "mnemonic": "Moon Shows Waking. M-S-W is the root of the evening.",
+    "words": [
+      {
+        "arabic": "مَسَاء",
+        "translit": "masāʾ",
+        "meaning": "evening",
+        "example": {
+          "ar": "مساء الخير!",
+          "en": "Good evening!"
+        }
+      },
+      {
+        "arabic": "مَسَائِيّ",
+        "translit": "masāʾī",
+        "meaning": "evening (adj.)",
+        "pattern": "nisba",
+        "example": {
+          "ar": "أدرس في الفصل المسائي.",
+          "en": "I study in the evening class."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "س ب ع",
+    "translit": "s-b-ʿ",
+    "meaning": "Seven; week",
+    "mnemonic": "Sunday Begins Again. S-B-ʿ is the root of seven, and of the seven-day week.",
+    "words": [
+      {
+        "arabic": "أُسْبُوع",
+        "translit": "ʾusbūʿ",
+        "meaning": "week",
+        "example": {
+          "ar": "أراك الأسبوع القادم.",
+          "en": "I will see you next week."
+        }
+      },
+      {
+        "arabic": "سَبْعَة",
+        "translit": "sabʿa",
+        "meaning": "seven",
+        "example": {
+          "ar": "في الأسبوع سبعة أيام.",
+          "en": "There are seven days in a week."
+        }
+      },
+      {
+        "arabic": "أُسْبُوعِيّ",
+        "translit": "ʾusbūʿī",
+        "meaning": "weekly",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذه مجلة أسبوعية.",
+          "en": "This is a weekly magazine."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ف ص ل",
+    "translit": "f-ṣ-l",
+    "meaning": "Season; separating",
+    "mnemonic": "Fences Split Lands. F-Ṣ-L is the root of dividing: seasons divide the year, chapters a book, classes a school.",
+    "words": [
+      {
+        "arabic": "فَصْل",
+        "translit": "faṣl",
+        "meaning": "season; chapter; class",
+        "pattern": "act",
+        "example": {
+          "ar": "الربيع فصل جميل.",
+          "en": "Spring is a beautiful season."
+        }
+      },
+      {
+        "arabic": "فُصُول",
+        "translit": "fuṣūl",
+        "meaning": "seasons; chapters",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "في السنة أربعة فصول.",
+          "en": "There are four seasons in a year."
+        }
+      },
+      {
+        "arabic": "فَاصِل",
+        "translit": "fāṣil",
+        "meaning": "break, interval",
+        "pattern": "doer",
+        "example": {
+          "ar": "نعود بعد الفاصل.",
+          "en": "We will be back after the break."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ص ي ف",
+    "translit": "ṣ-y-f",
+    "meaning": "Summer",
+    "mnemonic": "Sun's Yearly Feast. Ṣ-Y-F is the root of summer.",
+    "words": [
+      {
+        "arabic": "صَيْف",
+        "translit": "ṣayf",
+        "meaning": "summer",
+        "pattern": "act",
+        "example": {
+          "ar": "الصيف حار هنا.",
+          "en": "Summer is hot here."
+        }
+      },
+      {
+        "arabic": "صَيْفِيّ",
+        "translit": "ṣayfī",
+        "meaning": "summer (adj.)",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا قميص صيفي.",
+          "en": "This is a summer shirt."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ش ت و",
+    "translit": "sh-t-w",
+    "meaning": "Winter",
+    "mnemonic": "SHivering Through Wind. SH-T-W is the root of winter.",
+    "words": [
+      {
+        "arabic": "شِتَاء",
+        "translit": "shitāʾ",
+        "meaning": "winter",
+        "example": {
+          "ar": "الشتاء بارد.",
+          "en": "Winter is cold."
+        }
+      },
+      {
+        "arabic": "شَتْوِيّ",
+        "translit": "shatwī",
+        "meaning": "winter (adj.)",
+        "pattern": "nisba",
+        "example": {
+          "ar": "اشتريت معطفا شتويا.",
+          "en": "I bought a winter coat."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "و ق ت",
+    "translit": "w-q-t",
+    "meaning": "Time",
+    "mnemonic": "Watch Quietly Ticking. W-Q-T is the root of time and set times.",
+    "words": [
+      {
+        "arabic": "وَقْت",
+        "translit": "waqt",
+        "meaning": "time",
+        "pattern": "act",
+        "example": {
+          "ar": "ليس عندي وقت.",
+          "en": "I don't have time."
+        }
+      },
+      {
+        "arabic": "أَوْقَات",
+        "translit": "ʾawqāt",
+        "meaning": "times",
+        "pattern": "plural",
+        "example": {
+          "ar": "قضينا أوقاتا سعيدة.",
+          "en": "We spent happy times."
+        }
+      },
+      {
+        "arabic": "مُؤَقَّت",
+        "translit": "muʾaqqat",
+        "meaning": "temporary",
+        "example": {
+          "ar": "هذا عمل مؤقت.",
+          "en": "This is a temporary job."
+        }
+      }
+    ]
+  }
+]

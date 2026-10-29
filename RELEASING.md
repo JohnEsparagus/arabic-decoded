@@ -39,6 +39,12 @@ plus the folder under `android/app/src/main/kotlin/`) and in Xcode.
    app with the bundle ID above, and fill in the listing, the privacy
    answers and the privacy policy URL.
 
+### Store listing
+
+Everything for the Play Console listing is in `store/`: the text to paste,
+the answers for the content rating and data safety forms
+(`store/listing.md`), the feature graphic and six phone screenshots.
+
 ### Privacy policy
 
 Both stores need a public URL. `PRIVACY.md` in this repo is the text; put

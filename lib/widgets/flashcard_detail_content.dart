@@ -8,6 +8,7 @@ import '../screens/word_detail_screen.dart';
 import '../theme/app_theme.dart';
 import '../utils/spoken_text.dart';
 import 'card_actions_sheet.dart';
+import 'gold_diamond.dart';
 import 'sentence_text.dart';
 import 'sentence_tile.dart';
 import 'speak_button.dart';
@@ -68,9 +69,14 @@ class FlashcardDetailContent extends ConsumerWidget {
               ),
             ),
           ],
+          if (card.kind == CardKind.root && card.quranRank != null)
+            const _QuranMark(),
           SpeakButton(text: spokenText(card)),
           const SizedBox(height: 6),
-          Text('✦', style: TextStyle(color: colors.gold, fontSize: 14)),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 4),
+            child: GoldDiamond(),
+          ),
           const SizedBox(height: 10),
           Text(
             card.englishTranslation,
@@ -277,13 +283,18 @@ class _InfoContent extends ConsumerWidget {
               ),
           ],
           const SizedBox(height: 14),
-          // A short rule in the accent colour, in place of the ✦ the
+          // A short rule in the accent colour, in place of the diamond the
           // study cards have.
           Center(child: Container(width: 44, height: 3, color: style.color)),
           const SizedBox(height: 16),
           Text(
             card.exampleSentence,
-            style: TextStyle(color: colors.ink, height: 1.5, fontSize: 16),
+            style: TextStyle(
+              color: colors.ink,
+              height: 1.5,
+              fontSize: 16,
+              fontFamilyFallback: arabicFallback(context),
+            ),
           ),
           if (examples.isNotEmpty) ...[
             const SizedBox(height: 18),
@@ -488,6 +499,30 @@ class _SentencesSectionState extends State<_SentencesSection> {
   }
 }
 
+/// Says that a root is one of the Quran's most common.
+class _QuranMark extends StatelessWidget {
+  const _QuranMark();
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = context.colors;
+    return Padding(
+      padding: const EdgeInsets.only(top: 6),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.menu_book_outlined, size: 14, color: colors.gold),
+          const SizedBox(width: 5),
+          Text(
+            'Common in the Quran',
+            style: TextStyle(color: colors.inkMuted, fontSize: 12),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _SectionLabel extends StatelessWidget {
   const _SectionLabel(this.text);
 
@@ -642,7 +677,10 @@ class _MnemonicTip extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('💡', style: TextStyle(fontSize: 15)),
+            Padding(
+              padding: const EdgeInsets.only(top: 1),
+              child: Icon(Icons.lightbulb_outline, size: 18, color: colors.ink),
+            ),
             const SizedBox(width: 8),
             Flexible(
               child: Text(

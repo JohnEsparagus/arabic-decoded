@@ -66,6 +66,16 @@ class ContentImporter {
   Future<List<Deck>> importAll([
     List<CampaignSource> sources = campaignSources,
   ]) async {
+    // Renamed and moved cards go to their new names first, so the import
+    // below finds them there instead of making new ones.
+    for (final move in contentMoves) {
+      await _repository.moveCard(
+        fromDeck: move.fromDeck,
+        from: move.from,
+        toDeck: move.toDeck,
+        to: move.to,
+      );
+    }
     final decks = <Deck>[];
     for (final source in sources) {
       decks.add(
@@ -76,9 +86,9 @@ class ContentImporter {
         ),
       );
     }
+    decks.add(await importQuran());
     decks.add(await importPatterns());
     decks.add(await importAlphabet());
-    await importSentences();
     for (final source in readOnceSources) {
       await importReadOnce(source);
     }
@@ -94,9 +104,50 @@ class ContentImporter {
       deckName,
       description: deckDescription,
     );
-    final entries = await _loadEntries(assetPath);
-    if (entries.isEmpty) return deck;
+    await _storeRoots(deck, await _loadEntries(assetPath));
+    return deck;
+  }
 
+  /// Imports assets/data/quran.json: an ordered list of the Quran's most
+  /// common roots. An entry is either a reference to a root another
+  /// campaign teaches, or a whole root entry like a campaign's for one
+  /// that no campaign has:
+  ///
+  /// ```json
+  /// [
+  ///   {"arabic": "أ ل ه", "meaning": "God, deity", "words": [...]},
+  ///   {"root": "ق و ل"}
+  /// ]
+  /// ```
+  ///
+  /// The whole entries become this deck's cards; then every root on the
+  /// list, wherever it lives, is marked with its place in it. So there's
+  /// still just one card per root, and progress on it counts in both its
+  /// campaign and the Quran list.
+  Future<Deck> importQuran([CampaignSource source = quranSource]) async {
+    final deck = await _repository.getOrCreateDeck(
+      source.deckName,
+      description: source.description,
+    );
+    final entries = await _loadEntries(source.assetPath);
+    await _storeRoots(deck, [
+      for (final entry in entries)
+        if (entry['arabic'] != null) entry,
+    ]);
+    await _repository.setQuranRanks({
+      for (final (index, entry) in entries.indexed)
+        (entry['arabic'] ?? entry['root']) as String: index + 1,
+    });
+    return deck;
+  }
+
+  /// Turns campaign-style root entries (each with its words) into cards in
+  /// [deck], and stores them.
+  Future<void> _storeRoots(
+    Deck deck,
+    List<Map<String, dynamic>> entries,
+  ) async {
+    if (entries.isEmpty) return;
     final cards = <Flashcard>[];
     for (final entry in entries) {
       final arabic = entry['arabic'] as String?;
@@ -147,7 +198,6 @@ class ContentImporter {
       cards.addAll(wordCards);
     }
     await _store(deck, cards);
-    return deck;
   }
 
   /// Imports assets/data/patterns.json into the [patternsSource] deck, one
@@ -206,6 +256,10 @@ class ContentImporter {
     return deck;
   }
 
+  /// Not part of [importAll]: the corpus is big, and nothing on the first
+  /// screen needs it, so it loads in the background once the app is up
+  /// (see `sentenceCorpusProvider`).
+  ///
   /// Loads assets/data/sentences.json into the sentence corpus, if this
   /// build's edition of it ([sentencesVersion]) isn't the one already
   /// loaded. On every launch after the first that's one small query and

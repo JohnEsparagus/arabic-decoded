@@ -53,9 +53,11 @@ class ReadOnceExample {
 
 /// A single spaced-repetition flashcard belonging to a [Deck].
 ///
-/// The `ease_factor`, `interval`, `repetitions` and `next_review` fields are
-/// owned by the SM-2 engine (see `lib/services/sm2.dart`) — nothing else
-/// should mutate them directly.
+/// The scheduling fields (`interval`, `repetitions`, `next_review`,
+/// `stability`, `difficulty`) are owned by the scheduler (see
+/// `lib/services/scheduler.dart`) — nothing else should mutate them
+/// directly. `ease_factor` is left over from the SM-2 scheduler the app
+/// used before; it's only read to convert a card SM-2 last scheduled.
 ///
 /// [isNew] distinguishes cards that have never been studied from cards in
 /// the SM-2 review rotation: new cards don't show up in the due-for-review
@@ -81,6 +83,11 @@ class Flashcard {
   final double easeFactor;
   final int interval;
   final int repetitions;
+
+  /// FSRS's state for the card: how many days its memory lasts, and how
+  /// hard it is (1-10). Null until it's graded under FSRS.
+  final double? stability;
+  final double? difficulty;
   final DateTime nextReview;
   final bool isNew;
   final DateTime? introducedAt;
@@ -112,6 +119,17 @@ class Flashcard {
   /// ahead of whatever would have come next. Null if they haven't.
   final DateTime? queuedAt;
 
+  /// When the card was last graded, which the scheduler needs to know how
+  /// long it has been. Read from the database like [isFavorite]; the write
+  /// that grades a card stamps it.
+  final DateTime? lastReviewedAt;
+
+  /// For a root that's among the Quran's most common, its place in that
+  /// list (1 = the most common); null otherwise. Set by the importer from
+  /// assets/data/quran.json and, like [isFavorite], never written back by
+  /// [toMap].
+  final int? quranRank;
+
   const Flashcard({
     this.id,
     required this.arabicWord,
@@ -121,6 +139,8 @@ class Flashcard {
     this.easeFactor = 2.5,
     this.interval = 0,
     this.repetitions = 0,
+    this.stability,
+    this.difficulty,
     required this.nextReview,
     this.isNew = true,
     this.introducedAt,
@@ -135,6 +155,8 @@ class Flashcard {
     this.unlockAfter,
     this.isFavorite = false,
     this.queuedAt,
+    this.lastReviewedAt,
+    this.quranRank,
   });
 
   /// A brand-new card, due immediately, with default SM-2 parameters. Stays
@@ -187,6 +209,12 @@ class Flashcard {
       easeFactor: (map['ease_factor'] as num).toDouble(),
       interval: map['interval'] as int,
       repetitions: map['repetitions'] as int,
+      stability: (map['stability'] as num?)?.toDouble(),
+      difficulty: (map['difficulty'] as num?)?.toDouble(),
+      quranRank: map['quran_rank'] as int?,
+      lastReviewedAt: map['updated_at'] == null
+          ? null
+          : DateTime.fromMillisecondsSinceEpoch(map['updated_at'] as int),
       nextReview: DateTime.fromMillisecondsSinceEpoch(
         map['next_review'] as int,
       ),
@@ -220,6 +248,8 @@ class Flashcard {
       'ease_factor': easeFactor,
       'interval': interval,
       'repetitions': repetitions,
+      'stability': stability,
+      'difficulty': difficulty,
       'next_review': nextReview.millisecondsSinceEpoch,
       'is_new': isNew ? 1 : 0,
       'introduced_at': introducedAt?.millisecondsSinceEpoch,
@@ -254,6 +284,8 @@ class Flashcard {
     double? easeFactor,
     int? interval,
     int? repetitions,
+    double? stability,
+    double? difficulty,
     DateTime? nextReview,
     bool? isNew,
     DateTime? introducedAt,
@@ -275,6 +307,8 @@ class Flashcard {
       easeFactor: easeFactor ?? this.easeFactor,
       interval: interval ?? this.interval,
       repetitions: repetitions ?? this.repetitions,
+      stability: stability ?? this.stability,
+      difficulty: difficulty ?? this.difficulty,
       nextReview: nextReview ?? this.nextReview,
       isNew: isNew ?? this.isNew,
       introducedAt: introducedAt ?? this.introducedAt,
@@ -289,6 +323,8 @@ class Flashcard {
       unlockAfter: unlockAfter,
       isFavorite: isFavorite,
       queuedAt: queuedAt,
+      lastReviewedAt: lastReviewedAt,
+      quranRank: quranRank,
     );
   }
 }

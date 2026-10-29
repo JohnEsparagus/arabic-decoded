@@ -1,0 +1,380 @@
+[
+  {
+    "arabic": "ل ع ب",
+    "translit": "l-ʿ-b",
+    "meaning": "Playing",
+    "mnemonic": "Laughing As we Bounce. L-ʿ-B is the root of play and games.",
+    "words": [
+      {
+        "arabic": "لَعِبَ",
+        "translit": "laʿiba",
+        "meaning": "to play",
+        "pattern": "form1",
+        "note": "Present tense: يَلْعَبُ (yalʿabu)",
+        "example": {
+          "ar": "لعب الأطفال في الحديقة.",
+          "en": "The children played in the garden."
+        }
+      },
+      {
+        "arabic": "لُعْبَة",
+        "translit": "luʿba",
+        "meaning": "game, toy",
+        "example": {
+          "ar": "هذه لعبة جديدة.",
+          "en": "This is a new game."
+        }
+      },
+      {
+        "arabic": "لَاعِب",
+        "translit": "lāʿib",
+        "meaning": "player",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو لاعب مشهور.",
+          "en": "He is a famous player."
+        }
+      },
+      {
+        "arabic": "مَلْعَب",
+        "translit": "malʿab",
+        "meaning": "playing field, stadium",
+        "pattern": "place",
+        "example": {
+          "ar": "المباراة في الملعب الكبير.",
+          "en": "The match is at the big stadium."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "غ ن ي",
+    "translit": "gh-n-y",
+    "meaning": "Singing; wealth",
+    "mnemonic": "Gold, Notes, Yes. GH-N-Y is the root of singing, and of being rich: both are fullness.",
+    "words": [
+      {
+        "arabic": "غَنَّى",
+        "translit": "ghannā",
+        "meaning": "to sing",
+        "pattern": "form2",
+        "note": "Present tense: يُغَنِّي (yughannī)",
+        "example": {
+          "ar": "غنت البنت أغنية جميلة.",
+          "en": "The girl sang a beautiful song."
+        }
+      },
+      {
+        "arabic": "أُغْنِيَة",
+        "translit": "ʾughniya",
+        "meaning": "song",
+        "example": {
+          "ar": "هذه أغنيتي المفضلة.",
+          "en": "This is my favourite song."
+        }
+      },
+      {
+        "arabic": "غَنِيّ",
+        "translit": "ghanī",
+        "meaning": "rich",
+        "pattern": "adj",
+        "example": {
+          "ar": "هو رجل غني.",
+          "en": "He is a rich man."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ر س م",
+    "translit": "r-s-m",
+    "meaning": "Drawing; official",
+    "mnemonic": "Rough Sketch Made. R-S-M is the root of drawing, and of what is officially set down.",
+    "words": [
+      {
+        "arabic": "رَسَمَ",
+        "translit": "rasama",
+        "meaning": "to draw",
+        "pattern": "form1",
+        "note": "Present tense: يَرْسُمُ (yarsumu)",
+        "example": {
+          "ar": "رسم الطفل بيتا.",
+          "en": "The child drew a house."
+        }
+      },
+      {
+        "arabic": "رَسْم",
+        "translit": "rasm",
+        "meaning": "drawing; fee",
+        "pattern": "act",
+        "example": {
+          "ar": "هذا رسم جميل.",
+          "en": "This is a beautiful drawing."
+        }
+      },
+      {
+        "arabic": "رَسْمِيّ",
+        "translit": "rasmī",
+        "meaning": "official",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذه زيارة رسمية.",
+          "en": "This is an official visit."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ف ن ن",
+    "translit": "f-n-n",
+    "meaning": "Art",
+    "mnemonic": "Fine, Noble aNd lovely. F-N-N is the root of art.",
+    "words": [
+      {
+        "arabic": "فَنّ",
+        "translit": "fann",
+        "meaning": "art",
+        "example": {
+          "ar": "أحب الفن العربي.",
+          "en": "I love Arab art."
+        }
+      },
+      {
+        "arabic": "فَنَّان",
+        "translit": "fannān",
+        "meaning": "artist",
+        "example": {
+          "ar": "هو فنان موهوب.",
+          "en": "He is a talented artist."
+        }
+      },
+      {
+        "arabic": "فُنُون",
+        "translit": "funūn",
+        "meaning": "arts",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "يدرس الفنون الجميلة.",
+          "en": "He studies fine arts."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ر ق ص",
+    "translit": "r-q-ṣ",
+    "meaning": "Dancing",
+    "mnemonic": "Rhythm, Quick Steps. R-Q-Ṣ is the root of dance.",
+    "words": [
+      {
+        "arabic": "رَقَصَ",
+        "translit": "raqaṣa",
+        "meaning": "to dance",
+        "pattern": "form1",
+        "note": "Present tense: يَرْقُصُ (yarquṣu)",
+        "example": {
+          "ar": "رقص الناس في العرس.",
+          "en": "People danced at the wedding."
+        }
+      },
+      {
+        "arabic": "رَقْص",
+        "translit": "raqṣ",
+        "meaning": "dancing",
+        "pattern": "act",
+        "example": {
+          "ar": "الرقص الشعبي جميل.",
+          "en": "Folk dancing is beautiful."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ح ف ل",
+    "translit": "ḥ-f-l",
+    "meaning": "Party, celebration",
+    "mnemonic": "Happy Friends Laughing. Ḥ-F-L is the root of a gathering to celebrate.",
+    "words": [
+      {
+        "arabic": "حَفْلَة",
+        "translit": "ḥafla",
+        "meaning": "party, concert",
+        "example": {
+          "ar": "كانت الحفلة رائعة.",
+          "en": "The party was wonderful."
+        }
+      },
+      {
+        "arabic": "اِحْتَفَلَ",
+        "translit": "iḥtafala",
+        "meaning": "to celebrate",
+        "pattern": "form8",
+        "note": "Present tense: يَحْتَفِلُ (yaḥtafilu)",
+        "example": {
+          "ar": "احتفلنا بالعيد.",
+          "en": "We celebrated the holiday."
+        }
+      },
+      {
+        "arabic": "اِحْتِفَال",
+        "translit": "iḥtifāl",
+        "meaning": "celebration",
+        "example": {
+          "ar": "حضرت الاحتفال.",
+          "en": "I attended the celebration."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "م ت ع",
+    "translit": "m-t-ʿ",
+    "meaning": "Enjoyment",
+    "mnemonic": "More Treats, Always. M-T-ʿ is the root of enjoying.",
+    "words": [
+      {
+        "arabic": "مُمْتِع",
+        "translit": "mumtiʿ",
+        "meaning": "enjoyable, fun",
+        "example": {
+          "ar": "كان الفيلم ممتعا.",
+          "en": "The film was enjoyable."
+        }
+      },
+      {
+        "arabic": "مُتْعَة",
+        "translit": "mutʿa",
+        "meaning": "pleasure, fun",
+        "example": {
+          "ar": "القراءة متعة.",
+          "en": "Reading is a pleasure."
+        }
+      },
+      {
+        "arabic": "اِسْتَمْتَعَ",
+        "translit": "istamtaʿa",
+        "meaning": "to enjoy",
+        "pattern": "form10",
+        "note": "Present tense: يَسْتَمْتِعُ (yastamtiʿu)",
+        "example": {
+          "ar": "استمتعنا بالرحلة.",
+          "en": "We enjoyed the trip."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ص ي د",
+    "translit": "ṣ-y-d",
+    "meaning": "Hunting, fishing",
+    "mnemonic": "Stalk Your Dinner. Ṣ-Y-D is the root of hunting and fishing.",
+    "words": [
+      {
+        "arabic": "صَادَ",
+        "translit": "ṣāda",
+        "meaning": "to hunt, catch",
+        "pattern": "form1",
+        "note": "Present tense: يَصِيدُ (yaṣīdu)",
+        "example": {
+          "ar": "صاد الرجل سمكة كبيرة.",
+          "en": "The man caught a big fish."
+        }
+      },
+      {
+        "arabic": "صَيْد",
+        "translit": "ṣayd",
+        "meaning": "hunting, fishing",
+        "pattern": "act",
+        "example": {
+          "ar": "أحب صيد السمك.",
+          "en": "I love fishing."
+        }
+      },
+      {
+        "arabic": "صَيَّاد",
+        "translit": "ṣayyād",
+        "meaning": "hunter, fisherman",
+        "example": {
+          "ar": "الصياد في القارب.",
+          "en": "The fisherman is in the boat."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "س ب ح",
+    "translit": "s-b-ḥ",
+    "meaning": "Swimming; praising",
+    "mnemonic": "Swift Body Glides. S-B-Ḥ is the root of swimming, and of glorifying God.",
+    "words": [
+      {
+        "arabic": "سَبَحَ",
+        "translit": "sabaḥa",
+        "meaning": "to swim",
+        "pattern": "form1",
+        "note": "Present tense: يَسْبَحُ (yasbaḥu)",
+        "example": {
+          "ar": "سبح الولد في البحر.",
+          "en": "The boy swam in the sea."
+        }
+      },
+      {
+        "arabic": "سِبَاحَة",
+        "translit": "sibāḥa",
+        "meaning": "swimming",
+        "pattern": "craft",
+        "example": {
+          "ar": "السباحة رياضة مفيدة.",
+          "en": "Swimming is a useful sport."
+        }
+      },
+      {
+        "arabic": "مَسْبَح",
+        "translit": "masbaḥ",
+        "meaning": "swimming pool",
+        "pattern": "place",
+        "example": {
+          "ar": "في الفندق مسبح.",
+          "en": "The hotel has a swimming pool."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ض ح ك",
+    "translit": "ḍ-ḥ-k",
+    "meaning": "Laughing",
+    "mnemonic": "Delight, Ha, Ka! Ḍ-Ḥ-K is the root of laughter.",
+    "words": [
+      {
+        "arabic": "ضَحِكَ",
+        "translit": "ḍaḥika",
+        "meaning": "to laugh",
+        "pattern": "form1",
+        "note": "Present tense: يَضْحَكُ (yaḍḥaku)",
+        "example": {
+          "ar": "ضحك الجميع من النكتة.",
+          "en": "Everyone laughed at the joke."
+        }
+      },
+      {
+        "arabic": "ضَحِك",
+        "translit": "ḍaḥik",
+        "meaning": "laughter",
+        "example": {
+          "ar": "سمعنا ضحك الأطفال.",
+          "en": "We heard the children's laughter."
+        }
+      },
+      {
+        "arabic": "مُضْحِك",
+        "translit": "muḍḥik",
+        "meaning": "funny",
+        "example": {
+          "ar": "هذا فيلم مضحك.",
+          "en": "This is a funny film."
+        }
+      }
+    ]
+  }
+]

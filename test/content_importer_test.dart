@@ -5,7 +5,6 @@ import 'package:arabic_decoded/models/flashcard.dart';
 import 'package:arabic_decoded/repositories/local_flashcard_repository.dart';
 import 'package:arabic_decoded/services/content_importer.dart';
 import 'package:arabic_decoded/services/database_service.dart';
-import 'package:arabic_decoded/services/sm2.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
@@ -57,17 +56,11 @@ void main() {
   test('re-importing changes nothing and keeps progress', () async {
     final before = await importCore();
     final root = before.singleWhere((card) => card.arabicWord == 'ك ت ب');
-    final result = computeSM2(
-      easeFactor: root.easeFactor,
-      interval: root.interval,
-      repetitions: root.repetitions,
-      quality: Grade.good.quality,
-    );
     await db.updateFlashcard(
       root.copyWith(
-        interval: result.interval,
-        repetitions: result.repetitions,
-        nextReview: result.nextReview,
+        interval: 3,
+        repetitions: 1,
+        nextReview: DateTime.now().add(const Duration(days: 3)),
         isNew: false,
       ),
     );

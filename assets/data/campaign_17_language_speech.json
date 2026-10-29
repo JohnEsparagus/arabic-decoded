@@ -1,0 +1,348 @@
+[
+  {
+    "arabic": "ل غ و",
+    "translit": "l-gh-w",
+    "meaning": "Language",
+    "mnemonic": "Learn, Grasp, Write. L-GH-W is the root of language.",
+    "words": [
+      {
+        "arabic": "لُغَة",
+        "translit": "lugha",
+        "meaning": "language",
+        "example": {
+          "ar": "العربية لغة جميلة.",
+          "en": "Arabic is a beautiful language."
+        }
+      },
+      {
+        "arabic": "لُغَات",
+        "translit": "lughāt",
+        "meaning": "languages",
+        "example": {
+          "ar": "يتكلم ثلاث لغات.",
+          "en": "He speaks three languages."
+        }
+      },
+      {
+        "arabic": "لُغَوِيّ",
+        "translit": "lughawī",
+        "meaning": "linguistic; linguist",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذه مشكلة لغوية.",
+          "en": "This is a linguistic problem."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ك ل م",
+    "translit": "k-l-m",
+    "meaning": "Speaking, words",
+    "mnemonic": "Keep Lips Moving. K-L-M is the root of speech and words.",
+    "words": [
+      {
+        "arabic": "تَكَلَّمَ",
+        "translit": "takallama",
+        "meaning": "to speak",
+        "note": "Present tense: يَتَكَلَّمُ (yatakallamu)",
+        "example": {
+          "ar": "تكلم المعلم ببطء.",
+          "en": "The teacher spoke slowly."
+        }
+      },
+      {
+        "arabic": "كَلِمَة",
+        "translit": "kalima",
+        "meaning": "word",
+        "example": {
+          "ar": "ما معنى هذه الكلمة؟",
+          "en": "What does this word mean?"
+        }
+      },
+      {
+        "arabic": "كَلَام",
+        "translit": "kalām",
+        "meaning": "speech, talk",
+        "example": {
+          "ar": "هذا كلام جميل.",
+          "en": "These are kind words."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ح ر ف",
+    "translit": "ḥ-r-f",
+    "meaning": "Letter; edge; craft",
+    "mnemonic": "Hand-carved, Rough-edged Figures. Ḥ-R-F is the root of letters, edges and crafts.",
+    "words": [
+      {
+        "arabic": "حَرْف",
+        "translit": "ḥarf",
+        "meaning": "letter (of the alphabet)",
+        "pattern": "act",
+        "example": {
+          "ar": "في العربية ثمانية وعشرون حرفا.",
+          "en": "There are twenty-eight letters in Arabic."
+        }
+      },
+      {
+        "arabic": "حُرُوف",
+        "translit": "ḥurūf",
+        "meaning": "letters",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "تعلمت الحروف العربية.",
+          "en": "I learned the Arabic letters."
+        }
+      },
+      {
+        "arabic": "حِرْفَة",
+        "translit": "ḥirfa",
+        "meaning": "craft, trade",
+        "example": {
+          "ar": "النجارة حرفة قديمة.",
+          "en": "Carpentry is an old trade."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ج م ل",
+    "translit": "j-m-l",
+    "meaning": "Sentence; beauty; camel",
+    "mnemonic": "Just Marvellous Lines. J-M-L is the root of beauty, of a sentence, and of the camel.",
+    "words": [
+      {
+        "arabic": "جُمْلَة",
+        "translit": "jumla",
+        "meaning": "sentence",
+        "example": {
+          "ar": "اكتب جملة قصيرة.",
+          "en": "Write a short sentence."
+        }
+      },
+      {
+        "arabic": "جَمِيل",
+        "translit": "jamīl",
+        "meaning": "beautiful",
+        "pattern": "adj",
+        "example": {
+          "ar": "هذا منظر جميل.",
+          "en": "This is a beautiful view."
+        }
+      },
+      {
+        "arabic": "جَمَل",
+        "translit": "jamal",
+        "meaning": "camel",
+        "example": {
+          "ar": "الجمل يعيش في الصحراء.",
+          "en": "The camel lives in the desert."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ن ط ق",
+    "translit": "n-ṭ-q",
+    "meaning": "Pronouncing, logic",
+    "mnemonic": "Nicely Tuned Quality of voice. N-Ṭ-Q is the root of uttering sounds, and of the logic speech carries.",
+    "words": [
+      {
+        "arabic": "نَطَقَ",
+        "translit": "naṭaqa",
+        "meaning": "to pronounce, utter",
+        "pattern": "form1",
+        "note": "Present tense: يَنْطِقُ (yanṭiqu)",
+        "example": {
+          "ar": "نطق الطفل أول كلمة.",
+          "en": "The child said his first word."
+        }
+      },
+      {
+        "arabic": "نُطْق",
+        "translit": "nuṭq",
+        "meaning": "pronunciation",
+        "example": {
+          "ar": "نطقك ممتاز.",
+          "en": "Your pronunciation is excellent."
+        }
+      },
+      {
+        "arabic": "مَنْطِق",
+        "translit": "manṭiq",
+        "meaning": "logic",
+        "pattern": "place",
+        "example": {
+          "ar": "هذا كلام بلا منطق.",
+          "en": "This talk makes no sense."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ع ر ب",
+    "translit": "ʿ-r-b",
+    "meaning": "Arab, Arabic",
+    "mnemonic": "Ancient Routes of the Bedouin. ʿ-R-B is the root of the Arabs and their language.",
+    "words": [
+      {
+        "arabic": "عَرَبِيّ",
+        "translit": "ʿarabī",
+        "meaning": "Arab; Arabic",
+        "pattern": "nisba",
+        "example": {
+          "ar": "أتعلم اللغة العربية.",
+          "en": "I am learning the Arabic language."
+        }
+      },
+      {
+        "arabic": "العَرَبِيَّة",
+        "translit": "al-ʿarabiyya",
+        "meaning": "Arabic (the language)",
+        "example": {
+          "ar": "العربية لغة القرآن.",
+          "en": "Arabic is the language of the Quran."
+        }
+      },
+      {
+        "arabic": "عَرَب",
+        "translit": "ʿarab",
+        "meaning": "Arabs",
+        "example": {
+          "ar": "العرب يحبون الشعر.",
+          "en": "The Arabs love poetry."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "م ع ن",
+    "translit": "m-ʿ-n",
+    "meaning": "Meaning",
+    "mnemonic": "Mind's Aim, Notion. M-ʿ-N is the root of meaning.",
+    "words": [
+      {
+        "arabic": "مَعْنَى",
+        "translit": "maʿnā",
+        "meaning": "meaning",
+        "example": {
+          "ar": "ما معنى هذا؟",
+          "en": "What does this mean?"
+        }
+      },
+      {
+        "arabic": "مَعَانٍ",
+        "translit": "maʿānin",
+        "meaning": "meanings",
+        "example": {
+          "ar": "لهذه الكلمة معان كثيرة.",
+          "en": "This word has many meanings."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ص و ت",
+    "translit": "ṣ-w-t",
+    "meaning": "Sound, voice",
+    "mnemonic": "Sounds Wobble Through. Ṣ-W-T is the root of sound and voice; it is also how you vote.",
+    "words": [
+      {
+        "arabic": "صَوْت",
+        "translit": "ṣawt",
+        "meaning": "sound, voice",
+        "pattern": "act",
+        "example": {
+          "ar": "صوتها جميل.",
+          "en": "Her voice is beautiful."
+        }
+      },
+      {
+        "arabic": "أَصْوَات",
+        "translit": "ʾaṣwāt",
+        "meaning": "sounds, votes",
+        "pattern": "plural",
+        "example": {
+          "ar": "سمعت أصواتا في الليل.",
+          "en": "I heard sounds in the night."
+        }
+      },
+      {
+        "arabic": "صَوَّتَ",
+        "translit": "ṣawwata",
+        "meaning": "to vote",
+        "pattern": "form2",
+        "note": "Present tense: يُصَوِّتُ (yuṣawwitu)",
+        "example": {
+          "ar": "صوت الناس في الانتخابات.",
+          "en": "The people voted in the elections."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ق ص ص",
+    "translit": "q-ṣ-ṣ",
+    "meaning": "Story; cutting",
+    "mnemonic": "Quill Shapes Stories. Q-Ṣ-Ṣ is the root of telling a story, and of cutting, as a story follows a trail.",
+    "words": [
+      {
+        "arabic": "قِصَّة",
+        "translit": "qiṣṣa",
+        "meaning": "story",
+        "example": {
+          "ar": "أحب هذه القصة.",
+          "en": "I love this story."
+        }
+      },
+      {
+        "arabic": "قِصَص",
+        "translit": "qiṣaṣ",
+        "meaning": "stories",
+        "example": {
+          "ar": "قرأ الأب قصصا للأطفال.",
+          "en": "The father read stories to the children."
+        }
+      },
+      {
+        "arabic": "مِقَصّ",
+        "translit": "miqaṣṣ",
+        "meaning": "scissors",
+        "example": {
+          "ar": "أين المقص؟",
+          "en": "Where are the scissors?"
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ف ص ح",
+    "translit": "f-ṣ-ḥ",
+    "meaning": "Eloquence, clarity",
+    "mnemonic": "Fine Speech, Heard clearly. F-Ṣ-Ḥ is the root of speaking clearly and well.",
+    "words": [
+      {
+        "arabic": "فُصْحَى",
+        "translit": "fuṣḥā",
+        "meaning": "standard Arabic",
+        "example": {
+          "ar": "الفصحى لغة الكتب والأخبار.",
+          "en": "Standard Arabic is the language of books and news."
+        }
+      },
+      {
+        "arabic": "فَصِيح",
+        "translit": "faṣīḥ",
+        "meaning": "eloquent",
+        "pattern": "adj",
+        "example": {
+          "ar": "هو خطيب فصيح.",
+          "en": "He is an eloquent speaker."
+        }
+      }
+    ]
+  }
+]

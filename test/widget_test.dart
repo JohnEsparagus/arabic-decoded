@@ -142,13 +142,13 @@ void main() {
 
         // Tapping a word opens its detail view (the flashcard back side),
         // showing detail-only content that plain dictionary rows don't:
-        // the transliteration and the mnemonic tip (its 💡 marker is our
+        // the transliteration and the mnemonic tip (its lightbulb marker is our
         // own widget chrome, not user-editable prose, so it's a stable
         // thing to assert on regardless of what the mnemonic text says).
         await tester.tap(find.text('Taking'));
         await _settle(tester);
         expect(find.text('ʾ-kh-dh'), findsOneWidget);
-        expect(find.text('💡'), findsOneWidget);
+        expect(find.byIcon(Icons.lightbulb_outline), findsOneWidget);
 
         // Roots and words are linked both ways: the root lists its
         // words, and a word has a link back to its root.
@@ -176,33 +176,43 @@ void main() {
           await _settle(tester);
         }
 
-        // Switch to the Campaigns tab: same underlying decks, shown as
-        // sections with a grid of compact root cards each. Absolute Core
-        // is the first campaign, so its section renders without scrolling.
-        // (Asserting on the deck name rather than a root count, since more
-        // than one campaign happens to share the same root count.)
+        // Switch to the Campaigns tab: the Quran list on top, then the
+        // campaigns, each a section with a grid of compact root cards.
         await tester.tap(find.text('Campaigns'));
         await _settle(tester);
-        expect(find.text('Absolute Core'), findsOneWidget);
+        expect(find.text('Quran'), findsOneWidget);
+        expect(find.text('0 of 105 learnt'), findsOneWidget);
 
         // Holding a root tile selects it, tapping another adds it, and
         // the bar acts on both: mastering two roots makes their words
-        // ready to learn.
+        // ready to learn. (ق و ل and ك و ن, near the top of the Quran
+        // list; each is also in Absolute Core further down, as the same
+        // card, so the first match is the one on the list.)
         final holdTile = await tester.startGesture(
-          tester.getCenter(find.text('k-t-b')),
+          tester.getCenter(find.text('q-w-l').first),
         );
         await Future.delayed(const Duration(milliseconds: 700));
         await tester.pump();
         await holdTile.up();
         await _settle(tester);
         expect(find.text('1 selected'), findsOneWidget);
-        await tester.tap(find.text('q-w-l'));
+        await tester.tap(find.text('k-w-n').first);
         await _settle(tester);
         expect(find.text('2 selected'), findsOneWidget);
         await tester.tap(find.text('Mastered'));
         await _settle(tester);
         expect(find.text('2 selected'), findsNothing);
         expect(find.text('Marked 2 cards as mastered'), findsOneWidget);
+        expect(find.text('2 of 105 learnt'), findsOneWidget);
+
+        // The regular campaigns are below it.
+        await tester.dragUntilVisible(
+          find.text('Absolute Core'),
+          find.byType(ListView).first,
+          const Offset(0, -300),
+        );
+        await _settle(tester);
+        expect(find.text('Absolute Core'), findsOneWidget);
 
         // The Words part shows learnt words (none yet) and, as tiles, the
         // ones ready to be: the words of the two roots just mastered.
@@ -211,7 +221,7 @@ void main() {
         await _settle(tester);
         expect(find.text('No words learnt yet.'), findsOneWidget);
         expect(find.text('Ready to learn'), findsOneWidget);
-        expect(find.text('kitāb'), findsOneWidget);
+        expect(find.text('qāla'), findsOneWidget);
         // The Alphabet part has all 28 letters as tiles.
         await tester.tap(find.text('Alphabet'));
         await _settle(tester);

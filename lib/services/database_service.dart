@@ -60,7 +60,7 @@ class DatabaseService {
     _resolvedPath = path;
     return openDatabase(
       path,
-      version: 10,
+      version: 12,
       // sqflite's default `singleInstance: true` caches connections keyed
       // by the literal path string. That's harmless for the app's real
       // on-disk path (only ever opened once, by the DatabaseService
@@ -89,6 +89,9 @@ class DatabaseService {
             ease_factor REAL NOT NULL DEFAULT 2.5,
             interval INTEGER NOT NULL DEFAULT 0,
             repetitions INTEGER NOT NULL DEFAULT 0,
+            stability REAL,
+            difficulty REAL,
+            quran_rank INTEGER,
             next_review INTEGER NOT NULL,
             is_new INTEGER NOT NULL DEFAULT 1,
             introduced_at INTEGER,
@@ -255,6 +258,18 @@ class DatabaseService {
               AND queued_at IS NULL AND favorite = 0
               AND id NOT IN (SELECT card_id FROM collection_cards)
           ''');
+        }
+        if (oldVersion < 11) {
+          // The FSRS scheduler's state — see lib/services/scheduler.dart.
+          // Cards SM-2 scheduled get theirs on their next review.
+          await db.execute('ALTER TABLE flashcards ADD COLUMN stability REAL');
+          await db.execute('ALTER TABLE flashcards ADD COLUMN difficulty REAL');
+        }
+        if (oldVersion < 12) {
+          // Which roots are the Quran's most common — see Flashcard.quranRank.
+          await db.execute(
+            'ALTER TABLE flashcards ADD COLUMN quran_rank INTEGER',
+          );
         }
       },
     );
@@ -453,6 +468,125 @@ class DatabaseService {
     return rows.map(ReviewLogEntry.fromMap).toList();
   }
 
+  /// Moves a card from one name to another (a corrected spelling, or
+  /// another deck), keeping its progress. Does nothing if there's no card
+  /// at the old name, which is what makes it safe to run on every launch.
+  ///
+  /// If a card is already at the new name (two copies of one root being
+  /// merged), the one with more progress wins and the other goes, with its
+  /// review history, collections and star carried over. The kept card is
+  /// flagged for sync, so its progress is uploaded under the new name.
+  Future<void> moveCard({
+    required String fromDeck,
+    required String from,
+    required String toDeck,
+    required String to,
+  }) async {
+    final db = await database;
+    Future<Map<String, Object?>?> find(String deck, String arabic) async {
+      final rows = await db.rawQuery(
+        '''
+        SELECT f.* FROM flashcards f JOIN decks d ON d.id = f.deck_id
+        WHERE d.name = ? AND f.arabic_word = ?
+        ''',
+        [deck, arabic],
+      );
+      return rows.isEmpty ? null : rows.first;
+    }
+
+    final source = await find(fromDeck, from);
+    if (source == null) return;
+    final target = await find(toDeck, to);
+    final now = DateTime.now().millisecondsSinceEpoch;
+    final studied = source['is_new'] == 0;
+
+    if (target == null) {
+      final deck = await getOrCreateDeck(toDeck);
+      await db.rawUpdate(
+        '''
+        UPDATE flashcards
+        SET deck_id = ?, arabic_word = ?,
+            dirty = CASE WHEN is_new = 0 THEN 1 ELSE dirty END,
+            updated_at = CASE WHEN is_new = 0 THEN COALESCE(updated_at, ?)
+                              ELSE updated_at END
+        WHERE id = ?
+        ''',
+        [deck.id, to, now, source['id']],
+      );
+      return;
+    }
+
+    final sourceId = source['id'] as int;
+    final targetId = target['id'] as int;
+    await db.transaction((txn) async {
+      final sourceAhead =
+          studied &&
+          (target['is_new'] == 1 ||
+              (source['interval'] as int) > (target['interval'] as int));
+      if (sourceAhead) {
+        await txn.update(
+          'flashcards',
+          {
+            for (final column in [
+              'ease_factor',
+              'interval',
+              'repetitions',
+              'stability',
+              'difficulty',
+              'next_review',
+              'is_new',
+              'introduced_at',
+            ])
+              column: source[column],
+            'updated_at': source['updated_at'] ?? now,
+            'dirty': 1,
+          },
+          where: 'id = ?',
+          whereArgs: [targetId],
+        );
+      }
+      if (source['favorite'] == 1) {
+        await txn.update(
+          'flashcards',
+          {'favorite': 1},
+          where: 'id = ?',
+          whereArgs: [targetId],
+        );
+      }
+      await txn.rawUpdate(
+        'UPDATE review_log SET card_id = ? WHERE card_id = ?',
+        [targetId, sourceId],
+      );
+      await txn.rawUpdate(
+        'UPDATE OR IGNORE collection_cards SET card_id = ? WHERE card_id = ?',
+        [targetId, sourceId],
+      );
+      await txn.delete('flashcards', where: 'id = ?', whereArgs: [sourceId]);
+    });
+  }
+
+  /// Marks the Quran's most common roots: [ranks] maps a root's letters
+  /// ("ك ت ب") to its place in the list. Every other root is unmarked, so
+  /// a root dropped from the list stops counting as Quranic. One
+  /// transaction; a root's letters identify it, whichever deck it's in.
+  Future<void> setQuranRanks(Map<String, int> ranks) async {
+    final db = await database;
+    await db.transaction((txn) async {
+      await txn.rawUpdate(
+        'UPDATE flashcards SET quran_rank = NULL WHERE quran_rank IS NOT NULL',
+      );
+      final batch = txn.batch();
+      for (final MapEntry(key: root, value: rank) in ranks.entries) {
+        batch.rawUpdate(
+          "UPDATE flashcards SET quran_rank = ? WHERE kind = 'root' "
+          'AND arabic_word = ?',
+          [rank, root],
+        );
+      }
+      await batch.commit(noResult: true);
+    });
+  }
+
   /// Overwrites [card]'s content (meaning, example, links...) and nothing
   /// else: SM-2 progress and the sync flags are left exactly as they are.
   /// Used by `ContentImporter` when the bundled JSON has changed.
@@ -547,6 +681,11 @@ class DatabaseService {
   /// is asked for again after every new card, that means one turns up
   /// right after the root that unlocks it.
   ///
+  /// The Quran campaign's own roots (the ones no other campaign teaches)
+  /// only come up with [quranFirst] on. With it on, every Quranic root, in
+  /// whichever campaign it lives, comes before the rest, most common
+  /// first.
+  ///
   /// Cards the user queued by hand (see [setQueued]) aren't part of this;
   /// those come from [getQueuedFlashcards] and go ahead of these.
   ///
@@ -556,10 +695,18 @@ class DatabaseService {
     required int limit,
     bool includeWords = true,
     bool includeLetters = true,
+    bool quranFirst = false,
   }) async {
     if (limit <= 0) return [];
     final db = await database;
     final rows = await db.query('flashcards', orderBy: 'deck_id ASC, id ASC');
+    final quranDeck = await db.query(
+      'decks',
+      columns: ['id'],
+      where: 'name = ?',
+      whereArgs: [quranSource.deckName],
+    );
+    final quranDeckId = quranDeck.isEmpty ? null : quranDeck.first['id'];
     final cards = rows.map(Flashcard.fromMap).toList();
     bool isWaiting(Flashcard card) => card.isNew && card.queuedAt == null;
 
@@ -590,9 +737,19 @@ class DatabaseService {
           (card) => isWaiting(card) && card.kind == CardKind.letter,
         ),
     ];
-    final roots = cards
-        .where((card) => isWaiting(card) && card.kind == CardKind.root)
+    var roots = cards
+        .where(
+          (card) =>
+              isWaiting(card) &&
+              card.kind == CardKind.root &&
+              (quranFirst || card.deckId != quranDeckId),
+        )
         .toList();
+    if (quranFirst) {
+      final quranic = roots.where((card) => card.quranRank != null).toList()
+        ..sort((a, b) => a.quranRank!.compareTo(b.quranRank!));
+      roots = [...quranic, ...roots.where((card) => card.quranRank == null)];
+    }
     if (!includeWords) return [...result, ...roots].take(limit).toList();
 
     // Each word, led by its pattern's card if that hasn't been introduced
@@ -685,11 +842,13 @@ class DatabaseService {
       '''
       UPDATE flashcards
       SET is_new = 0, interval = ?, repetitions = MAX(repetitions, 5),
+          stability = ?, difficulty = COALESCE(difficulty, 3),
           next_review = ?, queued_at = NULL, updated_at = ?, dirty = 1
       WHERE id = ?
       ''',
       [
         intervalDays,
+        intervalDays.toDouble(),
         today.add(Duration(days: intervalDays)).millisecondsSinceEpoch,
         now.millisecondsSinceEpoch,
         cardId,
@@ -730,6 +889,8 @@ class DatabaseService {
         'ease_factor': 2.5,
         'interval': 0,
         'repetitions': 0,
+        'stability': null,
+        'difficulty': null,
         'next_review': now,
         'is_new': 1,
         'introduced_at': null,
@@ -854,6 +1015,7 @@ class DatabaseService {
     final db = await database;
     final rows = await db.rawQuery('''
       SELECT d.name AS deck_name, f.arabic_word, f.ease_factor, f.interval,
+             f.stability, f.difficulty,
              f.repetitions, f.next_review, f.introduced_at, f.updated_at
       FROM flashcards f JOIN decks d ON d.id = f.deck_id
       WHERE f.dirty = 1
@@ -864,6 +1026,8 @@ class DatabaseService {
         deckName: row['deck_name'] as String,
         arabicWord: row['arabic_word'] as String,
         easeFactor: (row['ease_factor'] as num).toDouble(),
+        stability: (row['stability'] as num?)?.toDouble(),
+        difficulty: (row['difficulty'] as num?)?.toDouble(),
         interval: row['interval'] as int,
         repetitions: row['repetitions'] as int,
         nextReview: DateTime.fromMillisecondsSinceEpoch(
@@ -939,6 +1103,7 @@ class DatabaseService {
         '''
         UPDATE flashcards
         SET ease_factor = ?, interval = ?, repetitions = ?, next_review = ?,
+            stability = ?, difficulty = ?,
             is_new = ?, introduced_at = ?, updated_at = ?, dirty = 0
         WHERE arabic_word = ?
           AND deck_id = (SELECT id FROM decks WHERE name = ?)
@@ -949,6 +1114,8 @@ class DatabaseService {
           progress.interval,
           progress.repetitions,
           progress.nextReview.millisecondsSinceEpoch,
+          progress.stability,
+          progress.difficulty,
           // Only a card that was reset by hand is uploaded with no
           // interval and no repetitions: even one failed first try has an
           // interval of a day. That card is new again here too.
@@ -987,6 +1154,8 @@ class DatabaseService {
       'ease_factor': 2.5,
       'interval': 0,
       'repetitions': 0,
+      'stability': null,
+      'difficulty': null,
       'next_review': DateTime.now().millisecondsSinceEpoch,
       'is_new': 1,
       'introduced_at': null,
@@ -1266,35 +1435,60 @@ class DatabaseService {
     required int version,
   }) async {
     final db = await database;
+    // Rows go in many to a statement: one statement per row is most of the
+    // cost of a big load, in a browser especially. Each statement stays
+    // under 999 values, the most an older Android SQLite allows.
+    final sentenceRows = [
+      for (final (index, sentence) in sentences.indexed)
+        [index + 1, sentence.arabic, sentence.english, sentence.search],
+    ];
+    final wordRows = [
+      for (final (index, sentence) in sentences.indexed)
+        for (final key in sentence.keys) [key, index + 1],
+    ];
     await db.transaction((txn) async {
       await txn.delete('sentence_words');
       await txn.delete('sentences');
-      var batch = txn.batch();
-      var pending = 0;
-      for (final (index, sentence) in sentences.indexed) {
-        final id = index + 1;
-        batch.insert('sentences', {
-          'id': id,
-          'arabic': sentence.arabic,
-          'english': sentence.english,
-          'search': sentence.search,
-        }, conflictAlgorithm: ConflictAlgorithm.ignore);
-        for (final key in sentence.keys) {
-          batch.insert('sentence_words', {'word': key, 'sentence_id': id});
-        }
-        pending += 1 + sentence.keys.length;
-        if (pending >= 5000) {
-          await batch.commit(noResult: true);
-          batch = txn.batch();
-          pending = 0;
-        }
-      }
-      await batch.commit(noResult: true);
+      await _insertMany(
+        txn,
+        'INSERT OR IGNORE INTO sentences (id, arabic, english, search)',
+        sentenceRows,
+      );
+      await _insertMany(
+        txn,
+        'INSERT OR IGNORE INTO sentence_words (word, sentence_id)',
+        wordRows,
+      );
       await txn.insert('content_meta', {
         'key': 'sentences_version',
         'value': '$version',
       }, conflictAlgorithm: ConflictAlgorithm.replace);
     });
+  }
+
+  /// Inserts [rows] (each a list of values, in the order [insert] names
+  /// the columns) a few hundred to a statement.
+  static Future<void> _insertMany(
+    Transaction txn,
+    String insert,
+    List<List<Object?>> rows,
+  ) async {
+    if (rows.isEmpty) return;
+    final columns = rows.first.length;
+    final perStatement = 999 ~/ columns;
+    final placeholder = '(${List.filled(columns, '?').join(', ')})';
+    final batch = txn.batch();
+    for (var start = 0; start < rows.length; start += perStatement) {
+      final chunk = rows.sublist(
+        start,
+        (start + perStatement).clamp(0, rows.length),
+      );
+      batch.rawInsert(
+        '$insert VALUES ${List.filled(chunk.length, placeholder).join(', ')}',
+        [for (final row in chunk) ...row],
+      );
+    }
+    await batch.commit(noResult: true);
   }
 
   /// One page of the corpus in its own order: [limit] sentences starting

@@ -198,6 +198,26 @@
           "ar": "يعمل الطبيب في المعمل.",
           "en": "The doctor works in the laboratory."
         }
+      },
+      {
+        "arabic": "اِسْتَعْمَلَ",
+        "translit": "istaʿmala",
+        "meaning": "to use",
+        "pattern": "form10",
+        "note": "Present tense: يَسْتَعْمِلُ (yastaʿmilu)",
+        "example": {
+          "ar": "استعمل الولد القلم.",
+          "en": "The boy used the pen."
+        }
+      },
+      {
+        "arabic": "اِسْتِعْمَال",
+        "translit": "istiʿmāl",
+        "meaning": "use, usage",
+        "example": {
+          "ar": "هذا للاستعمال اليومي.",
+          "en": "This is for daily use."
+        }
       }
     ]
   },

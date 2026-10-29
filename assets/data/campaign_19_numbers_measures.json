@@ -1,0 +1,367 @@
+[
+  {
+    "arabic": "ع د د",
+    "translit": "ʿ-d-d",
+    "meaning": "Number, counting",
+    "mnemonic": "Add, Divide, Deduct. ʿ-D-D is the root of number and counting.",
+    "words": [
+      {
+        "arabic": "عَدَد",
+        "translit": "ʿadad",
+        "meaning": "number",
+        "example": {
+          "ar": "ما عدد الطلاب؟",
+          "en": "What is the number of students?"
+        }
+      },
+      {
+        "arabic": "عَدَّ",
+        "translit": "ʿadda",
+        "meaning": "to count",
+        "pattern": "form1",
+        "note": "Present tense: يَعُدُّ (yaʿuddu)",
+        "example": {
+          "ar": "عد الطفل من واحد إلى عشرة.",
+          "en": "The child counted from one to ten."
+        }
+      },
+      {
+        "arabic": "عِدَّة",
+        "translit": "ʿidda",
+        "meaning": "several",
+        "example": {
+          "ar": "زرت عدة مدن.",
+          "en": "I visited several cities."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ر ق م",
+    "translit": "r-q-m",
+    "meaning": "Digit, number",
+    "mnemonic": "Rows of Quick Marks. R-Q-M is the root of written numbers.",
+    "words": [
+      {
+        "arabic": "رَقْم",
+        "translit": "raqm",
+        "meaning": "number, digit",
+        "pattern": "act",
+        "example": {
+          "ar": "ما رقم هاتفك؟",
+          "en": "What is your phone number?"
+        }
+      },
+      {
+        "arabic": "أَرْقَام",
+        "translit": "ʾarqām",
+        "meaning": "numbers",
+        "pattern": "plural",
+        "example": {
+          "ar": "هذه أرقام مهمة.",
+          "en": "These are important numbers."
+        }
+      },
+      {
+        "arabic": "رَقْمِيّ",
+        "translit": "raqmī",
+        "meaning": "digital",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذه ساعة رقمية.",
+          "en": "This is a digital watch."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ك ث ر",
+    "translit": "k-th-r",
+    "meaning": "Many, much",
+    "mnemonic": "Keep THrowing Rice. K-TH-R is the root of a lot.",
+    "words": [
+      {
+        "arabic": "كَثِير",
+        "translit": "kathīr",
+        "meaning": "many, much",
+        "pattern": "adj",
+        "example": {
+          "ar": "عندي أصدقاء كثيرون.",
+          "en": "I have many friends."
+        }
+      },
+      {
+        "arabic": "أَكْثَر",
+        "translit": "ʾakthar",
+        "meaning": "more, most",
+        "pattern": "comparative",
+        "example": {
+          "ar": "أريد أكثر من هذا.",
+          "en": "I want more than this."
+        }
+      },
+      {
+        "arabic": "كَثْرَة",
+        "translit": "kathra",
+        "meaning": "abundance",
+        "example": {
+          "ar": "المشكلة كثرة السيارات.",
+          "en": "The problem is the great number of cars."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ق ل ل",
+    "translit": "q-l-l",
+    "meaning": "Few, little",
+    "mnemonic": "Quite Little Left. Q-L-L is the root of few and less.",
+    "words": [
+      {
+        "arabic": "قَلِيل",
+        "translit": "qalīl",
+        "meaning": "few, little",
+        "pattern": "adj",
+        "example": {
+          "ar": "عندي وقت قليل.",
+          "en": "I have little time."
+        }
+      },
+      {
+        "arabic": "أَقَلّ",
+        "translit": "ʾaqall",
+        "meaning": "less, least",
+        "pattern": "comparative",
+        "example": {
+          "ar": "هذا أقل من ذلك.",
+          "en": "This is less than that."
+        }
+      },
+      {
+        "arabic": "قَلَّلَ",
+        "translit": "qallala",
+        "meaning": "to reduce",
+        "pattern": "form2",
+        "note": "Present tense: يُقَلِّلُ (yuqallilu)",
+        "example": {
+          "ar": "قلل الطبيب السكر.",
+          "en": "The doctor cut down the sugar."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ن ص ف",
+    "translit": "n-ṣ-f",
+    "meaning": "Half; fairness",
+    "mnemonic": "Neatly Split, Fair. N-Ṣ-F is the root of half, and of giving each their fair half.",
+    "words": [
+      {
+        "arabic": "نِصْف",
+        "translit": "niṣf",
+        "meaning": "half",
+        "example": {
+          "ar": "أكلت نصف التفاحة.",
+          "en": "I ate half the apple."
+        }
+      },
+      {
+        "arabic": "مُنْتَصَف",
+        "translit": "muntaṣaf",
+        "meaning": "middle",
+        "example": {
+          "ar": "نام في منتصف الليل.",
+          "en": "He slept at midnight."
+        }
+      },
+      {
+        "arabic": "إِنْصَاف",
+        "translit": "ʾinṣāf",
+        "meaning": "fairness",
+        "example": {
+          "ar": "نريد الإنصاف للجميع.",
+          "en": "We want fairness for everyone."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ط و ل",
+    "translit": "ṭ-w-l",
+    "meaning": "Length",
+    "mnemonic": "Tall, Wide, Long. Ṭ-W-L is the root of length.",
+    "words": [
+      {
+        "arabic": "طَوِيل",
+        "translit": "ṭawīl",
+        "meaning": "long, tall",
+        "pattern": "adj",
+        "example": {
+          "ar": "هذا طريق طويل.",
+          "en": "This is a long road."
+        }
+      },
+      {
+        "arabic": "طُول",
+        "translit": "ṭūl",
+        "meaning": "length",
+        "example": {
+          "ar": "ما طول الغرفة؟",
+          "en": "What is the length of the room?"
+        }
+      },
+      {
+        "arabic": "طَاوِلَة",
+        "translit": "ṭāwila",
+        "meaning": "table",
+        "example": {
+          "ar": "الكتاب على الطاولة.",
+          "en": "The book is on the table."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ع ر ض",
+    "translit": "ʿ-r-ḍ",
+    "meaning": "Width; showing",
+    "mnemonic": "Arms Reach Distance. ʿ-R-Ḍ is the root of width, and of displaying something to view.",
+    "words": [
+      {
+        "arabic": "عَرْض",
+        "translit": "ʿarḍ",
+        "meaning": "width; show, offer",
+        "pattern": "act",
+        "example": {
+          "ar": "ما عرض الشارع؟",
+          "en": "How wide is the street?"
+        }
+      },
+      {
+        "arabic": "عَرَضَ",
+        "translit": "ʿaraḍa",
+        "meaning": "to show, present",
+        "pattern": "form1",
+        "note": "Present tense: يَعْرِضُ (yaʿriḍu)",
+        "example": {
+          "ar": "عرض الفنان لوحاته.",
+          "en": "The artist exhibited his paintings."
+        }
+      },
+      {
+        "arabic": "مَعْرِض",
+        "translit": "maʿriḍ",
+        "meaning": "exhibition",
+        "pattern": "place",
+        "example": {
+          "ar": "زرت معرض الكتاب.",
+          "en": "I visited the book fair."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "و ز ن",
+    "translit": "w-z-n",
+    "meaning": "Weight; measure",
+    "mnemonic": "Weigh Zealously, Neatly. W-Z-N is the root of weight, and of the patterns words are measured by.",
+    "words": [
+      {
+        "arabic": "وَزْن",
+        "translit": "wazn",
+        "meaning": "weight; pattern",
+        "pattern": "act",
+        "example": {
+          "ar": "ما وزنك؟",
+          "en": "What is your weight?"
+        }
+      },
+      {
+        "arabic": "وَزَنَ",
+        "translit": "wazana",
+        "meaning": "to weigh",
+        "pattern": "form1",
+        "note": "Present tense: يَزِنُ (yazinu)",
+        "example": {
+          "ar": "وزن البائع الفاكهة.",
+          "en": "The seller weighed the fruit."
+        }
+      },
+      {
+        "arabic": "مِيزَان",
+        "translit": "mīzān",
+        "meaning": "scale, balance",
+        "example": {
+          "ar": "الميزان في المطبخ.",
+          "en": "The scale is in the kitchen."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ق ي س",
+    "translit": "q-y-s",
+    "meaning": "Measuring",
+    "mnemonic": "Quick Yardstick Sizing. Q-Y-S is the root of measuring.",
+    "words": [
+      {
+        "arabic": "قَاسَ",
+        "translit": "qāsa",
+        "meaning": "to measure",
+        "pattern": "form1",
+        "note": "Present tense: يَقِيسُ (yaqīsu)",
+        "example": {
+          "ar": "قاس الخياط طولي.",
+          "en": "The tailor measured my height."
+        }
+      },
+      {
+        "arabic": "مِقْيَاس",
+        "translit": "miqyās",
+        "meaning": "measure, scale",
+        "example": {
+          "ar": "هذا مقياس الحرارة.",
+          "en": "This is the thermometer."
+        }
+      },
+      {
+        "arabic": "قِيَاس",
+        "translit": "qiyās",
+        "meaning": "measurement; size",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "ما قياس حذائك؟",
+          "en": "What is your shoe size?"
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ح ج م",
+    "translit": "ḥ-j-m",
+    "meaning": "Size, volume",
+    "mnemonic": "How Jumbo is it, Measured? Ḥ-J-M is the root of size and bulk.",
+    "words": [
+      {
+        "arabic": "حَجْم",
+        "translit": "ḥajm",
+        "meaning": "size, volume",
+        "pattern": "act",
+        "example": {
+          "ar": "ما حجم الصندوق؟",
+          "en": "What size is the box?"
+        }
+      },
+      {
+        "arabic": "أَحْجَام",
+        "translit": "ʾaḥjām",
+        "meaning": "sizes",
+        "pattern": "plural",
+        "example": {
+          "ar": "عندنا كل الأحجام.",
+          "en": "We have all sizes."
+        }
+      }
+    ]
+  }
+]

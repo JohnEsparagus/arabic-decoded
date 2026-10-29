@@ -19,6 +19,7 @@ const _studyWordsKey = 'settings.study_words';
 const _studyAlphabetKey = 'settings.study_alphabet';
 const _dailyGoalKey = 'settings.daily_goal';
 const _arabicFontKey = 'settings.arabic_font';
+const _quranFirstKey = 'settings.quran_first';
 
 /// Default daily cap on never-studied cards, used until the user changes it
 /// from Settings.
@@ -167,4 +168,25 @@ class ArabicFontNotifier extends Notifier<ArabicFont> {
 
 final arabicFontProvider = NotifierProvider<ArabicFontNotifier, ArabicFont>(
   ArabicFontNotifier.new,
+);
+
+/// Whether the Quran campaign is switched on: its roots, most common first,
+/// go ahead of everything else among new cards. Off by default; the Quran
+/// list is always there to browse either way, and shows progress on roots
+/// learned in any campaign.
+class QuranFirstNotifier extends Notifier<bool> {
+  @override
+  bool build() {
+    return ref.watch(sharedPreferencesProvider).getBool(_quranFirstKey) ??
+        false;
+  }
+
+  Future<void> set(bool value) async {
+    state = value;
+    await ref.read(sharedPreferencesProvider).setBool(_quranFirstKey, value);
+  }
+}
+
+final quranFirstProvider = NotifierProvider<QuranFirstNotifier, bool>(
+  QuranFirstNotifier.new,
 );

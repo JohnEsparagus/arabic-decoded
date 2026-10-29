@@ -6,7 +6,7 @@ import 'package:arabic_decoded/providers/database_providers.dart';
 import 'package:arabic_decoded/providers/settings_providers.dart';
 import 'package:arabic_decoded/providers/study_session_provider.dart';
 import 'package:arabic_decoded/services/database_service.dart';
-import 'package:arabic_decoded/services/sm2.dart';
+import 'package:arabic_decoded/services/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

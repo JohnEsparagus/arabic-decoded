@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-10-25",
+    "title": "Quran mode",
+    "changes": [
+      "The Quran's 105 most common roots, most common first, at the top of Campaigns.",
+      "Roots you learn in any campaign count on the Quran list too: they're the same cards.",
+      "Switch on \"Quran first\" (in Campaigns or Settings) to learn the Quran's roots before anything else.",
+      "50 new roots that the Quran uses often, each with its words."
+    ]
+  },
+  {
+    "date": "2026-10-17",
+    "title": "Smarter reviews, 50 more roots and 13,000 sentences",
+    "changes": [
+      "Reviews are now scheduled with FSRS, the algorithm Anki uses: fewer reviews for the same memory. Each grade button shows when the card will come back.",
+      "Five new campaigns, 50 more roots: Faith & Tradition, Language & Speech, Days & Seasons, Numbers & Measures, Arts & Leisure.",
+      "The sentence explorer now has about 13,700 sentences, most of them from Tatoeba, all using words you can learn here.",
+      "Fixed the spelling of several roots and merged a root that appeared twice. Your progress on them carries over.",
+      "Hear roots and letters said by their letter names."
+    ]
+  },
+  {
     "date": "2026-10-11",
     "title": "More roots, lessons, stories and a sentence explorer",
     "changes": [

@@ -98,7 +98,47 @@ const campaignSources = [
     description:
         'Cities, streets, companies, jobs, messages, pictures, printing, publishing, news',
   ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_16_faith_tradition.json',
+    deckName: 'Faith & Tradition',
+    description:
+        'Religion, worship, prayer, fasting, pilgrimage, feasts, blessing',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_17_language_speech.json',
+    deckName: 'Language & Speech',
+    description: 'Language, words, letters, sentences, meaning, voice, stories',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_18_days_seasons.json',
+    deckName: 'Days & Seasons',
+    description: 'Day, month, year, morning, evening, week, seasons, time',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_19_numbers_measures.json',
+    deckName: 'Numbers & Measures',
+    description:
+        'Number, many, few, half, length, width, weight, measuring, size',
+  ),
+  CampaignSource(
+    assetPath: 'assets/data/campaign_20_arts_leisure.json',
+    deckName: 'Arts & Leisure',
+    description:
+        'Playing, singing, drawing, art, dancing, parties, fun, swimming, laughing',
+  ),
 ];
+
+/// The Quran campaign: the most common roots of the Quran, most common
+/// first. Unlike the other campaigns it mostly points at roots taught
+/// elsewhere (`{"root": "ك ت ب"}`): there's only ever one card per root, so
+/// a root learned in any campaign is learned here too. The Quranic roots
+/// no campaign teaches are full entries, imported into this deck. See
+/// `ContentImporter.importQuran`.
+const quranSource = CampaignSource(
+  assetPath: 'assets/data/quran.json',
+  deckName: 'Quran',
+  description: 'The most common roots of the Quran, most common first',
+);
 
 /// The 28 letters, for absolute beginners. Not a campaign either: it's
 /// optional, and when switched on its cards come before any root (see
@@ -109,7 +149,9 @@ const alphabetSource = CampaignSource(
   description: 'The 28 letters: their names, sounds and shapes',
 );
 
-/// The sentence corpus: whole sentences to read, browsed from the
+/// The sentence corpus: whole sentences to read (the app's own example
+/// sentences, then a selection from Tatoeba, CC BY 2.0 FR, keeping those
+/// that use at least one word the app teaches), browsed from the
 /// Sentences screen and listed under the words they contain. Never fed
 /// into the queue automatically; one becomes a card, in this deck, when
 /// the user adds it.
@@ -124,7 +166,7 @@ const sentencesSource = CampaignSource(
 /// number changes, so a launch never has to open the file just to find
 /// out nothing is new. **Bump it whenever the file changes** (a test
 /// fails if the file changes and this doesn't).
-const sentencesVersion = 2;
+const sentencesVersion = 4;
 
 /// Read-once cards: something to read at a set point along the way, not
 /// to memorise. Each file is a deck of them, and each card is shown in
@@ -177,3 +219,44 @@ const patternsSource = CampaignSource(
   deckName: 'Patterns',
   description: 'The shapes roots are poured into to make words',
 );
+
+/// A card that has been renamed or moved to another deck in the content,
+/// so that anyone who has studied it keeps their progress under the new
+/// name. Cards are identified by deck + Arabic (that's also what sync
+/// uses), so without this a corrected spelling would look like a brand new
+/// card and the old one would linger. See `DatabaseService.moveCard`.
+class ContentMove {
+  const ContentMove(this.fromDeck, this.from, this.toDeck, [String? to])
+    : to = to ?? from;
+
+  final String fromDeck;
+  final String from;
+  final String toDeck;
+  final String to;
+}
+
+/// Every rename and move the content has had, applied in order at each
+/// launch before the import. Each one is skipped once it's done, so they
+/// can stay here for good: a device updating from any older version still
+/// catches up.
+const contentMoves = [
+  // Roots spelled with letters that can't be root letters, or wrongly.
+  ContentMove('Daily Actions', 'ج ا ء', 'Daily Actions', 'ج ي ء'),
+  ContentMove('Daily Actions', 'ق ا م', 'Daily Actions', 'ق و م'),
+  ContentMove('Daily Actions', 'م ش ى', 'Daily Actions', 'م ش ي'),
+  ContentMove('Home & Daily Life', 'ب ن ى', 'Home & Daily Life', 'ب ن ي'),
+  ContentMove('Money & Work', 'ش ر ى', 'Money & Work', 'ش ر ي'),
+  ContentMove('Money & Work', 'ع ط ي', 'Money & Work', 'ع ط و'),
+  ContentMove('Money & Work', 'ح ت ا ج', 'Money & Work', 'ح و ج'),
+  // "ستعمل" was a verb form of ع م ل, which Absolute Core already has: its
+  // words join that root.
+  ContentMove('Home & Daily Life', 'س ت ع م ل', 'Absolute Core', 'ع م ل'),
+  ContentMove('Home & Daily Life', 'اِسْتَعْمَلَ', 'Absolute Core'),
+  ContentMove('Home & Daily Life', 'اِسْتِعْمَال', 'Absolute Core'),
+  // و ص ل was in two campaigns; Abstract Concepts' copy joins the first.
+  ContentMove('Abstract Concepts', 'و ص ل', 'Daily Actions'),
+  ContentMove('Abstract Concepts', 'وَصْل', 'Daily Actions'),
+  ContentMove('Abstract Concepts', 'وَصَّلَ', 'Daily Actions'),
+  ContentMove('Abstract Concepts', 'اِتِّصَال', 'Daily Actions'),
+  ContentMove('Abstract Concepts', 'صِلَة', 'Daily Actions'),
+];

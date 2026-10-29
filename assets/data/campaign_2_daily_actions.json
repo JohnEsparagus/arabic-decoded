@@ -38,10 +38,10 @@
     ]
   },
   {
-    "arabic": "ج ا ء",
-    "translit": "j-ʾ-ʾ",
+    "arabic": "ج ي ء",
+    "translit": "j-y-ʾ",
     "meaning": "Coming",
-    "mnemonic": "A Jester Arrives, Announcing his entrance loudly. J-ʾ-ʾ is the root of coming and arriving.",
+    "mnemonic": "A Jester Yells his Arrival loudly. J-Y-ʾ is the root of coming and arriving.",
     "words": [
       {
         "arabic": "جَاءَ",
@@ -198,6 +198,45 @@
           "ar": "هل أنت متصل بالإنترنت؟",
           "en": "Are you connected to the internet?"
         }
+      },
+      {
+        "arabic": "وَصْل",
+        "translit": "waṣl",
+        "meaning": "connection, linking",
+        "pattern": "act",
+        "example": {
+          "ar": "هذه همزة وصل.",
+          "en": "This is a connecting hamza."
+        }
+      },
+      {
+        "arabic": "وَصَّلَ",
+        "translit": "waṣṣala",
+        "meaning": "to deliver, connect",
+        "pattern": "form2",
+        "note": "Present tense: يُوَصِّلُ (yuwaṣṣilu)",
+        "example": {
+          "ar": "وصل السائق الطلب.",
+          "en": "The driver delivered the order."
+        }
+      },
+      {
+        "arabic": "اِتِّصَال",
+        "translit": "ittiṣāl",
+        "meaning": "contact, call",
+        "example": {
+          "ar": "شكرا على الاتصال.",
+          "en": "Thank you for calling."
+        }
+      },
+      {
+        "arabic": "صِلَة",
+        "translit": "ṣila",
+        "meaning": "link, relation",
+        "example": {
+          "ar": "لا صلة بينهما.",
+          "en": "There is no link between them."
+        }
       }
     ]
   },
@@ -231,7 +270,7 @@
     ]
   },
   {
-    "arabic": "ق ا م",
+    "arabic": "ق و م",
     "translit": "q-w-m",
     "meaning": "Standing, rising",
     "mnemonic": "A Queen Wakes and stands Majestic. Q-W-M is the root of standing, rising, and getting up.",
@@ -500,7 +539,7 @@
     ]
   },
   {
-    "arabic": "م ش ى",
+    "arabic": "م ش ي",
     "translit": "m-sh-y",
     "meaning": "Walking",
     "mnemonic": "A Marcher Shuffles onward, Yawning as he walks. M-SH-Y is the root of walking.",

@@ -25,6 +25,15 @@ abstract class FlashcardRepository {
   Future<void> insertFlashcards(List<Flashcard> cards);
   Future<void> updateFlashcard(Flashcard card);
 
+  /// Renames or moves a card, keeping its progress (see
+  /// `DatabaseService.moveCard`).
+  Future<void> moveCard({
+    required String fromDeck,
+    required String from,
+    required String toDeck,
+    required String to,
+  });
+
   /// Replaces a card's content without touching its progress.
   Future<void> updateFlashcardContent(Flashcard card);
 
@@ -51,6 +60,7 @@ abstract class FlashcardRepository {
     required int limit,
     bool includeWords = true,
     bool includeLetters = true,
+    bool quranFirst = false,
   });
   Future<List<Flashcard>> getQueuedFlashcards();
   Future<int> countIntroducedSince(DateTime cutoff);
@@ -58,6 +68,10 @@ abstract class FlashcardRepository {
 
   /// The sentence corpus (see "Sentences" in `DatabaseService`): which
   /// version of the bundled file is loaded, and loading a new one.
+  /// Marks the Quran's most common roots (see
+  /// `DatabaseService.setQuranRanks`).
+  Future<void> setQuranRanks(Map<String, int> ranks);
+
   Future<int?> getSentencesVersion();
   Future<void> replaceSentences(
     List<({String arabic, String english, String search, Set<String> keys})>

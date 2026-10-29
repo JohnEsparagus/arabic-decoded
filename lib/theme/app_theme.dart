@@ -193,6 +193,13 @@ TextStyle arabicTextStyle(
   );
 }
 
+/// For English text that has Arabic in it (a lesson's "the root ف ع ل"):
+/// a fallback so those words come out in the chosen Arabic typeface rather
+/// than whatever the device has. Add it to the English text's style.
+List<String> arabicFallback(BuildContext context) => [
+  ?Theme.of(context).extension<ArabicFontTheme>()?.font.family,
+];
+
 /// The typefaces offered for Arabic text. All but [system] are bundled
 /// with the app (see pubspec.yaml), so they work offline. This only
 /// changes Arabic script; headings stay in Amiri, the app's own face.

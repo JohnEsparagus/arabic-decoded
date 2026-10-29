@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/flashcard.dart';
 import '../providers/study_session_provider.dart';
-import '../services/sm2.dart';
+import '../services/scheduler.dart';
 import '../theme/app_theme.dart';
 import '../widgets/card_actions_sheet.dart';
 import '../widgets/flashcard_detail_content.dart';
@@ -89,7 +89,7 @@ class StudySessionView extends ConsumerWidget {
             ),
           )
         else
-          _GradeButtons(onGrade: notifier.grade),
+          _GradeButtons(card: card, onGrade: notifier.grade),
       ],
     );
   }
@@ -199,46 +199,40 @@ class _CardFront extends StatelessWidget {
   }
 }
 
+/// The four grades, each with when the card would come back if picked,
+/// worked out by the same scheduler that grading uses.
 class _GradeButtons extends StatelessWidget {
-  const _GradeButtons({required this.onGrade});
+  const _GradeButtons({required this.card, required this.onGrade});
 
+  final Flashcard card;
   final void Function(Grade grade) onGrade;
 
   @override
   Widget build(BuildContext context) {
+    // "Again" puts the card back in this session's queue, so it's next
+    // seen today whatever the schedule says after that.
+    String when(Grade grade) => grade == Grade.again
+        ? 'today'
+        : formatInterval(scheduleFor(card, grade).interval);
+    final buttons = [
+      (Grade.again, 'Again', const Color(0xFFB3432D)),
+      (Grade.hard, 'Hard', const Color(0xFFBE8A3A)),
+      (Grade.good, 'Good', context.colors.deepGreen),
+      (Grade.easy, 'Easy', const Color(0xFF2E6E8E)),
+    ];
     return Row(
       children: [
-        Expanded(
-          child: _GradeButton(
-            label: 'Again',
-            color: const Color(0xFFB3432D),
-            onPressed: () => onGrade(Grade.again),
+        for (final (index, (grade, label, color)) in buttons.indexed) ...[
+          if (index > 0) const SizedBox(width: 8),
+          Expanded(
+            child: _GradeButton(
+              label: label,
+              when: when(grade),
+              color: color,
+              onPressed: () => onGrade(grade),
+            ),
           ),
-        ),
-        const SizedBox(width: 8),
-        Expanded(
-          child: _GradeButton(
-            label: 'Hard',
-            color: const Color(0xFFBE8A3A),
-            onPressed: () => onGrade(Grade.hard),
-          ),
-        ),
-        const SizedBox(width: 8),
-        Expanded(
-          child: _GradeButton(
-            label: 'Good',
-            color: context.colors.deepGreen,
-            onPressed: () => onGrade(Grade.good),
-          ),
-        ),
-        const SizedBox(width: 8),
-        Expanded(
-          child: _GradeButton(
-            label: 'Easy',
-            color: const Color(0xFF2E6E8E),
-            onPressed: () => onGrade(Grade.easy),
-          ),
-        ),
+        ],
       ],
     );
   }
@@ -247,11 +241,13 @@ class _GradeButtons extends StatelessWidget {
 class _GradeButton extends StatelessWidget {
   const _GradeButton({
     required this.label,
+    required this.when,
     required this.color,
     required this.onPressed,
   });
 
   final String label;
+  final String when;
   final Color color;
   final VoidCallback onPressed;
 
@@ -262,9 +258,18 @@ class _GradeButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: color,
         foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(vertical: 14),
+        padding: const EdgeInsets.symmetric(vertical: 8),
       ),
-      child: Text(label),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(label),
+          Text(
+            when,
+            style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w400),
+          ),
+        ],
+      ),
     );
   }
 }

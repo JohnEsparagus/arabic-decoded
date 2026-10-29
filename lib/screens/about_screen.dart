@@ -12,7 +12,11 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
-    final body = TextStyle(color: colors.ink, height: 1.45);
+    final body = TextStyle(
+      color: colors.ink,
+      height: 1.45,
+      fontFamilyFallback: arabicFallback(context),
+    );
     return Scaffold(
       appBar: AppBar(title: const Text('About')),
       body: SafeArea(
@@ -72,6 +76,14 @@ class AboutScreen extends StatelessWidget {
                     'Arabic or Noto Kufi Arabic, whichever you choose in '
                     'Settings. All four are used under the SIL Open Font '
                     'License.',
+                    style: TextStyle(color: colors.inkMuted, fontSize: 13),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'Most of the sentences in the sentence explorer come '
+                    'from Tatoeba (tatoeba.org), a collection of sentences '
+                    'and translations written by volunteers, used under the '
+                    'Creative Commons Attribution 2.0 France licence.',
                     style: TextStyle(color: colors.inkMuted, fontSize: 13),
                   ),
                   const SizedBox(height: 8),

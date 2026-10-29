@@ -195,6 +195,27 @@ class SettingsScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: 12),
                   Card(
+                    child: SwitchListTile(
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 18,
+                      ),
+                      title: const Text('Quran first'),
+                      subtitle: const Text(
+                        'Learn the Quran\'s most common roots first, most '
+                        'common at the front. Roots you know from any '
+                        'campaign already count.',
+                      ),
+                      secondary: Icon(
+                        Icons.menu_book_outlined,
+                        color: colors.deepGreen,
+                      ),
+                      value: ref.watch(quranFirstProvider),
+                      onChanged: (value) =>
+                          ref.read(quranFirstProvider.notifier).set(value),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Card(
                     child: Padding(
                       padding: const EdgeInsets.all(18),
                       child: Column(

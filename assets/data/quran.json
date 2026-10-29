@@ -1,0 +1,2062 @@
+[
+  {
+    "arabic": "أ ل ه",
+    "translit": "ʾ-l-h",
+    "meaning": "God, deity",
+    "mnemonic": "Above, Lord of the Heavens. ʾ-L-H is the root of God and of any deity.",
+    "words": [
+      {
+        "arabic": "اللّٰه",
+        "translit": "allāh",
+        "meaning": "God",
+        "example": {
+          "ar": "الله أكبر.",
+          "en": "God is greatest."
+        }
+      },
+      {
+        "arabic": "إِلٰه",
+        "translit": "ʾilāh",
+        "meaning": "god, deity",
+        "example": {
+          "ar": "كان للرومان إله للبحر.",
+          "en": "The Romans had a god of the sea."
+        }
+      },
+      {
+        "arabic": "آلِهَة",
+        "translit": "ʾāliha",
+        "meaning": "gods",
+        "example": {
+          "ar": "في القصص القديمة آلهة كثيرة.",
+          "en": "There are many gods in the old stories."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ق و ل"
+  },
+  {
+    "root": "ك و ن"
+  },
+  {
+    "arabic": "ر ب ب",
+    "translit": "r-b-b",
+    "meaning": "Lord, master",
+    "mnemonic": "Ruler Beyond Bounds. R-B-B is the root of the lord and master who owns and looks after.",
+    "words": [
+      {
+        "arabic": "رَبّ",
+        "translit": "rabb",
+        "meaning": "lord, master",
+        "example": {
+          "ar": "يا رب ساعدني.",
+          "en": "O Lord, help me."
+        }
+      },
+      {
+        "arabic": "رَبَّة",
+        "translit": "rabba",
+        "meaning": "mistress (of a house)",
+        "example": {
+          "ar": "أمي ربة بيت.",
+          "en": "My mother is a housewife."
+        }
+      }
+    ]
+  },
+  {
+    "root": "أ م ن"
+  },
+  {
+    "root": "ع ل م"
+  },
+  {
+    "arabic": "أ ت ي",
+    "translit": "ʾ-t-y",
+    "meaning": "Coming",
+    "mnemonic": "Arrive Today, Yes! ʾ-T-Y is the root of coming and bringing.",
+    "words": [
+      {
+        "arabic": "أَتَى",
+        "translit": "ʾatā",
+        "meaning": "to come",
+        "pattern": "form1",
+        "note": "Present tense: يَأْتِي (yaʾtī)",
+        "example": {
+          "ar": "أتى الصديق في المساء.",
+          "en": "The friend came in the evening."
+        }
+      },
+      {
+        "arabic": "آتٍ",
+        "translit": "ʾātin",
+        "meaning": "coming, next",
+        "pattern": "doer",
+        "example": {
+          "ar": "الأسبوع الآتي عطلة.",
+          "en": "Next week is a holiday."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ك ف ر",
+    "translit": "k-f-r",
+    "meaning": "Disbelief, covering",
+    "mnemonic": "Keep the Farmland coveRed. K-F-R first meant covering over, as a farmer covers seed; then covering up the truth: disbelief.",
+    "words": [
+      {
+        "arabic": "كَفَرَ",
+        "translit": "kafara",
+        "meaning": "to disbelieve",
+        "pattern": "form1",
+        "note": "Present tense: يَكْفُرُ (yakfuru)",
+        "example": {
+          "ar": "كفر الملك بالآلهة القديمة.",
+          "en": "The king rejected the old gods."
+        }
+      },
+      {
+        "arabic": "كُفْر",
+        "translit": "kufr",
+        "meaning": "disbelief",
+        "example": {
+          "ar": "الكفر عكس الإيمان.",
+          "en": "Disbelief is the opposite of faith."
+        }
+      },
+      {
+        "arabic": "كَافِر",
+        "translit": "kāfir",
+        "meaning": "unbeliever",
+        "pattern": "doer",
+        "example": {
+          "ar": "كان في القرية رجل كافر.",
+          "en": "There was an unbeliever in the village."
+        }
+      },
+      {
+        "arabic": "كَفَّارَة",
+        "translit": "kaffāra",
+        "meaning": "atonement",
+        "example": {
+          "ar": "دفع كفارة عن يمينه.",
+          "en": "He paid an atonement for his oath."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ي و م"
+  },
+  {
+    "root": "ر س ل"
+  },
+  {
+    "root": "ع م ل"
+  },
+  {
+    "root": "ج ع ل"
+  },
+  {
+    "arabic": "ن ف س",
+    "translit": "n-f-s",
+    "meaning": "Self, soul, breath",
+    "mnemonic": "Nothing Feels Self-less. N-F-S is the root of the self, the soul and the breath that keeps it.",
+    "words": [
+      {
+        "arabic": "نَفْس",
+        "translit": "nafs",
+        "meaning": "self, soul",
+        "pattern": "act",
+        "example": {
+          "ar": "اعرف نفسك.",
+          "en": "Know yourself."
+        }
+      },
+      {
+        "arabic": "نَفَس",
+        "translit": "nafas",
+        "meaning": "breath",
+        "example": {
+          "ar": "خذ نفسا عميقا.",
+          "en": "Take a deep breath."
+        }
+      },
+      {
+        "arabic": "تَنَفَّسَ",
+        "translit": "tanaffasa",
+        "meaning": "to breathe",
+        "note": "Present tense: يَتَنَفَّسُ (yatanaffasu)",
+        "example": {
+          "ar": "تنفس الرجل بصعوبة.",
+          "en": "The man breathed with difficulty."
+        }
+      },
+      {
+        "arabic": "نَفِيس",
+        "translit": "nafīs",
+        "meaning": "precious",
+        "pattern": "adj",
+        "example": {
+          "ar": "هذا كتاب نفيس.",
+          "en": "This is a precious book."
+        }
+      }
+    ]
+  },
+  {
+    "root": "أ ر ض"
+  },
+  {
+    "arabic": "ش ي أ",
+    "translit": "sh-y-ʾ",
+    "meaning": "Thing; will",
+    "mnemonic": "SHow Your Aims. SH-Y-ʾ is the root of a thing, and of willing it.",
+    "words": [
+      {
+        "arabic": "شَيْء",
+        "translit": "shayʾ",
+        "meaning": "thing",
+        "pattern": "act",
+        "example": {
+          "ar": "لا أعرف أي شيء.",
+          "en": "I don't know anything."
+        }
+      },
+      {
+        "arabic": "أَشْيَاء",
+        "translit": "ʾashyāʾ",
+        "meaning": "things",
+        "pattern": "plural",
+        "example": {
+          "ar": "عندي أشياء كثيرة في الحقيبة.",
+          "en": "I have many things in the bag."
+        }
+      },
+      {
+        "arabic": "شَاءَ",
+        "translit": "shāʾa",
+        "meaning": "to will, want",
+        "pattern": "form1",
+        "note": "Present tense: يَشَاءُ (yashāʾu)",
+        "example": {
+          "ar": "أراك غدا إن شاء الله.",
+          "en": "I'll see you tomorrow, God willing."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ر أ ي"
+  },
+  {
+    "arabic": "ه د ي",
+    "translit": "h-d-y",
+    "meaning": "Guidance; gift",
+    "mnemonic": "Help Direct You. H-D-Y is the root of guiding someone, and of the gift that leads to them.",
+    "words": [
+      {
+        "arabic": "هُدًى",
+        "translit": "hudan",
+        "meaning": "guidance",
+        "example": {
+          "ar": "الكتاب هدى للناس.",
+          "en": "The book is guidance for people."
+        }
+      },
+      {
+        "arabic": "هَدِيَّة",
+        "translit": "hadiyya",
+        "meaning": "gift",
+        "example": {
+          "ar": "اشتريت هدية لأمي.",
+          "en": "I bought a gift for my mother."
+        }
+      },
+      {
+        "arabic": "اِهْتَدَى",
+        "translit": "ihtadā",
+        "meaning": "to find the way, be guided",
+        "pattern": "form8",
+        "note": "Present tense: يَهْتَدِي (yahtadī)",
+        "example": {
+          "ar": "اهتدى المسافر إلى الطريق.",
+          "en": "The traveller found the road."
+        }
+      }
+    ]
+  },
+  {
+    "root": "س م و"
+  },
+  {
+    "arabic": "ع ذ ب",
+    "translit": "ʿ-dh-b",
+    "meaning": "Torment; sweetness",
+    "mnemonic": "Awful DHeath Blow. ʿ-DH-B is the root of torment, and, oddly, of fresh sweet water.",
+    "words": [
+      {
+        "arabic": "عَذَاب",
+        "translit": "ʿadhāb",
+        "meaning": "torment, suffering",
+        "example": {
+          "ar": "كان الانتظار عذابا.",
+          "en": "The waiting was torment."
+        }
+      },
+      {
+        "arabic": "عَذَّبَ",
+        "translit": "ʿadhdhaba",
+        "meaning": "to torment",
+        "pattern": "form2",
+        "note": "Present tense: يُعَذِّبُ (yuʿadhdhibu)",
+        "example": {
+          "ar": "لا تعذب الحيوانات.",
+          "en": "Don't torment animals."
+        }
+      },
+      {
+        "arabic": "عَذْب",
+        "translit": "ʿadhb",
+        "meaning": "sweet (of water)",
+        "pattern": "act",
+        "example": {
+          "ar": "ماء النهر عذب.",
+          "en": "The river water is fresh."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ر ح م"
+  },
+  {
+    "root": "ج ي ء"
+  },
+  {
+    "arabic": "خ ل ق",
+    "translit": "kh-l-q",
+    "meaning": "Creating; character",
+    "mnemonic": "KHnead, Lift, Quicken. KH-L-Q is the root of creating, and of the character one is made with.",
+    "words": [
+      {
+        "arabic": "خَلَقَ",
+        "translit": "khalaqa",
+        "meaning": "to create",
+        "pattern": "form1",
+        "note": "Present tense: يَخْلُقُ (yakhluqu)",
+        "example": {
+          "ar": "خلق الله السماوات والأرض.",
+          "en": "God created the heavens and the earth."
+        }
+      },
+      {
+        "arabic": "خَلْق",
+        "translit": "khalq",
+        "meaning": "creation",
+        "pattern": "act",
+        "example": {
+          "ar": "الخلق كله جميل.",
+          "en": "All of creation is beautiful."
+        }
+      },
+      {
+        "arabic": "خُلُق",
+        "translit": "khuluq",
+        "meaning": "character, manners",
+        "example": {
+          "ar": "هو رجل حسن الخلق.",
+          "en": "He is a man of good character."
+        }
+      },
+      {
+        "arabic": "أَخْلَاق",
+        "translit": "ʾakhlāq",
+        "meaning": "morals, ethics",
+        "pattern": "plural",
+        "example": {
+          "ar": "الأخلاق مهمة في العمل.",
+          "en": "Ethics are important at work."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ن ز ل"
+  },
+  {
+    "root": "أ خ ذ"
+  },
+  {
+    "root": "ح ق ق"
+  },
+  {
+    "root": "ظ ل م"
+  },
+  {
+    "root": "د ع و"
+  },
+  {
+    "root": "ذ ك ر"
+  },
+  {
+    "root": "ك ت ب"
+  },
+  {
+    "root": "ق و م"
+  },
+  {
+    "arabic": "أ م ر",
+    "translit": "ʾ-m-r",
+    "meaning": "Command; matter",
+    "mnemonic": "A Monarch Rules. ʾ-M-R is the root of commanding, and of the matter commanded.",
+    "words": [
+      {
+        "arabic": "أَمَرَ",
+        "translit": "ʾamara",
+        "meaning": "to order",
+        "pattern": "form1",
+        "note": "Present tense: يَأْمُرُ (yaʾmuru)",
+        "example": {
+          "ar": "أمر القائد الجنود بالانتظار.",
+          "en": "The commander ordered the soldiers to wait."
+        }
+      },
+      {
+        "arabic": "أَمْر",
+        "translit": "ʾamr",
+        "meaning": "order; matter",
+        "pattern": "act",
+        "example": {
+          "ar": "هذا أمر مهم.",
+          "en": "This is an important matter."
+        }
+      },
+      {
+        "arabic": "أَمِير",
+        "translit": "ʾamīr",
+        "meaning": "prince, leader",
+        "pattern": "adj",
+        "example": {
+          "ar": "زار الأمير المدرسة.",
+          "en": "The prince visited the school."
+        }
+      },
+      {
+        "arabic": "أُمُور",
+        "translit": "ʾumūr",
+        "meaning": "matters, affairs",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "كيف الأمور؟",
+          "en": "How are things?"
+        }
+      }
+    ]
+  },
+  {
+    "root": "ع ب د"
+  },
+  {
+    "arabic": "ن ب أ",
+    "translit": "n-b-ʾ",
+    "meaning": "News; prophecy",
+    "mnemonic": "News Brought Abroad. N-B-ʾ is the root of important news, and of the prophet who brings it.",
+    "words": [
+      {
+        "arabic": "نَبَأ",
+        "translit": "nabaʾ",
+        "meaning": "news, tidings",
+        "example": {
+          "ar": "سمعنا نبأ مهما.",
+          "en": "We heard important news."
+        }
+      },
+      {
+        "arabic": "نَبِيّ",
+        "translit": "nabiyy",
+        "meaning": "prophet",
+        "pattern": "adj",
+        "example": {
+          "ar": "كان موسى نبيا.",
+          "en": "Moses was a prophet."
+        }
+      },
+      {
+        "arabic": "أَنْبَاء",
+        "translit": "ʾanbāʾ",
+        "meaning": "news reports",
+        "pattern": "plural",
+        "example": {
+          "ar": "هذه وكالة أنباء.",
+          "en": "This is a news agency."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ب ي ن"
+  },
+  {
+    "arabic": "أ خ ر",
+    "translit": "ʾ-kh-r",
+    "meaning": "Other; last; later",
+    "mnemonic": "After, KHeep Rear. ʾ-KH-R is the root of what comes after: the other one, the last one, the life hereafter.",
+    "words": [
+      {
+        "arabic": "آخَر",
+        "translit": "ʾākhar",
+        "meaning": "other, another",
+        "example": {
+          "ar": "أريد كتابا آخر.",
+          "en": "I want another book."
+        }
+      },
+      {
+        "arabic": "آخِر",
+        "translit": "ʾākhir",
+        "meaning": "last",
+        "pattern": "doer",
+        "example": {
+          "ar": "هذا آخر درس.",
+          "en": "This is the last lesson."
+        }
+      },
+      {
+        "arabic": "آخِرَة",
+        "translit": "ʾākhira",
+        "meaning": "the hereafter",
+        "example": {
+          "ar": "يؤمن المسلمون بالآخرة.",
+          "en": "Muslims believe in the hereafter."
+        }
+      },
+      {
+        "arabic": "تَأَخَّرَ",
+        "translit": "taʾakhkhara",
+        "meaning": "to be late",
+        "note": "Present tense: يَتَأَخَّرُ (yataʾakhkharu)",
+        "example": {
+          "ar": "تأخر القطار ساعة.",
+          "en": "The train was an hour late."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "د ن و",
+    "translit": "d-n-w",
+    "meaning": "Nearness; this world",
+    "mnemonic": "Down, Near, Within reach. D-N-W is the root of being near and low, and of this nearer world.",
+    "words": [
+      {
+        "arabic": "دُنْيَا",
+        "translit": "dunyā",
+        "meaning": "this world, worldly life",
+        "example": {
+          "ar": "الدنيا قصيرة.",
+          "en": "Life in this world is short."
+        }
+      },
+      {
+        "arabic": "أَدْنَى",
+        "translit": "ʾadnā",
+        "meaning": "lowest, nearest",
+        "pattern": "comparative",
+        "example": {
+          "ar": "هذا أدنى سعر.",
+          "en": "This is the lowest price."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ج ن ن"
+  },
+  {
+    "root": "خ ي ر"
+  },
+  {
+    "root": "ح ك م"
+  },
+  {
+    "arabic": "ع ظ م",
+    "translit": "ʿ-ẓ-m",
+    "meaning": "Greatness; bone",
+    "mnemonic": "Awesome, Zealous, Mighty. ʿ-Ẓ-M is the root of greatness, and of bone, the body's strong frame.",
+    "words": [
+      {
+        "arabic": "عَظِيم",
+        "translit": "ʿaẓīm",
+        "meaning": "great, mighty",
+        "pattern": "adj",
+        "example": {
+          "ar": "هذا عمل عظيم.",
+          "en": "This is a great achievement."
+        }
+      },
+      {
+        "arabic": "أَعْظَم",
+        "translit": "ʾaʿẓam",
+        "meaning": "greatest",
+        "pattern": "comparative",
+        "example": {
+          "ar": "هو أعظم شاعر عربي.",
+          "en": "He is the greatest Arab poet."
+        }
+      },
+      {
+        "arabic": "عَظْم",
+        "translit": "ʿaẓm",
+        "meaning": "bone",
+        "pattern": "act",
+        "example": {
+          "ar": "كسر عظم يده.",
+          "en": "He broke a bone in his hand."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "س ب ل",
+    "translit": "s-b-l",
+    "meaning": "Way, path",
+    "mnemonic": "Straight, Broad Lane. S-B-L is the root of the way and the path.",
+    "words": [
+      {
+        "arabic": "سَبِيل",
+        "translit": "sabīl",
+        "meaning": "way, path",
+        "pattern": "adj",
+        "example": {
+          "ar": "هذا سبيل النجاح.",
+          "en": "This is the way to success."
+        }
+      },
+      {
+        "arabic": "سُبُل",
+        "translit": "subul",
+        "meaning": "ways, means",
+        "example": {
+          "ar": "نبحث عن سبل جديدة.",
+          "en": "We are looking for new ways."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ق ل ب",
+    "translit": "q-l-b",
+    "meaning": "Heart; turning",
+    "mnemonic": "Quickly Lub-dub Beating. Q-L-B is the root of the heart, and of turning over, as the heart turns.",
+    "words": [
+      {
+        "arabic": "قَلْب",
+        "translit": "qalb",
+        "meaning": "heart",
+        "pattern": "act",
+        "example": {
+          "ar": "قلبه طيب.",
+          "en": "He has a kind heart."
+        }
+      },
+      {
+        "arabic": "قُلُوب",
+        "translit": "qulūb",
+        "meaning": "hearts",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "الموسيقى تفتح القلوب.",
+          "en": "Music opens hearts."
+        }
+      },
+      {
+        "arabic": "قَلَبَ",
+        "translit": "qalaba",
+        "meaning": "to turn over",
+        "pattern": "form1",
+        "note": "Present tense: يَقْلِبُ (yaqlibu)",
+        "example": {
+          "ar": "قلب الطفل الصفحة.",
+          "en": "The child turned the page."
+        }
+      },
+      {
+        "arabic": "اِنْقِلَاب",
+        "translit": "inqilāb",
+        "meaning": "coup; reversal",
+        "example": {
+          "ar": "حدث انقلاب في البلد.",
+          "en": "There was a coup in the country."
+        }
+      }
+    ]
+  },
+  {
+    "root": "م و ت"
+  },
+  {
+    "root": "ح ي ي"
+  },
+  {
+    "arabic": "ص ل ح",
+    "translit": "ṣ-l-ḥ",
+    "meaning": "Goodness; repair",
+    "mnemonic": "Sound, Lasting, Healthy. Ṣ-L-Ḥ is the root of being good and set right.",
+    "words": [
+      {
+        "arabic": "صَالِح",
+        "translit": "ṣāliḥ",
+        "meaning": "good, righteous; valid",
+        "pattern": "doer",
+        "example": {
+          "ar": "هو رجل صالح.",
+          "en": "He is a good man."
+        }
+      },
+      {
+        "arabic": "أَصْلَحَ",
+        "translit": "ʾaṣlaḥa",
+        "meaning": "to repair, fix",
+        "pattern": "form4",
+        "note": "Present tense: يُصْلِحُ (yuṣliḥu)",
+        "example": {
+          "ar": "أصلح العامل السيارة.",
+          "en": "The worker fixed the car."
+        }
+      },
+      {
+        "arabic": "مَصْلَحَة",
+        "translit": "maṣlaḥa",
+        "meaning": "interest, benefit",
+        "pattern": "place_f",
+        "example": {
+          "ar": "هذا في مصلحة الجميع.",
+          "en": "This is in everyone's interest."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "و ق ي",
+    "translit": "w-q-y",
+    "meaning": "Protection; piety",
+    "mnemonic": "Wear Quilted Yokes. W-Q-Y is the root of guarding against harm, and of the mindful fear of God that guards the heart.",
+    "words": [
+      {
+        "arabic": "تَقْوَى",
+        "translit": "taqwā",
+        "meaning": "piety, mindfulness of God",
+        "example": {
+          "ar": "التقوى في القلب.",
+          "en": "Piety is in the heart."
+        }
+      },
+      {
+        "arabic": "وِقَايَة",
+        "translit": "wiqāya",
+        "meaning": "prevention, protection",
+        "pattern": "craft",
+        "example": {
+          "ar": "الوقاية خير من العلاج.",
+          "en": "Prevention is better than cure."
+        }
+      },
+      {
+        "arabic": "اِتَّقَى",
+        "translit": "ittaqā",
+        "meaning": "to guard against; to fear (God)",
+        "pattern": "form8",
+        "note": "Present tense: يَتَّقِي (yattaqī)",
+        "example": {
+          "ar": "اتق الله في عملك.",
+          "en": "Be mindful of God in your work."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ش ه د"
+  },
+  {
+    "arabic": "و ع د",
+    "translit": "w-ʿ-d",
+    "meaning": "Promise",
+    "mnemonic": "Words Assured, Delivered. W-ʿ-D is the root of promising.",
+    "words": [
+      {
+        "arabic": "وَعَدَ",
+        "translit": "waʿada",
+        "meaning": "to promise",
+        "pattern": "form1",
+        "note": "Present tense: يَعِدُ (yaʿidu)",
+        "example": {
+          "ar": "وعد الأب ابنه بهدية.",
+          "en": "The father promised his son a gift."
+        }
+      },
+      {
+        "arabic": "وَعْد",
+        "translit": "waʿd",
+        "meaning": "promise",
+        "pattern": "act",
+        "example": {
+          "ar": "الوعد دين.",
+          "en": "A promise is a debt."
+        }
+      },
+      {
+        "arabic": "مَوْعِد",
+        "translit": "mawʿid",
+        "meaning": "appointment",
+        "pattern": "place",
+        "example": {
+          "ar": "عندي موعد مع الطبيب.",
+          "en": "I have an appointment with the doctor."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ر ز ق",
+    "translit": "r-z-q",
+    "meaning": "Provision, livelihood",
+    "mnemonic": "Rice, Zucchini, Quinoa. R-Z-Q is the root of provision: what you are given to live on.",
+    "words": [
+      {
+        "arabic": "رِزْق",
+        "translit": "rizq",
+        "meaning": "livelihood, provision",
+        "example": {
+          "ar": "الرزق على الله.",
+          "en": "Our provision is in God's hands."
+        }
+      },
+      {
+        "arabic": "رَزَقَ",
+        "translit": "razaqa",
+        "meaning": "to provide",
+        "pattern": "form1",
+        "note": "Present tense: يَرْزُقُ (yarzuqu)",
+        "example": {
+          "ar": "رزقهم الله ولدا.",
+          "en": "God blessed them with a son."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "غ ف ر",
+    "translit": "gh-f-r",
+    "meaning": "Forgiveness",
+    "mnemonic": "Grace For Regret. GH-F-R is the root of forgiving, originally covering over a fault.",
+    "words": [
+      {
+        "arabic": "غَفَرَ",
+        "translit": "ghafara",
+        "meaning": "to forgive",
+        "pattern": "form1",
+        "note": "Present tense: يَغْفِرُ (yaghfiru)",
+        "example": {
+          "ar": "غفر الأب لابنه.",
+          "en": "The father forgave his son."
+        }
+      },
+      {
+        "arabic": "مَغْفِرَة",
+        "translit": "maghfira",
+        "meaning": "forgiveness",
+        "pattern": "place_f",
+        "example": {
+          "ar": "نطلب المغفرة.",
+          "en": "We ask for forgiveness."
+        }
+      },
+      {
+        "arabic": "غَفُور",
+        "translit": "ghafūr",
+        "meaning": "all-forgiving",
+        "example": {
+          "ar": "الله غفور رحيم.",
+          "en": "God is forgiving and merciful."
+        }
+      },
+      {
+        "arabic": "اِسْتَغْفَرَ",
+        "translit": "istaghfara",
+        "meaning": "to ask forgiveness",
+        "pattern": "form10",
+        "note": "Present tense: يَسْتَغْفِرُ (yastaghfiru)",
+        "example": {
+          "ar": "استغفر الرجل بعد خطئه.",
+          "en": "The man asked forgiveness after his mistake."
+        }
+      }
+    ]
+  },
+  {
+    "root": "س م ع"
+  },
+  {
+    "root": "ك ب ر"
+  },
+  {
+    "arabic": "ب ص ر",
+    "translit": "b-ṣ-r",
+    "meaning": "Sight, insight",
+    "mnemonic": "Bright Sharp Retina. B-Ṣ-R is the root of seeing, with the eyes and with the mind.",
+    "words": [
+      {
+        "arabic": "بَصَر",
+        "translit": "baṣar",
+        "meaning": "sight, eyesight",
+        "example": {
+          "ar": "بصره ضعيف.",
+          "en": "His eyesight is weak."
+        }
+      },
+      {
+        "arabic": "بَصِير",
+        "translit": "baṣīr",
+        "meaning": "seeing; perceptive",
+        "pattern": "adj",
+        "example": {
+          "ar": "الله سميع بصير.",
+          "en": "God hears and sees all."
+        }
+      },
+      {
+        "arabic": "بَصِيرَة",
+        "translit": "baṣīra",
+        "meaning": "insight",
+        "example": {
+          "ar": "هو رجل صاحب بصيرة.",
+          "en": "He is a man of insight."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ص د ق"
+  },
+  {
+    "root": "ك ذ ب"
+  },
+  {
+    "arabic": "ف س د",
+    "translit": "f-s-d",
+    "meaning": "Corruption, spoiling",
+    "mnemonic": "Food Spoils, Decays. F-S-D is the root of going bad and corruption.",
+    "words": [
+      {
+        "arabic": "فَسَاد",
+        "translit": "fasād",
+        "meaning": "corruption",
+        "example": {
+          "ar": "الفساد مشكلة كبيرة.",
+          "en": "Corruption is a big problem."
+        }
+      },
+      {
+        "arabic": "فَاسِد",
+        "translit": "fāsid",
+        "meaning": "rotten, corrupt",
+        "pattern": "doer",
+        "example": {
+          "ar": "هذا الطعام فاسد.",
+          "en": "This food is rotten."
+        }
+      },
+      {
+        "arabic": "أَفْسَدَ",
+        "translit": "ʾafsada",
+        "meaning": "to spoil, ruin",
+        "pattern": "form4",
+        "note": "Present tense: يُفْسِدُ (yufsidu)",
+        "example": {
+          "ar": "أفسد المطر الرحلة.",
+          "en": "The rain spoiled the trip."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ن ص ر",
+    "translit": "n-ṣ-r",
+    "meaning": "Help, victory",
+    "mnemonic": "Never Surrender, Rise. N-Ṣ-R is the root of helping someone to win, and of victory.",
+    "words": [
+      {
+        "arabic": "نَصْر",
+        "translit": "naṣr",
+        "meaning": "victory",
+        "pattern": "act",
+        "example": {
+          "ar": "حقق الجيش النصر.",
+          "en": "The army won the victory."
+        }
+      },
+      {
+        "arabic": "نَصَرَ",
+        "translit": "naṣara",
+        "meaning": "to help, support",
+        "pattern": "form1",
+        "note": "Present tense: يَنْصُرُ (yanṣuru)",
+        "example": {
+          "ar": "نصر الصديق صديقه.",
+          "en": "The friend stood by his friend."
+        }
+      },
+      {
+        "arabic": "اِنْتَصَرَ",
+        "translit": "intaṣara",
+        "meaning": "to win, triumph",
+        "pattern": "form8",
+        "note": "Present tense: يَنْتَصِرُ (yantaṣiru)",
+        "example": {
+          "ar": "انتصر الفريق في النهاية.",
+          "en": "The team won in the end."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "و ل ي",
+    "translit": "w-l-y",
+    "meaning": "Closeness; guardianship",
+    "mnemonic": "Watching, Loyal, Yours. W-L-Y is the root of being near someone: a guardian, a friend, one in charge.",
+    "words": [
+      {
+        "arabic": "وَلِيّ",
+        "translit": "walī",
+        "meaning": "guardian; friend; saint",
+        "pattern": "adj",
+        "example": {
+          "ar": "والد الطفل وليه.",
+          "en": "A child's father is his guardian."
+        }
+      },
+      {
+        "arabic": "وِلَايَة",
+        "translit": "wilāya",
+        "meaning": "state, province",
+        "pattern": "craft",
+        "example": {
+          "ar": "تكساس ولاية كبيرة.",
+          "en": "Texas is a large state."
+        }
+      },
+      {
+        "arabic": "تَوَلَّى",
+        "translit": "tawallā",
+        "meaning": "to take charge",
+        "note": "Present tense: يَتَوَلَّى (yatawallā)",
+        "example": {
+          "ar": "تولى الوزير المنصب.",
+          "en": "The minister took office."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ق ت ل",
+    "translit": "q-t-l",
+    "meaning": "Killing, fighting",
+    "mnemonic": "Quarrels Turn Lethal. Q-T-L is the root of killing and of fighting.",
+    "words": [
+      {
+        "arabic": "قَتَلَ",
+        "translit": "qatala",
+        "meaning": "to kill",
+        "pattern": "form1",
+        "note": "Present tense: يَقْتُلُ (yaqtulu)",
+        "example": {
+          "ar": "قتل الصياد الذئب.",
+          "en": "The hunter killed the wolf."
+        }
+      },
+      {
+        "arabic": "قَاتَلَ",
+        "translit": "qātala",
+        "meaning": "to fight",
+        "pattern": "form3",
+        "note": "Present tense: يُقَاتِلُ (yuqātilu)",
+        "example": {
+          "ar": "قاتل الجنود بشجاعة.",
+          "en": "The soldiers fought bravely."
+        }
+      },
+      {
+        "arabic": "قِتَال",
+        "translit": "qitāl",
+        "meaning": "fighting, combat",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "انتهى القتال.",
+          "en": "The fighting ended."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ت و ب"
+  },
+  {
+    "root": "د ي ن"
+  },
+  {
+    "root": "ش ك ر"
+  },
+  {
+    "root": "ص ب ر"
+  },
+  {
+    "root": "ح ب ب"
+  },
+  {
+    "root": "ف ع ل"
+  },
+  {
+    "arabic": "س ج د",
+    "translit": "s-j-d",
+    "meaning": "Prostration",
+    "mnemonic": "Stoop, Join the Dust. S-J-D is the root of bowing down with the forehead to the ground.",
+    "words": [
+      {
+        "arabic": "سَجَدَ",
+        "translit": "sajada",
+        "meaning": "to prostrate",
+        "pattern": "form1",
+        "note": "Present tense: يَسْجُدُ (yasjudu)",
+        "example": {
+          "ar": "سجد الرجل في الصلاة.",
+          "en": "The man prostrated in prayer."
+        }
+      },
+      {
+        "arabic": "مَسْجِد",
+        "translit": "masjid",
+        "meaning": "mosque",
+        "pattern": "place",
+        "example": {
+          "ar": "المسجد قريب من البيت.",
+          "en": "The mosque is near the house."
+        }
+      },
+      {
+        "arabic": "سَجَّادَة",
+        "translit": "sajjāda",
+        "meaning": "prayer rug, carpet",
+        "example": {
+          "ar": "هذه سجادة جميلة.",
+          "en": "This is a beautiful rug."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ص ل و"
+  },
+  {
+    "arabic": "ز ك و",
+    "translit": "z-k-w",
+    "meaning": "Purity, alms",
+    "mnemonic": "Zero Kept, Wealth given. Z-K-W is the root of purity and of the alms that purify wealth.",
+    "words": [
+      {
+        "arabic": "زَكَاة",
+        "translit": "zakāh",
+        "meaning": "alms, charity tax",
+        "example": {
+          "ar": "الزكاة ركن من أركان الإسلام.",
+          "en": "Alms-giving is a pillar of Islam."
+        }
+      },
+      {
+        "arabic": "زَكِيّ",
+        "translit": "zakī",
+        "meaning": "pure; bright",
+        "pattern": "adj",
+        "example": {
+          "ar": "هو ولد زكي.",
+          "en": "He is a bright boy."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ن ع م",
+    "translit": "n-ʿ-m",
+    "meaning": "Blessing, ease",
+    "mnemonic": "Nice And Mellow. N-ʿ-M is the root of blessing, comfort and softness; and of نَعَم, yes.",
+    "words": [
+      {
+        "arabic": "نِعْمَة",
+        "translit": "niʿma",
+        "meaning": "blessing",
+        "example": {
+          "ar": "الصحة نعمة.",
+          "en": "Health is a blessing."
+        }
+      },
+      {
+        "arabic": "نَعَم",
+        "translit": "naʿam",
+        "meaning": "yes",
+        "example": {
+          "ar": "نعم، أنا جاهز.",
+          "en": "Yes, I'm ready."
+        }
+      },
+      {
+        "arabic": "نَاعِم",
+        "translit": "nāʿim",
+        "meaning": "soft, smooth",
+        "pattern": "doer",
+        "example": {
+          "ar": "هذا قماش ناعم.",
+          "en": "This is soft fabric."
+        }
+      },
+      {
+        "arabic": "نَعِيم",
+        "translit": "naʿīm",
+        "meaning": "bliss",
+        "pattern": "adj",
+        "example": {
+          "ar": "يعيشون في نعيم.",
+          "en": "They live in bliss."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ج ز ي",
+    "translit": "j-z-y",
+    "meaning": "Reward, recompense",
+    "mnemonic": "Just Zeal Yields. J-Z-Y is the root of giving back what someone deserves.",
+    "words": [
+      {
+        "arabic": "جَزَاء",
+        "translit": "jazāʾ",
+        "meaning": "reward; penalty",
+        "example": {
+          "ar": "هذا جزاء الصبر.",
+          "en": "This is the reward of patience."
+        }
+      },
+      {
+        "arabic": "جَزَى",
+        "translit": "jazā",
+        "meaning": "to reward, repay",
+        "pattern": "form1",
+        "note": "Present tense: يَجْزِي (yajzī)",
+        "example": {
+          "ar": "جزاك الله خيرا.",
+          "en": "May God reward you with good."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ن و ر"
+  },
+  {
+    "root": "ق د ر"
+  },
+  {
+    "arabic": "ب ع ث",
+    "translit": "b-ʿ-th",
+    "meaning": "Sending; raising",
+    "mnemonic": "Bring An envoy THere. B-ʿ-TH is the root of sending someone out, and of raising the dead.",
+    "words": [
+      {
+        "arabic": "بَعَثَ",
+        "translit": "baʿatha",
+        "meaning": "to send",
+        "pattern": "form1",
+        "note": "Present tense: يَبْعَثُ (yabʿathu)",
+        "example": {
+          "ar": "بعث الملك رسالة.",
+          "en": "The king sent a message."
+        }
+      },
+      {
+        "arabic": "بَعْثَة",
+        "translit": "baʿtha",
+        "meaning": "mission, delegation",
+        "example": {
+          "ar": "سافرت البعثة إلى الصين.",
+          "en": "The delegation travelled to China."
+        }
+      },
+      {
+        "arabic": "مَبْعُوث",
+        "translit": "mabʿūth",
+        "meaning": "envoy",
+        "pattern": "done",
+        "example": {
+          "ar": "وصل المبعوث الخاص.",
+          "en": "The special envoy arrived."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ه ل ك",
+    "translit": "h-l-k",
+    "meaning": "Ruin, perishing",
+    "mnemonic": "Hope Lost, Killed. H-L-K is the root of perishing; and, more mildly, of using things up.",
+    "words": [
+      {
+        "arabic": "هَلَكَ",
+        "translit": "halaka",
+        "meaning": "to perish",
+        "pattern": "form1",
+        "note": "Present tense: يَهْلِكُ (yahliku)",
+        "example": {
+          "ar": "هلك الزرع من العطش.",
+          "en": "The crops died of thirst."
+        }
+      },
+      {
+        "arabic": "أَهْلَكَ",
+        "translit": "ʾahlaka",
+        "meaning": "to destroy",
+        "pattern": "form4",
+        "note": "Present tense: يُهْلِكُ (yuhliku)",
+        "example": {
+          "ar": "أهلك الإعصار القرية.",
+          "en": "The hurricane destroyed the village."
+        }
+      },
+      {
+        "arabic": "مُسْتَهْلِك",
+        "translit": "mustahlik",
+        "meaning": "consumer",
+        "example": {
+          "ar": "حقوق المستهلك مهمة.",
+          "en": "Consumer rights are important."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ط ي ب",
+    "translit": "ṭ-y-b",
+    "meaning": "Goodness, pleasantness",
+    "mnemonic": "Tasty, Yummy, Brilliant. Ṭ-Y-B is the root of what is good and pleasant.",
+    "words": [
+      {
+        "arabic": "طَيِّب",
+        "translit": "ṭayyib",
+        "meaning": "good, kind; tasty",
+        "example": {
+          "ar": "الأكل طيب.",
+          "en": "The food is good."
+        }
+      },
+      {
+        "arabic": "طِيب",
+        "translit": "ṭīb",
+        "meaning": "perfume",
+        "pattern": "act",
+        "example": {
+          "ar": "رائحة الطيب جميلة.",
+          "en": "The perfume smells lovely."
+        }
+      },
+      {
+        "arabic": "أَطْيَب",
+        "translit": "ʾaṭyab",
+        "meaning": "tastiest, best",
+        "pattern": "comparative",
+        "example": {
+          "ar": "هذا أطيب طعام أكلته.",
+          "en": "This is the tastiest food I've eaten."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ض ل ل",
+    "translit": "ḍ-l-l",
+    "meaning": "Going astray",
+    "mnemonic": "Drifting, Lost, Lonely. Ḍ-L-L is the root of losing the way.",
+    "words": [
+      {
+        "arabic": "ضَلَّ",
+        "translit": "ḍalla",
+        "meaning": "to go astray, get lost",
+        "pattern": "form1",
+        "note": "Present tense: يَضِلُّ (yaḍillu)",
+        "example": {
+          "ar": "ضل الولد في السوق.",
+          "en": "The boy got lost in the market."
+        }
+      },
+      {
+        "arabic": "ضَلَال",
+        "translit": "ḍalāl",
+        "meaning": "error, going astray",
+        "example": {
+          "ar": "هذا ضلال كبير.",
+          "en": "This is a great error."
+        }
+      },
+      {
+        "arabic": "ضَالّ",
+        "translit": "ḍāll",
+        "meaning": "lost, astray",
+        "pattern": "doer",
+        "example": {
+          "ar": "وجدنا القط الضال.",
+          "en": "We found the stray cat."
+        }
+      }
+    ]
+  },
+  {
+    "root": "خ و ف"
+  },
+  {
+    "root": "و ج د"
+  },
+  {
+    "root": "ر ج ع"
+  },
+  {
+    "arabic": "ف ض ل",
+    "translit": "f-ḍ-l",
+    "meaning": "Favour; excess",
+    "mnemonic": "Finer, Dearer, Leading. F-Ḍ-L is the root of what is extra and better: favour, merit, preference.",
+    "words": [
+      {
+        "arabic": "فَضْل",
+        "translit": "faḍl",
+        "meaning": "favour, kindness",
+        "pattern": "act",
+        "example": {
+          "ar": "هذا من فضل الله.",
+          "en": "This is by God's grace."
+        }
+      },
+      {
+        "arabic": "أَفْضَل",
+        "translit": "ʾafḍal",
+        "meaning": "better, best",
+        "pattern": "comparative",
+        "example": {
+          "ar": "هذا أفضل حل.",
+          "en": "This is the best solution."
+        }
+      },
+      {
+        "arabic": "مِنْ فَضْلِك",
+        "translit": "min faḍlik",
+        "meaning": "please",
+        "example": {
+          "ar": "الماء من فضلك.",
+          "en": "Water, please."
+        }
+      },
+      {
+        "arabic": "فَضَّلَ",
+        "translit": "faḍḍala",
+        "meaning": "to prefer",
+        "pattern": "form2",
+        "note": "Present tense: يُفَضِّلُ (yufaḍḍilu)",
+        "example": {
+          "ar": "أفضل الشاي على القهوة.",
+          "en": "I prefer tea to coffee."
+        }
+      }
+    ]
+  },
+  {
+    "root": "م ل ك"
+  },
+  {
+    "root": "أ ه ل"
+  },
+  {
+    "arabic": "ع د و",
+    "translit": "ʿ-d-w",
+    "meaning": "Enmity; running",
+    "mnemonic": "Attack, Dash, War. ʿ-D-W is the root of enmity, and of running at someone.",
+    "words": [
+      {
+        "arabic": "عَدُوّ",
+        "translit": "ʿaduww",
+        "meaning": "enemy",
+        "example": {
+          "ar": "لا تجعله عدوك.",
+          "en": "Don't make him your enemy."
+        }
+      },
+      {
+        "arabic": "عَدَاوَة",
+        "translit": "ʿadāwa",
+        "meaning": "enmity",
+        "pattern": "quality",
+        "example": {
+          "ar": "بينهما عداوة قديمة.",
+          "en": "There is an old enmity between them."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "أ ج ر",
+    "translit": "ʾ-j-r",
+    "meaning": "Wage, reward; rent",
+    "mnemonic": "A Job's Return. ʾ-J-R is the root of what is earned: a wage, a reward, a rent.",
+    "words": [
+      {
+        "arabic": "أَجْر",
+        "translit": "ʾajr",
+        "meaning": "wage; reward",
+        "pattern": "act",
+        "example": {
+          "ar": "لك أجر عظيم.",
+          "en": "You have a great reward."
+        }
+      },
+      {
+        "arabic": "أُجْرَة",
+        "translit": "ʾujra",
+        "meaning": "fare, fee",
+        "example": {
+          "ar": "كم أجرة التاكسي؟",
+          "en": "How much is the taxi fare?"
+        }
+      },
+      {
+        "arabic": "إِيجَار",
+        "translit": "ʾījār",
+        "meaning": "rent",
+        "example": {
+          "ar": "الإيجار غال في المدينة.",
+          "en": "Rent is expensive in the city."
+        }
+      }
+    ]
+  },
+  {
+    "root": "س ل م"
+  },
+  {
+    "arabic": "ح س ن",
+    "translit": "ḥ-s-n",
+    "meaning": "Goodness, beauty",
+    "mnemonic": "Handsome, Splendid, Nice. Ḥ-S-N is the root of what is good and beautiful, and of doing good.",
+    "words": [
+      {
+        "arabic": "حَسَن",
+        "translit": "ḥasan",
+        "meaning": "good, fine",
+        "example": {
+          "ar": "حسنا، أنا موافق.",
+          "en": "All right, I agree."
+        }
+      },
+      {
+        "arabic": "أَحْسَن",
+        "translit": "ʾaḥsan",
+        "meaning": "better, best",
+        "pattern": "comparative",
+        "example": {
+          "ar": "أنت أحسن صديق.",
+          "en": "You are the best friend."
+        }
+      },
+      {
+        "arabic": "إِحْسَان",
+        "translit": "ʾiḥsān",
+        "meaning": "kindness, excellence",
+        "example": {
+          "ar": "الإحسان إلى الجار واجب.",
+          "en": "Kindness to a neighbour is a duty."
+        }
+      },
+      {
+        "arabic": "حَسَنَة",
+        "translit": "ḥasana",
+        "meaning": "good deed",
+        "example": {
+          "ar": "كل كلمة طيبة حسنة.",
+          "en": "Every kind word is a good deed."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ع ز ز",
+    "translit": "ʿ-z-z",
+    "meaning": "Might; dearness",
+    "mnemonic": "Admired, Zealous, Zenith. ʿ-Z-Z is the root of being mighty, honoured and dear.",
+    "words": [
+      {
+        "arabic": "عَزِيز",
+        "translit": "ʿazīz",
+        "meaning": "dear; mighty",
+        "pattern": "adj",
+        "example": {
+          "ar": "صديقي العزيز.",
+          "en": "My dear friend."
+        }
+      },
+      {
+        "arabic": "عِزّ",
+        "translit": "ʿizz",
+        "meaning": "glory, honour",
+        "example": {
+          "ar": "عاش في عز.",
+          "en": "He lived in honour."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "و ك ل",
+    "translit": "w-k-l",
+    "meaning": "Trusting; agency",
+    "mnemonic": "Wholly Kept, Lean on. W-K-L is the root of trusting someone with your affairs.",
+    "words": [
+      {
+        "arabic": "تَوَكَّلَ",
+        "translit": "tawakkala",
+        "meaning": "to rely, put trust",
+        "note": "Present tense: يَتَوَكَّلُ (yatawakkalu)",
+        "example": {
+          "ar": "توكل على الله وابدأ.",
+          "en": "Put your trust in God and begin."
+        }
+      },
+      {
+        "arabic": "وَكِيل",
+        "translit": "wakīl",
+        "meaning": "agent, representative",
+        "pattern": "adj",
+        "example": {
+          "ar": "هو وكيل الشركة.",
+          "en": "He is the company's agent."
+        }
+      },
+      {
+        "arabic": "وَكَالَة",
+        "translit": "wakāla",
+        "meaning": "agency",
+        "pattern": "craft",
+        "example": {
+          "ar": "هذه وكالة سفر.",
+          "en": "This is a travel agency."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ب ش ر",
+    "translit": "b-sh-r",
+    "meaning": "Humans; good news; skin",
+    "mnemonic": "Bring SHining Reports. B-SH-R is the root of the human being (seen by the skin), and of good news that shows on the face.",
+    "words": [
+      {
+        "arabic": "بَشَر",
+        "translit": "bashar",
+        "meaning": "human beings",
+        "example": {
+          "ar": "كل البشر متساوون.",
+          "en": "All human beings are equal."
+        }
+      },
+      {
+        "arabic": "بُشْرَى",
+        "translit": "bushrā",
+        "meaning": "good news",
+        "example": {
+          "ar": "هذه بشرى سارة.",
+          "en": "This is happy news."
+        }
+      },
+      {
+        "arabic": "بَشَرَة",
+        "translit": "bashara",
+        "meaning": "skin, complexion",
+        "example": {
+          "ar": "بشرتها ناعمة.",
+          "en": "Her skin is soft."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ن ذ ر",
+    "translit": "n-dh-r",
+    "meaning": "Warning; vow",
+    "mnemonic": "Notice: Danger Rising. N-DH-R is the root of warning, and of a solemn vow.",
+    "words": [
+      {
+        "arabic": "أَنْذَرَ",
+        "translit": "ʾandhara",
+        "meaning": "to warn",
+        "pattern": "form4",
+        "note": "Present tense: يُنْذِرُ (yundhiru)",
+        "example": {
+          "ar": "أنذر المعلم الطلاب.",
+          "en": "The teacher warned the students."
+        }
+      },
+      {
+        "arabic": "إِنْذَار",
+        "translit": "ʾindhār",
+        "meaning": "warning, alarm",
+        "example": {
+          "ar": "سمعنا جرس الإنذار.",
+          "en": "We heard the alarm bell."
+        }
+      },
+      {
+        "arabic": "نَذِير",
+        "translit": "nadhīr",
+        "meaning": "warner",
+        "pattern": "adj",
+        "example": {
+          "ar": "جاء نذير من المدينة.",
+          "en": "A warner came from the city."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "غ ي ب",
+    "translit": "gh-y-b",
+    "meaning": "Absence; the unseen",
+    "mnemonic": "Gone, Yet Believed. GH-Y-B is the root of being absent, out of sight.",
+    "words": [
+      {
+        "arabic": "غَابَ",
+        "translit": "ghāba",
+        "meaning": "to be absent; to set (sun)",
+        "pattern": "form1",
+        "note": "Present tense: يَغِيبُ (yaghību)",
+        "example": {
+          "ar": "غاب الطالب اليوم.",
+          "en": "The student was absent today."
+        }
+      },
+      {
+        "arabic": "غَائِب",
+        "translit": "ghāʾib",
+        "meaning": "absent",
+        "pattern": "doer",
+        "example": {
+          "ar": "المدير غائب.",
+          "en": "The manager is absent."
+        }
+      },
+      {
+        "arabic": "غِيَاب",
+        "translit": "ghiyāb",
+        "meaning": "absence",
+        "pattern": "fi3al",
+        "example": {
+          "ar": "لاحظ المعلم غيابه.",
+          "en": "The teacher noticed his absence."
+        }
+      },
+      {
+        "arabic": "غَيْب",
+        "translit": "ghayb",
+        "meaning": "the unseen",
+        "pattern": "act",
+        "example": {
+          "ar": "لا يعلم الغيب إلا الله.",
+          "en": "Only God knows the unseen."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ش ر ك"
+  },
+  {
+    "arabic": "و ح ي",
+    "translit": "w-ḥ-y",
+    "meaning": "Revelation, inspiration",
+    "mnemonic": "Whispered, Heavenly, Inward. W-Ḥ-Y is the root of a message passed silently: inspiration and revelation.",
+    "words": [
+      {
+        "arabic": "وَحْي",
+        "translit": "waḥy",
+        "meaning": "revelation; inspiration",
+        "pattern": "act",
+        "example": {
+          "ar": "الشعر وحي الشاعر.",
+          "en": "Poetry is the poet's inspiration."
+        }
+      },
+      {
+        "arabic": "أَوْحَى",
+        "translit": "ʾawḥā",
+        "meaning": "to inspire, suggest",
+        "pattern": "form4",
+        "note": "Present tense: يُوحِي (yūḥī)",
+        "example": {
+          "ar": "أوحى لي المنظر بفكرة.",
+          "en": "The view gave me an idea."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ط و ع",
+    "translit": "ṭ-w-ʿ",
+    "meaning": "Obeying; being able",
+    "mnemonic": "Take Willing Action. Ṭ-W-ʿ is the root of willingly doing: obeying, and being able to.",
+    "words": [
+      {
+        "arabic": "أَطَاعَ",
+        "translit": "ʾaṭāʿa",
+        "meaning": "to obey",
+        "pattern": "form4",
+        "note": "Present tense: يُطِيعُ (yuṭīʿu)",
+        "example": {
+          "ar": "أطاع الولد أباه.",
+          "en": "The boy obeyed his father."
+        }
+      },
+      {
+        "arabic": "طَاعَة",
+        "translit": "ṭāʿa",
+        "meaning": "obedience",
+        "example": {
+          "ar": "الطاعة مهمة في الجيش.",
+          "en": "Obedience matters in the army."
+        }
+      },
+      {
+        "arabic": "اِسْتَطَاعَ",
+        "translit": "istaṭāʿa",
+        "meaning": "to be able",
+        "pattern": "form10",
+        "note": "Present tense: يَسْتَطِيعُ (yastaṭīʿu)",
+        "example": {
+          "ar": "لا أستطيع النوم.",
+          "en": "I can't sleep."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ر ض ي",
+    "translit": "r-ḍ-y",
+    "meaning": "Contentment",
+    "mnemonic": "Relaxed, Delighted, Yes. R-Ḍ-Y is the root of being pleased and content.",
+    "words": [
+      {
+        "arabic": "رَضِيَ",
+        "translit": "raḍiya",
+        "meaning": "to be pleased, content",
+        "pattern": "form1",
+        "note": "Present tense: يَرْضَى (yarḍā)",
+        "example": {
+          "ar": "رضي الأب عن ابنه.",
+          "en": "The father was pleased with his son."
+        }
+      },
+      {
+        "arabic": "رِضًا",
+        "translit": "riḍan",
+        "meaning": "contentment, approval",
+        "example": {
+          "ar": "الرضا كنز.",
+          "en": "Contentment is a treasure."
+        }
+      },
+      {
+        "arabic": "رَاضٍ",
+        "translit": "rāḍin",
+        "meaning": "satisfied",
+        "pattern": "doer",
+        "example": {
+          "ar": "أنا راض عن عملي.",
+          "en": "I am satisfied with my work."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ب ل غ",
+    "translit": "b-l-gh",
+    "meaning": "Reaching; conveying",
+    "mnemonic": "Bring Letters, Go. B-L-GH is the root of arriving at, and of conveying a message all the way.",
+    "words": [
+      {
+        "arabic": "بَلَغَ",
+        "translit": "balagha",
+        "meaning": "to reach",
+        "pattern": "form1",
+        "note": "Present tense: يَبْلُغُ (yablughu)",
+        "example": {
+          "ar": "بلغ عمره عشرين سنة.",
+          "en": "He reached the age of twenty."
+        }
+      },
+      {
+        "arabic": "بَلَّغَ",
+        "translit": "ballagha",
+        "meaning": "to inform, convey",
+        "pattern": "form2",
+        "note": "Present tense: يُبَلِّغُ (yuballighu)",
+        "example": {
+          "ar": "بلغ الشرطة عن الحادث.",
+          "en": "He reported the accident to the police."
+        }
+      },
+      {
+        "arabic": "بَلِيغ",
+        "translit": "balīgh",
+        "meaning": "eloquent",
+        "pattern": "adj",
+        "example": {
+          "ar": "هذا خطاب بليغ.",
+          "en": "This is an eloquent speech."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ع ر ف"
+  },
+  {
+    "root": "ن ظ ر"
+  },
+  {
+    "root": "ف ت ح"
+  },
+  {
+    "root": "ج م ع"
+  },
+  {
+    "arabic": "ح م د",
+    "translit": "ḥ-m-d",
+    "meaning": "Praise",
+    "mnemonic": "Hearts Make Devotion. Ḥ-M-D is the root of praise; Muhammad and Ahmad mean \"praised\".",
+    "words": [
+      {
+        "arabic": "حَمِدَ",
+        "translit": "ḥamida",
+        "meaning": "to praise",
+        "pattern": "form1",
+        "note": "Present tense: يَحْمَدُ (yaḥmadu)",
+        "example": {
+          "ar": "حمد الرجل ربه.",
+          "en": "The man praised his Lord."
+        }
+      },
+      {
+        "arabic": "حَمْد",
+        "translit": "ḥamd",
+        "meaning": "praise",
+        "pattern": "act",
+        "example": {
+          "ar": "الحمد لله.",
+          "en": "Praise be to God."
+        }
+      },
+      {
+        "arabic": "مُحَمَّد",
+        "translit": "muḥammad",
+        "meaning": "Muhammad (praised)",
+        "example": {
+          "ar": "اسم صديقي محمد.",
+          "en": "My friend's name is Muhammad."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ذ ن ب",
+    "translit": "dh-n-b",
+    "meaning": "Sin; tail",
+    "mnemonic": "DHark Nasty Blot. DH-N-B is the root of a sin, a fault that trails after you like a tail.",
+    "words": [
+      {
+        "arabic": "ذَنْب",
+        "translit": "dhanb",
+        "meaning": "sin, fault",
+        "pattern": "act",
+        "example": {
+          "ar": "ما ذنبي؟",
+          "en": "What is my fault?"
+        }
+      },
+      {
+        "arabic": "ذُنُوب",
+        "translit": "dhunūb",
+        "meaning": "sins",
+        "pattern": "fu3ul",
+        "example": {
+          "ar": "استغفر لذنوبك.",
+          "en": "Ask forgiveness for your sins."
+        }
+      },
+      {
+        "arabic": "ذَنَب",
+        "translit": "dhanab",
+        "meaning": "tail",
+        "example": {
+          "ar": "للقط ذنب طويل.",
+          "en": "The cat has a long tail."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ج ه د",
+    "translit": "j-h-d",
+    "meaning": "Effort, striving",
+    "mnemonic": "Just Hustle Daily. J-H-D is the root of effort and striving.",
+    "words": [
+      {
+        "arabic": "جُهْد",
+        "translit": "juhd",
+        "meaning": "effort",
+        "example": {
+          "ar": "بذلت جهدا كبيرا.",
+          "en": "I made a great effort."
+        }
+      },
+      {
+        "arabic": "اِجْتَهَدَ",
+        "translit": "ijtahada",
+        "meaning": "to strive, work hard",
+        "pattern": "form8",
+        "note": "Present tense: يَجْتَهِدُ (yajtahidu)",
+        "example": {
+          "ar": "اجتهد الطالب في دراسته.",
+          "en": "The student worked hard at his studies."
+        }
+      },
+      {
+        "arabic": "مُجْتَهِد",
+        "translit": "mujtahid",
+        "meaning": "hardworking",
+        "example": {
+          "ar": "هي طالبة مجتهدة.",
+          "en": "She is a hardworking student."
+        }
+      }
+    ]
+  },
+  {
+    "root": "ق ر ب"
+  },
+  {
+    "root": "ب ع د"
+  }
+]

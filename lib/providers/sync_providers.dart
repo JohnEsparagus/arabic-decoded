@@ -51,7 +51,8 @@ class SyncNotifier extends Notifier<SyncState> {
   Future<void> sync() => _run((service) async {
     // Progress for a card that hasn't been imported yet has nowhere to
     // land, so let the first-launch import finish before pulling.
-    await ref.read(campaignDecksProvider.future);
+    // Nor for a sentence before the corpus it's made from is loaded.
+    await ref.read(sentenceCorpusProvider.future);
     return service.sync();
   });
 

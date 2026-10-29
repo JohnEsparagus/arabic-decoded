@@ -49,6 +49,15 @@ final campaignDecksProvider = FutureProvider<List<Deck>>((ref) async {
   return importer.importAll();
 });
 
+/// The sentence corpus, loaded into the database (once per edition; see
+/// `ContentImporter.importSentences`). Started in the background as soon
+/// as the app is up, by `RootShell`, and awaited by anything that reads
+/// sentences, so the cards don't wait on thousands of sentences to load.
+final sentenceCorpusProvider = FutureProvider<void>((ref) async {
+  await ref.watch(campaignDecksProvider.future);
+  await ref.watch(contentImporterProvider).importSentences();
+});
+
 /// Current text in the dictionary tab's search field.
 class SearchQueryNotifier extends Notifier<String> {
   @override

@@ -300,7 +300,7 @@ void main() {
     // file changes and that number doesn't, nobody who already has the
     // app would ever get the new sentences. So: changed the file? Bump
     // sentencesVersion, then update the fingerprint here.
-    const fingerprintOfEdition = (version: 2, bytes: _bytes, sum: _sum);
+    const fingerprintOfEdition = (version: 4, bytes: _bytes, sum: _sum);
     final bytes = File(sentencesSource.assetPath).readAsBytesSync();
     final sum = bytes.fold<int>(
       0,
@@ -314,5 +314,5 @@ void main() {
   });
 }
 
-const _bytes = 50283;
-const _sum = 763865031;
+const _bytes = 1694587;
+const _sum = 113568148;

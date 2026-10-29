@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/flashcard.dart';
+import '../config/campaign_sources.dart';
 import '../providers/database_providers.dart';
 import '../providers/settings_providers.dart';
 import '../providers/stats_providers.dart';
@@ -33,7 +34,27 @@ class WelcomeCard extends ConsumerWidget {
       CardKind.root,
       if (ref.watch(studyWordsProvider)) CardKind.word,
     ];
-    final cards = allCards.where((card) => kinds.contains(card.kind)).toList();
+    // The Quran campaign's own roots only count once it's switched on.
+    final quranFirst = ref.watch(quranFirstProvider);
+    final quranDeckId = ref
+        .watch(campaignDecksProvider)
+        .asData
+        ?.value
+        .where((deck) => deck.name == quranSource.deckName)
+        .firstOrNull
+        ?.id;
+    final cards = allCards
+        .where(
+          (card) =>
+              kinds.contains(card.kind) &&
+              (quranFirst || card.deckId != quranDeckId),
+        )
+        .toList();
+    final quranRoots = [
+      if (quranFirst)
+        for (final card in allCards)
+          if (card.quranRank != null) card,
+    ];
     final learned = cards.where((card) => !card.isNew).length;
     final reviews = session.reviewQueue.length;
     final newCards = session.newQueue.length;
@@ -58,6 +79,7 @@ class WelcomeCard extends ConsumerWidget {
                     cards: cards,
                     // Offered to someone who hasn't started and hasn't
                     // already chosen it: the one moment it's useful.
+                    quranRoots: quranRoots,
                     onLearnAlphabet:
                         !learningAlphabet &&
                             allCards.every((card) => card.isNew)
@@ -93,6 +115,7 @@ class WelcomeCard extends ConsumerWidget {
     required List<CardKind> kinds,
     required List<Flashcard> cards,
     required VoidCallback? onLearnAlphabet,
+    required List<Flashcard> quranRoots,
   }) {
     final colors = context.colors;
     return [
@@ -147,6 +170,15 @@ class WelcomeCard extends ConsumerWidget {
                 .where((card) => card.kind == kind && !card.isNew)
                 .length,
             total: cards.where((card) => card.kind == kind).length,
+          ),
+        ),
+      if (quranRoots.isNotEmpty)
+        Padding(
+          padding: const EdgeInsets.only(top: 12),
+          child: _ProgressRow(
+            label: 'Quran roots',
+            learned: quranRoots.where((card) => !card.isNew).length,
+            total: quranRoots.length,
           ),
         ),
       if (onLearnAlphabet != null)

@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/flashcard.dart';
-import '../services/sm2.dart';
+import '../services/scheduler.dart';
 import 'database_providers.dart';
 import 'settings_providers.dart';
 
@@ -86,6 +86,7 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
     // Same for switching words on or off: the queue is rebuilt around it.
     ref.watch(studyWordsProvider);
     ref.watch(studyAlphabetProvider);
+    ref.watch(quranFirstProvider);
     // Kick off the load without blocking `build`, which must stay
     // synchronous for a plain Notifier.
     Future.microtask(_load);
@@ -127,6 +128,7 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
       limit: remainingToday,
       includeWords: ref.read(studyWordsProvider),
       includeLetters: ref.read(studyAlphabetProvider),
+      quranFirst: ref.read(quranFirstProvider),
     );
     return [...queued, ...upNext];
   }
@@ -143,16 +145,12 @@ class StudySessionNotifier extends Notifier<StudySessionState> {
     final card = state.current;
     if (card == null) return;
 
-    final result = computeSM2(
-      easeFactor: card.easeFactor,
-      interval: card.interval,
-      repetitions: card.repetitions,
-      quality: grade.quality,
-    );
+    final result = scheduleFor(card, grade);
     final updated = card.copyWith(
-      easeFactor: result.easeFactor,
+      stability: result.stability,
+      difficulty: result.difficulty,
       interval: result.interval,
-      repetitions: result.repetitions,
+      repetitions: card.repetitions + 1,
       nextReview: result.nextReview,
       isNew: false,
       introducedAt: card.isNew ? DateTime.now() : card.introducedAt,

@@ -32,6 +32,7 @@ final wordMasteryProvider = Provider<Map<String, MasteryLevel>>((ref) {
 /// when they leave.
 final sentencesForCardProvider = FutureProvider.autoDispose
     .family<List<Sentence>, int>((ref, cardId) async {
+      await ref.watch(sentenceCorpusProvider.future);
       final cards = await ref.watch(allFlashcardsProvider.future);
       final card = cards.where((c) => c.id == cardId).firstOrNull;
       if (card == null) return const [];
@@ -94,8 +95,7 @@ class SentenceExplorerNotifier extends Notifier<SentenceExplorerState> {
       loading: true,
       total: state.total,
     );
-    // The corpus is loaded by the same import the cards are.
-    await ref.read(campaignDecksProvider.future);
+    await ref.read(sentenceCorpusProvider.future);
     final db = ref.read(databaseServiceProvider);
     final total = await db.countSentences();
     final page = await db.searchSentences(

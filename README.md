@@ -22,13 +22,19 @@ Pushes to `main` publish it to GitHub Pages (`.github/workflows/web.yml`).
 - **Content** is bundled with the app as JSON in `assets/data/`. To add a
   campaign, drop in a JSON file and list it in
   `lib/config/campaign_sources.dart`.
+  - `quran.json` is the Quran campaign: the Quran's most common roots in
+    order. Most entries just name a root another campaign teaches
+    (`{"root": "ق و ل"}`), so there's one card per root and progress is
+    shared; roots no campaign has are full entries in the Quran's own deck.
   - `lessons.json` and `stories.json` are read-once cards, each shown
     after `after_roots` roots have been introduced. Add or delete an entry
     and the card follows.
   - `sentences.json` is the sentence corpus. It is loaded into its own
     indexed table once per edition, so **bump `sentencesVersion`** in
     `campaign_sources.dart` whenever you change the file (a test fails if
-    you forget). It is built to hold thousands of sentences.
+    you forget). It holds the app's own example sentences followed by
+    about 13,000 from [Tatoeba](https://tatoeba.org) (CC BY 2.0 FR; credited
+    on the About screen), chosen because they use words the app teaches.
 - **Progress** lives in an on-device SQLite database
   (`lib/services/database_service.dart`). The app always reads and writes
   that, so it works offline and without an account.

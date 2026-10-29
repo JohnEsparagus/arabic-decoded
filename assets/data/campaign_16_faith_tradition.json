@@ -1,0 +1,364 @@
+[
+  {
+    "arabic": "د ي ن",
+    "translit": "d-y-n",
+    "meaning": "Religion; debt",
+    "mnemonic": "Devotion Yields Norms. D-Y-N is the root of religion, and of a debt owed.",
+    "words": [
+      {
+        "arabic": "دِين",
+        "translit": "dīn",
+        "meaning": "religion",
+        "example": {
+          "ar": "لكل شعب دين وثقافة.",
+          "en": "Every people has a religion and a culture."
+        }
+      },
+      {
+        "arabic": "دِينِيّ",
+        "translit": "dīnī",
+        "meaning": "religious",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذا عيد ديني.",
+          "en": "This is a religious holiday."
+        }
+      },
+      {
+        "arabic": "دَيْن",
+        "translit": "dayn",
+        "meaning": "debt",
+        "pattern": "act",
+        "example": {
+          "ar": "عليه دين كبير.",
+          "en": "He has a large debt."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ع ب د",
+    "translit": "ʿ-b-d",
+    "meaning": "Worship, servitude",
+    "mnemonic": "Above, Beyond, Devoted. ʿ-B-D is the root of worship and of serving.",
+    "words": [
+      {
+        "arabic": "عَبَدَ",
+        "translit": "ʿabada",
+        "meaning": "to worship",
+        "pattern": "form1",
+        "note": "Present tense: يَعْبُدُ (yaʿbudu)",
+        "example": {
+          "ar": "كان الناس يعبدون الشمس.",
+          "en": "People used to worship the sun."
+        }
+      },
+      {
+        "arabic": "عِبَادَة",
+        "translit": "ʿibāda",
+        "meaning": "worship",
+        "pattern": "craft",
+        "example": {
+          "ar": "الصلاة عبادة.",
+          "en": "Prayer is worship."
+        }
+      },
+      {
+        "arabic": "عَبْد",
+        "translit": "ʿabd",
+        "meaning": "servant, slave",
+        "pattern": "act",
+        "example": {
+          "ar": "عبد الله اسم مشهور.",
+          "en": "Abdullah is a well-known name."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ص ل و",
+    "translit": "ṣ-l-w",
+    "meaning": "Prayer",
+    "mnemonic": "Silent Lips, Whispering. Ṣ-L-W is the root of prayer.",
+    "words": [
+      {
+        "arabic": "صَلَّى",
+        "translit": "ṣallā",
+        "meaning": "to pray",
+        "pattern": "form2",
+        "note": "Present tense: يُصَلِّي (yuṣallī)",
+        "example": {
+          "ar": "صلى الرجل في المسجد.",
+          "en": "The man prayed in the mosque."
+        }
+      },
+      {
+        "arabic": "صَلَاة",
+        "translit": "ṣalāh",
+        "meaning": "prayer",
+        "example": {
+          "ar": "حان وقت الصلاة.",
+          "en": "It is time for prayer."
+        }
+      },
+      {
+        "arabic": "مُصَلًّى",
+        "translit": "muṣallan",
+        "meaning": "prayer room",
+        "example": {
+          "ar": "في المطار مصلى صغير.",
+          "en": "There is a small prayer room at the airport."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ص و م",
+    "translit": "ṣ-w-m",
+    "meaning": "Fasting",
+    "mnemonic": "Stay Without Meals. Ṣ-W-M is the root of fasting.",
+    "words": [
+      {
+        "arabic": "صَامَ",
+        "translit": "ṣāma",
+        "meaning": "to fast",
+        "pattern": "form1",
+        "note": "Present tense: يَصُومُ (yaṣūmu)",
+        "example": {
+          "ar": "صام الناس شهرا كاملا.",
+          "en": "The people fasted for a whole month."
+        }
+      },
+      {
+        "arabic": "صَوْم",
+        "translit": "ṣawm",
+        "meaning": "fasting",
+        "pattern": "act",
+        "example": {
+          "ar": "الصوم في رمضان.",
+          "en": "Fasting is in Ramadan."
+        }
+      },
+      {
+        "arabic": "صَائِم",
+        "translit": "ṣāʾim",
+        "meaning": "fasting (person)",
+        "pattern": "doer",
+        "example": {
+          "ar": "أنا صائم اليوم.",
+          "en": "I am fasting today."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ح ج ج",
+    "translit": "ḥ-j-j",
+    "meaning": "Pilgrimage; argument",
+    "mnemonic": "Holy Journey, Joyful. Ḥ-J-J is the root of the pilgrimage, and of a case argued.",
+    "words": [
+      {
+        "arabic": "حَجّ",
+        "translit": "ḥajj",
+        "meaning": "pilgrimage",
+        "pattern": "act",
+        "example": {
+          "ar": "ذهب جدي إلى الحج.",
+          "en": "My grandfather went on the pilgrimage."
+        }
+      },
+      {
+        "arabic": "حَاجّ",
+        "translit": "ḥājj",
+        "meaning": "pilgrim",
+        "pattern": "doer",
+        "example": {
+          "ar": "عاد الحاج إلى بلده.",
+          "en": "The pilgrim returned to his country."
+        }
+      },
+      {
+        "arabic": "حُجَّة",
+        "translit": "ḥujja",
+        "meaning": "argument, proof",
+        "example": {
+          "ar": "هذه حجة قوية.",
+          "en": "This is a strong argument."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ع ي د",
+    "translit": "ʿ-y-d",
+    "meaning": "Feast; returning",
+    "mnemonic": "A Yearly Day. ʿ-Y-D is the root of the festival, the day that keeps coming back.",
+    "words": [
+      {
+        "arabic": "عِيد",
+        "translit": "ʿīd",
+        "meaning": "festival, holiday",
+        "example": {
+          "ar": "عيد سعيد!",
+          "en": "Happy holiday!"
+        }
+      },
+      {
+        "arabic": "أَعْيَاد",
+        "translit": "ʾaʿyād",
+        "meaning": "festivals",
+        "pattern": "plural",
+        "example": {
+          "ar": "الأعياد كثيرة في هذا البلد.",
+          "en": "There are many holidays in this country."
+        }
+      },
+      {
+        "arabic": "عِيد مِيلَاد",
+        "translit": "ʿīd mīlād",
+        "meaning": "birthday",
+        "example": {
+          "ar": "اليوم عيد ميلادي.",
+          "en": "Today is my birthday."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ب ر ك",
+    "translit": "b-r-k",
+    "meaning": "Blessing",
+    "mnemonic": "Bounty Reaches Kin. B-R-K is the root of blessing.",
+    "words": [
+      {
+        "arabic": "بَرَكَة",
+        "translit": "baraka",
+        "meaning": "blessing",
+        "example": {
+          "ar": "في هذا البيت بركة.",
+          "en": "There is blessing in this house."
+        }
+      },
+      {
+        "arabic": "مُبَارَك",
+        "translit": "mubārak",
+        "meaning": "blessed",
+        "example": {
+          "ar": "عيد مبارك!",
+          "en": "Blessed holiday!"
+        }
+      },
+      {
+        "arabic": "بَارَكَ",
+        "translit": "bāraka",
+        "meaning": "to bless",
+        "pattern": "form3",
+        "note": "Present tense: يُبَارِكُ (yubāriku)",
+        "example": {
+          "ar": "بارك الله فيك.",
+          "en": "May God bless you."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ق د س",
+    "translit": "q-d-s",
+    "meaning": "Holiness",
+    "mnemonic": "Quiet, Devout, Sacred. Q-D-S is the root of holiness.",
+    "words": [
+      {
+        "arabic": "مُقَدَّس",
+        "translit": "muqaddas",
+        "meaning": "holy, sacred",
+        "example": {
+          "ar": "هذا مكان مقدس.",
+          "en": "This is a holy place."
+        }
+      },
+      {
+        "arabic": "القُدْس",
+        "translit": "al-Quds",
+        "meaning": "Jerusalem (the Holy)",
+        "example": {
+          "ar": "زار القدس في الصيف.",
+          "en": "He visited Jerusalem in the summer."
+        }
+      },
+      {
+        "arabic": "قُدْسِيّ",
+        "translit": "qudsī",
+        "meaning": "holy, sacred (of holiness)",
+        "pattern": "nisba",
+        "example": {
+          "ar": "هذه كلمات قدسية.",
+          "en": "These are holy words."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ت و ب",
+    "translit": "t-w-b",
+    "meaning": "Repentance",
+    "mnemonic": "Turn Wholly Back. T-W-B is the root of repenting, turning back.",
+    "words": [
+      {
+        "arabic": "تَابَ",
+        "translit": "tāba",
+        "meaning": "to repent",
+        "pattern": "form1",
+        "note": "Present tense: يَتُوبُ (yatūbu)",
+        "example": {
+          "ar": "تاب الرجل عن الكذب.",
+          "en": "The man repented of lying."
+        }
+      },
+      {
+        "arabic": "تَوْبَة",
+        "translit": "tawba",
+        "meaning": "repentance",
+        "example": {
+          "ar": "التوبة باب مفتوح.",
+          "en": "Repentance is an open door."
+        }
+      }
+    ]
+  },
+  {
+    "arabic": "ج ن ن",
+    "translit": "j-n-n",
+    "meaning": "Hidden: garden, madness, spirits",
+    "mnemonic": "Jungle, Nothing seeN. J-N-N is the root of what is hidden or covered: a garden thick with trees, a mind hidden by madness, the unseen spirits.",
+    "words": [
+      {
+        "arabic": "جَنَّة",
+        "translit": "janna",
+        "meaning": "garden; paradise",
+        "example": {
+          "ar": "الجنة تحت أقدام الأمهات.",
+          "en": "Paradise lies under the feet of mothers."
+        }
+      },
+      {
+        "arabic": "مَجْنُون",
+        "translit": "majnūn",
+        "meaning": "mad, crazy",
+        "pattern": "done",
+        "example": {
+          "ar": "هل أنت مجنون؟",
+          "en": "Are you crazy?"
+        }
+      },
+      {
+        "arabic": "جِنّ",
+        "translit": "jinn",
+        "meaning": "jinn, spirits",
+        "example": {
+          "ar": "في القصص يسكن الجن الصحراء.",
+          "en": "In stories the jinn live in the desert."
+        }
+      }
+    ]
+  }
+]

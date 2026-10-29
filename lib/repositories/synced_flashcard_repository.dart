@@ -90,10 +90,12 @@ class SyncedFlashcardRepository implements FlashcardRepository {
     required int limit,
     bool includeWords = true,
     bool includeLetters = true,
+    bool quranFirst = false,
   }) => _local.getNewFlashcards(
     limit: limit,
     includeWords: includeWords,
     includeLetters: includeLetters,
+    quranFirst: quranFirst,
   );
 
   @override
@@ -113,4 +115,16 @@ class SyncedFlashcardRepository implements FlashcardRepository {
     sentences, {
     required int version,
   }) => _local.replaceSentences(sentences, version: version);
+
+  @override
+  Future<void> moveCard({
+    required String fromDeck,
+    required String from,
+    required String toDeck,
+    required String to,
+  }) => _local.moveCard(fromDeck: fromDeck, from: from, toDeck: toDeck, to: to);
+
+  @override
+  Future<void> setQuranRanks(Map<String, int> ranks) =>
+      _local.setQuranRanks(ranks);
 }

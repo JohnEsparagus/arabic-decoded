@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../providers/database_providers.dart';
 import '../providers/sync_providers.dart';
 import '../providers/tts_providers.dart';
 import '../widgets/app_drawer.dart';
@@ -54,6 +55,8 @@ class _RootShellState extends ConsumerState<RootShell> {
     // `listen` rather than `watch`: this only needs the provider kept
     // alive, not a rebuild of the whole shell on every sync.
     ref.listen(syncProvider, (_, _) {});
+    // Load the sentence corpus in the background now the app is up.
+    ref.listen(sentenceCorpusProvider, (_, _) {});
     // Everything works offline against the local database; whatever was
     // done meanwhile is flagged for upload. The moment a connection comes
     // back, send it and fetch what other devices did.

@@ -201,7 +201,7 @@
     ]
   },
   {
-    "arabic": "ب ن ى",
+    "arabic": "ب ن ي",
     "translit": "b-n-y",
     "meaning": "Building",
     "mnemonic": "A Builder Nails and Yanks the beams into place. B-N-Y is the root of building.",
@@ -279,29 +279,40 @@
     ]
   },
   {
-    "arabic": "س ت ع م ل",
-    "translit": "s-t-ʿ-m-l",
-    "meaning": "Using",
-    "mnemonic": "A Student Tries an Old Machine, Learning to use it. The extended root S-T-ʿ-M-L (from ع م ل, 'work') means to use or employ something.",
+    "arabic": "ن ظ ف",
+    "translit": "n-ẓ-f",
+    "meaning": "Cleaning",
+    "mnemonic": "Neat, Zesty and Fresh. N-Ẓ-F is the root of cleanliness.",
     "words": [
       {
-        "arabic": "اِسْتَعْمَلَ",
-        "translit": "istaʿmala",
-        "meaning": "to use",
-        "pattern": "form10",
-        "note": "Present tense: يَسْتَعْمِلُ (yastaʿmilu)",
+        "arabic": "نَظِيف",
+        "translit": "naẓīf",
+        "meaning": "clean",
+        "pattern": "adj",
         "example": {
-          "ar": "استعمل الولد القلم.",
-          "en": "The boy used the pen."
+          "ar": "البيت نظيف.",
+          "en": "The house is clean."
         }
       },
       {
-        "arabic": "اِسْتِعْمَال",
-        "translit": "istiʿmāl",
-        "meaning": "use, usage",
+        "arabic": "نَظَّفَ",
+        "translit": "naẓẓafa",
+        "meaning": "to clean",
+        "pattern": "form2",
+        "note": "Present tense: يُنَظِّفُ (yunaẓẓifu)",
         "example": {
-          "ar": "هذا للاستعمال اليومي.",
-          "en": "This is for daily use."
+          "ar": "نظفت الأم المطبخ.",
+          "en": "The mother cleaned the kitchen."
+        }
+      },
+      {
+        "arabic": "نَظَافَة",
+        "translit": "naẓāfa",
+        "meaning": "cleanliness",
+        "pattern": "quality",
+        "example": {
+          "ar": "النظافة مهمة للصحة.",
+          "en": "Cleanliness is important for health."
         }
       }
     ]

@@ -6,6 +6,7 @@ import '../config/campaign_sources.dart';
 import '../models/deck.dart';
 import '../models/flashcard.dart';
 import '../providers/database_providers.dart';
+import '../providers/settings_providers.dart';
 import '../providers/study_session_provider.dart';
 import '../theme/app_theme.dart';
 import '../widgets/root_preview_card.dart';
@@ -82,12 +83,14 @@ class _RootsTab extends ConsumerWidget {
         ),
       ),
       data: (allDecks) {
-        // The patterns and the alphabet have decks but aren't campaigns.
+        // The patterns and the alphabet have decks but aren't campaigns,
+        // and the Quran's deck is shown as the Quran list, on top.
         final decks = allDecks
             .where(
               (deck) =>
                   deck.name != patternsSource.deckName &&
-                  deck.name != alphabetSource.deckName,
+                  deck.name != alphabetSource.deckName &&
+                  deck.name != quranSource.deckName,
             )
             .toList();
         if (decks.isEmpty) {
@@ -101,14 +104,112 @@ class _RootsTab extends ConsumerWidget {
         final showResetButton = kDebugMode;
         return ListView.separated(
           padding: const EdgeInsets.all(20),
-          itemCount: decks.length + (showResetButton ? 1 : 0),
+          itemCount: decks.length + 1 + (showResetButton ? 1 : 0),
           separatorBuilder: (_, _) => const SizedBox(height: 24),
           itemBuilder: (context, index) {
-            if (index >= decks.length) return const _ResetProgressButton();
-            return _CampaignSection(deck: decks[index]);
+            if (index == 0) return const _QuranSection();
+            if (index > decks.length) return const _ResetProgressButton();
+            return _CampaignSection(deck: decks[index - 1]);
           },
         );
       },
+    );
+  }
+}
+
+/// The Quran campaign: the Quran's most common roots, most common first,
+/// whichever campaign each one lives in. They're the same cards, so this
+/// shows progress made anywhere. Always here to browse; the switch makes
+/// these roots the first new cards. Folded to its first few rows until
+/// opened, so it doesn't push the regular campaigns off the screen.
+class _QuranSection extends ConsumerStatefulWidget {
+  const _QuranSection();
+
+  @override
+  ConsumerState<_QuranSection> createState() => _QuranSectionState();
+}
+
+class _QuranSectionState extends ConsumerState<_QuranSection> {
+  static const _folded = 12;
+  bool _expanded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = context.colors;
+    final roots =
+        (ref.watch(allFlashcardsProvider).asData?.value ?? const <Flashcard>[])
+            .where((card) => card.quranRank != null)
+            .toList()
+          ..sort((a, b) => a.quranRank!.compareTo(b.quranRank!));
+    final learnt = roots.where((card) => !card.isNew).length;
+    final shown = _expanded ? roots : roots.take(_folded).toList();
+
+    return Card(
+      color: Color.alphaBlend(
+        colors.gold.withValues(alpha: 0.08),
+        colors.cardSurface,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(Icons.menu_book_outlined, color: colors.gold),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    'Quran',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                ),
+                Text(
+                  '$learnt of ${roots.length} learnt',
+                  style: TextStyle(color: colors.inkMuted),
+                ),
+              ],
+            ),
+            const SizedBox(height: 4),
+            Text(
+              'The Quran\'s most common roots, most common first. Roots '
+              'you learn in any campaign count here too.',
+              style: TextStyle(color: colors.inkMuted),
+            ),
+            SwitchListTile(
+              contentPadding: EdgeInsets.zero,
+              title: const Text('Quran first'),
+              subtitle: const Text('Learn these before anything else'),
+              value: ref.watch(quranFirstProvider),
+              onChanged: (value) =>
+                  ref.read(quranFirstProvider.notifier).set(value),
+            ),
+            const SizedBox(height: 4),
+            TileGrid(
+              children: [
+                for (final card in shown)
+                  RootPreviewCard(
+                    card: card,
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => WordDetailScreen(card: card),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+            if (roots.length > _folded)
+              Center(
+                child: TextButton(
+                  onPressed: () => setState(() => _expanded = !_expanded),
+                  child: Text(
+                    _expanded ? 'Show fewer' : 'Show all ${roots.length}',
+                  ),
+                ),
+              ),
+          ],
+        ),
+      ),
     );
   }
 }

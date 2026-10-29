@@ -1,6 +1,6 @@
 [
   {
-    "arabic": "ش ر ى",
+    "arabic": "ش ر ي",
     "translit": "sh-r-y",
     "meaning": "Buying",
     "mnemonic": "A Shopper Rushes to Yell 'sold!' after buying. SH-R-Y is the root of buying.",
@@ -77,10 +77,10 @@
     ]
   },
   {
-    "arabic": "ع ط ي",
-    "translit": "ʿ-ṭ-y",
+    "arabic": "ع ط و",
+    "translit": "ʿ-ṭ-w",
     "meaning": "Giving",
-    "mnemonic": "An Artist Tosses a Yellow gift to a friend. ʿ-Ṭ-Y is the root of giving.",
+    "mnemonic": "An Artist Tosses a Wrapped gift to a friend. ʿ-Ṭ-W is the root of giving.",
     "words": [
       {
         "arabic": "أَعْطَى",
@@ -298,10 +298,10 @@
     ]
   },
   {
-    "arabic": "ح ت ا ج",
-    "translit": "ḥ-t-ʾ-j",
+    "arabic": "ح و ج",
+    "translit": "ḥ-w-j",
     "meaning": "Needing",
-    "mnemonic": "A Hiker Tugs at his Aching Joints, needing rest badly. The extended root Ḥ-T-ʾ-J (from ح و ج) means to need.",
+    "mnemonic": "A Hiker With aching Joints needs rest badly. Ḥ-W-J is the root of need.",
     "words": [
       {
         "arabic": "اِحْتَاجَ",

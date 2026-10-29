@@ -75,10 +75,12 @@ class LocalFlashcardRepository implements FlashcardRepository {
     required int limit,
     bool includeWords = true,
     bool includeLetters = true,
+    bool quranFirst = false,
   }) => _db.getNewFlashcards(
     limit: limit,
     includeWords: includeWords,
     includeLetters: includeLetters,
+    quranFirst: quranFirst,
   );
 
   @override
@@ -98,4 +100,16 @@ class LocalFlashcardRepository implements FlashcardRepository {
     sentences, {
     required int version,
   }) => _db.replaceSentences(sentences, version: version);
+
+  @override
+  Future<void> moveCard({
+    required String fromDeck,
+    required String from,
+    required String toDeck,
+    required String to,
+  }) => _db.moveCard(fromDeck: fromDeck, from: from, toDeck: toDeck, to: to);
+
+  @override
+  Future<void> setQuranRanks(Map<String, int> ranks) =>
+      _db.setQuranRanks(ranks);
 }

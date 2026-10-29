@@ -369,48 +369,49 @@
     ]
   },
   {
-    "arabic": "و ص ل",
-    "translit": "w-ṣ-l",
-    "meaning": "Connecting, joining",
-    "mnemonic": "A Welder Solders a Link, connecting the pieces. W-Ṣ-L is the root of connecting and joining.",
+    "arabic": "ح د د",
+    "translit": "ḥ-d-d",
+    "meaning": "Limit, defining",
+    "mnemonic": "A Hard, Definite Divide. Ḥ-D-D is the root of limits and borders, and of pinning something down.",
     "words": [
       {
-        "arabic": "وَصْل",
-        "translit": "waṣl",
-        "meaning": "connection, linking",
+        "arabic": "حَدّ",
+        "translit": "ḥadd",
+        "meaning": "limit, edge",
         "pattern": "act",
         "example": {
-          "ar": "هذه همزة وصل.",
-          "en": "This is a connecting hamza."
+          "ar": "لكل شيء حد.",
+          "en": "Everything has a limit."
         }
       },
       {
-        "arabic": "وَصَّلَ",
-        "translit": "waṣṣala",
-        "meaning": "to deliver, connect",
-        "pattern": "form2",
-        "note": "Present tense: يُوَصِّلُ (yuwaṣṣilu)",
+        "arabic": "حُدُود",
+        "translit": "ḥudūd",
+        "meaning": "borders, limits",
+        "pattern": "fu3ul",
         "example": {
-          "ar": "وصل السائق الطلب.",
-          "en": "The driver delivered the order."
+          "ar": "عبرنا الحدود في الليل.",
+          "en": "We crossed the border at night."
         }
       },
       {
-        "arabic": "اِتِّصَال",
-        "translit": "ittiṣāl",
-        "meaning": "contact, call",
+        "arabic": "مَحْدُود",
+        "translit": "maḥdūd",
+        "meaning": "limited",
+        "pattern": "done",
         "example": {
-          "ar": "شكرا على الاتصال.",
-          "en": "Thank you for calling."
+          "ar": "الوقت محدود.",
+          "en": "Time is limited."
         }
       },
       {
-        "arabic": "صِلَة",
-        "translit": "ṣila",
-        "meaning": "link, relation",
+        "arabic": "تَحْدِيد",
+        "translit": "taḥdīd",
+        "meaning": "defining, setting",
+        "pattern": "taf3il",
         "example": {
-          "ar": "لا صلة بينهما.",
-          "en": "There is no link between them."
+          "ar": "تحديد الهدف مهم.",
+          "en": "Setting the goal is important."
         }
       }
     ]

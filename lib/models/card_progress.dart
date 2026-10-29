@@ -11,6 +11,11 @@ class CardProgress {
   final double easeFactor;
   final int interval;
   final int repetitions;
+
+  /// FSRS state (see `lib/services/scheduler.dart`); null for progress
+  /// from before FSRS, or from an app version without it.
+  final double? stability;
+  final double? difficulty;
   final DateTime nextReview;
   final DateTime? introducedAt;
 
@@ -23,6 +28,8 @@ class CardProgress {
     required this.easeFactor,
     required this.interval,
     required this.repetitions,
+    this.stability,
+    this.difficulty,
     required this.nextReview,
     this.introducedAt,
     required this.updatedAt,
@@ -37,6 +44,8 @@ class CardProgress {
       easeFactor: (row['ease_factor'] as num).toDouble(),
       interval: row['interval_days'] as int,
       repetitions: row['repetitions'] as int,
+      stability: (row['stability'] as num?)?.toDouble(),
+      difficulty: (row['difficulty'] as num?)?.toDouble(),
       nextReview: DateTime.parse(row['next_review'] as String).toLocal(),
       introducedAt: introducedAt == null
           ? null
@@ -53,6 +62,8 @@ class CardProgress {
       'ease_factor': easeFactor,
       'interval_days': interval,
       'repetitions': repetitions,
+      'stability': stability,
+      'difficulty': difficulty,
       'next_review': nextReview.toUtc().toIso8601String(),
       'introduced_at': introducedAt?.toUtc().toIso8601String(),
       'updated_at': updatedAt.toUtc().toIso8601String(),
