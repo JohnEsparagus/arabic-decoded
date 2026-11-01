@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": 1,
+  "version": 2,
   "campaigns": [
     {
       "file": "assets/data/campaign_1_absolute_core.json",
@@ -218,6 +218,7 @@
     "assets/data/campaign_8_nature.json": "bcd9af9cb70cdb9a",
     "assets/data/campaign_9_time_change.json": "fd687d459eb15a47",
     "assets/data/extras.json": "37517e5f3dc66819",
+    "assets/data/frequency.json": "fd0e667eed877976",
     "assets/data/lessons.json": "92558fa760f114b8",
     "assets/data/patterns.json": "e2f815b9564179c3",
     "assets/data/quran.json": "b7509b689d8c3277",

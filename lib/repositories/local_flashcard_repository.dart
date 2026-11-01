@@ -110,6 +110,6 @@ class LocalFlashcardRepository implements FlashcardRepository {
   }) => _db.moveCard(fromDeck: fromDeck, from: from, toDeck: toDeck, to: to);
 
   @override
-  Future<void> setQuranRanks(Map<String, int> ranks) =>
-      _db.setQuranRanks(ranks);
+  Future<void> setRootRanks(RootList list, Map<String, int> ranks) =>
+      _db.setRootRanks(list, ranks);
 }

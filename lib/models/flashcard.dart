@@ -24,6 +24,18 @@ enum CardKind {
   );
 }
 
+/// An ordered list of roots that spans the campaigns. Each is stored as a
+/// rank on the root's own card, so a root is one card however many lists
+/// it's on.
+enum RootList {
+  quran('quran_rank'),
+  frequency('frequency_rank');
+
+  const RootList(this.column);
+
+  final String column;
+}
+
 /// One worked example on a read-once card: a word, how it's said and what
 /// it means. A card's examples are kept in [Flashcard.relatedWords], which
 /// holds plain strings, so each one is packed into a single string there.
@@ -130,6 +142,9 @@ class Flashcard {
   /// [toMap].
   final int? quranRank;
 
+  /// The same for the frequency list.
+  final int? frequencyRank;
+
   const Flashcard({
     this.id,
     required this.arabicWord,
@@ -157,6 +172,7 @@ class Flashcard {
     this.queuedAt,
     this.lastReviewedAt,
     this.quranRank,
+    this.frequencyRank,
   });
 
   /// A brand-new card, due immediately, with default SM-2 parameters. Stays
@@ -212,6 +228,7 @@ class Flashcard {
       stability: (map['stability'] as num?)?.toDouble(),
       difficulty: (map['difficulty'] as num?)?.toDouble(),
       quranRank: map['quran_rank'] as int?,
+      frequencyRank: map['frequency_rank'] as int?,
       lastReviewedAt: map['updated_at'] == null
           ? null
           : DateTime.fromMillisecondsSinceEpoch(map['updated_at'] as int),
@@ -325,6 +342,7 @@ class Flashcard {
       queuedAt: queuedAt,
       lastReviewedAt: lastReviewedAt,
       quranRank: quranRank,
+      frequencyRank: frequencyRank,
     );
   }
 }

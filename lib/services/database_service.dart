@@ -60,7 +60,7 @@ class DatabaseService {
     _resolvedPath = path;
     return openDatabase(
       path,
-      version: 13,
+      version: 14,
       // sqflite's default `singleInstance: true` caches connections keyed
       // by the literal path string. That's harmless for the app's real
       // on-disk path (only ever opened once, by the DatabaseService
@@ -92,6 +92,7 @@ class DatabaseService {
             stability REAL,
             difficulty REAL,
             quran_rank INTEGER,
+            frequency_rank INTEGER,
             next_review INTEGER NOT NULL,
             is_new INTEGER NOT NULL DEFAULT 1,
             introduced_at INTEGER,
@@ -275,6 +276,12 @@ class DatabaseService {
         if (oldVersion < 13) {
           // Downloaded content — see ContentStore.
           await _createContentFilesTable(db);
+        }
+        if (oldVersion < 14) {
+          // The frequency list — see Flashcard.frequencyRank.
+          await db.execute(
+            'ALTER TABLE flashcards ADD COLUMN frequency_rank INTEGER',
+          );
         }
       },
     );
@@ -580,20 +587,21 @@ class DatabaseService {
     });
   }
 
-  /// Marks the Quran's most common roots: [ranks] maps a root's letters
-  /// ("ك ت ب") to its place in the list. Every other root is unmarked, so
-  /// a root dropped from the list stops counting as Quranic. One
-  /// transaction; a root's letters identify it, whichever deck it's in.
-  Future<void> setQuranRanks(Map<String, int> ranks) async {
+  /// Records [list]'s order: [ranks] maps a root's letters ("ك ت ب") to
+  /// its place. Every other root is unmarked, so one dropped from the list
+  /// stops being on it. One transaction; a root's letters identify it,
+  /// whichever deck it's in.
+  Future<void> setRootRanks(RootList list, Map<String, int> ranks) async {
     final db = await database;
+    final column = list.column;
     await db.transaction((txn) async {
       await txn.rawUpdate(
-        'UPDATE flashcards SET quran_rank = NULL WHERE quran_rank IS NOT NULL',
+        'UPDATE flashcards SET $column = NULL WHERE $column IS NOT NULL',
       );
       final batch = txn.batch();
       for (final MapEntry(key: root, value: rank) in ranks.entries) {
         batch.rawUpdate(
-          "UPDATE flashcards SET quran_rank = ? WHERE kind = 'root' "
+          "UPDATE flashcards SET $column = ? WHERE kind = 'root' "
           'AND arabic_word = ?',
           [rank, root],
         );
@@ -696,8 +704,9 @@ class DatabaseService {
   /// is asked for again after every new card, that means one turns up
   /// right after the root that unlocks it.
   ///
-  /// The Quran campaign's own roots (the ones no other campaign teaches)
-  /// only come up with [quranFirst] on. With it on, every Quranic root, in
+  /// The frequency list's own roots never come up here; they're added by
+  /// hand. The Quran campaign's own roots (the ones no other campaign
+  /// teaches) only come up with [quranFirst] on. With it on, every Quranic root, in
   /// whichever campaign it lives, comes before the rest, most common
   /// first.
   ///
@@ -715,13 +724,15 @@ class DatabaseService {
     if (limit <= 0) return [];
     final db = await database;
     final rows = await db.query('flashcards', orderBy: 'deck_id ASC, id ASC');
-    final quranDeck = await db.query(
+    final handPicked = (await db.query(
       'decks',
       columns: ['id'],
-      where: 'name = ?',
-      whereArgs: [quranSource.deckName],
-    );
-    final quranDeckId = quranDeck.isEmpty ? null : quranDeck.first['id'];
+      where: 'name IN (?, ?)',
+      whereArgs: [
+        frequencySource.deckName,
+        if (quranFirst) frequencySource.deckName else quranSource.deckName,
+      ],
+    )).map((row) => row['id']).toSet();
     final cards = rows.map(Flashcard.fromMap).toList();
     bool isWaiting(Flashcard card) => card.isNew && card.queuedAt == null;
 
@@ -757,7 +768,7 @@ class DatabaseService {
           (card) =>
               isWaiting(card) &&
               card.kind == CardKind.root &&
-              (quranFirst || card.deckId != quranDeckId),
+              !handPicked.contains(card.deckId),
         )
         .toList();
     if (quranFirst) {

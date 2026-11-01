@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../models/deck.dart';
 import '../models/flashcard.dart';
 import '../config/campaign_sources.dart';
 import '../providers/database_providers.dart';
@@ -34,20 +35,21 @@ class WelcomeCard extends ConsumerWidget {
       CardKind.root,
       if (ref.watch(studyWordsProvider)) CardKind.word,
     ];
-    // The Quran campaign's own roots only count once it's switched on.
+    // The frequency list's own roots are hand-picked, so they don't count
+    // towards overall progress, and the Quran campaign's own roots only
+    // count once it's switched on.
     final quranFirst = ref.watch(quranFirstProvider);
-    final quranDeckId = ref
-        .watch(campaignDecksProvider)
-        .asData
-        ?.value
-        .where((deck) => deck.name == quranSource.deckName)
-        .firstOrNull
-        ?.id;
+    final uncounted = {
+      for (final deck
+          in ref.watch(campaignDecksProvider).asData?.value ?? const <Deck>[])
+        if (deck.name == frequencySource.deckName ||
+            (!quranFirst && deck.name == quranSource.deckName))
+          deck.id,
+    };
     final cards = allCards
         .where(
           (card) =>
-              kinds.contains(card.kind) &&
-              (quranFirst || card.deckId != quranDeckId),
+              kinds.contains(card.kind) && !uncounted.contains(card.deckId),
         )
         .toList();
     final quranRoots = [

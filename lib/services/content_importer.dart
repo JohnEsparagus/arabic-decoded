@@ -91,6 +91,7 @@ class ContentImporter {
       );
     }
     decks.add(await importQuran());
+    decks.add(await importFrequency());
     decks.add(await importPatterns());
     decks.add(await importAlphabet());
     for (final source in readOnceSources) {
@@ -128,7 +129,13 @@ class ContentImporter {
   /// list, wherever it lives, is marked with its place in it. So there's
   /// still just one card per root, and progress on it counts in both its
   /// campaign and the Quran list.
-  Future<Deck> importQuran([CampaignSource source = quranSource]) async {
+  Future<Deck> importQuran() => _importRootList(quranSource, RootList.quran);
+
+  /// Imports assets/data/frequency.json, in the same form as the Quran's.
+  Future<Deck> importFrequency() =>
+      _importRootList(frequencySource, RootList.frequency);
+
+  Future<Deck> _importRootList(CampaignSource source, RootList list) async {
     final deck = await _repository.getOrCreateDeck(
       source.deckName,
       description: source.description,
@@ -138,7 +145,7 @@ class ContentImporter {
       for (final entry in entries)
         if (entry['arabic'] != null) entry,
     ]);
-    await _repository.setQuranRanks({
+    await _repository.setRootRanks(list, {
       for (final (index, entry) in entries.indexed)
         (entry['arabic'] ?? entry['root']) as String: index + 1,
     });

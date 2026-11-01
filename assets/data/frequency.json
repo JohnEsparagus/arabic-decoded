@@ -1,0 +1,3440 @@
+[
+  {
+    "root": "ك ت ب"
+  },
+  {
+    "root": "ق و ل"
+  },
+  {
+    "root": "أ م ر"
+  },
+  {
+    "root": "ع ل م"
+  },
+  {
+    "root": "ع م ل"
+  },
+  {
+    "root": "أ م ن"
+  },
+  {
+    "root": "ج ع ل"
+  },
+  {
+    "root": "أ ت ي"
+  },
+  {
+    "root": "ذ ك ر"
+  },
+  {
+    "root": "ف ع ل"
+  },
+  {
+    "root": "س م ع"
+  },
+  {
+    "root": "خ ل ق"
+  },
+  {
+    "root": "ن ز ل"
+  },
+  {
+    "root": "ر ج ع"
+  },
+  {
+    "root": "د خ ل"
+  },
+  {
+    "root": "خ ر ج"
+  },
+  {
+    "root": "ق ت ل"
+  },
+  {
+    "arabic": "ض ر ب",
+    "translit": "ḍ-r-b",
+    "meaning": "Striking",
+    "mnemonic": "Drummers Rap Beats. Ḍ-R-B is the root of striking.",
+    "words": [
+      {
+        "arabic": "ضَرَبَ",
+        "translit": "ḍaraba",
+        "meaning": "to strike / set forth"
+      },
+      {
+        "arabic": "أَضْرَبَ",
+        "translit": "ʾaḍraba",
+        "meaning": "to abstain"
+      },
+      {
+        "arabic": "اضْطَرَبَ",
+        "translit": "iḍṭaraba",
+        "meaning": "to be disturbed"
+      }
+    ]
+  },
+  {
+    "root": "ش ك ر"
+  },
+  {
+    "root": "ظ ل م"
+  },
+  {
+    "root": "ك ذ ب"
+  },
+  {
+    "root": "أ خ ذ"
+  },
+  {
+    "root": "ر أ ي"
+  },
+  {
+    "root": "و ج د"
+  },
+  {
+    "root": "ق ر أ"
+  },
+  {
+    "root": "ف ت ح"
+  },
+  {
+    "root": "ص ب ر"
+  },
+  {
+    "root": "خ و ف"
+  },
+  {
+    "root": "ب ع ث"
+  },
+  {
+    "root": "ح ك م"
+  },
+  {
+    "arabic": "ح ل ل",
+    "translit": "ḥ-l-l",
+    "meaning": "Being lawful, settling",
+    "mnemonic": "Hands Loosen the Lace. Ḥ-L-L is the root of being lawful, settling.",
+    "words": [
+      {
+        "arabic": "حَلَّ",
+        "translit": "ḥalla",
+        "meaning": "to be lawful / settle"
+      },
+      {
+        "arabic": "انْحَلَّ",
+        "translit": "inḥalla",
+        "meaning": "to dissolve / break up"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ر م",
+    "translit": "ḥ-r-m",
+    "meaning": "Forbidding, sacredness",
+    "mnemonic": "Holy Rules Matter. Ḥ-R-M is the root of forbidding, sacredness.",
+    "words": [
+      {
+        "arabic": "حَرَّمَ",
+        "translit": "ḥarrama",
+        "meaning": "to forbid / make sacred"
+      },
+      {
+        "arabic": "احْتَرَمَ",
+        "translit": "iḥtarama",
+        "meaning": "to respect"
+      },
+      {
+        "arabic": "حُرِمَ",
+        "translit": "ḥurima",
+        "meaning": "to be deprived"
+      }
+    ]
+  },
+  {
+    "root": "ج ي ء"
+  },
+  {
+    "root": "ر س ل"
+  },
+  {
+    "arabic": "ق ب ل",
+    "translit": "q-b-l",
+    "meaning": "Accepting; before",
+    "mnemonic": "Quietly Bow, Listen. Q-B-L is the root of accepting; before.",
+    "words": [
+      {
+        "arabic": "قَبِلَ",
+        "translit": "qabila",
+        "meaning": "to accept / before"
+      },
+      {
+        "arabic": "أَقْبَلَ",
+        "translit": "ʾaqbala",
+        "meaning": "to come forward"
+      },
+      {
+        "arabic": "اسْتَقْبَلَ",
+        "translit": "istaqbala",
+        "meaning": "to face / welcome"
+      },
+      {
+        "arabic": "تَقَبَّلَ",
+        "translit": "taqabbala",
+        "meaning": "to accept / receive"
+      }
+    ]
+  },
+  {
+    "root": "ف ر ح"
+  },
+  {
+    "root": "ع ر ف"
+  },
+  {
+    "arabic": "و ق ع",
+    "translit": "w-q-ʿ",
+    "meaning": "Falling, occurring",
+    "mnemonic": "Watch Quickly: Apples drop. W-Q-ʿ is the root of falling, occurring.",
+    "words": [
+      {
+        "arabic": "وَقَعَ",
+        "translit": "waqaʿa",
+        "meaning": "to fall / occur"
+      }
+    ]
+  },
+  {
+    "root": "ح م ل"
+  },
+  {
+    "root": "د ع و"
+  },
+  {
+    "root": "و ع د"
+  },
+  {
+    "root": "م ل ك"
+  },
+  {
+    "arabic": "أ ي د",
+    "translit": "ʾ-y-d",
+    "meaning": "Supporting",
+    "mnemonic": "A Yes-man Defends. ʾ-Y-D is the root of supporting.",
+    "words": [
+      {
+        "arabic": "أَيَّدَ",
+        "translit": "ʾayyada",
+        "meaning": "to support / strengthen"
+      }
+    ]
+  },
+  {
+    "root": "ف س د"
+  },
+  {
+    "arabic": "ل ق ي",
+    "translit": "l-q-y",
+    "meaning": "Meeting",
+    "mnemonic": "Lovers Quickly say Yes. L-Q-Y is the root of meeting.",
+    "words": [
+      {
+        "arabic": "لَقِيَ",
+        "translit": "laqiya",
+        "meaning": "to meet / encounter"
+      },
+      {
+        "arabic": "لَاقَى",
+        "translit": "lāqā",
+        "meaning": "to encounter"
+      }
+    ]
+  },
+  {
+    "arabic": "ر د د",
+    "translit": "r-d-d",
+    "meaning": "Returning, rejecting",
+    "mnemonic": "Refuse, Deny, Deflect. R-D-D is the root of returning, rejecting.",
+    "words": [
+      {
+        "arabic": "رَدَّ",
+        "translit": "radda",
+        "meaning": "to return / reject"
+      }
+    ]
+  },
+  {
+    "root": "ح ف ظ"
+  },
+  {
+    "arabic": "ز ع م",
+    "translit": "z-ʿ-m",
+    "meaning": "Claiming",
+    "mnemonic": "Zealots Always Maintain. Z-ʿ-M is the root of claiming.",
+    "words": [
+      {
+        "arabic": "زَعَمَ",
+        "translit": "zaʿama",
+        "meaning": "to claim / suppose"
+      }
+    ]
+  },
+  {
+    "root": "ب ل غ"
+  },
+  {
+    "arabic": "ف ر ر",
+    "translit": "f-r-r",
+    "meaning": "Fleeing",
+    "mnemonic": "Fast, Running, Racing. F-R-R is the root of fleeing.",
+    "words": [
+      {
+        "arabic": "فَرَّ",
+        "translit": "farra",
+        "meaning": "to flee"
+      }
+    ]
+  },
+  {
+    "root": "ق ل ب"
+  },
+  {
+    "arabic": "ب د ل",
+    "translit": "b-d-l",
+    "meaning": "Changing, replacing",
+    "mnemonic": "Buy a Different Label. B-D-L is the root of changing, replacing.",
+    "words": [
+      {
+        "arabic": "بَدَّلَ",
+        "translit": "baddala",
+        "meaning": "to change / substitute"
+      },
+      {
+        "arabic": "تَبَادَلَ",
+        "translit": "tabādala",
+        "meaning": "to exchange"
+      },
+      {
+        "arabic": "اسْتَبْدَلَ",
+        "translit": "istabdala",
+        "meaning": "to replace"
+      }
+    ]
+  },
+  {
+    "root": "ش ر ح"
+  },
+  {
+    "root": "ص د ق"
+  },
+  {
+    "arabic": "ظ ه ر",
+    "translit": "ẓ-h-r",
+    "meaning": "Appearing",
+    "mnemonic": "Zoom, Here's a Reveal. Ẓ-H-R is the root of appearing.",
+    "words": [
+      {
+        "arabic": "ظَهَرَ",
+        "translit": "ẓahara",
+        "meaning": "to appear / be manifest"
+      },
+      {
+        "arabic": "أَظْهَرَ",
+        "translit": "ʾaẓhara",
+        "meaning": "to reveal / make apparent"
+      }
+    ]
+  },
+  {
+    "arabic": "ع ل و",
+    "translit": "ʿ-l-w",
+    "meaning": "Rising, being high",
+    "mnemonic": "Always Lifting Way up. ʿ-L-W is the root of rising, being high.",
+    "words": [
+      {
+        "arabic": "عَلَا",
+        "translit": "ʿalā",
+        "meaning": "to rise / be exalted"
+      }
+    ]
+  },
+  {
+    "root": "ق و م"
+  },
+  {
+    "root": "ل ب س"
+  },
+  {
+    "arabic": "م ض ي",
+    "translit": "m-ḍ-y",
+    "meaning": "Passing, proceeding",
+    "mnemonic": "Moments Drift, Years go. M-Ḍ-Y is the root of passing, proceeding.",
+    "words": [
+      {
+        "arabic": "مَضَى",
+        "translit": "maḍā",
+        "meaning": "to pass / proceed"
+      }
+    ]
+  },
+  {
+    "root": "ف ر ق"
+  },
+  {
+    "root": "ك و ن"
+  },
+  {
+    "root": "ب ن ي"
+  },
+  {
+    "arabic": "ق ض ي",
+    "translit": "q-ḍ-y",
+    "meaning": "Decreeing, fulfilling",
+    "mnemonic": "Quiet Decision, Yes. Q-Ḍ-Y is the root of decreeing, fulfilling.",
+    "words": [
+      {
+        "arabic": "قَضَى",
+        "translit": "qaḍā",
+        "meaning": "to decree / fulfil"
+      }
+    ]
+  },
+  {
+    "root": "ش ه د"
+  },
+  {
+    "arabic": "ك ش ف",
+    "translit": "k-sh-f",
+    "meaning": "Uncovering",
+    "mnemonic": "Keep SHowing Facts. K-SH-F is the root of uncovering.",
+    "words": [
+      {
+        "arabic": "كَشَفَ",
+        "translit": "kashafa",
+        "meaning": "to uncover / remove"
+      },
+      {
+        "arabic": "انْكَشَفَ",
+        "translit": "inkashafa",
+        "meaning": "to be unveiled / revealed"
+      }
+    ]
+  },
+  {
+    "root": "أ ك ل"
+  },
+  {
+    "root": "ش ر ب"
+  },
+  {
+    "root": "م و ت"
+  },
+  {
+    "root": "و ل د"
+  },
+  {
+    "root": "ب ع د"
+  },
+  {
+    "root": "ق ر ب"
+  },
+  {
+    "root": "ل ع ب"
+  },
+  {
+    "root": "ن س ي"
+  },
+  {
+    "root": "ت ر ك"
+  },
+  {
+    "root": "س ل م"
+  },
+  {
+    "arabic": "ن ق ض",
+    "translit": "n-q-ḍ",
+    "meaning": "Breaking a pledge",
+    "mnemonic": "No Quarter, Deal's gone. N-Q-Ḍ is the root of breaking a pledge.",
+    "words": [
+      {
+        "arabic": "نَقَضَ",
+        "translit": "naqaḍa",
+        "meaning": "to break (a covenant)"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ك ي",
+    "translit": "ḥ-k-y",
+    "meaning": "Telling, narrating",
+    "mnemonic": "Here's a Kind Yarn. Ḥ-K-Y is the root of telling, narrating.",
+    "words": [
+      {
+        "arabic": "حَكَى",
+        "translit": "ḥakā",
+        "meaning": "to recount / narrate"
+      }
+    ]
+  },
+  {
+    "arabic": "م ن ع",
+    "translit": "m-n-ʿ",
+    "meaning": "Preventing",
+    "mnemonic": "My No Always holds. M-N-ʿ is the root of preventing.",
+    "words": [
+      {
+        "arabic": "مَنَعَ",
+        "translit": "manaʿa",
+        "meaning": "to prevent / withhold"
+      },
+      {
+        "arabic": "امْتَنَعَ",
+        "translit": "imtanaʿa",
+        "meaning": "to refrain / resist"
+      }
+    ]
+  },
+  {
+    "root": "ج م ع"
+  },
+  {
+    "arabic": "ف ر ض",
+    "translit": "f-r-ḍ",
+    "meaning": "Obliging, imposing",
+    "mnemonic": "Firm Rule, Do it. F-R-Ḍ is the root of obliging, imposing.",
+    "words": [
+      {
+        "arabic": "فَرَضَ",
+        "translit": "faraḍa",
+        "meaning": "to prescribe / obligate"
+      }
+    ]
+  },
+  {
+    "root": "ح د د"
+  },
+  {
+    "root": "و ق ف"
+  },
+  {
+    "root": "ن ظ ر"
+  },
+  {
+    "arabic": "ر ف ع",
+    "translit": "r-f-ʿ",
+    "meaning": "Raising",
+    "mnemonic": "Reach For the Air. R-F-ʿ is the root of raising.",
+    "words": [
+      {
+        "arabic": "رَفَعَ",
+        "translit": "rafaʿa",
+        "meaning": "to raise / elevate"
+      }
+    ]
+  },
+  {
+    "root": "و ض ع"
+  },
+  {
+    "arabic": "خ ف ف",
+    "translit": "kh-f-f",
+    "meaning": "Being light",
+    "mnemonic": "KHite Floating, Feather-light. KH-F-F is the root of being light.",
+    "words": [
+      {
+        "arabic": "خَفَّ",
+        "translit": "khaffa",
+        "meaning": "to be light"
+      }
+    ]
+  },
+  {
+    "root": "ق س م"
+  },
+  {
+    "arabic": "ن ج و",
+    "translit": "n-j-w",
+    "meaning": "Escaping, being saved",
+    "mnemonic": "Narrow Jump, Whew. N-J-W is the root of escaping, being saved.",
+    "words": [
+      {
+        "arabic": "نَجَا",
+        "translit": "najā",
+        "meaning": "to be saved / escape"
+      }
+    ]
+  },
+  {
+    "root": "ع ذ ب"
+  },
+  {
+    "arabic": "ت ب ع",
+    "translit": "t-b-ʿ",
+    "meaning": "Following",
+    "mnemonic": "Trail Behind Always. T-B-ʿ is the root of following.",
+    "words": [
+      {
+        "arabic": "تَبِعَ",
+        "translit": "tabiʿa",
+        "meaning": "to follow"
+      },
+      {
+        "arabic": "اتَّبَعَ",
+        "translit": "ittabaʿa",
+        "meaning": "to follow"
+      }
+    ]
+  },
+  {
+    "root": "ح ز ن"
+  },
+  {
+    "arabic": "أ م ل",
+    "translit": "ʾ-m-l",
+    "meaning": "Hoping",
+    "mnemonic": "Always More Light. ʾ-M-L is the root of hoping.",
+    "words": [
+      {
+        "arabic": "أَمَلَ",
+        "translit": "ʾamala",
+        "meaning": "to hope"
+      },
+      {
+        "arabic": "تَأَمَّلَ",
+        "translit": "taʾammala",
+        "meaning": "to contemplate"
+      }
+    ]
+  },
+  {
+    "arabic": "ر غ ب",
+    "translit": "r-gh-b",
+    "meaning": "Desiring",
+    "mnemonic": "Really Greatly Burning. R-GH-B is the root of desiring.",
+    "words": [
+      {
+        "arabic": "رَغِبَ",
+        "translit": "raghiba",
+        "meaning": "to desire / turn away"
+      }
+    ]
+  },
+  {
+    "root": "ع ب ر"
+  },
+  {
+    "arabic": "س خ ر",
+    "translit": "s-kh-r",
+    "meaning": "Mocking",
+    "mnemonic": "Sneers, Hoots, Ridicule. S-KH-R is the root of mocking.",
+    "words": [
+      {
+        "arabic": "سَخِرَ",
+        "translit": "sakhira",
+        "meaning": "to mock / subjugate"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ك ر",
+    "translit": "n-k-r",
+    "meaning": "Denying",
+    "mnemonic": "No, Keep Refusing. N-K-R is the root of denying.",
+    "words": [
+      {
+        "arabic": "أَنْكَرَ",
+        "translit": "ʾankara",
+        "meaning": "to deny / disapprove"
+      }
+    ]
+  },
+  {
+    "root": "ق ر ر"
+  },
+  {
+    "root": "ع ل ن"
+  },
+  {
+    "root": "خ س ر"
+  },
+  {
+    "arabic": "ل ق ن",
+    "translit": "l-q-n",
+    "meaning": "Instructing, prompting",
+    "mnemonic": "Lines Quietly Noted. L-Q-N is the root of instructing, prompting.",
+    "words": [
+      {
+        "arabic": "لَقَّنَ",
+        "translit": "laqqana",
+        "meaning": "to instruct / prompt"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ج ب",
+    "translit": "ḥ-j-b",
+    "meaning": "Veiling",
+    "mnemonic": "Hide Just Behind. Ḥ-J-B is the root of veiling.",
+    "words": [
+      {
+        "arabic": "حَجَبَ",
+        "translit": "ḥajaba",
+        "meaning": "to veil / conceal"
+      }
+    ]
+  },
+  {
+    "root": "س ف ر"
+  },
+  {
+    "arabic": "و ر ث",
+    "translit": "w-r-th",
+    "meaning": "Inheriting",
+    "mnemonic": "Wills Reward THe heirs. W-R-TH is the root of inheriting.",
+    "words": [
+      {
+        "arabic": "وَرِثَ",
+        "translit": "waritha",
+        "meaning": "to inherit"
+      },
+      {
+        "arabic": "تَوَارَثَ",
+        "translit": "tawāratha",
+        "meaning": "to inherit from one another"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ل ف",
+    "translit": "ḥ-l-f",
+    "meaning": "Swearing an oath",
+    "mnemonic": "Hand Lifted, Faithful. Ḥ-L-F is the root of swearing an oath.",
+    "words": [
+      {
+        "arabic": "حَلَفَ",
+        "translit": "ḥalafa",
+        "meaning": "to swear / take oath"
+      }
+    ]
+  },
+  {
+    "arabic": "ع ز م",
+    "translit": "ʿ-z-m",
+    "meaning": "Resolving",
+    "mnemonic": "A Zealous Mind. ʿ-Z-M is the root of resolving.",
+    "words": [
+      {
+        "arabic": "عَزَمَ",
+        "translit": "ʿazama",
+        "meaning": "to resolve / be determined"
+      }
+    ]
+  },
+  {
+    "arabic": "ص د ر",
+    "translit": "ṣ-d-r",
+    "meaning": "Issuing, emanating; chest",
+    "mnemonic": "Sent Directly, Released. Ṣ-D-R is the root of issuing, emanating; chest.",
+    "words": [
+      {
+        "arabic": "صَدَرَ",
+        "translit": "ṣadara",
+        "meaning": "to issue / emanate"
+      }
+    ]
+  },
+  {
+    "arabic": "ط ل ق",
+    "translit": "ṭ-l-q",
+    "meaning": "Releasing, divorcing",
+    "mnemonic": "Tie Loosened, Quit. Ṭ-L-Q is the root of releasing, divorcing.",
+    "words": [
+      {
+        "arabic": "طَلَّقَ",
+        "translit": "ṭallaqa",
+        "meaning": "to divorce"
+      },
+      {
+        "arabic": "انْطَلَقَ",
+        "translit": "inṭalaqa",
+        "meaning": "to set out / depart"
+      },
+      {
+        "arabic": "أَطْلَقَ",
+        "translit": "ʾaṭlaqa",
+        "meaning": "to release"
+      }
+    ]
+  },
+  {
+    "arabic": "ر ض ع",
+    "translit": "r-ḍ-ʿ",
+    "meaning": "Nursing",
+    "mnemonic": "Resting Darling, Asleep. R-Ḍ-ʿ is the root of nursing.",
+    "words": [
+      {
+        "arabic": "أَرْضَعَتْ",
+        "translit": "ʾarḍaʿat",
+        "meaning": "to breastfeed"
+      }
+    ]
+  },
+  {
+    "arabic": "ت ل و",
+    "translit": "t-l-w",
+    "meaning": "Reciting, following",
+    "mnemonic": "Tell Lines With care. T-L-W is the root of reciting, following.",
+    "words": [
+      {
+        "arabic": "تَلَا",
+        "translit": "talā",
+        "meaning": "to recite / follow"
+      }
+    ]
+  },
+  {
+    "root": "ج ل س"
+  },
+  {
+    "root": "م ش ي"
+  },
+  {
+    "arabic": "ر ك ض",
+    "translit": "r-k-ḍ",
+    "meaning": "Running",
+    "mnemonic": "Race, Kick, Dash. R-K-Ḍ is the root of running.",
+    "words": [
+      {
+        "arabic": "رَكَضَ",
+        "translit": "rakaḍa",
+        "meaning": "to run"
+      }
+    ]
+  },
+  {
+    "root": "ز ر ع"
+  },
+  {
+    "arabic": "ح ص د",
+    "translit": "ḥ-ṣ-d",
+    "meaning": "Harvesting",
+    "mnemonic": "Hands Slice Down the wheat. Ḥ-Ṣ-D is the root of harvesting.",
+    "words": [
+      {
+        "arabic": "حَصَدَ",
+        "translit": "ḥaṣada",
+        "meaning": "to harvest / reap"
+      }
+    ]
+  },
+  {
+    "arabic": "ط ع م",
+    "translit": "ṭ-ʿ-m",
+    "meaning": "Feeding, taste",
+    "mnemonic": "Tasty Appetising Meal. Ṭ-ʿ-M is the root of feeding, taste.",
+    "words": [
+      {
+        "arabic": "أَطْعَمَ",
+        "translit": "ʾaṭʿama",
+        "meaning": "to feed"
+      }
+    ]
+  },
+  {
+    "arabic": "س ق ي",
+    "translit": "s-q-y",
+    "meaning": "Giving water",
+    "mnemonic": "Sip, Quench, Yes. S-Q-Y is the root of giving water.",
+    "words": [
+      {
+        "arabic": "سَقَى",
+        "translit": "saqā",
+        "meaning": "to give to drink"
+      }
+    ]
+  },
+  {
+    "arabic": "ن س ج",
+    "translit": "n-s-j",
+    "meaning": "Weaving",
+    "mnemonic": "Needles Stitch Jackets. N-S-J is the root of weaving.",
+    "words": [
+      {
+        "arabic": "نَسَجَ",
+        "translit": "nasaja",
+        "meaning": "to weave"
+      }
+    ]
+  },
+  {
+    "arabic": "ه د م",
+    "translit": "h-d-m",
+    "meaning": "Demolishing",
+    "mnemonic": "Hammers Destroy Masonry. H-D-M is the root of demolishing.",
+    "words": [
+      {
+        "arabic": "هَدَمَ",
+        "translit": "hadama",
+        "meaning": "to demolish"
+      }
+    ]
+  },
+  {
+    "root": "ص ن ع"
+  },
+  {
+    "root": "و ز ن"
+  },
+  {
+    "arabic": "ت ج ر",
+    "translit": "t-j-r",
+    "meaning": "Trading",
+    "mnemonic": "Traders Journey Round. T-J-R is the root of trading.",
+    "words": [
+      {
+        "arabic": "تَاجَرَ",
+        "translit": "tājara",
+        "meaning": "to trade"
+      }
+    ]
+  },
+  {
+    "root": "ب ي ع"
+  },
+  {
+    "arabic": "أ ذ ي",
+    "translit": "ʾ-dh-y",
+    "meaning": "Harming",
+    "mnemonic": "Awful DHreadful Yelling. ʾ-DH-Y is the root of harming.",
+    "words": [
+      {
+        "arabic": "آذَى",
+        "translit": "ʾādhā",
+        "meaning": "to harm / hurt"
+      }
+    ]
+  },
+  {
+    "arabic": "ج ب ر",
+    "translit": "j-b-r",
+    "meaning": "Compelling, mending",
+    "mnemonic": "Just Bind and Repair. J-B-R is the root of compelling, mending.",
+    "words": [
+      {
+        "arabic": "جَبَرَ",
+        "translit": "jabara",
+        "meaning": "to compel / restore"
+      }
+    ]
+  },
+  {
+    "root": "ك ب ر"
+  },
+  {
+    "root": "ص غ ر"
+  },
+  {
+    "arabic": "ج ه ل",
+    "translit": "j-h-l",
+    "meaning": "Ignorance",
+    "mnemonic": "Just Haven't Learned. J-H-L is the root of ignorance.",
+    "words": [
+      {
+        "arabic": "جَهِلَ",
+        "translit": "jahila",
+        "meaning": "to be ignorant"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ل م",
+    "translit": "ḥ-l-m",
+    "meaning": "Dreaming; forbearance",
+    "mnemonic": "Heavy Lids, Mind drifts. Ḥ-L-M is the root of dreaming; forbearance.",
+    "words": [
+      {
+        "arabic": "حَلَمَ",
+        "translit": "ḥalama",
+        "meaning": "to be forbearing / dream"
+      }
+    ]
+  },
+  {
+    "arabic": "خ ل ص",
+    "translit": "kh-l-ṣ",
+    "meaning": "Being pure, escaping",
+    "mnemonic": "KHlean, Lean, Spotless. KH-L-Ṣ is the root of being pure, escaping.",
+    "words": [
+      {
+        "arabic": "خَلَصَ",
+        "translit": "khalaṣa",
+        "meaning": "to be pure / escape"
+      }
+    ]
+  },
+  {
+    "root": "ك ر م"
+  },
+  {
+    "arabic": "ن ف ق",
+    "translit": "n-f-q",
+    "meaning": "Spending",
+    "mnemonic": "Notes Fly Quickly. N-F-Q is the root of spending.",
+    "words": [
+      {
+        "arabic": "أَنْفَقَ",
+        "translit": "ʾanfaqa",
+        "meaning": "to spend / expend"
+      },
+      {
+        "arabic": "نَافَقَ",
+        "translit": "nāfaqa",
+        "meaning": "to be hypocritical"
+      }
+    ]
+  },
+  {
+    "arabic": "س ر ف",
+    "translit": "s-r-f",
+    "meaning": "Wastefulness",
+    "mnemonic": "Spending Rashly, Foolish. S-R-F is the root of wastefulness.",
+    "words": [
+      {
+        "arabic": "أَسْرَفَ",
+        "translit": "ʾasrafa",
+        "meaning": "to be wasteful / extravagant"
+      }
+    ]
+  },
+  {
+    "arabic": "ي أ س",
+    "translit": "y-ʾ-s",
+    "meaning": "Despairing",
+    "mnemonic": "You Abandon Stars. Y-ʾ-S is the root of despairing.",
+    "words": [
+      {
+        "arabic": "يَئِسَ",
+        "translit": "yaʾisa",
+        "meaning": "to lose hope / despair"
+      }
+    ]
+  },
+  {
+    "arabic": "ر ج و",
+    "translit": "r-j-w",
+    "meaning": "Hoping, expecting",
+    "mnemonic": "Really Just Wishing. R-J-W is the root of hoping, expecting.",
+    "words": [
+      {
+        "arabic": "رَجَا",
+        "translit": "rajā",
+        "meaning": "to hope / expect"
+      }
+    ]
+  },
+  {
+    "arabic": "ن د م",
+    "translit": "n-d-m",
+    "meaning": "Regret",
+    "mnemonic": "Now Deeply Moved. N-D-M is the root of regret.",
+    "words": [
+      {
+        "arabic": "نَدِمَ",
+        "translit": "nadima",
+        "meaning": "to regret"
+      }
+    ]
+  },
+  {
+    "arabic": "ع ز ل",
+    "translit": "ʿ-z-l",
+    "meaning": "Isolating",
+    "mnemonic": "Apart, Zoned, Lonely. ʿ-Z-L is the root of isolating.",
+    "words": [
+      {
+        "arabic": "عَزَلَ",
+        "translit": "ʿazala",
+        "meaning": "to isolate / remove"
+      },
+      {
+        "arabic": "اعْتَزَلَ",
+        "translit": "iʿtazala",
+        "meaning": "to withdraw / isolate"
+      }
+    ]
+  },
+  {
+    "arabic": "خ ل ف",
+    "translit": "kh-l-f",
+    "meaning": "Differing; behind",
+    "mnemonic": "KHeep Left, Follow behind. KH-L-F is the root of differing; behind.",
+    "words": [
+      {
+        "arabic": "اخْتَلَفَ",
+        "translit": "ikhtalafa",
+        "meaning": "to differ / dispute"
+      },
+      {
+        "arabic": "تَخَلَّفَ",
+        "translit": "takhallafa",
+        "meaning": "to lag behind"
+      },
+      {
+        "arabic": "خَلَّفَ",
+        "translit": "khallafa",
+        "meaning": "to leave behind"
+      }
+    ]
+  },
+  {
+    "arabic": "و ص ف",
+    "translit": "w-ṣ-f",
+    "meaning": "Describing",
+    "mnemonic": "Words Sketch Faces. W-Ṣ-F is the root of describing.",
+    "words": [
+      {
+        "arabic": "وَصَفَ",
+        "translit": "waṣafa",
+        "meaning": "to describe / attribute"
+      }
+    ]
+  },
+  {
+    "root": "ب ر ك"
+  },
+  {
+    "root": "ب ي ن"
+  },
+  {
+    "root": "ف ص ل"
+  },
+  {
+    "root": "ف ه م"
+  },
+  {
+    "root": "د ر س"
+  },
+  {
+    "root": "ح د ث"
+  },
+  {
+    "arabic": "ر و ي",
+    "translit": "r-w-y",
+    "meaning": "Narrating; watering",
+    "mnemonic": "Retell Wise Yarns. R-W-Y is the root of narrating; watering.",
+    "words": [
+      {
+        "arabic": "رَوَى",
+        "translit": "rawā",
+        "meaning": "to narrate / relate"
+      }
+    ]
+  },
+  {
+    "root": "خ ب ر"
+  },
+  {
+    "root": "ع ر ض"
+  },
+  {
+    "root": "م ث ل"
+  },
+  {
+    "arabic": "ش ب ه",
+    "translit": "sh-b-h",
+    "meaning": "Resembling",
+    "mnemonic": "SHadows Be Half-alike. SH-B-H is the root of resembling.",
+    "words": [
+      {
+        "arabic": "شَبَّهَ",
+        "translit": "shabbaha",
+        "meaning": "to liken / compare"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ر ك",
+    "translit": "ḥ-r-k",
+    "meaning": "Moving",
+    "mnemonic": "Hurry, Run, Keep going. Ḥ-R-K is the root of moving.",
+    "words": [
+      {
+        "arabic": "حَرَّكَ",
+        "translit": "ḥarraka",
+        "meaning": "to move / set in motion"
+      },
+      {
+        "arabic": "تَحَرَّكَ",
+        "translit": "taḥarraka",
+        "meaning": "to move"
+      }
+    ]
+  },
+  {
+    "root": "س ك ن"
+  },
+  {
+    "arabic": "س ك ت",
+    "translit": "s-k-t",
+    "meaning": "Being silent",
+    "mnemonic": "Silence Keeps Tongues. S-K-T is the root of being silent.",
+    "words": [
+      {
+        "arabic": "سَكَتَ",
+        "translit": "sakata",
+        "meaning": "to be silent"
+      }
+    ]
+  },
+  {
+    "root": "ف ك ر"
+  },
+  {
+    "arabic": "ش ك ك",
+    "translit": "sh-k-k",
+    "meaning": "Doubting",
+    "mnemonic": "SHaky, Kinda Kooky claim. SH-K-K is the root of doubting.",
+    "words": [
+      {
+        "arabic": "شَكَّ",
+        "translit": "shakka",
+        "meaning": "to doubt"
+      }
+    ]
+  },
+  {
+    "arabic": "ط م ن",
+    "translit": "ṭ-m-n",
+    "meaning": "Being at peace",
+    "mnemonic": "Tranquil Mind, Nice. Ṭ-M-N is the root of being at peace.",
+    "words": [
+      {
+        "arabic": "اطْمَأَنَّ",
+        "translit": "iṭmaʾanna",
+        "meaning": "to be at peace / content"
+      }
+    ]
+  },
+  {
+    "arabic": "ق ل ق",
+    "translit": "q-l-q",
+    "meaning": "Anxiety",
+    "mnemonic": "Quivering, Lost, Queasy. Q-L-Q is the root of anxiety.",
+    "words": [
+      {
+        "arabic": "قَلِقَ",
+        "translit": "qaliqa",
+        "meaning": "to be anxious"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ق ر",
+    "translit": "ḥ-q-r",
+    "meaning": "Despising",
+    "mnemonic": "Haughty Queen Rejects. Ḥ-Q-R is the root of despising.",
+    "words": [
+      {
+        "arabic": "احْتَقَرَ",
+        "translit": "iḥtaqara",
+        "meaning": "to look down upon"
+      }
+    ]
+  },
+  {
+    "arabic": "ع ج ب",
+    "translit": "ʿ-j-b",
+    "meaning": "Amazement",
+    "mnemonic": "Awe, Jaw-dropping, Beautiful. ʿ-J-B is the root of amazement.",
+    "words": [
+      {
+        "arabic": "تَعَجَّبَ",
+        "translit": "taʿajjaba",
+        "meaning": "to be amazed"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ق د",
+    "translit": "ḥ-q-d",
+    "meaning": "Bearing a grudge",
+    "mnemonic": "Hate Quietly Deepens. Ḥ-Q-D is the root of bearing a grudge.",
+    "words": [
+      {
+        "arabic": "حَقَدَ",
+        "translit": "ḥaqada",
+        "meaning": "to bear grudge"
+      }
+    ]
+  },
+  {
+    "arabic": "ح س د",
+    "translit": "ḥ-s-d",
+    "meaning": "Envy",
+    "mnemonic": "Hungry Stare, Desire. Ḥ-S-D is the root of envy.",
+    "words": [
+      {
+        "arabic": "حَسَدَ",
+        "translit": "ḥasada",
+        "meaning": "to envy"
+      }
+    ]
+  },
+  {
+    "root": "ظ ن ن"
+  },
+  {
+    "arabic": "ش ه و",
+    "translit": "sh-h-w",
+    "meaning": "Craving",
+    "mnemonic": "SHe Hungers, Wants. SH-H-W is the root of craving.",
+    "words": [
+      {
+        "arabic": "اشْتَهَى",
+        "translit": "ishtahā",
+        "meaning": "to desire / lust"
+      }
+    ]
+  },
+  {
+    "arabic": "س ر ق",
+    "translit": "s-r-q",
+    "meaning": "Stealing",
+    "mnemonic": "Sneak, Rob, Quit fast. S-R-Q is the root of stealing.",
+    "words": [
+      {
+        "arabic": "سَرَقَ",
+        "translit": "saraqa",
+        "meaning": "to steal"
+      }
+    ]
+  },
+  {
+    "arabic": "ق ذ ف",
+    "translit": "q-dh-f",
+    "meaning": "Throwing, accusing",
+    "mnemonic": "Quick DHrow, Fling. Q-DH-F is the root of throwing, accusing.",
+    "words": [
+      {
+        "arabic": "قَذَفَ",
+        "translit": "qadhafa",
+        "meaning": "to falsely accuse / throw"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ف ي",
+    "translit": "n-f-y",
+    "meaning": "Negating, exiling",
+    "mnemonic": "No Fellow, You're out. N-F-Y is the root of negating, exiling.",
+    "words": [
+      {
+        "arabic": "نَفَى",
+        "translit": "nafā",
+        "meaning": "to exile / negate"
+      }
+    ]
+  },
+  {
+    "root": "ك ث ر"
+  },
+  {
+    "root": "ق ل ل"
+  },
+  {
+    "arabic": "ن م و",
+    "translit": "n-m-w",
+    "meaning": "Growing",
+    "mnemonic": "Nature Makes Wonders. N-M-W is the root of growing.",
+    "words": [
+      {
+        "arabic": "نَمَا",
+        "translit": "namā",
+        "meaning": "to grow / increase"
+      }
+    ]
+  },
+  {
+    "arabic": "ب س ط",
+    "translit": "b-s-ṭ",
+    "meaning": "Spreading out",
+    "mnemonic": "Blanket Stretched Tight. B-S-Ṭ is the root of spreading out.",
+    "words": [
+      {
+        "arabic": "بَسَطَ",
+        "translit": "basaṭa",
+        "meaning": "to spread out / extend"
+      },
+      {
+        "arabic": "انْبَسَطَ",
+        "translit": "inbasaṭa",
+        "meaning": "to be spread out / happy"
+      }
+    ]
+  },
+  {
+    "arabic": "ق ب ض",
+    "translit": "q-b-ḍ",
+    "meaning": "Grasping",
+    "mnemonic": "Quick Big Clutch, Done. Q-B-Ḍ is the root of grasping.",
+    "words": [
+      {
+        "arabic": "قَبَضَ",
+        "translit": "qabaḍa",
+        "meaning": "to grasp / withhold"
+      }
+    ]
+  },
+  {
+    "arabic": "م د د",
+    "translit": "m-d-d",
+    "meaning": "Extending",
+    "mnemonic": "Make Distance Double. M-D-D is the root of extending.",
+    "words": [
+      {
+        "arabic": "مَدَّ",
+        "translit": "madda",
+        "meaning": "to extend / stretch"
+      },
+      {
+        "arabic": "أَمَدَّ",
+        "translit": "ʾamadda",
+        "meaning": "to aid / extend"
+      },
+      {
+        "arabic": "امْتَدَّ",
+        "translit": "imtadda",
+        "meaning": "to extend / stretch"
+      }
+    ]
+  },
+  {
+    "root": "ق ط ع"
+  },
+  {
+    "root": "و ص ل"
+  },
+  {
+    "arabic": "ر ب ط",
+    "translit": "r-b-ṭ",
+    "meaning": "Tying",
+    "mnemonic": "Rope Binds Tight. R-B-Ṭ is the root of tying.",
+    "words": [
+      {
+        "arabic": "رَبَطَ",
+        "translit": "rabaṭa",
+        "meaning": "to bind / tie"
+      }
+    ]
+  },
+  {
+    "arabic": "ف ك ك",
+    "translit": "f-k-k",
+    "meaning": "Releasing",
+    "mnemonic": "Free the Knotted Kite. F-K-K is the root of releasing.",
+    "words": [
+      {
+        "arabic": "فَكَّ",
+        "translit": "fakka",
+        "meaning": "to release / unchain"
+      }
+    ]
+  },
+  {
+    "arabic": "م ل أ",
+    "translit": "m-l-ʾ",
+    "meaning": "Filling",
+    "mnemonic": "Make Lots, All full. M-L-ʾ is the root of filling.",
+    "words": [
+      {
+        "arabic": "مَلَأَ",
+        "translit": "malaʾa",
+        "meaning": "to fill"
+      }
+    ]
+  },
+  {
+    "arabic": "ف ر غ",
+    "translit": "f-r-gh",
+    "meaning": "Being empty, free",
+    "mnemonic": "Free Room, Gone. F-R-GH is the root of being empty, free.",
+    "words": [
+      {
+        "arabic": "فَرَغَ",
+        "translit": "faragha",
+        "meaning": "to be empty / free"
+      },
+      {
+        "arabic": "أَفْرَغَ",
+        "translit": "ʾafragha",
+        "meaning": "to pour out"
+      }
+    ]
+  },
+  {
+    "arabic": "ص ب ب",
+    "translit": "ṣ-b-b",
+    "meaning": "Pouring",
+    "mnemonic": "Spill, Both Buckets. Ṣ-B-B is the root of pouring.",
+    "words": [
+      {
+        "arabic": "صَبَّ",
+        "translit": "ṣabba",
+        "meaning": "to pour"
+      }
+    ]
+  },
+  {
+    "arabic": "ف ج ر",
+    "translit": "f-j-r",
+    "meaning": "Bursting; dawn",
+    "mnemonic": "First Jet of Rays. F-J-R is the root of bursting; dawn.",
+    "words": [
+      {
+        "arabic": "انْفَجَرَ",
+        "translit": "infajara",
+        "meaning": "to burst / explode"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ب ع",
+    "translit": "n-b-ʿ",
+    "meaning": "Springing, flowing",
+    "mnemonic": "Natural Brook, Always flowing. N-B-ʿ is the root of springing, flowing.",
+    "words": [
+      {
+        "arabic": "نَبَعَ",
+        "translit": "nabaʿa",
+        "meaning": "to flow / spring"
+      }
+    ]
+  },
+  {
+    "arabic": "ع ط ش",
+    "translit": "ʿ-ṭ-sh",
+    "meaning": "Thirst",
+    "mnemonic": "Arid Tongue, SHrivelled. ʿ-Ṭ-SH is the root of thirst.",
+    "words": [
+      {
+        "arabic": "عَطِشَ",
+        "translit": "ʿaṭisha",
+        "meaning": "to be thirsty"
+      }
+    ]
+  },
+  {
+    "arabic": "ج و ع",
+    "translit": "j-w-ʿ",
+    "meaning": "Hunger",
+    "mnemonic": "Just Want A meal. J-W-ʿ is the root of hunger.",
+    "words": [
+      {
+        "arabic": "جَاعَ",
+        "translit": "jāʿa",
+        "meaning": "to be hungry"
+      }
+    ]
+  },
+  {
+    "arabic": "ش ب ع",
+    "translit": "sh-b-ʿ",
+    "meaning": "Being full",
+    "mnemonic": "SHe's Bloated After lunch. SH-B-ʿ is the root of being full.",
+    "words": [
+      {
+        "arabic": "شَبِعَ",
+        "translit": "shabiʿa",
+        "meaning": "to be full / satisfied"
+      }
+    ]
+  },
+  {
+    "root": "ت ع ب"
+  },
+  {
+    "arabic": "ر و ح",
+    "translit": "r-w-ḥ",
+    "meaning": "Rest; spirit",
+    "mnemonic": "Relax, Wind, Hush. R-W-Ḥ is the root of rest; spirit.",
+    "words": [
+      {
+        "arabic": "اسْتَرَاحَ",
+        "translit": "istarāḥa",
+        "meaning": "to rest"
+      }
+    ]
+  },
+  {
+    "root": "ن و م"
+  },
+  {
+    "arabic": "ي ق ظ",
+    "translit": "y-q-ẓ",
+    "meaning": "Waking",
+    "mnemonic": "Yawn, Quit Zzz's. Y-Q-Ẓ is the root of waking.",
+    "words": [
+      {
+        "arabic": "اسْتَيْقَظَ",
+        "translit": "istayqaẓa",
+        "meaning": "to wake up"
+      }
+    ]
+  },
+  {
+    "root": "ع ل ج"
+  },
+  {
+    "arabic": "ش ف ي",
+    "translit": "sh-f-y",
+    "meaning": "Healing",
+    "mnemonic": "SHe Feels Young again. SH-F-Y is the root of healing.",
+    "words": [
+      {
+        "arabic": "شَفَى",
+        "translit": "shafā",
+        "meaning": "to heal / cure"
+      }
+    ]
+  },
+  {
+    "root": "م ر ض"
+  },
+  {
+    "root": "ض ع ف"
+  },
+  {
+    "root": "ق و ي"
+  },
+  {
+    "arabic": "غ ل ب",
+    "translit": "gh-l-b",
+    "meaning": "Overcoming",
+    "mnemonic": "Gladiator Lands Blows. GH-L-B is the root of overcoming.",
+    "words": [
+      {
+        "arabic": "غَلَبَ",
+        "translit": "ghalaba",
+        "meaning": "to overcome / prevail"
+      }
+    ]
+  },
+  {
+    "arabic": "ه ز م",
+    "translit": "h-z-m",
+    "meaning": "Defeating",
+    "mnemonic": "Heroes Zap Monsters. H-Z-M is the root of defeating.",
+    "words": [
+      {
+        "arabic": "هَزَمَ",
+        "translit": "hazama",
+        "meaning": "to defeat"
+      },
+      {
+        "arabic": "انْهَزَمَ",
+        "translit": "inhazama",
+        "meaning": "to be routed"
+      }
+    ]
+  },
+  {
+    "arabic": "ل ج أ",
+    "translit": "l-j-ʾ",
+    "meaning": "Taking refuge",
+    "mnemonic": "Look, Just Arrive safely. L-J-ʾ is the root of taking refuge.",
+    "words": [
+      {
+        "arabic": "لَجَأَ",
+        "translit": "lajaʾa",
+        "meaning": "to resort to / take refuge"
+      }
+    ]
+  },
+  {
+    "arabic": "ل ع ن",
+    "translit": "l-ʿ-n",
+    "meaning": "Cursing",
+    "mnemonic": "Loud Angry Naming. L-ʿ-N is the root of cursing.",
+    "words": [
+      {
+        "arabic": "لَعَنَ",
+        "translit": "laʿana",
+        "meaning": "to curse"
+      }
+    ]
+  },
+  {
+    "arabic": "ق ر ن",
+    "translit": "q-r-n",
+    "meaning": "Pairing; century; horn",
+    "mnemonic": "Quite Rightly Near. Q-R-N is the root of pairing; century; horn.",
+    "words": [
+      {
+        "arabic": "قَرَنَ",
+        "translit": "qarana",
+        "meaning": "to pair / join"
+      }
+    ]
+  },
+  {
+    "root": "ح ج ج"
+  },
+  {
+    "arabic": "ج د ل",
+    "translit": "j-d-l",
+    "meaning": "Debating",
+    "mnemonic": "Justify, Disagree, Lecture. J-D-L is the root of debating.",
+    "words": [
+      {
+        "arabic": "جَادَلَ",
+        "translit": "jādala",
+        "meaning": "to argue / debate"
+      },
+      {
+        "arabic": "تَجَادَلَ",
+        "translit": "tajādala",
+        "meaning": "to argue with one another"
+      }
+    ]
+  },
+  {
+    "root": "ص ل ح"
+  },
+  {
+    "arabic": "خ و ن",
+    "translit": "kh-w-n",
+    "meaning": "Betrayal",
+    "mnemonic": "KHnife, Wound, No trust. KH-W-N is the root of betrayal.",
+    "words": [
+      {
+        "arabic": "خَانَ",
+        "translit": "khāna",
+        "meaning": "to betray"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ر س",
+    "translit": "ḥ-r-s",
+    "meaning": "Guarding",
+    "mnemonic": "Hold, Remain, Scout. Ḥ-R-S is the root of guarding.",
+    "words": [
+      {
+        "arabic": "حَرَسَ",
+        "translit": "ḥarasa",
+        "meaning": "to guard"
+      }
+    ]
+  },
+  {
+    "root": "ن ج ح"
+  },
+  {
+    "root": "ف ش ل"
+  },
+  {
+    "arabic": "ع ث ر",
+    "translit": "ʿ-th-r",
+    "meaning": "Stumbling, finding",
+    "mnemonic": "A THorny Root. ʿ-TH-R is the root of stumbling, finding.",
+    "words": [
+      {
+        "arabic": "عَثَرَ",
+        "translit": "ʿathara",
+        "meaning": "to stumble / find"
+      }
+    ]
+  },
+  {
+    "arabic": "خ ر ب",
+    "translit": "kh-r-b",
+    "meaning": "Ruin",
+    "mnemonic": "KHollapsed, Razed, Broken. KH-R-B is the root of ruin.",
+    "words": [
+      {
+        "arabic": "خَرِبَ",
+        "translit": "khariba",
+        "meaning": "to be ruined"
+      }
+    ]
+  },
+  {
+    "arabic": "ذ ب ح",
+    "translit": "dh-b-ḥ",
+    "meaning": "Slaughter",
+    "mnemonic": "DHread, Blade, Halal. DH-B-Ḥ is the root of slaughter.",
+    "words": [
+      {
+        "arabic": "ذَبَحَ",
+        "translit": "dhabaḥa",
+        "meaning": "to slaughter"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ر ق",
+    "translit": "ḥ-r-q",
+    "meaning": "Burning",
+    "mnemonic": "Hot Red Quick flames. Ḥ-R-Q is the root of burning.",
+    "words": [
+      {
+        "arabic": "حَرَقَ",
+        "translit": "ḥaraqa",
+        "meaning": "to burn"
+      },
+      {
+        "arabic": "احْتَرَقَ",
+        "translit": "iḥtaraqa",
+        "meaning": "to burn / be on fire"
+      }
+    ]
+  },
+  {
+    "arabic": "ط ف أ",
+    "translit": "ṭ-f-ʾ",
+    "meaning": "Extinguishing",
+    "mnemonic": "Turn Fire Away. Ṭ-F-ʾ is the root of extinguishing.",
+    "words": [
+      {
+        "arabic": "أَطْفَأَ",
+        "translit": "ʾaṭfaʾa",
+        "meaning": "to extinguish"
+      }
+    ]
+  },
+  {
+    "arabic": "ض و ء",
+    "translit": "ḍ-w-ʾ",
+    "meaning": "Light, shining",
+    "mnemonic": "Dawn Warmly Appears. Ḍ-W-ʾ is the root of light, shining.",
+    "words": [
+      {
+        "arabic": "أَضَاءَ",
+        "translit": "ʾaḍāʾa",
+        "meaning": "to illuminate"
+      }
+    ]
+  },
+  {
+    "arabic": "ط ل ع",
+    "translit": "ṭ-l-ʿ",
+    "meaning": "Rising, appearing",
+    "mnemonic": "Tall Light Ascends. Ṭ-L-ʿ is the root of rising, appearing.",
+    "words": [
+      {
+        "arabic": "طَلَعَ",
+        "translit": "ṭalaʿa",
+        "meaning": "to rise / emerge"
+      }
+    ]
+  },
+  {
+    "arabic": "غ ر ب",
+    "translit": "gh-r-b",
+    "meaning": "West, setting; strange",
+    "mnemonic": "Gold Rays Bow out. GH-R-B is the root of west, setting; strange.",
+    "words": [
+      {
+        "arabic": "غَرَبَ",
+        "translit": "gharaba",
+        "meaning": "to set (sun) / go west"
+      }
+    ]
+  },
+  {
+    "arabic": "ص ع د",
+    "translit": "ṣ-ʿ-d",
+    "meaning": "Ascending",
+    "mnemonic": "Stairs Above Daily. Ṣ-ʿ-D is the root of ascending.",
+    "words": [
+      {
+        "arabic": "صَعِدَ",
+        "translit": "ṣaʿida",
+        "meaning": "to ascend / go up"
+      }
+    ]
+  },
+  {
+    "arabic": "ه ب ط",
+    "translit": "h-b-ṭ",
+    "meaning": "Descending",
+    "mnemonic": "Heavy Balloon Tumbles. H-B-Ṭ is the root of descending.",
+    "words": [
+      {
+        "arabic": "هَبَطَ",
+        "translit": "habaṭa",
+        "meaning": "to descend"
+      }
+    ]
+  },
+  {
+    "arabic": "ع ل ق",
+    "translit": "ʿ-l-q",
+    "meaning": "Clinging, hanging",
+    "mnemonic": "A Leech Quietly hangs on. ʿ-L-Q is the root of clinging, hanging.",
+    "words": [
+      {
+        "arabic": "عَلِقَ",
+        "translit": "ʿaliqa",
+        "meaning": "to cling / adhere"
+      }
+    ]
+  },
+  {
+    "arabic": "م ر ر",
+    "translit": "m-r-r",
+    "meaning": "Passing by",
+    "mnemonic": "Move Right, Roll on. M-R-R is the root of passing by.",
+    "words": [
+      {
+        "arabic": "مَرَّ",
+        "translit": "marra",
+        "meaning": "to pass by"
+      }
+    ]
+  },
+  {
+    "arabic": "ج ر ي",
+    "translit": "j-r-y",
+    "meaning": "Flowing, running",
+    "mnemonic": "Jog, River, Yes. J-R-Y is the root of flowing, running.",
+    "words": [
+      {
+        "arabic": "جَرَى",
+        "translit": "jarā",
+        "meaning": "to flow / run"
+      }
+    ]
+  },
+  {
+    "arabic": "س ع ي",
+    "translit": "s-ʿ-y",
+    "meaning": "Striving",
+    "mnemonic": "Strain And Yearn. S-ʿ-Y is the root of striving.",
+    "words": [
+      {
+        "arabic": "سَعَى",
+        "translit": "saʿā",
+        "meaning": "to strive / walk"
+      }
+    ]
+  },
+  {
+    "arabic": "ق ف ز",
+    "translit": "q-f-z",
+    "meaning": "Jumping",
+    "mnemonic": "Quick Frog Zips. Q-F-Z is the root of jumping.",
+    "words": [
+      {
+        "arabic": "قَفَزَ",
+        "translit": "qafaza",
+        "meaning": "to leap / jump"
+      }
+    ]
+  },
+  {
+    "arabic": "و ر د",
+    "translit": "w-r-d",
+    "meaning": "Arriving; rose",
+    "mnemonic": "Water Reached, Drink. W-R-D is the root of arriving; rose.",
+    "words": [
+      {
+        "arabic": "وَرَدَ",
+        "translit": "warada",
+        "meaning": "to arrive at (water)"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ز ع",
+    "translit": "n-z-ʿ",
+    "meaning": "Pulling out",
+    "mnemonic": "Nail Zipped Away. N-Z-ʿ is the root of pulling out.",
+    "words": [
+      {
+        "arabic": "نَزَعَ",
+        "translit": "nazaʿa",
+        "meaning": "to pull out / remove"
+      },
+      {
+        "arabic": "تَنَازَعَ",
+        "translit": "tanāzaʿa",
+        "meaning": "to dispute / compete"
+      }
+    ]
+  },
+  {
+    "arabic": "ج ذ ب",
+    "translit": "j-dh-b",
+    "meaning": "Attracting",
+    "mnemonic": "Just DHrawn By it. J-DH-B is the root of attracting.",
+    "words": [
+      {
+        "arabic": "جَذَبَ",
+        "translit": "jadhaba",
+        "meaning": "to pull / attract"
+      },
+      {
+        "arabic": "انْجَذَبَ",
+        "translit": "injadhaba",
+        "meaning": "to be attracted"
+      }
+    ]
+  },
+  {
+    "root": "د ف ع"
+  },
+  {
+    "arabic": "س ح ب",
+    "translit": "s-ḥ-b",
+    "meaning": "Dragging; cloud",
+    "mnemonic": "Slowly Hauling Barge. S-Ḥ-B is the root of dragging; cloud.",
+    "words": [
+      {
+        "arabic": "سَحَبَ",
+        "translit": "saḥaba",
+        "meaning": "to drag"
+      }
+    ]
+  },
+  {
+    "root": "ن ش ر"
+  },
+  {
+    "arabic": "ط و ي",
+    "translit": "ṭ-w-y",
+    "meaning": "Folding",
+    "mnemonic": "Towels Wrapped, Yes. Ṭ-W-Y is the root of folding.",
+    "words": [
+      {
+        "arabic": "طَوَى",
+        "translit": "ṭawā",
+        "meaning": "to fold / roll up"
+      }
+    ]
+  },
+  {
+    "arabic": "ل ف ف",
+    "translit": "l-f-f",
+    "meaning": "Wrapping",
+    "mnemonic": "Layers Fold, Fold. L-F-F is the root of wrapping.",
+    "words": [
+      {
+        "arabic": "لَفَّ",
+        "translit": "laffa",
+        "meaning": "to wrap / wind"
+      }
+    ]
+  },
+  {
+    "arabic": "ك س ر",
+    "translit": "k-s-r",
+    "meaning": "Breaking",
+    "mnemonic": "Kicked, Smashed, Ruined. K-S-R is the root of breaking.",
+    "words": [
+      {
+        "arabic": "كَسَرَ",
+        "translit": "kasara",
+        "meaning": "to break"
+      },
+      {
+        "arabic": "انْكَسَرَ",
+        "translit": "inkasara",
+        "meaning": "to be broken"
+      }
+    ]
+  },
+  {
+    "arabic": "ع ب ث",
+    "translit": "ʿ-b-th",
+    "meaning": "Acting in vain",
+    "mnemonic": "All Bother, THen nothing. ʿ-B-TH is the root of acting in vain.",
+    "words": [
+      {
+        "arabic": "عَبَثَ",
+        "translit": "ʿabatha",
+        "meaning": "to act in vain"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ب س",
+    "translit": "ḥ-b-s",
+    "meaning": "Detaining",
+    "mnemonic": "Held Behind Steel. Ḥ-B-S is the root of detaining.",
+    "words": [
+      {
+        "arabic": "حَبَسَ",
+        "translit": "ḥabasa",
+        "meaning": "to detain / hold back"
+      }
+    ]
+  },
+  {
+    "root": "ع ق ل"
+  },
+  {
+    "arabic": "ح ج ز",
+    "translit": "ḥ-j-z",
+    "meaning": "Booking, holding back",
+    "mnemonic": "Hold Just the Zone. Ḥ-J-Z is the root of booking, holding back.",
+    "words": [
+      {
+        "arabic": "احْتُجِزَ",
+        "translit": "iḥtujiza",
+        "meaning": "to be held captive"
+      }
+    ]
+  },
+  {
+    "arabic": "ش ق ق",
+    "translit": "sh-q-q",
+    "meaning": "Splitting",
+    "mnemonic": "SHarp Quick Quake. SH-Q-Q is the root of splitting.",
+    "words": [
+      {
+        "arabic": "شَقَّ",
+        "translit": "shaqqa",
+        "meaning": "to split / be hard"
+      },
+      {
+        "arabic": "اشْتَقَّ",
+        "translit": "ishtaqqa",
+        "meaning": "to derive / be derived"
+      }
+    ]
+  },
+  {
+    "arabic": "ل ص ق",
+    "translit": "l-ṣ-q",
+    "meaning": "Sticking",
+    "mnemonic": "Lick, Seal, Quite stuck. L-Ṣ-Q is the root of sticking.",
+    "words": [
+      {
+        "arabic": "لَصِقَ",
+        "translit": "laṣiqa",
+        "meaning": "to stick"
+      }
+    ]
+  },
+  {
+    "arabic": "ب ر ز",
+    "translit": "b-r-z",
+    "meaning": "Standing out",
+    "mnemonic": "Bright, Rising, Zooming. B-R-Z is the root of standing out.",
+    "words": [
+      {
+        "arabic": "بَرَزَ",
+        "translit": "baraza",
+        "meaning": "to become visible / emerge"
+      }
+    ]
+  },
+  {
+    "root": "غ ي ب"
+  },
+  {
+    "arabic": "ح ض ر",
+    "translit": "ḥ-ḍ-r",
+    "meaning": "Being present",
+    "mnemonic": "Here, Duly Ready. Ḥ-Ḍ-R is the root of being present.",
+    "words": [
+      {
+        "arabic": "حَضَرَ",
+        "translit": "ḥaḍara",
+        "meaning": "to be present"
+      }
+    ]
+  },
+  {
+    "arabic": "ص م د",
+    "translit": "ṣ-m-d",
+    "meaning": "Standing firm",
+    "mnemonic": "Stay, Manage, Don't budge. Ṣ-M-D is the root of standing firm.",
+    "words": [
+      {
+        "arabic": "صَمَدَ",
+        "translit": "ṣamada",
+        "meaning": "to be self-sufficient"
+      }
+    ]
+  },
+  {
+    "arabic": "ف خ ر",
+    "translit": "f-kh-r",
+    "meaning": "Pride",
+    "mnemonic": "Flag, KHest, Rousing. F-KH-R is the root of pride.",
+    "words": [
+      {
+        "arabic": "افْتَخَرَ",
+        "translit": "iftakhara",
+        "meaning": "to be proud / boast"
+      },
+      {
+        "arabic": "تَفَاخَرَ",
+        "translit": "tafākhara",
+        "meaning": "to boast to each other"
+      }
+    ]
+  },
+  {
+    "root": "ن ف س"
+  },
+  {
+    "arabic": "ع و ن",
+    "translit": "ʿ-w-n",
+    "meaning": "Helping",
+    "mnemonic": "Always With Neighbours. ʿ-W-N is the root of helping.",
+    "words": [
+      {
+        "arabic": "تَعَاوَنَ",
+        "translit": "taʿāwana",
+        "meaning": "to cooperate"
+      },
+      {
+        "arabic": "اسْتَعَانَ",
+        "translit": "istaʿāna",
+        "meaning": "to seek help"
+      }
+    ]
+  },
+  {
+    "arabic": "ش و ر",
+    "translit": "sh-w-r",
+    "meaning": "Consulting",
+    "mnemonic": "SHare With Relatives. SH-W-R is the root of consulting.",
+    "words": [
+      {
+        "arabic": "تَشَاوَرَ",
+        "translit": "tashāwara",
+        "meaning": "to consult each other"
+      },
+      {
+        "arabic": "اسْتَشَارَ",
+        "translit": "istashāra",
+        "meaning": "to consult"
+      }
+    ]
+  },
+  {
+    "arabic": "ه و ر",
+    "translit": "h-w-r",
+    "meaning": "Collapsing",
+    "mnemonic": "Houses Wobble, Rubble. H-W-R is the root of collapsing.",
+    "words": [
+      {
+        "arabic": "انْهَارَ",
+        "translit": "inhāra",
+        "meaning": "to collapse"
+      }
+    ]
+  },
+  {
+    "arabic": "ق ض ض",
+    "translit": "q-ḍ-ḍ",
+    "meaning": "Swooping",
+    "mnemonic": "Quick Dive, Done. Q-Ḍ-Ḍ is the root of swooping.",
+    "words": [
+      {
+        "arabic": "انْقَضَّ",
+        "translit": "inqaḍḍa",
+        "meaning": "to swoop down"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ق ذ",
+    "translit": "n-q-dh",
+    "meaning": "Rescuing",
+    "mnemonic": "Nick of Quick DHefence. N-Q-DH is the root of rescuing.",
+    "words": [
+      {
+        "arabic": "أَنْقَذَ",
+        "translit": "ʾanqadha",
+        "meaning": "to rescue / save"
+      }
+    ]
+  },
+  {
+    "root": "ن ذ ر"
+  },
+  {
+    "arabic": "ن ج ز",
+    "translit": "n-j-z",
+    "meaning": "Accomplishing",
+    "mnemonic": "Now Just Zip through it. N-J-Z is the root of accomplishing.",
+    "words": [
+      {
+        "arabic": "أَنْجَزَ",
+        "translit": "ʾanjaza",
+        "meaning": "to fulfil / accomplish"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ج ب",
+    "translit": "n-j-b",
+    "meaning": "Bearing noble offspring",
+    "mnemonic": "Newborn Joy, Baby. N-J-B is the root of bearing noble offspring.",
+    "words": [
+      {
+        "arabic": "أَنْجَبَ",
+        "translit": "ʾanjaba",
+        "meaning": "to beget / bring forth"
+      }
+    ]
+  },
+  {
+    "root": "ن ت ج"
+  },
+  {
+    "arabic": "ع ق د",
+    "translit": "ʿ-q-d",
+    "meaning": "Tying, contract",
+    "mnemonic": "A Quick Deal. ʿ-Q-D is the root of tying, contract.",
+    "words": [
+      {
+        "arabic": "انْعَقَدَ",
+        "translit": "inʿaqada",
+        "meaning": "to be contracted / tied"
+      }
+    ]
+  },
+  {
+    "arabic": "ع ك س",
+    "translit": "ʿ-k-s",
+    "meaning": "Reflecting, reversing",
+    "mnemonic": "A Kind of Switch. ʿ-K-S is the root of reflecting, reversing.",
+    "words": [
+      {
+        "arabic": "انْعَكَسَ",
+        "translit": "inʿakasa",
+        "meaning": "to be reflected"
+      }
+    ]
+  },
+  {
+    "root": "ح و ج"
+  },
+  {
+    "arabic": "ع م ر",
+    "translit": "ʿ-m-r",
+    "meaning": "Life; building up",
+    "mnemonic": "Age, Many Rooms. ʿ-M-R is the root of life; building up.",
+    "words": [
+      {
+        "arabic": "اسْتَعْمَرَ",
+        "translit": "istaʿmara",
+        "meaning": "to colonise / develop"
+      }
+    ]
+  },
+  {
+    "arabic": "ف ز ز",
+    "translit": "f-z-z",
+    "meaning": "Provoking",
+    "mnemonic": "Fuming, Zapped, Zinged. F-Z-Z is the root of provoking.",
+    "words": [
+      {
+        "arabic": "اسْتَفَزَّ",
+        "translit": "istafazza",
+        "meaning": "to provoke"
+      }
+    ]
+  },
+  {
+    "arabic": "ه ز أ",
+    "translit": "h-z-ʾ",
+    "meaning": "Mocking",
+    "mnemonic": "Haha, Zing, Awful. H-Z-ʾ is the root of mocking.",
+    "words": [
+      {
+        "arabic": "اسْتَهْزَأَ",
+        "translit": "istahzaʾa",
+        "meaning": "to mock"
+      }
+    ]
+  },
+  {
+    "arabic": "ع ج ل",
+    "translit": "ʿ-j-l",
+    "meaning": "Hurrying",
+    "mnemonic": "All Jog Along. ʿ-J-L is the root of hurrying.",
+    "words": [
+      {
+        "arabic": "اسْتَعْجَلَ",
+        "translit": "istaʿjala",
+        "meaning": "to hasten / be impatient"
+      }
+    ]
+  },
+  {
+    "root": "ج و ب"
+  },
+  {
+    "root": "ح ق ق"
+  },
+  {
+    "root": "ط و ع"
+  },
+  {
+    "root": "غ ن ي"
+  },
+  {
+    "root": "و ل ي"
+  },
+  {
+    "arabic": "ف س ر",
+    "translit": "f-s-r",
+    "meaning": "Explaining, interpreting",
+    "mnemonic": "Find the Sense, Reveal. F-S-R is the root of explaining, interpreting.",
+    "words": [
+      {
+        "arabic": "اسْتَفْسَرَ",
+        "translit": "istafsara",
+        "meaning": "to enquire about"
+      }
+    ]
+  },
+  {
+    "root": "ح س ن"
+  },
+  {
+    "arabic": "س و ء",
+    "translit": "s-w-ʾ",
+    "meaning": "Evil, badness",
+    "mnemonic": "Sour, Wicked, Awful. S-W-ʾ is the root of evil, badness.",
+    "words": [
+      {
+        "arabic": "أَسَاءَ",
+        "translit": "ʾasāʾa",
+        "meaning": "to do evil / harm"
+      }
+    ]
+  },
+  {
+    "arabic": "م ح ن",
+    "translit": "m-ḥ-n",
+    "meaning": "Trial, ordeal",
+    "mnemonic": "Many Hard Nights. M-Ḥ-N is the root of trial, ordeal.",
+    "words": [
+      {
+        "arabic": "امْتَحَنَ",
+        "translit": "imtaḥana",
+        "meaning": "to test / examine"
+      }
+    ]
+  },
+  {
+    "arabic": "ب ه ج",
+    "translit": "b-h-j",
+    "meaning": "Delight",
+    "mnemonic": "Bright, Happy, Joyful. B-H-J is the root of delight.",
+    "words": [
+      {
+        "arabic": "ابْتَهَجَ",
+        "translit": "ibtahaja",
+        "meaning": "to rejoice"
+      }
+    ]
+  },
+  {
+    "arabic": "ف ق ر",
+    "translit": "f-q-r",
+    "meaning": "Poverty",
+    "mnemonic": "Few Quid Remaining. F-Q-R is the root of poverty.",
+    "words": [
+      {
+        "arabic": "افْتَقَرَ",
+        "translit": "iftaqara",
+        "meaning": "to be in need"
+      }
+    ]
+  },
+  {
+    "arabic": "ف ق د",
+    "translit": "f-q-d",
+    "meaning": "Losing, missing",
+    "mnemonic": "Found Quite Dropped. F-Q-D is the root of losing, missing.",
+    "words": [
+      {
+        "arabic": "افْتَقَدَ",
+        "translit": "iftaqada",
+        "meaning": "to miss / search for"
+      }
+    ]
+  },
+  {
+    "arabic": "ك س ب",
+    "translit": "k-s-b",
+    "meaning": "Earning",
+    "mnemonic": "Keep Saving Bucks. K-S-B is the root of earning.",
+    "words": [
+      {
+        "arabic": "اكْتَسَبَ",
+        "translit": "iktasaba",
+        "meaning": "to earn / acquire"
+      }
+    ]
+  },
+  {
+    "arabic": "ك ف ي",
+    "translit": "k-f-y",
+    "meaning": "Sufficing",
+    "mnemonic": "Kindly, Fine, Yes enough. K-F-Y is the root of sufficing.",
+    "words": [
+      {
+        "arabic": "اكْتَفَى",
+        "translit": "iktafā",
+        "meaning": "to be content / suffice"
+      }
+    ]
+  },
+  {
+    "root": "ن ص ر"
+  },
+  {
+    "arabic": "ن ق م",
+    "translit": "n-q-m",
+    "meaning": "Revenge",
+    "mnemonic": "Nurse Quiet Malice. N-Q-M is the root of revenge.",
+    "words": [
+      {
+        "arabic": "انْتَقَمَ",
+        "translit": "intaqama",
+        "meaning": "to take revenge"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ه ي",
+    "translit": "n-h-y",
+    "meaning": "Ending, forbidding",
+    "mnemonic": "No, Halt, Yield. N-H-Y is the root of ending, forbidding.",
+    "words": [
+      {
+        "arabic": "انْتَهَى",
+        "translit": "intahā",
+        "meaning": "to end / refrain"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ه ك",
+    "translit": "n-h-k",
+    "meaning": "Violating; exhausting",
+    "mnemonic": "No Honour Kept. N-H-K is the root of violating; exhausting.",
+    "words": [
+      {
+        "arabic": "انْتَهَكَ",
+        "translit": "intahaka",
+        "meaning": "to violate"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ض ن",
+    "translit": "ḥ-ḍ-n",
+    "meaning": "Embracing",
+    "mnemonic": "Hug Dearly, Nurture. Ḥ-Ḍ-N is the root of embracing.",
+    "words": [
+      {
+        "arabic": "احْتَضَنَ",
+        "translit": "iḥtaḍana",
+        "meaning": "to embrace"
+      }
+    ]
+  },
+  {
+    "arabic": "ع م د",
+    "translit": "ʿ-m-d",
+    "meaning": "Pillar; intending",
+    "mnemonic": "A Massive Doric column. ʿ-M-D is the root of pillar; intending.",
+    "words": [
+      {
+        "arabic": "اعْتَمَدَ",
+        "translit": "iʿtamada",
+        "meaning": "to rely on"
+      }
+    ]
+  },
+  {
+    "root": "ع ز ز"
+  },
+  {
+    "root": "ع د و"
+  },
+  {
+    "arabic": "ع ص م",
+    "translit": "ʿ-ṣ-m",
+    "meaning": "Protecting, holding fast",
+    "mnemonic": "Always Safe, Moored. ʿ-Ṣ-M is the root of protecting, holding fast.",
+    "words": [
+      {
+        "arabic": "اعْتَصَمَ",
+        "translit": "iʿtaṣama",
+        "meaning": "to hold fast / cling to"
+      }
+    ]
+  },
+  {
+    "arabic": "و س ل",
+    "translit": "w-s-l",
+    "meaning": "Seeking a means",
+    "mnemonic": "Way Sought, Linked. W-S-L is the root of seeking a means.",
+    "words": [
+      {
+        "arabic": "تَوَسَّلَ",
+        "translit": "tawassala",
+        "meaning": "to seek means of approach"
+      }
+    ]
+  },
+  {
+    "arabic": "ب ر أ",
+    "translit": "b-r-ʾ",
+    "meaning": "Innocence, freeing",
+    "mnemonic": "Blameless, Released, Acquitted. B-R-ʾ is the root of innocence, freeing.",
+    "words": [
+      {
+        "arabic": "تَبَرَّأَ",
+        "translit": "tabarraʾa",
+        "meaning": "to disown / be innocent"
+      }
+    ]
+  },
+  {
+    "arabic": "ص ف و",
+    "translit": "ṣ-f-w",
+    "meaning": "Being clear, pure",
+    "mnemonic": "Sky Fresh, Water clear. Ṣ-F-W is the root of being clear, pure.",
+    "words": [
+      {
+        "arabic": "صَفَا",
+        "translit": "ṣafā",
+        "meaning": "to be pure / clear"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ب ذ",
+    "translit": "n-b-dh",
+    "meaning": "Casting away",
+    "mnemonic": "Not Bothered, DHitch it. N-B-DH is the root of casting away.",
+    "words": [
+      {
+        "arabic": "نَبَذَ",
+        "translit": "nabadha",
+        "meaning": "to cast away / reject"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ه ض",
+    "translit": "n-h-ḍ",
+    "meaning": "Rising up",
+    "mnemonic": "Now Heroes Dash. N-H-Ḍ is the root of rising up.",
+    "words": [
+      {
+        "arabic": "نَهَضَ",
+        "translit": "nahaḍa",
+        "meaning": "to rise up"
+      }
+    ]
+  },
+  {
+    "arabic": "و ح د",
+    "translit": "w-ḥ-d",
+    "meaning": "Oneness",
+    "mnemonic": "Whole, Honest, Dependable unit. W-Ḥ-D is the root of oneness.",
+    "words": [
+      {
+        "arabic": "وَحَّدَ",
+        "translit": "waḥḥada",
+        "meaning": "to unify / declare oneness"
+      },
+      {
+        "arabic": "تَوَحَّدَ",
+        "translit": "tawaḥḥada",
+        "meaning": "to be united / alone"
+      }
+    ]
+  },
+  {
+    "arabic": "و د ع",
+    "translit": "w-d-ʿ",
+    "meaning": "Farewell",
+    "mnemonic": "Wave, Depart, Adieu. W-D-ʿ is the root of farewell.",
+    "words": [
+      {
+        "arabic": "وَدَّعَ",
+        "translit": "waddaʿa",
+        "meaning": "to bid farewell"
+      }
+    ]
+  },
+  {
+    "arabic": "ي س ر",
+    "translit": "y-s-r",
+    "meaning": "Ease",
+    "mnemonic": "You Sail Right through. Y-S-R is the root of ease.",
+    "words": [
+      {
+        "arabic": "يَسَّرَ",
+        "translit": "yassara",
+        "meaning": "to make easy"
+      }
+    ]
+  },
+  {
+    "root": "ح ر ب"
+  },
+  {
+    "root": "ح ب ب"
+  },
+  {
+    "root": "ك ر ه"
+  },
+  {
+    "root": "غ ض ب"
+  },
+  {
+    "root": "ر ض ي"
+  },
+  {
+    "arabic": "ب ر ه ن",
+    "translit": "b-r-h-n",
+    "meaning": "Proving",
+    "mnemonic": "Bring Real Hard Numbers. B-R-H-N is the root of proving.",
+    "words": [
+      {
+        "arabic": "بَرْهَنَ",
+        "translit": "barhana",
+        "meaning": "to prove / give evidence"
+      }
+    ]
+  },
+  {
+    "arabic": "خ ش ي",
+    "translit": "kh-sh-y",
+    "meaning": "Fearing, awe",
+    "mnemonic": "KHnees SHake, Yes. KH-SH-Y is the root of fearing, awe.",
+    "words": [
+      {
+        "arabic": "خَشِيَ",
+        "translit": "khashiya",
+        "meaning": "to fear (with reverence)"
+      }
+    ]
+  },
+  {
+    "arabic": "ج و ل",
+    "translit": "j-w-l",
+    "meaning": "Wandering",
+    "mnemonic": "Just Walk Lazily. J-W-L is the root of wandering.",
+    "words": [
+      {
+        "arabic": "جَالَ",
+        "translit": "jāla",
+        "meaning": "to roam / wander"
+      }
+    ]
+  },
+  {
+    "arabic": "ق ص د",
+    "translit": "q-ṣ-d",
+    "meaning": "Intending",
+    "mnemonic": "Quest, Set, Decided. Q-Ṣ-D is the root of intending.",
+    "words": [
+      {
+        "arabic": "قَصَدَ",
+        "translit": "qaṣada",
+        "meaning": "to intend / head towards"
+      }
+    ]
+  },
+  {
+    "arabic": "ن و ي",
+    "translit": "n-w-y",
+    "meaning": "Intending",
+    "mnemonic": "Now We Yearn to act. N-W-Y is the root of intending.",
+    "words": [
+      {
+        "arabic": "نَوَى",
+        "translit": "nawā",
+        "meaning": "to intend"
+      }
+    ]
+  },
+  {
+    "arabic": "ر ق ي",
+    "translit": "r-q-y",
+    "meaning": "Ascending",
+    "mnemonic": "Rise, Quickly, Yes. R-Q-Y is the root of ascending.",
+    "words": [
+      {
+        "arabic": "ارْتَقَى",
+        "translit": "irtaqā",
+        "meaning": "to rise up"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ط ط",
+    "translit": "ḥ-ṭ-ṭ",
+    "meaning": "Putting down",
+    "mnemonic": "Hit The Tarmac. Ḥ-Ṭ-Ṭ is the root of putting down.",
+    "words": [
+      {
+        "arabic": "انْحَطَّ",
+        "translit": "inḥaṭṭa",
+        "meaning": "to degrade / fall"
+      }
+    ]
+  },
+  {
+    "arabic": "غ س ل",
+    "translit": "gh-s-l",
+    "meaning": "Washing",
+    "mnemonic": "Gently Soap, Lather. GH-S-L is the root of washing.",
+    "words": [
+      {
+        "arabic": "اغْتَسَلَ",
+        "translit": "ightasala",
+        "meaning": "to bathe"
+      }
+    ]
+  },
+  {
+    "arabic": "ف ط ر",
+    "translit": "f-ṭ-r",
+    "meaning": "Breaking fast; creating",
+    "mnemonic": "Food, Tea, Relief. F-Ṭ-R is the root of breaking fast; creating.",
+    "words": [
+      {
+        "arabic": "أَفْطَرَ",
+        "translit": "ʾafṭara",
+        "meaning": "to break fast"
+      }
+    ]
+  },
+  {
+    "root": "ث ب ت"
+  },
+  {
+    "root": "ح ر ف"
+  },
+  {
+    "arabic": "م ي ل",
+    "translit": "m-y-l",
+    "meaning": "Inclining",
+    "mnemonic": "Motion Yields, Leaning. M-Y-L is the root of inclining.",
+    "words": [
+      {
+        "arabic": "مَالَ",
+        "translit": "māla",
+        "meaning": "to incline"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ي د",
+    "translit": "ḥ-y-d",
+    "meaning": "Avoiding",
+    "mnemonic": "Hurry Your Detour. Ḥ-Y-D is the root of avoiding.",
+    "words": [
+      {
+        "arabic": "حَادَ",
+        "translit": "ḥāda",
+        "meaning": "to deviate / avoid"
+      }
+    ]
+  },
+  {
+    "arabic": "ز و د",
+    "translit": "z-w-d",
+    "meaning": "Supplying",
+    "mnemonic": "Zip With Deliveries. Z-W-D is the root of supplying.",
+    "words": [
+      {
+        "arabic": "زَوَّدَ",
+        "translit": "zawwada",
+        "meaning": "to provision"
+      }
+    ]
+  },
+  {
+    "arabic": "ر ج ف",
+    "translit": "r-j-f",
+    "meaning": "Trembling",
+    "mnemonic": "Rumbling Jolts, Fear. R-J-F is the root of trembling.",
+    "words": [
+      {
+        "arabic": "ارْتَجَفَ",
+        "translit": "irtajafa",
+        "meaning": "to tremble"
+      }
+    ]
+  },
+  {
+    "arabic": "ر ع د",
+    "translit": "r-ʿ-d",
+    "meaning": "Thunder",
+    "mnemonic": "Rumble, Awful Din. R-ʿ-D is the root of thunder.",
+    "words": [
+      {
+        "arabic": "ارْتَعَدَ",
+        "translit": "irtaʿada",
+        "meaning": "to shiver / tremble"
+      }
+    ]
+  },
+  {
+    "arabic": "ث و ر",
+    "translit": "th-w-r",
+    "meaning": "Revolting",
+    "mnemonic": "THousands Will Riot. TH-W-R is the root of revolting.",
+    "words": [
+      {
+        "arabic": "ثَارَ",
+        "translit": "thāra",
+        "meaning": "to rise up / revolt"
+      }
+    ]
+  },
+  {
+    "arabic": "ص ع ق",
+    "translit": "ṣ-ʿ-q",
+    "meaning": "Lightning-struck",
+    "mnemonic": "Sudden Arc, Quiver. Ṣ-ʿ-Q is the root of lightning-struck.",
+    "words": [
+      {
+        "arabic": "صَعِقَ",
+        "translit": "ṣaʿiqa",
+        "meaning": "to be thunderstruck"
+      }
+    ]
+  },
+  {
+    "arabic": "ح د ر",
+    "translit": "ḥ-d-r",
+    "meaning": "Going downhill",
+    "mnemonic": "Hill Drops, Rolling. Ḥ-D-R is the root of going downhill.",
+    "words": [
+      {
+        "arabic": "انْحَدَرَ",
+        "translit": "inḥadara",
+        "meaning": "to slope down"
+      }
+    ]
+  },
+  {
+    "arabic": "ج ل و",
+    "translit": "j-l-w",
+    "meaning": "Clarity, departing",
+    "mnemonic": "Just Lucid Water. J-L-W is the root of clarity, departing.",
+    "words": [
+      {
+        "arabic": "تَجَلَّى",
+        "translit": "tajallā",
+        "meaning": "to be manifested"
+      }
+    ]
+  },
+  {
+    "arabic": "ر ف ض",
+    "translit": "r-f-ḍ",
+    "meaning": "Refusing",
+    "mnemonic": "Refuse, Flatly, Done. R-F-Ḍ is the root of refusing.",
+    "words": [
+      {
+        "arabic": "رَفَضَ",
+        "translit": "rafaḍa",
+        "meaning": "to reject / refuse"
+      }
+    ]
+  },
+  {
+    "arabic": "ص م م",
+    "translit": "ṣ-m-m",
+    "meaning": "Designing, resolving",
+    "mnemonic": "Set My Mind. Ṣ-M-M is the root of designing, resolving.",
+    "words": [
+      {
+        "arabic": "صَمَّمَ",
+        "translit": "ṣammama",
+        "meaning": "to be determined"
+      }
+    ]
+  },
+  {
+    "arabic": "ل ح ح",
+    "translit": "l-ḥ-ḥ",
+    "meaning": "Insisting",
+    "mnemonic": "Lean Hard, Hard. L-Ḥ-Ḥ is the root of insisting.",
+    "words": [
+      {
+        "arabic": "أَلَحَّ",
+        "translit": "ʾalaḥḥa",
+        "meaning": "to insist / persist"
+      }
+    ]
+  },
+  {
+    "arabic": "ل ز م",
+    "translit": "l-z-m",
+    "meaning": "Being necessary, committing",
+    "mnemonic": "Loyal Zeal, Must. L-Z-M is the root of being necessary, committing.",
+    "words": [
+      {
+        "arabic": "الْتَزَمَ",
+        "translit": "iltazama",
+        "meaning": "to commit / adhere"
+      }
+    ]
+  },
+  {
+    "arabic": "م ل ص",
+    "translit": "m-l-ṣ",
+    "meaning": "Slipping away",
+    "mnemonic": "Move, Lose, Skip. M-L-Ṣ is the root of slipping away.",
+    "words": [
+      {
+        "arabic": "تَمَلَّصَ",
+        "translit": "tamallaṣa",
+        "meaning": "to slip away"
+      }
+    ]
+  },
+  {
+    "arabic": "ف ر د",
+    "translit": "f-r-d",
+    "meaning": "Being single, alone",
+    "mnemonic": "Fully Remote, Distinct. F-R-D is the root of being single, alone.",
+    "words": [
+      {
+        "arabic": "انْفَرَدَ",
+        "translit": "infarada",
+        "meaning": "to be alone"
+      }
+    ]
+  },
+  {
+    "arabic": "ش ع ل",
+    "translit": "sh-ʿ-l",
+    "meaning": "Igniting",
+    "mnemonic": "SHining Amber Light. SH-ʿ-L is the root of igniting.",
+    "words": [
+      {
+        "arabic": "اشْتَعَلَ",
+        "translit": "ishtaʿala",
+        "meaning": "to be ablaze"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ض ج",
+    "translit": "n-ḍ-j",
+    "meaning": "Ripening",
+    "mnemonic": "Nearly Done, Juicy. N-Ḍ-J is the root of ripening.",
+    "words": [
+      {
+        "arabic": "نَضِجَ",
+        "translit": "naḍija",
+        "meaning": "to ripen / be cooked"
+      }
+    ]
+  },
+  {
+    "arabic": "ه ز ز",
+    "translit": "h-z-z",
+    "meaning": "Shaking",
+    "mnemonic": "Hard Zig-Zag. H-Z-Z is the root of shaking.",
+    "words": [
+      {
+        "arabic": "اهْتَزَّ",
+        "translit": "ihtazza",
+        "meaning": "to shake / tremble"
+      }
+    ]
+  },
+  {
+    "root": "م ط ر"
+  },
+  {
+    "arabic": "س ق ط",
+    "translit": "s-q-ṭ",
+    "meaning": "Falling",
+    "mnemonic": "Slip, Quickly Tumble. S-Q-Ṭ is the root of falling.",
+    "words": [
+      {
+        "arabic": "سَقَطَ",
+        "translit": "saqaṭa",
+        "meaning": "to fall down"
+      }
+    ]
+  },
+  {
+    "arabic": "ه ي ل",
+    "translit": "h-y-l",
+    "meaning": "Heaping, pouring down",
+    "mnemonic": "Heavy Yield Landing. H-Y-L is the root of heaping, pouring down.",
+    "words": [
+      {
+        "arabic": "انْهَالَ",
+        "translit": "inhāla",
+        "meaning": "to pour down"
+      }
+    ]
+  },
+  {
+    "arabic": "ف ي ض",
+    "translit": "f-y-ḍ",
+    "meaning": "Overflowing",
+    "mnemonic": "Flood, Yes, Deluge. F-Y-Ḍ is the root of overflowing.",
+    "words": [
+      {
+        "arabic": "فَاضَ",
+        "translit": "fāḍa",
+        "meaning": "to overflow"
+      }
+    ]
+  },
+  {
+    "arabic": "ز ي ن",
+    "translit": "z-y-n",
+    "meaning": "Adorning",
+    "mnemonic": "Zest, Yellow Necklace. Z-Y-N is the root of adorning.",
+    "words": [
+      {
+        "arabic": "تَزَيَّنَ",
+        "translit": "tazayyana",
+        "meaning": "to adorn oneself"
+      }
+    ]
+  },
+  {
+    "arabic": "خ ض ع",
+    "translit": "kh-ḍ-ʿ",
+    "meaning": "Submitting",
+    "mnemonic": "KHnees Down, Accept. KH-Ḍ-ʿ is the root of submitting.",
+    "words": [
+      {
+        "arabic": "خَضَعَ",
+        "translit": "khaḍaʿa",
+        "meaning": "to be humble / submissive"
+      }
+    ]
+  },
+  {
+    "arabic": "ح ص ن",
+    "translit": "ḥ-ṣ-n",
+    "meaning": "Fortress",
+    "mnemonic": "High Stone Nook. Ḥ-Ṣ-N is the root of fortress.",
+    "words": [
+      {
+        "arabic": "حَصَّنَ",
+        "translit": "ḥaṣṣana",
+        "meaning": "to fortify / protect"
+      }
+    ]
+  },
+  {
+    "arabic": "ك ت م",
+    "translit": "k-t-m",
+    "meaning": "Concealing",
+    "mnemonic": "Keep This Muted. K-T-M is the root of concealing.",
+    "words": [
+      {
+        "arabic": "كَتَمَ",
+        "translit": "katama",
+        "meaning": "to conceal"
+      }
+    ]
+  },
+  {
+    "arabic": "خ ف ي",
+    "translit": "kh-f-y",
+    "meaning": "Hiding",
+    "mnemonic": "KHloaked, Faded, Yonder. KH-F-Y is the root of hiding.",
+    "words": [
+      {
+        "arabic": "أَخْفَى",
+        "translit": "ʾakhfā",
+        "meaning": "to hide / conceal"
+      }
+    ]
+  },
+  {
+    "arabic": "ص ر ر",
+    "translit": "ṣ-r-r",
+    "meaning": "Persisting",
+    "mnemonic": "Stubborn, Resolved, Relentless. Ṣ-R-R is the root of persisting.",
+    "words": [
+      {
+        "arabic": "أَصَرَّ",
+        "translit": "ʾaṣarra",
+        "meaning": "to insist / persist"
+      }
+    ]
+  },
+  {
+    "arabic": "م ح و",
+    "translit": "m-ḥ-w",
+    "meaning": "Erasing",
+    "mnemonic": "Mop, Hide, Wipe. M-Ḥ-W is the root of erasing.",
+    "words": [
+      {
+        "arabic": "مَحَا",
+        "translit": "maḥā",
+        "meaning": "to erase / wipe out"
+      }
+    ]
+  },
+  {
+    "arabic": "ن س خ",
+    "translit": "n-s-kh",
+    "meaning": "Copying",
+    "mnemonic": "Note Scribed, KHopy. N-S-KH is the root of copying.",
+    "words": [
+      {
+        "arabic": "نَسَخَ",
+        "translit": "nasakha",
+        "meaning": "to abrogate / copy"
+      }
+    ]
+  },
+  {
+    "arabic": "س ب ق",
+    "translit": "s-b-q",
+    "meaning": "Preceding, racing",
+    "mnemonic": "Sprint Before the Queue. S-B-Q is the root of preceding, racing.",
+    "words": [
+      {
+        "arabic": "اسْتَبَقَ",
+        "translit": "istabaqa",
+        "meaning": "to race / compete"
+      },
+      {
+        "arabic": "تَسَابَقَ",
+        "translit": "tasābaqa",
+        "meaning": "to vie with one another"
+      },
+      {
+        "arabic": "سَبَقَ",
+        "translit": "sabaqa",
+        "meaning": "to precede / outstrip"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ي ل",
+    "translit": "n-y-l",
+    "meaning": "Attaining",
+    "mnemonic": "Now You Land it. N-Y-L is the root of attaining.",
+    "words": [
+      {
+        "arabic": "نَالَ",
+        "translit": "nāla",
+        "meaning": "to attain / receive"
+      }
+    ]
+  },
+  {
+    "arabic": "ك ف ل",
+    "translit": "k-f-l",
+    "meaning": "Guaranteeing",
+    "mnemonic": "Keep Faithfully, Look after. K-F-L is the root of guaranteeing.",
+    "words": [
+      {
+        "arabic": "كَفَلَ",
+        "translit": "kafala",
+        "meaning": "to be responsible for"
+      },
+      {
+        "arabic": "تَكَفَّلَ",
+        "translit": "takaffala",
+        "meaning": "to guarantee / sponsor"
+      }
+    ]
+  },
+  {
+    "arabic": "ر ب و",
+    "translit": "r-b-w",
+    "meaning": "Raising; growth",
+    "mnemonic": "Raising Babies Well. R-B-W is the root of raising; growth.",
+    "words": [
+      {
+        "arabic": "تَرَبَّى",
+        "translit": "tarabbā",
+        "meaning": "to be raised / grow up"
+      },
+      {
+        "arabic": "رَبَّى",
+        "translit": "rabbā",
+        "meaning": "to raise / nurture"
+      }
+    ]
+  },
+  {
+    "arabic": "و ف ق",
+    "translit": "w-f-q",
+    "meaning": "Agreeing",
+    "mnemonic": "We're Fine, Quite aligned. W-F-Q is the root of agreeing.",
+    "words": [
+      {
+        "arabic": "اتَّفَقَ",
+        "translit": "ittafaqa",
+        "meaning": "to agree"
+      },
+      {
+        "arabic": "تَوَافَقَ",
+        "translit": "tawāfaqa",
+        "meaning": "to be in harmony"
+      }
+    ]
+  },
+  {
+    "arabic": "ج و ر",
+    "translit": "j-w-r",
+    "meaning": "Neighbouring",
+    "mnemonic": "Just Walk Round. J-W-R is the root of neighbouring.",
+    "words": [
+      {
+        "arabic": "جَاوَرَ",
+        "translit": "jāwara",
+        "meaning": "to be neighbours"
+      }
+    ]
+  },
+  {
+    "root": "ن و ر"
+  },
+  {
+    "arabic": "ع ذ ر",
+    "translit": "ʿ-dh-r",
+    "meaning": "Excusing",
+    "mnemonic": "Accept DHis Regret. ʿ-DH-R is the root of excusing.",
+    "words": [
+      {
+        "arabic": "اعْتَذَرَ",
+        "translit": "iʿtadhara",
+        "meaning": "to apologise"
+      }
+    ]
+  },
+  {
+    "arabic": "ص ر ع",
+    "translit": "ṣ-r-ʿ",
+    "meaning": "Wrestling",
+    "mnemonic": "Strong Rivals Attack. Ṣ-R-ʿ is the root of wrestling.",
+    "words": [
+      {
+        "arabic": "تَصَارَعَ",
+        "translit": "taṣāraʿa",
+        "meaning": "to wrestle / struggle"
+      }
+    ]
+  },
+  {
+    "root": "ز و ج"
+  },
+  {
+    "arabic": "ج و ز",
+    "translit": "j-w-z",
+    "meaning": "Passing, being allowed",
+    "mnemonic": "Just Walk, Zip past. J-W-Z is the root of passing, being allowed.",
+    "words": [
+      {
+        "arabic": "تَجَاوَزَ",
+        "translit": "tajāwaza",
+        "meaning": "to overlook / go beyond"
+      }
+    ]
+  },
+  {
+    "arabic": "ب س م",
+    "translit": "b-s-m",
+    "meaning": "Smiling",
+    "mnemonic": "Bright Soft Mouth. B-S-M is the root of smiling.",
+    "words": [
+      {
+        "arabic": "ابْتَسَمَ",
+        "translit": "ibtasama",
+        "meaning": "to smile"
+      }
+    ]
+  },
+  {
+    "arabic": "ب ك ي",
+    "translit": "b-k-y",
+    "meaning": "Crying",
+    "mnemonic": "Bawling, Kid's Yowling. B-K-Y is the root of crying.",
+    "words": [
+      {
+        "arabic": "بَكَى",
+        "translit": "bakā",
+        "meaning": "to cry / weep"
+      }
+    ]
+  },
+  {
+    "root": "ض ح ك"
+  },
+  {
+    "arabic": "أ ل م",
+    "translit": "ʾ-l-m",
+    "meaning": "Pain",
+    "mnemonic": "Aching Limb, Moaning. ʾ-L-M is the root of pain.",
+    "words": [
+      {
+        "arabic": "تَأَلَّمَ",
+        "translit": "taʾallama",
+        "meaning": "to be in pain"
+      }
+    ]
+  },
+  {
+    "arabic": "ز ع ج",
+    "translit": "z-ʿ-j",
+    "meaning": "Disturbing",
+    "mnemonic": "Zapped, Annoyed, Jarred. Z-ʿ-J is the root of disturbing.",
+    "words": [
+      {
+        "arabic": "أَزْعَجَ",
+        "translit": "ʾazʿaja",
+        "meaning": "to disturb"
+      }
+    ]
+  },
+  {
+    "arabic": "ن ف ر",
+    "translit": "n-f-r",
+    "meaning": "Fleeing in aversion",
+    "mnemonic": "No Fear? Run anyway. N-F-R is the root of fleeing in aversion.",
+    "words": [
+      {
+        "arabic": "نَفَرَ",
+        "translit": "nafara",
+        "meaning": "to flee / feel aversion"
+      }
+    ]
+  },
+  {
+    "arabic": "أ ث ر",
+    "translit": "ʾ-th-r",
+    "meaning": "Trace, influence",
+    "mnemonic": "A THumbprint Remains. ʾ-TH-R is the root of trace, influence.",
+    "words": [
+      {
+        "arabic": "تَأَثَّرَ",
+        "translit": "taʾaththara",
+        "meaning": "to be influenced"
+      },
+      {
+        "arabic": "أَثَّرَ",
+        "translit": "ʾaththara",
+        "meaning": "to influence"
+      }
+    ]
+  }
+]

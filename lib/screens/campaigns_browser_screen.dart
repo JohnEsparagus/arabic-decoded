@@ -14,6 +14,7 @@ import '../widgets/tile_grid.dart';
 import '../widgets/selection_bar.dart';
 import 'alphabet_tab.dart';
 import 'collections_tab.dart';
+import 'frequency_view.dart';
 import 'word_detail_screen.dart';
 import 'words_tab.dart';
 
@@ -62,11 +63,68 @@ class CampaignsBrowserScreen extends StatelessWidget {
   }
 }
 
+/// Which way the Roots tab lists roots. Kept here rather than in the tab,
+/// which is rebuilt from scratch when switching between tabs.
+enum RootsView { campaigns, frequency }
+
+class RootsViewNotifier extends Notifier<RootsView> {
+  @override
+  RootsView build() => RootsView.campaigns;
+
+  void set(RootsView view) => state = view;
+}
+
+final rootsViewProvider = NotifierProvider<RootsViewNotifier, RootsView>(
+  RootsViewNotifier.new,
+);
+
+/// The Roots tab: its two views, and the switch between them.
+class _RootsTab extends ConsumerWidget {
+  const _RootsTab();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final view = ref.watch(rootsViewProvider);
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 12, 20, 8),
+          child: SizedBox(
+            width: double.infinity,
+            child: SegmentedButton<RootsView>(
+              showSelectedIcon: false,
+              style: const ButtonStyle(visualDensity: VisualDensity.compact),
+              segments: const [
+                ButtonSegment(
+                  value: RootsView.campaigns,
+                  label: Text('Campaigns'),
+                ),
+                ButtonSegment(
+                  value: RootsView.frequency,
+                  label: Text('Frequency'),
+                ),
+              ],
+              selected: {view},
+              onSelectionChanged: (selection) =>
+                  ref.read(rootsViewProvider.notifier).set(selection.single),
+            ),
+          ),
+        ),
+        Expanded(
+          child: view == RootsView.campaigns
+              ? const _CampaignsView()
+              : const FrequencyView(),
+        ),
+      ],
+    );
+  }
+}
+
 /// Every campaign as its own section, with a grid of its roots as compact
 /// preview cards. Tapping a root opens the same [WordDetailScreen] the
 /// Dictionary tab uses.
-class _RootsTab extends ConsumerWidget {
-  const _RootsTab();
+class _CampaignsView extends ConsumerWidget {
+  const _CampaignsView();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -84,13 +142,15 @@ class _RootsTab extends ConsumerWidget {
       ),
       data: (allDecks) {
         // The patterns and the alphabet have decks but aren't campaigns,
-        // and the Quran's deck is shown as the Quran list, on top.
+        // the Quran's deck is shown as the Quran list, on top, and the
+        // frequency deck as the Frequency view.
         final decks = allDecks
             .where(
               (deck) =>
                   deck.name != patternsSource.deckName &&
                   deck.name != alphabetSource.deckName &&
-                  deck.name != quranSource.deckName,
+                  deck.name != quranSource.deckName &&
+                  deck.name != frequencySource.deckName,
             )
             .toList();
         if (decks.isEmpty) {

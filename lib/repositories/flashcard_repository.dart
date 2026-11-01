@@ -68,9 +68,8 @@ abstract class FlashcardRepository {
 
   /// The sentence corpus (see "Sentences" in `DatabaseService`): which
   /// version of the bundled file is loaded, and loading a new one.
-  /// Marks the Quran's most common roots (see
-  /// `DatabaseService.setQuranRanks`).
-  Future<void> setQuranRanks(Map<String, int> ranks);
+  /// Records an ordered list of roots (see `DatabaseService.setRootRanks`).
+  Future<void> setRootRanks(RootList list, Map<String, int> ranks);
 
   Future<String?> getSentencesVersion();
   Future<void> replaceSentences(

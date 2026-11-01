@@ -94,8 +94,48 @@ void main() {
   });
 
   test('a root taken off the list stops counting as Quranic', () async {
-    await db.setQuranRanks({'ق و ل': 1});
+    await db.setRootRanks(RootList.quran, {'ق و ل': 1});
     all = await db.getAllFlashcards();
     expect(quranRoots().map((c) => c.arabicWord), ['ق و ل']);
+  });
+
+  group('the frequency list', () {
+    final list =
+        (json.decode(File(frequencySource.assetPath).readAsStringSync())
+                as List)
+            .cast<Map<String, dynamic>>();
+
+    List<Flashcard> ranked() =>
+        all.where((c) => c.frequencyRank != null).toList()
+          ..sort((a, b) => a.frequencyRank!.compareTo(b.frequencyRank!));
+
+    test('every root on it is one card, in list order, each with a '
+        'mnemonic', () {
+      expect(ranked().map((c) => c.arabicWord), list.map(rootOf));
+      expect(ranked().map((c) => c.kind), everyElement(CardKind.root));
+      for (final card in ranked()) {
+        expect(card.mnemonic, isNotEmpty, reason: card.arabicWord);
+        expect(card.transliteration, isNotEmpty, reason: card.arabicWord);
+      }
+    });
+
+    test('a root it shares with a campaign is the same card', () {
+      final root = all.singleWhere((c) => c.arabicWord == 'ك ت ب');
+      expect(root.frequencyRank, 1);
+    });
+
+    test('its own roots only reach the queue when picked', () async {
+      final deck = await db.getOrCreateDeck(frequencySource.deckName);
+      for (final quranFirst in [false, true]) {
+        final queue = await db.getNewFlashcards(
+          limit: 2000,
+          quranFirst: quranFirst,
+        );
+        expect(queue.where((c) => c.deckId == deck.id), isEmpty);
+      }
+      final picked = all.singleWhere((c) => c.arabicWord == 'ض ر ب');
+      await db.setQueued(picked.id!, true);
+      expect((await db.getQueuedFlashcards()).single.id, picked.id);
+    });
   });
 }

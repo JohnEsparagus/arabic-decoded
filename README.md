@@ -26,6 +26,8 @@ Pushes to `main` publish it to GitHub Pages (`.github/workflows/web.yml`).
     order. Most entries just name a root another campaign teaches
     (`{"root": "ق و ل"}`), so there's one card per root and progress is
     shared; roots no campaign has are full entries in the Quran's own deck.
+  - `frequency.json` works the same way: the Frequency view of the Roots
+    tab. Its own roots only reach the queue when a user picks them.
   - `lessons.json` and `stories.json` are read-once cards, each shown
     after `after_roots` roots have been introduced. Add or delete an entry
     and the card follows.

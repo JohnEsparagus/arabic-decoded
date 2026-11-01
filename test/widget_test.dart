@@ -120,12 +120,13 @@ void main() {
         await _settle(tester);
 
         // Switch to the Dictionary tab: it should already have the words
-        // imported by the Campaign tab available to browse. "Taking" (أ خ
-        // ذ, from the Absolute Core campaign) sorts first alphabetically
-        // across every campaign's roots, so it's guaranteed to be built
-        // without scrolling — ListView.separated only builds what's near
-        // the viewport.
+        // imported by the Campaign tab available to browse. Searching
+        // brings "Taking" (أ خ ذ, from Absolute Core) to the top; the query
+        // is cut short so it doesn't also match the search field's own
+        // text.
         await tester.tap(find.text('Dictionary'));
+        await _settle(tester);
+        await tester.enterText(find.byType(TextField).first, 'Takin');
         await _settle(tester);
         expect(find.text('Taking'), findsOneWidget);
 
@@ -204,6 +205,8 @@ void main() {
         await holdTile.up();
         await _settle(tester);
         expect(find.text('1 selected'), findsOneWidget);
+        await tester.ensureVisible(find.text('k-w-n').first);
+        await _settle(tester);
         await tester.tap(find.text('k-w-n').first);
         await _settle(tester);
         expect(find.text('2 selected'), findsOneWidget);
@@ -212,6 +215,30 @@ void main() {
         expect(find.text('2 selected'), findsNothing);
         expect(find.text('Marked 2 cards as mastered'), findsOneWidget);
         expect(find.text('2 of 105 learnt'), findsOneWidget);
+
+        // The Frequency view lists the same cards, and filters them.
+        await tester.tap(find.text('Frequency'));
+        await _settle(tester);
+        expect(find.text('2 of 351 learnt'), findsOneWidget);
+        expect(find.text('d-r-b'.replaceFirst('d', 'ḍ')), findsOneWidget);
+        await tester.ensureVisible(find.widgetWithText(ChoiceChip, 'Mastered'));
+        await _settle(tester);
+        await tester.tap(find.widgetWithText(ChoiceChip, 'Mastered'));
+        await _settle(tester);
+        expect(find.text('q-w-l'), findsOneWidget);
+        expect(find.text('k-w-n'), findsOneWidget);
+        expect(find.text('k-t-b'), findsNothing);
+        await tester.ensureVisible(find.widgetWithText(ChoiceChip, 'All'));
+        await _settle(tester);
+        await tester.tap(find.widgetWithText(ChoiceChip, 'All'));
+        await _settle(tester);
+        await tester.tap(
+          find.descendant(
+            of: find.byWidgetPredicate((widget) => widget is SegmentedButton),
+            matching: find.text('Campaigns'),
+          ),
+        );
+        await _settle(tester);
 
         // The regular campaigns are below it.
         await tester.dragUntilVisible(

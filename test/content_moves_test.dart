@@ -167,7 +167,8 @@ void main() {
     // And the moved words now belong to the root they moved to.
     expect((await cardAt('Absolute Core', 'اِسْتَعْمَلَ'))!.rootKey, 'ع م ل');
     expect((await cardAt('Daily Actions', 'صِلَة'))!.rootKey, 'و ص ل');
-    // 215 in the campaigns, and the 50 Quranic roots no campaign teaches.
-    expect(all.where((c) => c.kind == CardKind.root).length, 265);
+    // 215 in the campaigns, 50 only on the Quran list, 216 only on the
+    // frequency list.
+    expect(all.where((c) => c.kind == CardKind.root).length, 481);
   });
 }

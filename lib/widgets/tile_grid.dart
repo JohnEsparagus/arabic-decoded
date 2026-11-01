@@ -14,23 +14,32 @@ class TileGrid extends StatelessWidget {
   /// Which side rows fill from. Right-to-left for the alphabet.
   final TextDirection? textDirection;
 
-  static const _spacing = 10.0;
+  static const spacing = 10.0;
+
+  /// How many tiles fit across [width].
+  static int columnsFor(double width) {
+    final fit = (width + spacing) / (RootPreviewCard.width + spacing);
+    return fit.floor().clamp(1, 1000);
+  }
+
+  /// How wide a row of [columns] tiles is.
+  static double widthFor(int columns) =>
+      columns * RootPreviewCard.width + (columns - 1) * spacing;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        const tile = RootPreviewCard.width;
-        final columns = ((constraints.maxWidth + _spacing) / (tile + _spacing))
-            .floor()
-            .clamp(1, children.isEmpty ? 1 : children.length);
+        final columns = columnsFor(
+          constraints.maxWidth,
+        ).clamp(1, children.isEmpty ? 1 : children.length);
         return Center(
           child: SizedBox(
-            width: columns * tile + (columns - 1) * _spacing,
+            width: widthFor(columns),
             child: Wrap(
               textDirection: textDirection,
-              spacing: _spacing,
-              runSpacing: _spacing,
+              spacing: spacing,
+              runSpacing: spacing,
               children: children,
             ),
           ),

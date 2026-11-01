@@ -39,6 +39,16 @@ const quranSource = CampaignSource(
   description: 'The most common roots of the Quran, most common first',
 );
 
+/// The frequency list: useful roots, most common first, shown as the
+/// Frequency view of the Roots tab. It works like [quranSource]: a
+/// reference for a root taught elsewhere, a whole entry for one that isn't.
+/// Its own roots never enter the queue by themselves; users add them.
+const frequencySource = CampaignSource(
+  assetPath: 'assets/data/frequency.json',
+  deckName: 'Frequency',
+  description: 'The most useful roots, most common first',
+);
+
 /// The 28 letters, for absolute beginners. Not a campaign either: it's
 /// optional, and when switched on its cards come before any root (see
 /// `DatabaseService.getNewFlashcards`).

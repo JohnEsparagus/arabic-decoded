@@ -125,6 +125,6 @@ class SyncedFlashcardRepository implements FlashcardRepository {
   }) => _local.moveCard(fromDeck: fromDeck, from: from, toDeck: toDeck, to: to);
 
   @override
-  Future<void> setQuranRanks(Map<String, int> ranks) =>
-      _local.setQuranRanks(ranks);
+  Future<void> setRootRanks(RootList list, Map<String, int> ranks) =>
+      _local.setRootRanks(list, ranks);
 }
