@@ -19,9 +19,9 @@ Pushes to `main` publish it to GitHub Pages (`.github/workflows/web.yml`).
 
 ## How it fits together
 
-- **Content** is bundled with the app as JSON in `assets/data/`. To add a
-  campaign, drop in a JSON file and list it in
-  `lib/config/campaign_sources.dart`.
+- **Content** is JSON in `assets/data/`, listed by `manifest.json`. A copy
+  ships in the app, and pushing to `main` publishes it online, where apps
+  pick it up without a store update (see "Updating content" below).
   - `quran.json` is the Quran campaign: the Quran's most common roots in
     order. Most entries just name a root another campaign teaches
     (`{"root": "ق و ل"}`), so there's one card per root and progress is
@@ -29,10 +29,8 @@ Pushes to `main` publish it to GitHub Pages (`.github/workflows/web.yml`).
   - `lessons.json` and `stories.json` are read-once cards, each shown
     after `after_roots` roots have been introduced. Add or delete an entry
     and the card follows.
-  - `sentences.json` is the sentence corpus. It is loaded into its own
-    indexed table once per edition, so **bump `sentencesVersion`** in
-    `campaign_sources.dart` whenever you change the file (a test fails if
-    you forget). It holds the app's own example sentences followed by
+  - `sentences.json` is the sentence corpus, loaded into its own indexed
+    table whenever the file changes. It holds the app's own example sentences followed by
     about 13,000 from [Tatoeba](https://tatoeba.org) (CC BY 2.0 FR; credited
     on the About screen), chosen because they use words the app teaches.
 - **Progress** lives in an on-device SQLite database
@@ -44,6 +42,21 @@ Pushes to `main` publish it to GitHub Pages (`.github/workflows/web.yml`).
   the library (favorites and collections) sync alongside it.
 - **Accounts** go through `lib/services/auth_service.dart`, a thin wrapper
   over Supabase Auth.
+
+## Updating content
+
+To change roots, words, lessons, stories or sentences:
+
+1. Edit the JSON in `assets/data/`. For a new campaign, add the file and list
+   it under `campaigns` in `manifest.json`. If a card's Arabic or deck
+   changes, add a line to `moves`, so progress follows it.
+2. Run `python3 tool/build_manifest.py` (a test fails if you forget).
+3. Push to `main`. Apps download it on their next launch and use it from the
+   launch after, with no store release.
+
+New features or database changes still need an app update. If content
+needs something older apps can't handle, raise `contentSchema` and the
+manifest's `schema`; those apps stay on what they have.
 
 ## Supabase
 

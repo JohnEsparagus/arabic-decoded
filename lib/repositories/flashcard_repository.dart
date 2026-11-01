@@ -72,10 +72,10 @@ abstract class FlashcardRepository {
   /// `DatabaseService.setQuranRanks`).
   Future<void> setQuranRanks(Map<String, int> ranks);
 
-  Future<int?> getSentencesVersion();
+  Future<String?> getSentencesVersion();
   Future<void> replaceSentences(
     List<({String arabic, String english, String search, Set<String> keys})>
     sentences, {
-    required int version,
+    required String version,
   });
 }

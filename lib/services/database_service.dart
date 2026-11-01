@@ -60,7 +60,7 @@ class DatabaseService {
     _resolvedPath = path;
     return openDatabase(
       path,
-      version: 12,
+      version: 13,
       // sqflite's default `singleInstance: true` caches connections keyed
       // by the literal path string. That's harmless for the app's real
       // on-disk path (only ever opened once, by the DatabaseService
@@ -115,6 +115,7 @@ class DatabaseService {
         await _createReviewLogTable(db);
         await _createLibraryStateTable(db);
         await _createSentenceTables(db);
+        await _createContentFilesTable(db);
         await db.execute(
           'CREATE INDEX idx_flashcards_deck_id ON flashcards (deck_id)',
         );
@@ -271,6 +272,10 @@ class DatabaseService {
             'ALTER TABLE flashcards ADD COLUMN quran_rank INTEGER',
           );
         }
+        if (oldVersion < 13) {
+          // Downloaded content — see ContentStore.
+          await _createContentFilesTable(db);
+        }
       },
     );
   }
@@ -341,6 +346,16 @@ class DatabaseService {
     await db.execute(
       'CREATE INDEX idx_flashcards_arabic_word ON flashcards (arabic_word)',
     );
+  }
+
+  static Future<void> _createContentFilesTable(Database db) async {
+    await db.execute('''
+      CREATE TABLE content_files (
+        path TEXT PRIMARY KEY,
+        hash TEXT NOT NULL,
+        body TEXT NOT NULL
+      )
+    ''');
   }
 
   /// A single row that says when the library (favorites and collections)
@@ -1413,15 +1428,52 @@ class DatabaseService {
       ON f.arabic_word = s.arabic AND f.kind = 'sentence'
   ''';
 
-  /// Which version of the bundled corpus is loaded, or null if none is.
-  Future<int?> getSentencesVersion() async {
+  // ---- Downloaded content ---------------------------------------------------
+
+  Future<({String hash, String body})?> getContentFile(String path) async {
+    final db = await database;
+    final rows = await db.query(
+      'content_files',
+      where: 'path = ?',
+      whereArgs: [path],
+    );
+    if (rows.isEmpty) return null;
+    return (
+      hash: rows.single['hash'] as String,
+      body: rows.single['body'] as String,
+    );
+  }
+
+  /// Saves downloaded files all together, or not at all.
+  Future<void> saveContentFiles(
+    Map<String, ({String hash, String body})> files,
+  ) async {
+    final db = await database;
+    await db.transaction((txn) async {
+      for (final MapEntry(key: path, value: file) in files.entries) {
+        await txn.insert('content_files', {
+          'path': path,
+          'hash': file.hash,
+          'body': file.body,
+        }, conflictAlgorithm: ConflictAlgorithm.replace);
+      }
+    });
+  }
+
+  Future<void> clearContentFiles() async {
+    final db = await database;
+    await db.delete('content_files');
+  }
+
+  /// Which edition of the corpus is loaded, or null if none is.
+  Future<String?> getSentencesVersion() async {
     final db = await database;
     final rows = await db.query(
       'content_meta',
       where: 'key = ?',
       whereArgs: ['sentences_version'],
     );
-    return rows.isEmpty ? null : int.tryParse(rows.single['value'] as String);
+    return rows.isEmpty ? null : rows.single['value'] as String;
   }
 
   /// Replaces the whole corpus with [sentences] and records it as
@@ -1432,7 +1484,7 @@ class DatabaseService {
   Future<void> replaceSentences(
     List<({String arabic, String english, String search, Set<String> keys})>
     sentences, {
-    required int version,
+    required String version,
   }) async {
     final db = await database;
     // Rows go in many to a statement: one statement per row is most of the
@@ -1461,7 +1513,7 @@ class DatabaseService {
       );
       await txn.insert('content_meta', {
         'key': 'sentences_version',
-        'value': '$version',
+        'value': version,
       }, conflictAlgorithm: ConflictAlgorithm.replace);
     });
   }

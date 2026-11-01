@@ -107,13 +107,13 @@ class SyncedFlashcardRepository implements FlashcardRepository {
       _local.searchFlashcards(query);
 
   @override
-  Future<int?> getSentencesVersion() => _local.getSentencesVersion();
+  Future<String?> getSentencesVersion() => _local.getSentencesVersion();
 
   @override
   Future<void> replaceSentences(
     List<({String arabic, String english, String search, Set<String> keys})>
     sentences, {
-    required int version,
+    required String version,
   }) => _local.replaceSentences(sentences, version: version);
 
   @override

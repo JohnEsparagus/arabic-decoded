@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "version": 1,
+  "campaigns": [
+    {
+      "file": "assets/data/campaign_1_absolute_core.json",
+      "deck": "Absolute Core",
+      "description": "The most foundational roots: writing, saying, knowing, being"
+    },
+    {
+      "file": "assets/data/campaign_2_daily_actions.json",
+      "deck": "Daily Actions",
+      "description": "Going, coming, entering, sitting, and other everyday verbs"
+    },
+    {
+      "file": "assets/data/campaign_3_learning_communication.json",
+      "deck": "Learning & Communication",
+      "description": "Asking, answering, studying, explaining, translating"
+    },
+    {
+      "file": "assets/data/campaign_4_people_relationships.json",
+      "deck": "People & Relationships",
+      "description": "Birth, life, death, love, family, and marriage"
+    },
+    {
+      "file": "assets/data/campaign_5_home_daily_life.json",
+      "deck": "Home & Daily Life",
+      "description": "Eating, drinking, cooking, building, owning, selling"
+    },
+    {
+      "file": "assets/data/campaign_6_money_work.json",
+      "deck": "Money & Work",
+      "description": "Buying, paying, profit, loss, farming, needing, serving"
+    },
+    {
+      "file": "assets/data/campaign_7_society_news.json",
+      "deck": "Society & News",
+      "description": "Ruling, justice, war, peace, law, and the people"
+    },
+    {
+      "file": "assets/data/campaign_8_nature.json",
+      "deck": "Nature",
+      "description": "Earth, sky, sun, moon, sea, mountains, wind, rain, light"
+    },
+    {
+      "file": "assets/data/campaign_9_time_change.json",
+      "deck": "Time & Change",
+      "description": "Beginning, completing, growing, shrinking, nearness"
+    },
+    {
+      "file": "assets/data/campaign_10_abstract.json",
+      "deck": "Abstract Concepts",
+      "description": "Cause, result, shape, example, gathering, dividing, type"
+    },
+    {
+      "file": "assets/data/campaign_11_body_health.json",
+      "deck": "Body & Health",
+      "description": "Body, health, illness, medicine, sleep, strength"
+    },
+    {
+      "file": "assets/data/campaign_12_travel_places.json",
+      "deck": "Travel & Places",
+      "description": "Travelling, flying, riding, visiting, roads, countries"
+    },
+    {
+      "file": "assets/data/campaign_13_feelings_character.json",
+      "deck": "Feelings & Character",
+      "description": "Joy, sadness, fear, anger, patience, thanks, honesty, generosity, mercy"
+    },
+    {
+      "file": "assets/data/campaign_14_mind_will.json",
+      "deck": "Mind & Will",
+      "description": "Thinking, reason, feeling, wanting, trying, choosing, success, failure, goals"
+    },
+    {
+      "file": "assets/data/campaign_15_city_media.json",
+      "deck": "City & Media",
+      "description": "Cities, streets, companies, jobs, messages, pictures, printing, publishing, news"
+    },
+    {
+      "file": "assets/data/campaign_16_faith_tradition.json",
+      "deck": "Faith & Tradition",
+      "description": "Religion, worship, prayer, fasting, pilgrimage, feasts, blessing"
+    },
+    {
+      "file": "assets/data/campaign_17_language_speech.json",
+      "deck": "Language & Speech",
+      "description": "Language, words, letters, sentences, meaning, voice, stories"
+    },
+    {
+      "file": "assets/data/campaign_18_days_seasons.json",
+      "deck": "Days & Seasons",
+      "description": "Day, month, year, morning, evening, week, seasons, time"
+    },
+    {
+      "file": "assets/data/campaign_19_numbers_measures.json",
+      "deck": "Numbers & Measures",
+      "description": "Number, many, few, half, length, width, weight, measuring, size"
+    },
+    {
+      "file": "assets/data/campaign_20_arts_leisure.json",
+      "deck": "Arts & Leisure",
+      "description": "Playing, singing, drawing, art, dancing, parties, fun, swimming, laughing"
+    }
+  ],
+  "moves": [
+    [
+      "Daily Actions",
+      "ج ا ء",
+      "Daily Actions",
+      "ج ي ء"
+    ],
+    [
+      "Daily Actions",
+      "ق ا م",
+      "Daily Actions",
+      "ق و م"
+    ],
+    [
+      "Daily Actions",
+      "م ش ى",
+      "Daily Actions",
+      "م ش ي"
+    ],
+    [
+      "Home & Daily Life",
+      "ب ن ى",
+      "Home & Daily Life",
+      "ب ن ي"
+    ],
+    [
+      "Money & Work",
+      "ش ر ى",
+      "Money & Work",
+      "ش ر ي"
+    ],
+    [
+      "Money & Work",
+      "ع ط ي",
+      "Money & Work",
+      "ع ط و"
+    ],
+    [
+      "Money & Work",
+      "ح ت ا ج",
+      "Money & Work",
+      "ح و ج"
+    ],
+    [
+      "Home & Daily Life",
+      "س ت ع م ل",
+      "Absolute Core",
+      "ع م ل"
+    ],
+    [
+      "Home & Daily Life",
+      "اِسْتَعْمَلَ",
+      "Absolute Core",
+      "اِسْتَعْمَلَ"
+    ],
+    [
+      "Home & Daily Life",
+      "اِسْتِعْمَال",
+      "Absolute Core",
+      "اِسْتِعْمَال"
+    ],
+    [
+      "Abstract Concepts",
+      "و ص ل",
+      "Daily Actions",
+      "و ص ل"
+    ],
+    [
+      "Abstract Concepts",
+      "وَصْل",
+      "Daily Actions",
+      "وَصْل"
+    ],
+    [
+      "Abstract Concepts",
+      "وَصَّلَ",
+      "Daily Actions",
+      "وَصَّلَ"
+    ],
+    [
+      "Abstract Concepts",
+      "اِتِّصَال",
+      "Daily Actions",
+      "اِتِّصَال"
+    ],
+    [
+      "Abstract Concepts",
+      "صِلَة",
+      "Daily Actions",
+      "صِلَة"
+    ]
+  ],
+  "files": {
+    "assets/data/alphabet.json": "b04c51379e0f7a3b",
+    "assets/data/campaign_10_abstract.json": "5bc76e4ccdb4f996",
+    "assets/data/campaign_11_body_health.json": "9f2b71b0f2188824",
+    "assets/data/campaign_12_travel_places.json": "2b320fceeefd201a",
+    "assets/data/campaign_13_feelings_character.json": "6d8775c1b860759b",
+    "assets/data/campaign_14_mind_will.json": "cac27ac2e9d32779",
+    "assets/data/campaign_15_city_media.json": "c7e785f66e45b62a",
+    "assets/data/campaign_16_faith_tradition.json": "8ee000a23f739e71",
+    "assets/data/campaign_17_language_speech.json": "5a50667b9b363a7a",
+    "assets/data/campaign_18_days_seasons.json": "c74cc4d16d9864af",
+    "assets/data/campaign_19_numbers_measures.json": "5f6ead2449215742",
+    "assets/data/campaign_1_absolute_core.json": "da17d26ed5f941a0",
+    "assets/data/campaign_20_arts_leisure.json": "ed3e378fe07ea727",
+    "assets/data/campaign_2_daily_actions.json": "aca25e7a5a8b9c86",
+    "assets/data/campaign_3_learning_communication.json": "af2a7dc2c2c92da4",
+    "assets/data/campaign_4_people_relationships.json": "c3bf270bff3e1eaf",
+    "assets/data/campaign_5_home_daily_life.json": "cf84d50226b150bd",
+    "assets/data/campaign_6_money_work.json": "c7995489150bff40",
+    "assets/data/campaign_7_society_news.json": "b1a4b52260752174",
+    "assets/data/campaign_8_nature.json": "bcd9af9cb70cdb9a",
+    "assets/data/campaign_9_time_change.json": "fd687d459eb15a47",
+    "assets/data/extras.json": "37517e5f3dc66819",
+    "assets/data/lessons.json": "92558fa760f114b8",
+    "assets/data/patterns.json": "e2f815b9564179c3",
+    "assets/data/quran.json": "b7509b689d8c3277",
+    "assets/data/sentences.json": "90203ee78b720b21",
+    "assets/data/stories.json": "236d6e7ea82f1959"
+  }
+}

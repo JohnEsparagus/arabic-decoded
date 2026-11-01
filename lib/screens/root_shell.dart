@@ -57,6 +57,7 @@ class _RootShellState extends ConsumerState<RootShell> {
     ref.listen(syncProvider, (_, _) {});
     // Load the sentence corpus in the background now the app is up.
     ref.listen(sentenceCorpusProvider, (_, _) {});
+    ref.listen(contentUpdateProvider, (_, _) {});
     // Everything works offline against the local database; whatever was
     // done meanwhile is flagged for upload. The moment a connection comes
     // back, send it and fetch what other devices did.
@@ -64,6 +65,7 @@ class _RootShellState extends ConsumerState<RootShell> {
       final wasOnline = previous?.asData?.value ?? false;
       if (!wasOnline && (next.asData?.value ?? false)) {
         ref.read(syncProvider.notifier).sync();
+        ref.invalidate(contentUpdateProvider);
       }
     });
     return Scaffold(

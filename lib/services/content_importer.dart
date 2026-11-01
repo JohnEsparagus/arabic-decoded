@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart' show mapEquals;
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../config/campaign_sources.dart';
+import '../models/content_manifest.dart';
 import '../models/deck.dart';
 import '../models/flashcard.dart';
 import '../repositories/flashcard_repository.dart';
@@ -59,16 +60,19 @@ class ContentImporter {
   final FlashcardRepository _repository;
   final Future<String> Function(String assetPath) _loadAsset;
 
-  /// Imports every campaign in [sources] (defaults to [campaignSources]),
+  /// The content manifest, which lists the campaigns and renames.
+  Future<ContentManifest> _manifest() async =>
+      ContentManifest.parse(await _loadAsset(contentManifestPath));
+
+  /// Imports every campaign the manifest lists,
   /// in order, then everything that isn't a campaign. Sequential — not parallel — so decks get
   /// created in list order, which is what makes campaign progression
   /// deterministic (see [CampaignSource]'s doc comment).
-  Future<List<Deck>> importAll([
-    List<CampaignSource> sources = campaignSources,
-  ]) async {
+  Future<List<Deck>> importAll() async {
+    final manifest = await _manifest();
     // Renamed and moved cards go to their new names first, so the import
     // below finds them there instead of making new ones.
-    for (final move in contentMoves) {
+    for (final move in manifest.moves) {
       await _repository.moveCard(
         fromDeck: move.fromDeck,
         from: move.from,
@@ -77,7 +81,7 @@ class ContentImporter {
       );
     }
     final decks = <Deck>[];
-    for (final source in sources) {
+    for (final source in manifest.campaigns) {
       decks.add(
         await importAsset(
           assetPath: source.assetPath,
@@ -261,7 +265,7 @@ class ContentImporter {
   /// (see `sentenceCorpusProvider`).
   ///
   /// Loads assets/data/sentences.json into the sentence corpus, if this
-  /// build's edition of it ([sentencesVersion]) isn't the one already
+  /// edition of it isn't the one already
   /// loaded. On every launch after the first that's one small query and
   /// nothing else: the file isn't even opened.
   ///
@@ -272,10 +276,15 @@ class ContentImporter {
   /// The file is the whole corpus: loading a new edition replaces the old
   /// one. Sentences the user has added to their queue are flashcards by
   /// then, and stay whatever happens to the file.
-  Future<void> importSentences({int version = sentencesVersion}) async {
-    if (await _repository.getSentencesVersion() == version) return;
+  ///
+  /// An edition is the file's hash in the manifest, so it changes by itself
+  /// whenever the file does; [edition] overrides that for tests.
+  Future<void> importSentences({String? edition}) async {
+    final current =
+        edition ?? (await _manifest()).files[sentencesSource.assetPath] ?? '';
+    if (await _repository.getSentencesVersion() == current) return;
     final entries = await _loadEntries(sentencesSource.assetPath);
-    await _repository.replaceSentences(version: version, [
+    await _repository.replaceSentences(version: current, [
       for (final entry in entries)
         if (entry['arabic'] case final String arabic when arabic.isNotEmpty)
           (

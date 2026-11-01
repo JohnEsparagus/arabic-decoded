@@ -3,6 +3,6 @@
 /// runtime, which would take a plugin; keep it in step with `version:` in
 /// pubspec.yaml.
 const appName = 'Arabic Decoded';
-const appVersion = '1.0.0';
+const appVersion = '1.0.1';
 const appTagline =
     'Learn Arabic through its roots, with spaced-repetition flashcards.';

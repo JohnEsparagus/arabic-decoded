@@ -40,7 +40,15 @@ void main() {
             child: const ArabicDecodedApp(),
           ),
         );
-        await _settle(tester);
+        // Startup is real work (the import), so wait for its result rather
+        // than a fixed time that a busy machine can overrun.
+        for (
+          var i = 0;
+          i < 75 && find.text('Welcome').evaluate().isEmpty;
+          i++
+        ) {
+          await _settle(tester);
+        }
 
         // Home tab is selected by default and opens on the welcome card:
         // nothing studied yet, so nothing to review and a day's worth of

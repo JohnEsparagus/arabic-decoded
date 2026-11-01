@@ -92,13 +92,13 @@ class LocalFlashcardRepository implements FlashcardRepository {
       _db.searchFlashcards(query);
 
   @override
-  Future<int?> getSentencesVersion() => _db.getSentencesVersion();
+  Future<String?> getSentencesVersion() => _db.getSentencesVersion();
 
   @override
   Future<void> replaceSentences(
     List<({String arabic, String english, String search, Set<String> keys})>
     sentences, {
-    required int version,
+    required String version,
   }) => _db.replaceSentences(sentences, version: version);
 
   @override

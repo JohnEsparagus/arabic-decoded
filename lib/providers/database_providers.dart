@@ -8,6 +8,8 @@ import '../repositories/flashcard_repository.dart';
 import '../repositories/local_flashcard_repository.dart';
 import '../repositories/synced_flashcard_repository.dart';
 import '../services/content_importer.dart';
+import '../services/content_store.dart';
+import '../services/content_updater.dart';
 import '../services/database_service.dart';
 import 'auth_providers.dart';
 import 'sync_providers.dart';
@@ -35,8 +37,27 @@ final flashcardRepositoryProvider = Provider<FlashcardRepository>((ref) {
   );
 });
 
+/// Reads content files: downloaded ones if newer, otherwise bundled ones.
+final contentStoreProvider = Provider<ContentStore>((ref) {
+  return ContentStore(ref.watch(databaseServiceProvider));
+});
+
 final contentImporterProvider = Provider<ContentImporter>((ref) {
-  return ContentImporter(ref.watch(flashcardRepositoryProvider));
+  return ContentImporter(
+    ref.watch(flashcardRepositoryProvider),
+    loadAsset: ref.watch(contentStoreProvider).load,
+  );
+});
+
+/// Looks for newer content in the background, once per launch and again
+/// whenever a lost connection comes back (see `RootShell`). Anything it
+/// finds applies from the next launch.
+final contentUpdateProvider = FutureProvider<bool>((ref) async {
+  await ref.watch(sentenceCorpusProvider.future);
+  return ContentUpdater(
+    ref.watch(databaseServiceProvider),
+    ref.watch(contentStoreProvider),
+  ).check();
 });
 
 /// Imports every campaign listed in `lib/config/campaign_sources.dart`
@@ -46,7 +67,14 @@ final contentImporterProvider = Provider<ContentImporter>((ref) {
 /// needs campaign data without duplicating anything.
 final campaignDecksProvider = FutureProvider<List<Deck>>((ref) async {
   final importer = ref.watch(contentImporterProvider);
-  return importer.importAll();
+  try {
+    return await importer.importAll();
+  } catch (_) {
+    // Downloaded content the app can't import mustn't stop it starting: go
+    // back to the bundled content, which is known to work.
+    await ref.read(contentStoreProvider).reset();
+    return importer.importAll();
+  }
 });
 
 /// The sentence corpus, loaded into the database (once per edition; see

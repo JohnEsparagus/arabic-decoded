@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:arabic_decoded/config/campaign_sources.dart';
+import 'package:arabic_decoded/models/content_manifest.dart';
 import 'package:arabic_decoded/models/flashcard.dart';
 import 'package:arabic_decoded/repositories/local_flashcard_repository.dart';
 import 'package:arabic_decoded/services/content_importer.dart';
@@ -130,7 +133,10 @@ void main() {
     final all = await db.getAllFlashcards();
 
     // Nothing at an old name, nothing twice in a deck.
-    for (final move in contentMoves) {
+    final manifest = ContentManifest.parse(
+      File(contentManifestPath).readAsStringSync(),
+    );
+    for (final move in manifest.moves) {
       expect(
         await cardAt(move.fromDeck, move.from),
         isNull,
